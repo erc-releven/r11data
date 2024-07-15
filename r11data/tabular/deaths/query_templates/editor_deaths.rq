@@ -1,0 +1,33 @@
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX star: <https://r11.eu/ns/star/>
+
+select ?pub ?d ?e
+where {{ 
+    ?a1 a star:E13_crm_P3 ;
+        crm:P140_assigned_attribute_to ?d ;
+        crm:P141_assigned """{pbw_desc}"""@en ;
+        crm:P14_carried_out_by ?authority ;
+        crm:P17_was_motivated_by ?source .
+    ?d a crm:E69_Death .
+    ?a2 a star:E13_crm_P100 ;
+        crm:P140_assigned_attribute_to ?d ;
+        crm:P141_assigned ?p .
+    ?p a crm:E21_Person .
+    ?id a crm:E15_Identifier_Assignment ;
+        crm:P140_assigned_attribute_to ?p ;
+        crm:P37_assigned ?e42 .
+    ?e42 a crm:E42_Identifier ;
+         crm:P190_has_symbolic_content "{name} {code}" .
+    ?a3 a star:E13_lrmoo_R15 ;
+        crm:P140_assigned_attribute_to ?pub ;
+        crm:P141_assigned ?source .
+  
+    values (?r24_r5) {{
+        (star:E13_lrmoo_R5) 
+        (star:E13_lrmoo_R24) 
+    }}
+    ?a4 a ?r24_r5 ;
+        crm:P17_was_motivated_by ?pub ;
+        crm:P14_carried_out_by ?e .
+    ?e crm:P3_has_note ?editor . 
+}} limit 1
