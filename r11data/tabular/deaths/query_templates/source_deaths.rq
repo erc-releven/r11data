@@ -1,0 +1,21 @@
+PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+PREFIX star: <https://r11.eu/ns/star/>
+
+select ?attrassign_uri ?death_uri ?authority_uri ?source_uri
+where {{
+        ?attrassign_uri a star:E13_crm_P3 ;
+            crm:P140_assigned_attribute_to ?death_uri ;
+            crm:P141_assigned """{pbw_desc}"""@en ;
+            crm:P14_carried_out_by ?authority_uri ;
+            crm:P17_was_motivated_by ?source_uri .
+        ?death_uri a crm:E69_Death .
+        ?a2 a star:E13_crm_P100 ;
+            crm:P140_assigned_attribute_to ?death_uri ;
+            crm:P141_assigned ?p .
+        ?p a crm:E21_Person .
+        ?id a crm:E15_Identifier_Assignment ;
+            crm:P140_assigned_attribute_to ?p ;
+            crm:P37_assigned ?e42 .
+        ?e42 a crm:E42_Identifier ;
+             crm:P190_has_symbolic_content "{name} {code}" .
+}} limit 1
