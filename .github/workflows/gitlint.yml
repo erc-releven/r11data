@@ -1,0 +1,9 @@
+name: Run commit message linter
+on:
+  pull_request:
+
+jobs:
+  gitlint:
+    uses: acdh-oeaw/prosnet-workflows/.github/workflows/gitlint.yml@v0.3.4
+    with:
+      comment: false

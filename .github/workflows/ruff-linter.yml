@@ -1,0 +1,10 @@
+name: Run ruff linter
+
+on: [push, pull_request]
+
+jobs:
+  ruff:
+    uses: acdh-oeaw/prosnet-workflows/.github/workflows/poetry-ruff.yml@v0.3.3
+    with:
+      src: "."
+      python-version: "3.12"
