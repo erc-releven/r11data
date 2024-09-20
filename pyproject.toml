@@ -17,11 +17,11 @@ sparqlwrapper = "^2.0.0"
 lodkit = "^0.1.13"
 pytz = "^2024.1"
 python-dotenv = "^1.0.1"
-ruff = "^0.6.6"
 
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"
+ruff = "^0.6.6"
 
 [build-system]
 requires = ["poetry-core"]
