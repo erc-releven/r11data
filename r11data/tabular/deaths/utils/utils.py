@@ -1,10 +1,9 @@
 """General utilities for r11tab."""
 
-from collections.abc import Callable, Container, Iterable, Mapping, Mapping
+from collections.abc import Callable, Container, Iterable, Mapping
 from contextlib import contextmanager
 import functools
 import json
-from logging import Logger
 import math
 import operator
 import os
@@ -15,10 +14,8 @@ from typing import Any
 from SPARQLWrapper import JSON, SPARQLWrapper
 import convertdate
 from dotenv import load_dotenv
-
 from r11data.tabular.deaths.utils.loggers import logger
 from rdflib import Graph, URIRef
-from tabulardf import RowGraphConverter
 
 
 load_dotenv()

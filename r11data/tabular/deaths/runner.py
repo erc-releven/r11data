@@ -3,9 +3,6 @@
 from pathlib import Path
 from typing import cast
 
-from rdflib import Graph
-from rich.console import Console
-
 from r11data.abcs import _ABCRunner
 from r11data.tabular.deaths.converters import (
     editor_converter_aa,
@@ -15,6 +12,7 @@ from r11data.tabular.deaths.converters import (
 )
 from r11data.tabular.deaths.utils.namespaces import R11NamespaceManager
 from r11data.utils.paths import output_tabular
+from rdflib import Graph
 from tabulardf import RowGraphConverter
 
 

@@ -31,7 +31,7 @@ class R11NamespaceManager(NamespaceManager):
     ```
     """
 
-    def __init__(self, graph: Graph, bind_namespaces: "_NamespaceSetString" = "rdflib"):
+    def __init__(self, graph: Graph, bind_namespaces="rdflib"):
         """Call init.super and add CLSInfra namespaces."""
         super().__init__(graph=graph, bind_namespaces=bind_namespaces)
 
