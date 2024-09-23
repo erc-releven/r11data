@@ -17,6 +17,7 @@ sparqlwrapper = "^2.0.0"
 lodkit = "^0.1.13"
 pytz = "^2024.1"
 python-dotenv = "^1.0.1"
+pydantic-settings = "^2.5.2"
 
 
 [tool.poetry.group.dev.dependencies]
