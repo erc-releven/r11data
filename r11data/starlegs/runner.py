@@ -1,9 +1,7 @@
 """Runner for R11data starlegs generation."""
 
-import os
-
 from SPARQLWrapper import SPARQLWrapper
-from dotenv import load_dotenv
+from r11data import settings
 from r11data.starlegs.utils._types import CRMTemplateMap
 from r11data.starlegs.utils.starlegs_logging import (
     starlegs_final_graph_log,
@@ -11,15 +9,12 @@ from r11data.starlegs.utils.starlegs_logging import (
 )
 from rdflib import Graph
 
-load_dotenv()
-passwd = os.getenv("PASSWD")
-
 
 def starlegs(*template_maps: CRMTemplateMap) -> Graph:
     _graph = Graph()
 
     sparql = SPARQLWrapper("https://graphdb.r11.eu/repositories/RELEVEN")
-    sparql.setCredentials(user="admin", passwd=passwd)
+    sparql.setCredentials(user=settings.GRAPHDB_USER, passwd=settings.PASSWD)
 
     for template_map in template_maps:
         for cls in template_map.crm_classes:
