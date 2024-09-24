@@ -4,7 +4,10 @@ from collections import Counter
 import io
 
 from loguru import logger
+from r11data.utils.paths import logs
 from rdflib import Graph
+
+logger.add(sink=logs / "starlegs.log")
 
 
 def _starlegs_count_assertions(graph: Graph) -> dict[str, int]:
@@ -27,7 +30,7 @@ def starlegs_subgraph_log(subgraph: Graph, target_class: str):
 
     _log_message = (
         f"Running starlegs constructor for {target_class} instances.\n"
-        f"Generated {len(subgraph)} assertions:\n"
+        f"Generated {len(subgraph)} assertions{':' if subgraph else '.'}\n"
         f"{_starlegs_create_count_log(count_mapping=count_mapping)}"
     )
 
