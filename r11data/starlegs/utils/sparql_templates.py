@@ -1,8 +1,10 @@
 """SPARQL construct templates for starleg generation."""
 
+from collections.abc import Iterator
 from string import Template
 
-from r11data.starlegs.utils._types import CRMTemplateMap
+from r11data.starlegs.utils._types import StarlegsQuery
+
 
 _base_sparql_template: str = """
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -40,15 +42,18 @@ _p141_sparql_template: str = Template(_base_sparql_template).safe_substitute(
 _p140_template: Template = Template(_p140_sparql_template)
 _p141_template: Template = Template(_p141_sparql_template)
 
-p140_template_map: CRMTemplateMap = CRMTemplateMap(
-    sparql_construct_template=_p140_template,
-    crm_classes=[
+
+p140_queries: Iterator[StarlegsQuery] = map(
+    lambda x: StarlegsQuery(_p140_template.substitute(target_class=x), target_class=x),
+    [
         "E13_sdhss_P13",
         "E13_sdhss_P26",
         "E13_sdhss_P36",
         "E13_crm_P41",
     ],
 )
-p141_template_map: CRMTemplateMap = CRMTemplateMap(
-    sparql_construct_template=_p141_template, crm_classes=["E13_sdhss_P38"]
+
+p141_queries: Iterator[StarlegsQuery] = map(
+    lambda x: StarlegsQuery(_p141_template.substitute(target_class=x), target_class=x),
+    ["E13_sdhss_P38"],
 )
