@@ -3,11 +3,14 @@
 import argparse
 from types import SimpleNamespace
 
+from loguru import logger
+from r11data.starlegs.runner import StarlegsRunner
 from r11data.tabular.deaths.runner import DeathsRunner
 
 
 runners = SimpleNamespace()
 runners.deaths = DeathsRunner()
+runners.starlegs = StarlegsRunner()
 
 
 parser = argparse.ArgumentParser(
@@ -23,6 +26,5 @@ if __name__ == "__main__":
 
     for arg in args:
         runner = getattr(runners, arg)
-        # use logger instead
-        print(f"Invoking '{arg}' runner.")
+        logger.info(f"Invoking '{arg}' runner.")
         runner.persist()
