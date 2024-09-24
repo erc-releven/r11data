@@ -1,0 +1,27 @@
+@prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
+
+<https://r11.eu/rdf/resource/6527dffa55030> ns1:P14_carried_out_by <https://r11.eu/rdf/resource/6527dffa8ab46> .
+
+<https://r11.eu/rdf/resource/6527e24476ba6> ns1:P14_carried_out_by <https://r11.eu/rdf/resource/6527dffa8ab46> .
+
+<https://r11.eu/rdf/resource/6527e4f3a0ca0> ns1:P14_carried_out_by <https://r11.eu/rdf/resource/6527e24540b93> ;
+    ns1:P17_was_motivated_by <https://r11.eu/rdf/resource/6527ea1892158> .
+
+<https://r11.eu/rdf/resource/6527e4f4a728b> ns1:P14_carried_out_by <https://r11.eu/rdf/resource/6527e24540b93> ;
+    ns1:P17_was_motivated_by <https://r11.eu/rdf/resource/6527e81746aff> .
+
+<https://r11.eu/rdf/resource/6527e9417c546> ns1:P14_carried_out_by <https://r11.eu/rdf/resource/6527dffa8ab46> .
+
+<https://r11.eu/rdf/resource/6543b760cc8f5> ns1:P14_carried_out_by <https://r11.eu/rdf/resource/6527dffa8ab46> .
+
+<https://r11.eu/rdf/resource/6543c9b6a477a> ns1:P14_carried_out_by <https://r11.eu/rdf/resource/6540e37d2fbd6> .
+
+<https://r11.eu/rdf/resource/6543c9b7d95f3> ns1:P14_carried_out_by <https://r11.eu/rdf/resource/6527dffa8ab46> .
+
+<https://r11.eu/rdf/resource/6544d0066468f> ns1:P14_carried_out_by <https://r11.eu/rdf/resource/6527dffa8ab46> .
+
+<https://r11.eu/rdf/resource/6544d6ad7be45> ns1:P14_carried_out_by <https://r11.eu/rdf/resource/6527dffa8ab46> .
+
+<https://r11.eu/rdf/resource/65b9690917bb7> ns1:P14_carried_out_by <https://r11.eu/rdf/resource/95dfd541-7f57-42b3-be3a-8f61f73df835> ;
+    ns1:P17_was_motivated_by <https://r11.eu/rdf/resource/a28947e4-ed6c-4d61-aefe-f551b433145d> .
+
