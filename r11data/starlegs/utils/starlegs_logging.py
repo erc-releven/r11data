@@ -24,12 +24,12 @@ def _starlegs_create_count_log(count_mapping: dict[str, int], indent: int = 4) -
     return output.getvalue()
 
 
-def starlegs_subgraph_log(subgraph: Graph, target_class: str):
+def starlegs_subgraph_log(subgraph: Graph, target_class: str | None):
     """Logger for intermediary starlegs graph results."""
     count_mapping = _starlegs_count_assertions(subgraph)
 
     _log_message = (
-        f"Running starlegs constructor for {target_class} instances.\n"
+        f"Running starlegs constructor{'.' if target_class is None else f' for {target_class} instances.'}\n"
         f"Generated {len(subgraph)} assertions{':' if subgraph else '.'}\n"
         f"{_starlegs_create_count_log(count_mapping=count_mapping)}"
     )

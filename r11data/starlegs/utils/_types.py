@@ -1,12 +1,14 @@
 """Custom types for starlegs functionality."""
 
-from dataclasses import dataclass
-from string import Template
+from collections import UserString
 
 
-@dataclass
-class CRMTemplateMap:
-    """Simple dataclass for associating a construct template with applicable CRM classes."""
+class StarlegsQuery(UserString):
+    """UserString which can hold additional metadata in a Namespace.
 
-    sparql_construct_template: Template
-    crm_classes: list[str]
+    Intended for Starlegs SPARQL queries.
+    """
+
+    def __init__(self, data: str, **metadata):
+        self.data: str = data
+        self.metadata: dict = metadata
