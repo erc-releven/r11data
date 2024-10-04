@@ -24,7 +24,7 @@ def _starlegs_create_count_log(count_mapping: dict[str, int], indent: int = 4) -
     return output.getvalue()
 
 
-def starlegs_subgraph_log(subgraph: Graph, target_class: str | None):
+def starlegs_subgraph_log(subgraph: Graph, target_class: str | None) -> None:
     """Logger for intermediary starlegs graph results."""
     count_mapping = _starlegs_count_assertions(subgraph)
 
@@ -37,7 +37,7 @@ def starlegs_subgraph_log(subgraph: Graph, target_class: str | None):
     logger.info(_log_message)
 
 
-def starlegs_final_graph_log(graph: Graph):
+def starlegs_final_graph_log(graph: Graph) -> None:
     """Logger for final report on starlegs construction."""
     count_mapping = _starlegs_count_assertions(graph)
 

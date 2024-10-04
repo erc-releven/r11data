@@ -42,18 +42,21 @@ _p141_sparql_template: str = Template(_base_sparql_template).safe_substitute(
 _p140_template: Template = Template(_p140_sparql_template)
 _p141_template: Template = Template(_p141_sparql_template)
 
+_p140_crm_classes: list[str] = [
+    "E13_sdhss_P13",
+    "E13_sdhss_P26",
+    "E13_sdhss_P36",
+    "E13_crm_P41",
+]
+
+_p141_crm_classes: list[str] = ["E13_sdhss_P38"]
 
 p140_queries: Iterator[StarlegsQuery] = map(
     lambda x: StarlegsQuery(_p140_template.substitute(target_class=x), target_class=x),
-    [
-        "E13_sdhss_P13",
-        "E13_sdhss_P26",
-        "E13_sdhss_P36",
-        "E13_crm_P41",
-    ],
+    _p140_crm_classes,
 )
 
 p141_queries: Iterator[StarlegsQuery] = map(
     lambda x: StarlegsQuery(_p141_template.substitute(target_class=x), target_class=x),
-    ["E13_sdhss_P38"],
+    _p141_crm_classes,
 )
