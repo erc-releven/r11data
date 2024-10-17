@@ -18,6 +18,18 @@ lodkit = "^0.1.13"
 pytz = "^2024.1"
 python-dotenv = "^1.0.1"
 pydantic-settings = "^2.5.2"
+<<<<<<< Updated upstream
+=======
+hypothesis = "^6.112.1"
+httpx = "^0.27.2"
+rdfproxy = {git = "https://github.com/acdh-oeaw/rdfproxy.git"}
+<<<<<<< ours
+<<<<<<< ours
+>>>>>>> Stashed changes
+=======
+>>>>>>> theirs
+=======
+>>>>>>> theirs
 
 
 [tool.poetry.group.dev.dependencies]
