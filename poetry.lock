@@ -33,14 +33,6 @@ files = [
 ]
 
 [[package]]
-<<<<<<< ours
-<<<<<<< ours
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> theirs
-=======
->>>>>>> theirs
 name = "anyio"
 version = "4.6.2.post1"
 description = "High level compatibility layer for multiple asynchronous event loop implementations"
@@ -80,7 +72,6 @@ tests = ["cloudpickle", "hypothesis", "mypy (>=1.11.1)", "pympler", "pytest (>=4
 tests-mypy = ["mypy (>=1.11.1)", "pytest-mypy-plugins"]
 
 [[package]]
->>>>>>> Stashed changes
 name = "certifi"
 version = "2024.8.30"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -293,14 +284,6 @@ files = [
 ]
 
 [[package]]
-<<<<<<< ours
-<<<<<<< ours
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> theirs
-=======
->>>>>>> theirs
 name = "h11"
 version = "0.14.0"
 description = "A pure-Python, bring-your-own-I/O implementation of HTTP/1.1"
@@ -359,13 +342,13 @@ zstd = ["zstandard (>=0.18.0)"]
 
 [[package]]
 name = "hypothesis"
-version = "6.115.2"
+version = "6.115.3"
 description = "A library for property-based testing"
 optional = false
 python-versions = ">=3.9"
 files = [
-    {file = "hypothesis-6.115.2-py3-none-any.whl", hash = "sha256:d0ccbd67f588a6abcdc17a4f06fea3b2bc0a166ecd89126fb90985036c1940fe"},
-    {file = "hypothesis-6.115.2.tar.gz", hash = "sha256:6df95ea6cccf950f80e142f43a684d1462e26c5e28ba29ab4eceb8399e207e0b"},
+    {file = "hypothesis-6.115.3-py3-none-any.whl", hash = "sha256:d2770b0db08ad666fe6ff36027910039ab681084d13bcf9c057449c2e27099c4"},
+    {file = "hypothesis-6.115.3.tar.gz", hash = "sha256:d4efc8c7371bd4ec906d2777f1f18fee5539e47b3d7c7cdc93d1026ad35d9b33"},
 ]
 
 [package.dependencies]
@@ -390,7 +373,6 @@ redis = ["redis (>=3.0.0)"]
 zoneinfo = ["tzdata (>=2024.2)"]
 
 [[package]]
->>>>>>> Stashed changes
 name = "idna"
 version = "3.10"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -1078,13 +1060,13 @@ typing-extensions = ">=4.6.0,<4.7.0 || >4.7.0"
 
 [[package]]
 name = "pydantic-settings"
-version = "2.5.2"
+version = "2.6.0"
 description = "Settings management using Pydantic"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "pydantic_settings-2.5.2-py3-none-any.whl", hash = "sha256:2c912e55fd5794a59bf8c832b9de832dcfdf4778d79ff79b708744eed499a907"},
-    {file = "pydantic_settings-2.5.2.tar.gz", hash = "sha256:f90b139682bee4d2065273d5185d71d37ea46cfe57e1b5ae184fc6a0b2484ca0"},
+    {file = "pydantic_settings-2.6.0-py3-none-any.whl", hash = "sha256:4a819166f119b74d7f8c765196b165f95cc7487ce58ea27dec8a5a26be0970e0"},
+    {file = "pydantic_settings-2.6.0.tar.gz", hash = "sha256:44a1804abffac9e6a30372bb45f6cafab945ef5af25e66b1c634c01dd39e0188"},
 ]
 
 [package.dependencies]
@@ -1360,14 +1342,6 @@ files = [
 ]
 
 [[package]]
-<<<<<<< ours
-<<<<<<< ours
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> theirs
-=======
->>>>>>> theirs
 name = "sniffio"
 version = "1.3.1"
 description = "Sniff out which async library your code is running under"
@@ -1390,7 +1364,6 @@ files = [
 ]
 
 [[package]]
->>>>>>> Stashed changes
 name = "sparqlwrapper"
 version = "2.0.0"
 description = "SPARQL Endpoint interface to Python"
@@ -1513,16 +1486,4 @@ dev = ["black (>=19.3b0)", "pytest (>=4.6.2)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-<<<<<<< ours
-<<<<<<< ours
-<<<<<<< Updated upstream
-content-hash = "4fd51f5eb287212c9e4269cfa090c29a417d00bb3c5f8d81b6e59c67ba94b426"
-=======
 content-hash = "ce57772c446734c1e9bc6b63116937b93f5f2f9d6d2c64bb249654eadfbcf47f"
->>>>>>> Stashed changes
-=======
-content-hash = "ce57772c446734c1e9bc6b63116937b93f5f2f9d6d2c64bb249654eadfbcf47f"
->>>>>>> theirs
-=======
-content-hash = "ce57772c446734c1e9bc6b63116937b93f5f2f9d6d2c64bb249654eadfbcf47f"
->>>>>>> theirs
