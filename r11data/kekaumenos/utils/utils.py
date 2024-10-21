@@ -69,7 +69,8 @@ def group_iterator(iterator: Iterator[dict], *, by: str) -> dict:
             value = grouped[binding["object"]]
         except KeyError:
             grouped.update({binding["object"]: {}})
+            value = grouped[binding["object"]]
 
-        grouped[binding["object"]].update({binding["p"]: binding["o"]})
+        value.update({binding["p"]: binding["o"]})
 
     return grouped

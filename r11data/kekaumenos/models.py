@@ -1,9 +1,6 @@
 """Pydantic models for Kekaumenos extraction."""
 
-import json
-from typing import Annotated, Union
-
-from pydantic import AnyUrl, BaseModel, Field
+from pydantic import BaseModel, Field
 from rdflib import Namespace
 
 rdf = Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
