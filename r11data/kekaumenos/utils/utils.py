@@ -50,13 +50,26 @@ def extract_text_from_xml(xml: str) -> str:
     return "".join(xpath_result)
 
 
-def strip_xml(iterator: Iterator[dict]) -> Iterator[dict]:
+def strip_xml_nodes(iterator: Iterator[dict]) -> Iterator[dict]:
     """Strip XML from textContent nodes of response bindings."""
     text_content_key = "http://www.homermultitext.org/cts/rdf/hasTextContent"
 
     for d in iterator:
-        if (p_value := d.get("p", None)) == text_content_key:
+        if d.get("p", None) == text_content_key:
             xml = d["o"]
             d["o"] = extract_text_from_xml(xml)
 
         yield d
+
+
+def group_iterator(iterator: Iterator[dict], *, by: str) -> dict:
+    grouped = {}
+    for binding in iterator:
+        try:
+            value = grouped[binding["object"]]
+        except KeyError:
+            grouped.update({binding["object"]: {}})
+
+        grouped[binding["object"]].update({binding["p"]: binding["o"]})
+
+    return grouped

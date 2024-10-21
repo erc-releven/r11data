@@ -1,38 +1,30 @@
 """Pydantic models for Kekaumenos extraction."""
 
 import json
-from typing import Annotated
+from typing import Annotated, Union
 
-from pydantic import AnyUrl, BaseModel
-from rdfproxy import SPARQLBinding
-from rdfproxy import ModelBindingsMapper
+from pydantic import AnyUrl, BaseModel, Field
+from rdflib import Namespace
 
-
-# class KekaumenosSAWSModel(BaseModel):
-#     saws_id: Annotated[str, SPARQLBinding("object")]
-#     data: KekaumenosSAWSData
-
-
-# [
-#     {
-#         "saws_id": <saws_id>,
-#         "data": {
-#             "<p>": <value>,
-#             ...
-#         }
-#     }
-# ]
+rdf = Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#")
+rdfs = Namespace("http://www.w3.org/2000/01/rdf-schema#")
+dc = Namespace("http://purl.org/dc/terms/")
+saws = Namespace("http://purl.org/saws/ontology#")
+cts = Namespace("http://www.homermultitext.org/cts/rdf/")
 
 
-x = [
-    {
-        "object": "http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsEng01:div1.e002",
-        "p": "saws:variantOf",
-        "o": "http://data.perseus.org/citations/urn:cts:greekLit:tlg0031.tlg004.perseus-eng1:19.10",
-    },
-    {
-        "object": "http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsEng01:div1.e002",
-        "p": "rdf:type",
-        "o": "saws:LinguisticObject",
-    },
-]
+class KekaumenosSAWSDataField(BaseModel):
+    is_variant_of: str | None = Field(validation_alias=saws.isVariantOf, default=None)
+    a: str = Field(validation_alias=rdf.type)
+    falls_within: str = Field(validation_alias=saws.fallsWithin)
+    is_close_translation_of: str | None = Field(
+        validation_alias=saws.isCloseTranslationOf, default=None
+    )
+    has_text_content: str = Field(validation_alias=cts.hasTextContent)
+    provenance: str | None = Field(validation_alias=dc.provenance, default=None)
+    rdf_schema_label: str = Field(validation_alias=rdfs.label)
+
+
+class KekaumenosSAWSModel(BaseModel):
+    node_id: str
+    data: KekaumenosSAWSDataField
