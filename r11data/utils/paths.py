@@ -14,3 +14,5 @@ output_tabular: Traversable = output / "tabular"
 output_starlegs: Traversable = output / "starlegs"
 
 logs: Traversable = files("r11data") / "logs"
+
+data_kekaumenos = r11data_base_path / "kekaumenos" / "data"
