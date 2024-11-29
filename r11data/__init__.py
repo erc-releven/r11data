@@ -6,8 +6,12 @@ class Settings(BaseSettings):
     """Main settings class."""
 
     model_config = SettingsConfigDict(env_file=env_path)
+
     GRAPHDB_USER: str
-    PASSWD: str
+    GRAPHDB_PASSWD: str
+
+    WISSKI_USER: str
+    WISSKI_PASSWD: str
 
 
 settings = Settings()
