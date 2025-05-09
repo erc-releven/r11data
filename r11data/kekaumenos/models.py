@@ -11,15 +11,36 @@ cts = Namespace("http://www.homermultitext.org/cts/rdf/")
 
 
 class KekaumenosSAWSDataField(BaseModel):
-    is_variant_of: str | None = Field(validation_alias=saws.isVariantOf, default=None)
-    a: str = Field(validation_alias=rdf.type)
-    falls_within: str = Field(validation_alias=saws.fallsWithin)
-    is_close_translation_of: str | None = Field(
-        validation_alias=saws.isCloseTranslationOf, default=None
+    is_variant_of: str | None = Field(
+        validation_alias="http://purl.org/saws/ontology#isVariantOf", default=None
     )
-    has_text_content: str = Field(validation_alias=cts.hasTextContent)
-    provenance: str | None = Field(validation_alias=dc.provenance, default=None)
-    rdf_schema_label: str = Field(validation_alias=rdfs.label)
+    a: str = Field(validation_alias="http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
+    falls_within: str = Field(
+        validation_alias="http://purl.org/saws/ontology#fallsWithin"
+    )
+    is_close_translation_of: str | None = Field(
+        validation_alias="http://purl.org/saws/ontology#isCloseTranslationOf",
+        default=None,
+    )
+    has_text_content: str = Field(
+        validation_alias="http://www.homermultitext.org/cts/rdf/hasTextContent"
+    )
+    provenance: str | None = Field(
+        validation_alias="http://purl.org/dc/terms/", default=None
+    )
+    rdf_schema_label: str = Field("http://www.w3.org/2000/01/rdf-schema#label")
+
+
+# class KekaumenosSAWSDataField(BaseModel):
+#     is_variant_of: str | None = Field(validation_alias=saws.isVariantOf, default=None)
+#     a: str = Field(validation_alias=rdf.type)
+#     falls_within: str = Field(validation_alias=saws.fallsWithin)
+#     is_close_translation_of: str | None = Field(
+#         validation_alias=saws.isCloseTranslationOf, default=None
+#     )
+#     has_text_content: str = Field(validation_alias=cts.hasTextContent)
+#     provenance: str | None = Field(validation_alias=dc.provenance, default=None)
+#     rdf_schema_label: str = Field(validation_alias=rdfs.label)
 
 
 class KekaumenosSAWSModel(BaseModel):
