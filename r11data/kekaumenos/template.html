@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Checklist</title>
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 2em auto; background: #f9f9f9; padding: 2em; border-radius: 10px; }
+    .item { margin-bottom: 1em; }
+    label span { display: inline-block; margin-left: 0.5em; }
+    button { margin-top: 1.5em; padding: 0.6em 1.2em; font-size: 1em; }
+  </style>
+</head>
+<body>
+
+  <h2>Select Commentary Items</h2>
+
+  <form id="checklist-form">
+    {% for item in data %}
+    <div class="item">
+      <label>
+	<input type="checkbox" id="item-{{ loop.index0 }}">
+	<span>
+	  <strong color="red">{{ item.r11_text }}</strong><br>
+	  <!-- <em>{{ item.saws_text }}</em> -->
+	  <em>{{ color_match(item.saws_text, item.r11_text)|safe }}</em>
+	</span>
+      </label>
+    </div>
+    {% endfor %}
+  </form>
+
+  <button onclick="downloadSelections()">Download Selections</button>
+
+  <script>
+    const data = {{ data | tojson(indent=2) }};
+
+    function downloadSelections() {
+      const selected = [];
+      data.forEach((item, index) => {
+	const checkbox = document.getElementById(`item-${index}`);
+	if (checkbox.checked) {
+	  selected.push(item);
+	}
+      });
+
+      const blob = new Blob([JSON.stringify(selected, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "selected_items.json";
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+  </script>
+
+</body>
+</html>

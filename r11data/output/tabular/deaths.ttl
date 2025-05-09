@@ -10,7 +10,7 @@
 star:cd81994d8e a crmdig:D10_Software_Execution ;
     crm:P4_has_time-span star:2998767784 ;
     crmdig:L11_had_output sd:69978024-42a9-11ef-8a96-9c2dcde5b085,
-        sd:69cc236a-42a9-11ef-8a96-9c2dcde5b085,
+    sd:69cc236a-42a9-11ef-8a96-9c2dcde5b085,
         sd:69d1ad8a-42a9-11ef-8a96-9c2dcde5b085,
         sd:69d5a8a4-42a9-11ef-8a96-9c2dcde5b085,
         sd:69d997c0-42a9-11ef-8a96-9c2dcde5b085,
