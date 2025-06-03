@@ -2,16 +2,13 @@
 
 from collections.abc import Iterator
 from collections.abc import Callable
-import csv
 from functools import partial
-import io
 import json
 import re
 from typing import Annotated
 from typing import Any
 
-from jinja2 import Environment, PackageLoader, Template, select_autoescape
-
+from jinja2 import Template
 from r11data.kekaumenos.models import KekaumenosSAWSDataField, KekaumenosSAWSModel
 from r11data.kekaumenos.sparql.kekaumenos_queries import (
     kekaumenos_eng_query,
@@ -73,7 +70,7 @@ def get_releven_kekaumenos_bindings():
     PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
     PREFIX star: <https://r11.eu/ns/star/>
 
-    select distinct ?e33 ?text
+    select distinct ?e33 ?text ?label
     where {
     ?a crm:P141_assigned [a spec:Text_Expression ; rdfs:label "Consilia et narrationes"];
        a star:E13_lrmoo_R76 ;
@@ -84,7 +81,8 @@ def get_releven_kekaumenos_bindings():
     ?c ^crm:P67_refers_to ?e33 ;
        a [rdfs:subClassOf crm:E13_Attribute_Assignment] .
     ?e33 a crm:E33_Linguistic_Object ;
-        crm:P190_has_symbolic_content ?text .
+        crm:P190_has_symbolic_content ?text ;
+        rdfs:label ?label.
 
     filter (?text != "")
     }
@@ -109,7 +107,7 @@ def get_saws_bindings():
 
 def generate_matches():
     for r11_binding in get_releven_kekaumenos_bindings():
-        r11_uri, r11_text = r11_binding.values()
+        r11_uri, r11_text, r11_label = r11_binding.values()
 
         for saws_binding in get_saws_bindings():
             saws_uri, saws_text = saws_binding.values()
@@ -118,6 +116,7 @@ def generate_matches():
                 yield {
                     "r11_uri": r11_uri,
                     "r11_text": r11_text,
+                    "r11_label": r11_label,
                     "saws_uri": saws_uri,
                     "saws_text": saws_text,
                 }

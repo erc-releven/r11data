@@ -21,6 +21,7 @@
 	<input type="checkbox" id="item-{{ loop.index0 }}">
 	<span>
 	  <strong color="red">{{ item.r11_text }}</strong><br>
+	  <strong color="blue">{{ item.r11_label }}</strong><br>
 	  <!-- <em>{{ item.saws_text }}</em> -->
 	  <em>{{ color_match(item.saws_text, item.r11_text)|safe }}</em>
 	</span>
