@@ -2,6 +2,7 @@
 
 from collections.abc import Iterator
 from collections.abc import Callable
+import csv
 from functools import partial
 import json
 import re
@@ -132,3 +133,11 @@ with open("./template.html") as template, open("./matches.html", "w") as output:
     rendered = template.render(data=list(generate_matches()), color_match=color_match)
 
     output.write(rendered)
+
+
+with open("./matches.csv", "w") as csvfile:
+    fieldnames = ["r11_uri", "r11_text", "r11_label", "saws_uri", "saws_text"]
+    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+
+    writer.writeheader()
+    writer.writerows(generate_matches())
