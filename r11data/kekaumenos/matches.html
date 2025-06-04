@@ -4565,5 +4565,20 @@
     }
   </script>
 
+  <script>
+    function updateStorage(ev){
+      localStorage.setItem(ev.target.id, ev.target.checked)
+    }
+
+    window.addEventListener("load", () => {
+      document.querySelectorAll("input[type='checkbox']").forEach(el => {
+	el.checked = localStorage.getItem(el.id) === "true"
+	el.addEventListener("change", updateStorage)
+      })
+    })
+  </script>
+
+
+
 </body>
 </html>
