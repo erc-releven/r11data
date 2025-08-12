@@ -12,7 +12,6 @@ dependencies = [
     "pydantic>=2.8.2,<3",
     "toolz>=0.12.1,<0.13",
     "sparqlwrapper>=2.0.0,<3",
-    "lodkit>=0.1.13,<0.2",
     "pytz~=2024.1",
     "python-dotenv>=1.0.1,<2",
     "pydantic-settings>=2.5.2,<3",
@@ -20,6 +19,7 @@ dependencies = [
     "httpx>=0.27.2,<0.28",
     "lxml>=5.3.1",
     "jinja2>=3.1.6",
+    "lodkit>=0.2.7",
 ]
 
 [dependency-groups]
