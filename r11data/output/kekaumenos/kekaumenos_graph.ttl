@@ -1,0 +1,491 @@
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix so: <http://r11.eu/twc/ontologies/similarity/> .
+
+<https://r11.eu/ns/star/017035a8-e0cd-4bdd-bcc2-520924d2d6e3> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/21b4e642-8716-412f-b37b-80835a3f8b67> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection3.o6> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/04e837cb-bbf6-4530-93f0-69fe1547d56a> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/5d81faed-eb0b-4a19-b737-2daf7b951079> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o2> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/092395c3-ba9c-4fc3-9c69-1c981489eab9> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/8e0d2bcd-dc86-4b25-b68d-d9932fcb73d3> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection5.o4> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/0a860db3-b153-4f59-8ac7-e5e4a34abad6> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/2f55e725-d952-4024-8fdb-8cdd27f9f8dc> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o67> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/0c9c172e-a7a6-4827-aba1-f27e364f5ad3> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/1fb2c589-8ea2-441f-91ad-f4eab7be4f35> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o52> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/1103f86d-961c-4430-acf9-27c282ce0f0b> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/abe58815-062b-45a9-b7f0-20e2b652bd4c> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection3.o6> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/117da673-4a87-4a60-85b5-0b8e871b49fd> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/10730bda-901a-4e20-83c8-b20af9bbda75> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection5.o3> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/1304e3e5-9f43-4b3b-a7ef-31a0cf1fb50f> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e1643fdc-3b1a-4370-8403-783ec8de5271> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o49> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/16063754-dcde-4ae0-a1a7-77c3d6cc9eb2> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/a87b933c-1127-4303-a0a1-a4f7f1117224> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o2> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/163357a0-8690-4cfa-8039-68a7f23ebbca> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/df431967-1888-474c-b796-6648412c3b40> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o4> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/1a3bdc86-257e-4457-a5ad-68fd178f8cb4> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/3e103a90-394e-43c1-9ef3-1da1d32d822f> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o38> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/1ca5fcaa-7092-42f5-bd85-0f85b28a2a69> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c6654ef7-55e9-4368-8e39-9f749179e0e5> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o6> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/1cb04613-6ac6-4cc7-85f3-03fe89d4cc2e> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/00ce3f2b-903d-4047-b3f7-a5a320c4a2c1> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o27> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/23d77666-f0c9-4ce5-a00e-7fb5c507f520> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/b2ec98eb-b0e0-45b4-aa87-f3845bfe33c1> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o44> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/27ebdd83-6adf-4907-9ea1-25983450f9f2> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/fe346056-5323-4341-a3f7-0f4c7241a5a6> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection3.o6> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/2d786cfa-8e43-4699-b069-1181b590daf7> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/11c4b62f-aa24-4734-9d03-eb54b5c5ae37> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o27> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/2e156cdb-174e-4c9e-b29e-0104edee2b5c> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/b3455930-9e31-46b2-b886-682b62dd6178> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o43> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/3098c3bf-45ec-49d6-a228-8036b9e1dfa2> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/64925a3d-56e9-46cb-baf5-c15c9218d3f0> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o4> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/322c598e-8fab-4e1b-b5e4-8db5ccc67c3f> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/24ac5e29-f8c8-4ac6-9793-6d06af65c70a> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o6> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/3a2e7082-3e78-4934-949e-dcfd0be7f3e1> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c2839d93-d9a1-4ab5-8d3e-08ef6f236a90> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o2> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/3b8e8156-cb8b-4a2c-8b7d-e5f0c980b605> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/6ec7b5d5-3a98-47b7-995d-7b038f0d97c6> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o46> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/3cef3012-9de7-4e38-bacf-ee128c0e750d> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/1df637d1-cedb-44c6-afaf-0e060527a5bc> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection3.o13> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/4004a96b-1639-43d5-85ec-1d78f4a0b3d4> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/cbf27953-a9e0-4359-8ccc-af680b478cf7> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o11> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/41da26d3-3678-433b-972d-f6ad27d02706> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/a6ba6c7b-c52e-4ac0-9f75-9ce1820cbe4f> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o54> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/48353f6d-0360-4bb5-bc94-7c5ed43813fb> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/a30bdd1c-c1c1-4694-a95b-48a9abaf7172> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o6> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/4d9b6fa7-84c2-4f56-bb71-49342295a6dd> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/fb5bde0d-67a9-4cf4-93d4-93e11f574b94> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o49> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/57095d33-2259-43d8-bf55-285051639cda> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/635126dc-519c-4149-8a6d-c97ba9723096> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection3.o13> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/5785fe42-edcc-43a9-821a-ce961d721cb9> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c9abbf61-7a64-4073-b84c-430748420c24> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o68> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/5917ad20-83de-472c-86ee-7123dac538d3> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/ed98fd96-8270-42e5-92be-7232810a32f2> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o54> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/597f321b-e52f-4639-968b-5d238d9ba967> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/8c777a11-73f1-437e-8eae-64ba6e6199e2> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection5.o3> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/5ad56594-de8c-4377-8365-a2aa1b64c916> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/54f1995b-9828-41d6-a19e-ed6f99c1fcf3> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o2> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/6017eb3e-6d57-41d0-9aa7-dc5b9083fc03> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/fbebb582-9069-479d-83a2-799a70e78bdb> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection3.o6> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/6562d223-ce00-4daf-9be0-551207b49158> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/5fc45345-bf1a-499d-9a66-302ae23050c1> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection3.o13> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/676b0a1a-ecd3-4704-a908-6b8ebcc2a936> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/497526b1-7397-42c4-98d3-95b79da24ba9> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o57> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/6aec8785-3f9c-4d91-82e5-1f410e24a193> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/a8566435-5c91-454d-a285-5a7cf1bbbb4e> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o5> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/6e5512de-8edf-47e5-b9c9-8c51488b29cc> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/dc68bcd6-97a4-4021-ad3c-60aba922edcd> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o57> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/7315a8fb-3f7a-497d-bf15-2a9ed9ff8d33> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/fe43f282-8aaa-401c-bfea-2b87e380abc3> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o4> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/7746d43f-9d1a-4ecd-b291-60efe4dcf568> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/f06cfd2f-a33a-4725-b684-7eec60af3c87> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o52> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/7ab28bc7-06cc-41a5-989d-7fcc15bb9a6b> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/db2e8f01-4f34-4060-8c94-6b441c14e417> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o54> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/7cc59953-3f39-44a3-9d91-6dba52d6dafa> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/bfb58043-17c9-48cd-a2ab-a0180f0c39a0> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o11> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/8025c2c1-5172-4815-b9c8-0fade736f15a> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/afcfdbf5-8f1a-4868-bee2-a3b484f04df9> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection5.o3> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/80421dc8-7a77-4568-bcfe-373496bec63f> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/2cc6969f-c040-4519-ab5f-e38ee61a9aab> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o4> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/81aaba07-0b69-4c0d-aa2b-b40279d8b0b7> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/58b3da57-6baa-4873-a0f0-b2edd944eb75> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o54> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/81b07962-7c57-4dd4-a91d-5eed5a52a192> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c1d37e29-544d-460b-b442-136ae79112d7> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o52> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/82e3d04d-ae1e-41a5-92ae-d9f3b4f0cd1b> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/f91d025d-d734-492f-9ec4-743683d1a9f5> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o57> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/8ac11689-cc32-46a1-bd93-52d6f5c7ce9f> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/a337491f-decf-49c2-a216-b565108c6a9c> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection3.o6> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/8dd2342d-4647-4ff3-b22e-67ba10a2246e> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/6052b03d-dc49-41c3-b656-850d0c2c4b0e> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o68> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/8f247832-2f23-4c00-be4d-bba50a7cccdf> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/3ee1f190-f94e-4c21-ac55-3272f0244acc> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o54> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/910209eb-b4a0-436f-9af4-5edafe5d0d17> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/ddd9d07a-53ea-4f14-9c13-41c8ce98f926> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o2> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/94a80724-0981-457c-a00e-1a013de803f6> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/24225197-1c98-42af-ad6d-9c71d1f57214> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection3.o6> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/9b1bbd45-3253-483f-bcc4-c2d85b59bb95> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/8bf8eb1b-a4de-4a16-a790-bc444f7871cc> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o5> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/9c959b2d-3eaf-436e-bc89-ab7b0c180ea4> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/213b417b-f557-4945-a9e3-fe68d2c0564e> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o6> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/9fdef199-e7c1-4b3a-bac4-30c6ce4f2dfa> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c9d71d9d-427b-4905-ab4d-b4164edacfbf> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o5> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/a0f00479-7291-4b38-be1e-0f998dd774c0> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c4715661-4b0c-4f84-8460-9001261807a1> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o52> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/adea29ba-93c9-4b69-a9fa-6ec474ccb16b> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/718d7cf0-0b8a-4041-8bcb-276c0f32ae8f> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o57> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/b2315443-ef81-4812-9d52-669a8e7d3c14> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/40b31cc0-7610-4702-8206-44726a472d43> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o46> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/b4fa736c-ad89-42b1-9816-be630f8222e6> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/159e6adf-2366-431e-bd6c-6b50ae9bac84> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o11> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/b76f8c99-dfa5-4b18-9fd6-4d87d9dcd79b> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c7790da0-279b-4d3f-9a02-b433c154a471> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection3.o82> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/b9f26bc3-8b01-4033-a182-87627ac48c45> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/a8876fd8-9751-4699-b647-4224978fe39c> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o27> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/bc0552c6-37ec-45a2-865c-fb2eaa9515a3> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/bfbf0956-ab24-48e4-a91e-42235297eac2> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o57> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/bc54aa19-6b1b-4669-9432-ee6ac40e601e> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/0c0385d5-c7dd-45ff-b908-e7f78e287b47> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o11> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/bfc562c9-6537-4d35-bd78-aeb1173c4868> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/b133d472-730f-4e55-ab57-28f22df85327> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o6> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/c2dc9475-fd9b-4f84-850a-22774a52b942> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/8f783d6b-6a51-4d8b-9d11-4f3295ca1c23> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection5.o3> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/c594dbfd-f5cd-4b47-9a83-25ea408d0fb7> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/da453741-87e0-4157-9c6c-0111680a05cb> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o27> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/c97ed94e-d11d-4034-ab42-353a0cb64d13> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e1212bcd-a24c-448e-a32b-012eefb0e7a0> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o52> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/c9e80f9c-9e36-4878-a799-0e253d11f6d8> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/25de427d-cecc-433c-aaa4-e816c6c3fa68> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o67> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/d2ce8dcc-8b0f-4ed3-a279-eb6e96ec8804> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/2f9d7654-9cba-4c43-b22c-3adef0de9c63> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o6> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/d680d53c-556c-4162-ae2b-d935f370329e> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e66d2983-ec24-4443-8da2-fa56e181d85d> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o52> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/d951e5bf-6b9a-4289-8e89-bd7f0087e72d> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/abbc9222-68f7-4c20-a443-3eeecc1ef5dc> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o27> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/da43e5da-f62a-4242-809a-be3c84cc9e44> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/9acf8791-bf90-42e1-a67d-1e5bac512632> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o38> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/da788cf6-f8d9-49ed-aa2b-81b36a315b59> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/49965442-63d7-47b8-8b4f-d055a6e9e6e1> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o38> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/da9decef-2c85-4c69-b93c-1dc233a9ac7d> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/4dbd57f6-2837-4260-a535-af07a671f5ef> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o49> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/dabb68cb-ec35-46f9-b9d1-252e8d56150a> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c1d8ccd3-a7e6-41ad-a323-6911aed1f56c> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection3.o13> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/de721066-3f71-48e0-bde5-94f183908a5f> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/cb41df1d-9a66-4f98-a136-001f16475eb7> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o4> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/e1556d4f-9bb0-4913-a05b-a6ed16289ef5> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/10b10094-da3a-4b38-9121-b92597209812> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o6> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/e526a4f5-7be4-4b9c-9405-c32447cead7e> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/dc2d4c40-9cab-4fb2-afdb-90b32c7a23ae> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection2.o26> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/eee4bc31-91ab-429b-aa9c-e0aab65c1631> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/6ae3a212-5639-4d9a-8198-1e4be02559c5> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection3.o101.a91> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/f4af27e3-a5e6-4a88-a2f6-769cefca9955> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/b9108af9-cfc3-4a46-ae54-ce8d2e0f1ecd> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection5.o3> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/f563ffe4-5e02-4f92-bd84-fa4d89274c1a> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/5e9c3417-58d3-43fa-83e8-501676b3142c> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection4.o6> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/f9c96c8e-68a0-4ac5-8b2a-211273b9ea1a> a crm:E13_Attribute_Assignment ;
+    crm:P140_assigned_attribute_to <https://r11.eu/rdf/resource/67069bda-750c-44c6-833c-0af0c7760f3a> ;
+    crm:P141_assigned <http://www.ancientwisdoms.ac.uk/cts/urn:cts:greekLit:tlg3017.Syno298.sawsGrc01:divedition.divsection5.o3> ;
+    crm:P14_carried_out_by <https://r11.eu/ns/star/669d2f5bc7> ;
+    crm:P177_assigned_property_of_type so:ID5_related .
+
+<https://r11.eu/ns/star/3f9250e60d> a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "https://orcid.org/0009-0007-1432-0127" .
+
+<https://r11.eu/ns/star/669d2f5bc7> a crm:E21_Person ;
+    rdfs:label "Aleksandar Anđelović" ;
+    crm:P1_is_identified_by <https://r11.eu/ns/star/3f9250e60d> .
+
