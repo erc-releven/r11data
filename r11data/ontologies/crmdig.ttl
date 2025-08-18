@@ -1,0 +1,343 @@
+@prefix : <http://www.ics.forth.gr/isl/CRMdig/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix crmdig: <http://www.ics.forth.gr/isl/CRMdig/> .
+@base <http://www.ics.forth.gr/isl/CRMdig/> .
+
+<http://www.ics.forth.gr/isl/CRMdig/> rdf:type owl:Ontology ;
+                                       owl:versionIRI <http://www.ics.forth.gr/isl/CRMdig/4.0> ;
+                                       owl:imports <http://www.cidoc-crm.org/cidoc-crm/7.1.2> ;
+                                       rdfs:comment "This ontology is the result of importing the class and property definitions of the RDF file downloaded from https://ontome.net/namespace/211#identification."@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.ics.forth.gr/isl/CRMdig/L10_had_input
+crmdig:L10_had_input rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf crm:P16_used_specific_object ;
+                     rdfs:domain crmdig:D7_Digital_Machine_Event ;
+                     rdfs:range crmdig:D1_Digital_Object ;
+                     rdfs:comment "This property associates an instance of D7 Digital Machine Event with an instance of D1 Digital Object which is the input used to specify the machine action."@en ;
+                     rdfs:label "had input"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L11_had_output
+crmdig:L11_had_output rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf crm:P94_has_created ;
+                      rdfs:domain crmdig:D7_Digital_Machine_Event ;
+                      rdfs:range crmdig:D1_Digital_Object ;
+                      rdfs:comment "This property associates an instance of D7 Digital Machine Event with an instance of D1 Digital Object which is the output of the activity."@en ;
+                      rdfs:label "had output"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L12_happened_on_device
+crmdig:L12_happened_on_device rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf crm:P12_occurred_in_the_presence_of ;
+                              rdfs:domain crmdig:D7_Digital_Machine_Event ;
+                              rdfs:range crmdig:D8_Digital_Device ;
+                              rdfs:comment "This property associates an instance of D7 Digital Machine Event with an object, the D8 Digital Device, which happened with, e.g a capturing event that happened on/with a digital camera, etc."@en ;
+                              rdfs:label "happened on device"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L13_used_parameters
+crmdig:L13_used_parameters rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf crmdig:L10_had_input ;
+                           rdfs:domain crmdig:D10_Software_Execution ;
+                           rdfs:range crmdig:D1_Digital_Object ;
+                           rdfs:comment "This property associates an instance of D10 Software Execution with a digital object used as a parameter during the process."@en ;
+                           rdfs:label "used parameters"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L14_transferred
+crmdig:L14_transferred rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf crmdig:L10_had_input ;
+                       rdfs:domain crmdig:D12_Data_Transfer_Event ;
+                       rdfs:range crmdig:D1_Digital_Object ;
+                       rdfs:comment "This property identifies a digital object transferred by a D12 Data Transfer Event."@en ;
+                       rdfs:label "transferred"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L15_has_sender
+crmdig:L15_has_sender rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf crmdig:L12_happened_on_device ;
+                      rdfs:domain crmdig:D12_Data_Transfer_Event ;
+                      rdfs:range crmdig:D8_Digital_Device ;
+                      rdfs:comment "This property identifies a digital device used as a medium on which data are transferred through a D12 Data Transfer Event."@en ;
+                      rdfs:label "has sender"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L16_has_receiver
+crmdig:L16_has_receiver rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf crmdig:L12_happened_on_device ;
+                        rdfs:domain crmdig:D12_Data_Transfer_Event ;
+                        rdfs:range crmdig:D8_Digital_Device ;
+                        rdfs:comment "This property identifies a digital device used as a medium to receive data through a D12 Data Transfer Event."@en ;
+                        rdfs:label "has receiver"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L17_measured_thing_of_type
+crmdig:L17_measured_thing_of_type rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf crm:P125_used_object_of_type ;
+                                  rdfs:domain crmdig:D11_Digital_Measurement_Event ;
+                                  rdfs:range crm:E55_Type ;
+                                  rdfs:comment "This property associates an instance of D11 Digital Measurement Event with the instance of E55Type of object to which it applied."@en ;
+                                  rdfs:label "measured thing of type"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L18_has_modified
+crmdig:L18_has_modified rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf crm:P31_has_modified ;
+                        rdfs:domain crmdig:D7_Digital_Machine_Event ;
+                        rdfs:range crmdig:D13_Digital_Information_Carrier ;
+                        rdfs:comment "This property identifies a Digital Information Carrier modified in a Digital Machine Event."@en ;
+                        rdfs:label "has modified"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L19_stores
+crmdig:L19_stores rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf crm:P128_carries ;
+                  rdfs:domain crmdig:D13_Digital_Information_Carrier ;
+                  rdfs:range crmdig:D1_Digital_Object ;
+                  rdfs:comment "This property associates an instance of a D13 Digital Information Carrier with the instance of Digital Object that is stored on it."@en ;
+                  rdfs:label "stores"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L1_digitized
+crmdig:L1_digitized rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf crm:P39_measured ;
+                    rdfs:domain crmdig:D2_Digitization_Process ;
+                    rdfs:range crm:E18_Physical_Thing ;
+                    rdfs:comment "This property associates an instance of D2 Digitization Process with an instance of E18 Physical Thing which is a material thing."@en ;
+                    rdfs:label "digitized"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L20_has_created
+crmdig:L20_has_created rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf crm:P40_observed_dimension ,
+                                          crmdig:L11_had_output ;
+                       rdfs:domain crmdig:D11_Digital_Measurement_Event ;
+                       rdfs:range crmdig:D9_Data_Object ;
+                       rdfs:comment "This property identifies a Data Object that came into existence as a result of a D11 Digital Measurement Event."@en ;
+                       rdfs:label "has created"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L21_used_as_derivation_source
+crmdig:L21_used_as_derivation_source rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf crmdig:L2_used_as_source ;
+                                     rdfs:domain crmdig:D3_Formal_Derivation ;
+                                     rdfs:range crmdig:D1_Digital_Object ;
+                                     rdfs:comment "This property associates an instance of a D3 Formal Derivation with the instance of D1 Digital Object that is used as a derivation source."@en ;
+                                     rdfs:label "used as derivation source"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L22_created_derivative
+crmdig:L22_created_derivative rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf crmdig:L11_had_output ;
+                              rdfs:domain crmdig:D3_Formal_Derivation ;
+                              rdfs:range crmdig:D1_Digital_Object ;
+                              rdfs:comment "This property associates an instance of D3 Formal Derivation with the Digital Object it used to create a version of."@en ;
+                              rdfs:label "created derivative"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L23_used_software_or_firmware
+crmdig:L23_used_software_or_firmware rdf:type owl:ObjectProperty ;
+                                     rdfs:subPropertyOf crm:P16_used_specific_object ;
+                                     rdfs:domain crmdig:D7_Digital_Machine_Event ;
+                                     rdfs:range crmdig:D14_Software ;
+                                     rdfs:comment "This property associates an instance of D7 Digital Machine Event with the instance of D14 Software that had used."@en ;
+                                     rdfs:label "used software or firmware"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L24_created_logfile
+crmdig:L24_created_logfile rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf crmdig:L11_had_output ;
+                           rdfs:domain crmdig:D10_Software_Execution ;
+                           rdfs:range crmdig:D1_Digital_Object ;
+                           rdfs:comment "This property identifies the logfile that was created by a D10 Software Execution in order to record all the activities in the system."@en ;
+                           rdfs:label "created logfile"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L2_used_as_source
+crmdig:L2_used_as_source rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf crmdig:L10_had_input ;
+                         rdfs:domain crmdig:D10_Software_Execution ;
+                         rdfs:range crmdig:D1_Digital_Object ;
+                         rdfs:comment "This property associates an instance of D10 Software Execution with an instance of D1 Digital Object which is used as a source, software essential for the performance."@en ;
+                         rdfs:label "used as source"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L43_annotates
+crmdig:L43_annotates rdf:type owl:ObjectProperty ;
+                     rdfs:domain crmdig:D29_Annotation_Object ;
+                     rdfs:range crm:E1_CRM_Entity ;
+                     rdfs:comment "This property describes the associations between objects or areas of objects of the RI, with other objects or regions or persons, places, events."@en ;
+                     rdfs:label "annotates"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L48_created_annotation
+crmdig:L48_created_annotation rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf crm:P94_has_created ;
+                              rdfs:domain crmdig:D30_Annotation_Event ;
+                              rdfs:range crmdig:D29_Annotation_Object ;
+                              rdfs:comment "This property identifies the D29 Annotation Object (associations) that came into existence as a result of a D30 Annotation Event."@en ;
+                              rdfs:label "created annotation"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L49_is_primary_area_of
+crmdig:L49_is_primary_area_of rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf crm:P106_is_composed_of ;
+                              rdfs:domain crmdig:D35_Area ;
+                              rdfs:range crmdig:D1_Digital_Object ;
+                              rdfs:comment "This property describes the association between a particular area declared in an original digital object."@en ;
+                              rdfs:label "is primary area of"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L50_is_propagated_area_of
+crmdig:L50_is_propagated_area_of rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf crm:P106_is_composed_of ;
+                                 rdfs:domain crmdig:D35_Area ;
+                                 rdfs:range crmdig:D1_Digital_Object ;
+                                 rdfs:comment "This property describes the association between an area and the digital object to which it is propagated."@en ;
+                                 rdfs:label "is propagated area of"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L54_is_same-as
+crmdig:L54_is_same-as rdf:type owl:ObjectProperty ;
+                      rdfs:domain crm:E1_CRM_Entity ;
+                      rdfs:range crm:E1_CRM_Entity ;
+                      rdfs:comment "This property describes a non unique identification applied to E1 CRM Entity."@en ;
+                      rdfs:label "is same-as"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/L60_documents
+crmdig:L60_documents rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf crm:P140_assigned_attribute_to ;
+                     rdfs:domain crmdig:D2_Digitization_Process ;
+                     rdfs:range crm:E1_CRM_Entity ;
+                     rdfs:comment "This property describes the CRM Entities documented by instances of Digitization Processes."@en ;
+                     rdfs:label "documents"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ics.forth.gr/isl/CRMdig/D10_Software_Execution
+crmdig:D10_Software_Execution rdf:type owl:Class ;
+                              rdfs:subClassOf crmdig:D7_Digital_Machine_Event ;
+                              rdfs:comment "This class comprises events by which a digital device runs a software program or a series of computing operations on a digital object as a single task, which is completely determined by its digital input, the software and the generic properties of the device." ;
+                              rdfs:label "Software Execution"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/D11_Digital_Measurement_Event
+crmdig:D11_Digital_Measurement_Event rdf:type owl:Class ;
+                                     rdfs:subClassOf crm:E16_Measurement ,
+                                                     crmdig:D7_Digital_Machine_Event ;
+                                     rdfs:comment """This class comprises actions measuring physical properties using a digital device, that are determined by a systematic procedure and creates an instance of D9 Data Object, which is stored on an instance of D13 Digital Information Carrier.
+In contrast to instances of D10 Software Execution, environmental factors have an intended influence on the outcome of an instance of D11 Digital Measurement Event.
+Measurement devices may include running distinct software, such as the RAW to JPEG conversion in digital cameras.
+In this case, the event is regarded as instance of both classes, D10 Software Execution and D11 Digital Measurement Event.""" ;
+                                     rdfs:label "Digital Measurement Event"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/D12_Data_Transfer_Event
+crmdig:D12_Data_Transfer_Event rdf:type owl:Class ;
+                               rdfs:subClassOf crmdig:D7_Digital_Machine_Event ;
+                               rdfs:comment "This class comprises events that transfer a digital object from one digital carrier to another. Normally, the digital object remains the same. If in general or by observation the transfer implies or has implied some data corruption, the change of the digital objects may be documented distinguishing input and output rather than instantiating the property L14 transferred (was transferred by)." ;
+                               rdfs:label "Data Transfer Event"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/D13_Digital_Information_Carrier
+crmdig:D13_Digital_Information_Carrier rdf:type owl:Class ;
+                                       rdfs:subClassOf crm:E1_CRM_Entity ;
+                                       rdfs:comment "This class comprises all instances of E84 Information Carrier that are explicitly designed to be used as persistent digital physical carriers of instances of D1 Digital Object. A D13 Digital Information Carrier may or may not contain information, e.g., an empty diskette." ;
+                                       rdfs:label "Digital Information Carrier"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/D14_Software
+crmdig:D14_Software rdf:type owl:Class ;
+                    rdfs:subClassOf crmdig:D1_Digital_Object ;
+                    rdfs:comment "This class comprises software codes, computer programs, procedures and functions that are used to operate a system of digital objects." ;
+                    rdfs:label "Software"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/D1_Digital_Object
+crmdig:D1_Digital_Object rdf:type owl:Class ;
+                         rdfs:subClassOf crm:E73_Information_Object ;
+                         rdfs:comment """This class comprises identifiable immaterial items that can be represented as sets of bit sequences, such as data sets, e-texts, images, audio or video items, software, etc., and are documented as single units.
+Any aggregation of instances of D1 Digital Object into a whole treated as single unit is also regarded as an instance of D1 Digital Object.
+This means that for instance, the content of a DVD, an XML file on it, and an element of this file, are regarded as distinct instances of D1 Digital Object, mutually related by the P106 is composed of (forms part of) property.
+A D1 Digital Object does not depend on a specific physical carrier, and it can exist on one or more carriers simultaneously.""" ;
+                         rdfs:label "Digital Object"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/D29_Annotation_Object
+crmdig:D29_Annotation_Object rdf:type owl:Class ;
+                             rdfs:subClassOf crm:E89_Propositional_Object ;
+                             rdfs:comment "This class comprises objects that make propositions about other artefacts.Instances of this class are not the attributes themselves, by which things are annotated, but represent the connection between the concepts related in a proposition, and the activities of creation, modification and deletion.This class is specialized by appropriate subclasses to express more specific relationships between annotated things, such as knowledge object, same as etc." ;
+                             rdfs:label "Annotation Object"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/D2_Digitization_Process
+crmdig:D2_Digitization_Process rdf:type owl:Class ;
+                               rdfs:subClassOf crmdig:D11_Digital_Measurement_Event ;
+                               rdfs:comment """This class comprises events that result in the creation of instances of D9 Data Object that represent the appearance and/or form of an instance of E18 Physical Thing such as paper documents, statues, buildings, paintings, etc.
+A particular case is the analogue-to-digital conversion of audiovisual material.
+This class represents the transition from a material thing to an immaterial representation of it.
+The characteristic subsequent processing steps on digital objects are regarded as instances of D3 Formal Derivation.""" ;
+                               rdfs:label "Digitization Process"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/D30_Annotation_Event
+crmdig:D30_Annotation_Event rdf:type owl:Class ;
+                            rdfs:subClassOf crm:E65_Creation ;
+                            rdfs:comment "This class comprises events that describe the creation of associations (“Annotation Objects”) between objects or areas of objects of the Repository, with other objects or regions or persons, places, events. It is the event that creates the Annotation Object." ;
+                            rdfs:label "Annotation Event"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/D35_Area
+crmdig:D35_Area rdf:type owl:Class ;
+                rdfs:subClassOf crm:E26_Physical_Feature ,
+                                crmdig:D1_Digital_Object ;
+                rdfs:comment "This class describes a part (of any shape or size) of interest in basically any media object stored in the Object Repository, i.e., a text, an image, a video or a 3D model. It points to content consisting of just a portion or area of a file. In some contexts, however, the area can also point to content represented by an integral (i.e., proper) file. It is equal to the METS AREA element." ;
+                rdfs:label "Area"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/D3_Formal_Derivation
+crmdig:D3_Formal_Derivation rdf:type owl:Class ;
+                            rdfs:subClassOf crmdig:D10_Software_Execution ;
+                            rdfs:comment """This class comprises events that result in the creation of a D1 Digital Object from another one following a deterministic algorithm, such that the resulting instance of digital object shares representative properties with the original object.
+In other words, this class describes the transition from an immaterial object referred to by property L21 used as derivation source (was derivation source for) to another immaterial object referred to by property L22 created derivative (was derivative created by) preserving the representation of some things but in a different form. Characteristic examples are colour corrections, contrast changes and resizing of images.""" ;
+                            rdfs:label "Formal Derivation"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/D7_Digital_Machine_Event
+crmdig:D7_Digital_Machine_Event rdf:type owl:Class ;
+                                rdfs:subClassOf crm:E11_Modification ,
+                                                crm:E65_Creation ;
+                                rdfs:comment """This class comprises events that happen on physical digital devices following a human activity that intentionally caused its immediate or delayed initiation and results in the creation of a new instance of D1 Digital Object on behalf of the human actor.
+The input of a D7 Digital Machine Event may be parameter settings and/or data to be processed. Some D7 Digital Machine Events may form part of a wider E65 Creation event. In this case, all machine output of the partial events is regarded as creation of the overall activity.""" ;
+                                rdfs:label "Digital Machine Event"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/D8_Digital_Device
+crmdig:D8_Digital_Device rdf:type owl:Class ;
+                         rdfs:subClassOf crm:E22_Human-Made_Object ;
+                         rdfs:comment "This class comprises identifiable material items such as computers, scanners, cameras, etc. that have the capability to process or produce instances of D1 Digital Object." ;
+                         rdfs:label "Digital Device"@en .
+
+
+###  http://www.ics.forth.gr/isl/CRMdig/D9_Data_Object
+crmdig:D9_Data_Object rdf:type owl:Class ;
+                      rdfs:subClassOf crm:E54_Dimension ,
+                                      crmdig:D1_Digital_Object ;
+                      rdfs:comment "This class comprises instances of D1 Digital Object that are the direct result of a digital measurement or a formal derivative of it, containing quantitative properties of some physical things or other constellations of matter." ;
+                      rdfs:label "Data Object"@en .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
