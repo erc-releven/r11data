@@ -20,6 +20,9 @@ dependencies = [
     "lxml>=5.3.1",
     "jinja2>=3.1.6",
     "lodkit>=0.2.7",
+    "pandas>=2.3.1",
+    "openpyxl>=3.1.5",
+    "pydantic-extra-types>=2.10.5",
 ]
 
 [dependency-groups]
