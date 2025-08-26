@@ -9,6 +9,7 @@ from rdflib import Graph, Namespace, RDF, RDFS, URIRef
 
 crm = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
 so = Namespace("http://r11.eu/twc/ontologies/similarity/")
+star = Namespace("https://r11.eu/ns/star/")
 
 mkuri = URIConstructorFactory("https://r11.eu/ns/star/")
 orcid_aleks = "https://orcid.org/0009-0007-1432-0127"
@@ -38,11 +39,10 @@ def aleks_triples() -> Iterator[_Triple]:
 def generate_relation_triples(data: dict) -> Iterator[_Triple]:
     return ttl(
         mkuri(),
-        (RDF.type, crm.E13_Attribute_Assignment),
+        (RDF.type, star.E13_so_ID5),
         (crm.P14_carried_out_by, mkuri(orcid_aleks)),
         (crm.P140_assigned_attribute_to, URIRef(data["r11_uri"])),
         (crm.P141_assigned, URIRef(data["saws_uri"])),
-        (crm.P177_assigned_property_of_type, URIRef(so.ID5_related)),
     )
 
 
