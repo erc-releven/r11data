@@ -1,3 +1,4 @@
+import pandas as pd
 from r11data.tabular.main.models import Person
 from r11data.tabular.main.triple_generators import PersonRDFConverter, TripleGenerator
 from r11data.tabular.main.utils.df_utils import SheetLoader
@@ -20,9 +21,9 @@ lewis_persons_sheet = lewis_sheet_loader.load_persons_sheet()
 # print(len(graph))
 
 ########################################
-test_joe_df = lewis_persons_sheet.iloc[[254]]
+test_ioannes_df: pd.DataFrame = lewis_persons_sheet.iloc[[254]]
 test_lewis_person_triples = TripleGenerator(
-    df=test_joe_df, model_type=Person, model_converter=PersonRDFConverter
+    df=test_ioannes_df, model_type=Person, model_converter=PersonRDFConverter
 )
 
 
@@ -31,5 +32,5 @@ graph = RelevenGraph()
 for triple in test_lewis_person_triples:
     graph.add(triple)
 
-# print(len(graph))
+print(len(graph))
 print(graph.serialize())
