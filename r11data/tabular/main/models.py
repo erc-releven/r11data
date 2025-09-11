@@ -12,7 +12,9 @@ class Person(BaseModel):
     wisski_id: Annotated[
         AnyUrl | None, AfterValidator(lambda x: str(x) if x is not None else x)
     ] = Field(validation_alias="WissKI ID")
+
     identifier: str = Field(validation_alias="Identifier", coerce_numbers_to_str=True)
+
     descriptive_name: str | None = Field(validation_alias="Descriptive name")
     name_in_sources_orig: str | None = Field(validation_alias="Name in source (orig)")
     name_in_sources_transl: str | None = Field(
@@ -38,6 +40,7 @@ class Place(BaseModel):
     """Place model corresponding to the main 'Places' sheet."""
 
     reference_name: str = Field(validation_alias="Reference name")
+
     pleiades_id: AnyUrl | None = Field(validation_alias="Pleiades ID")
     geonames_id: AnyUrl | None = Field(validation_alias="Geonames ID")
     wikidata_id: AnyUrl | None = Field(validation_alias="Wikidata ID")
@@ -87,6 +90,7 @@ class TextPublication(BaseModel):
     """TextPublication model corresponding to the main 'Text publications' sheet."""
 
     text_identifier: str = Field(validation_alias="Text identifier")
+
     text_name: str | None = Field(validation_alias="Text name")
     creation_date: str | None = Field(validation_alias="Creation date")
     author: str | None = Field(validation_alias="Author")
