@@ -6,10 +6,7 @@ from lodkit import ClosedOntologyNamespace, NamespaceGraph, URIConstructorFactor
 from r11data.tabular.main.utils.paths import ontologies_path
 
 
-## for some reason, lodkit.ClosedOntologyNamespace does not load CRM
-# crm = ClosedOntologyNamespace(ontology=ontologies_path / "crm.ttl")
-
-crm = Namespace("http://www.cidoc-crm.org/cidoc-crm/")
+crm = ClosedOntologyNamespace(ontology=ontologies_path / "crm.ttl")
 crmdig = ClosedOntologyNamespace(ontology=ontologies_path / "crmdig.ttl")
 
 r11 = Namespace("https://r11.eu/rdf/resource/")

@@ -7,7 +7,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://www.cidoc-crm.org/cidoc-crm#> .
 
-<http://www.cidoc-crm.org/cidoc-crm> rdf:type owl:Ontology ;
+<http://www.cidoc-crm.org/cidoc-crm/> rdf:type owl:Ontology ;
                                       owl:versionIRI <http://www.cidoc-crm.org/cidoc-crm/7.1.2> ;
                                       rdfs:comment "This ontology is the result of importing the class and property definitions of the RDF file given at https://cidoc-crm.org/rdfs/7.1.2/CIDOC_CRM_v7.1.2.rdfs ."@en .
 
