@@ -13,7 +13,6 @@ from pydantic import BaseModel
 from r11data.tabular.main.models import Person
 from r11data.tabular.main.utils.df_utils import Sheets
 from r11data.tabular.main.utils.rdf_utils import (
-    aleks_uri,
     crm,
     get_source_name_lang_tag,
     lewis_uri,

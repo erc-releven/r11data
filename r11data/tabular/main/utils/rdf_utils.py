@@ -1,8 +1,9 @@
 from typing import Literal as TypingLiteral
 
+from rdflib import Namespace
+
 from lodkit import ClosedOntologyNamespace, NamespaceGraph, URIConstructorFactory
-from r11data.tabular.main.utils.paths import ontologies_path
-from rdflib import Namespace, URIRef
+from r11data.utils.paths import ontologies_path
 
 
 crm = ClosedOntologyNamespace(ontology=ontologies_path / "crm.ttl")

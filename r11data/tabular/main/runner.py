@@ -1,5 +1,3 @@
-from functools import cached_property
-
 import pandas as pd
 from r11data.tabular.main.models import Person
 from r11data.tabular.main.triple_generators import PersonRDFConverter, TripleGenerator
@@ -44,6 +42,7 @@ person_triples = TripleGenerator(
 
 for triple in person_triples:
     aleks_graph.add(triple)
+
 
 with open(output_tabular / "aleks_persons.ttl", "w") as f:
     f.write(aleks_graph.serialize())

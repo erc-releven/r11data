@@ -8,8 +8,9 @@ r11data_base_path = files("r11data")
 
 env_path = r11data_base_path / "../.env"
 
-output: Traversable = files("r11data.output")
+ontologies_path = files("r11data.ontologies")
 
+output: Traversable = files("r11data.output")
 output_tabular: Traversable = output / "tabular"
 output_starlegs: Traversable = output / "starlegs"
 
