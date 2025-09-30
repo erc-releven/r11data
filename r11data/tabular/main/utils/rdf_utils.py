@@ -1,13 +1,13 @@
 from typing import Literal as TypingLiteral
 
-from rdflib import Namespace, URIRef
-
 from lodkit import ClosedOntologyNamespace, NamespaceGraph, URIConstructorFactory
 from r11data.tabular.main.utils.paths import ontologies_path
+from rdflib import Namespace, URIRef
 
 
 crm = ClosedOntologyNamespace(ontology=ontologies_path / "crm.ttl")
 crmdig = ClosedOntologyNamespace(ontology=ontologies_path / "crmdig.ttl")
+lrm = ClosedOntologyNamespace(ontology=ontologies_path / "lrmoo.ttl")
 
 r11 = Namespace("https://r11.eu/rdf/resource/")
 star = Namespace("https://r11.eu/ns/star/")
@@ -15,6 +15,9 @@ r11spec = Namespace("https://r11.eu/ns/spec/")
 r11pros = Namespace("https://r11.eu/ns/prosopography/")
 
 mkuri = URIConstructorFactory(r11)
+
+lewis_uri = mkuri("0009-0007-3535-6823")
+aleks_uri = mkuri("0009-0007-1432-0127")
 
 
 class RelevenGraph(NamespaceGraph):
