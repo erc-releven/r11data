@@ -4,11 +4,14 @@ from collections.abc import Iterable, Iterator
 from functools import cached_property
 import itertools
 
+from rdflib import Literal, RDF, RDFS, URIRef
+import structlog
+
 from lodkit import _Triple, ttl
 import pandas as pd
 from pydantic import BaseModel
 from r11data.tabular.main.models import Person
-from r11data.tabular.main.utils.df_utils import SheetLoader
+from r11data.tabular.main.utils.df_utils import Sheets
 from r11data.tabular.main.utils.rdf_utils import (
     aleks_uri,
     crm,
@@ -21,21 +24,19 @@ from r11data.tabular.main.utils.rdf_utils import (
     r11spec,
     star,
 )
-from rdflib import Literal, RDF, RDFS, URIRef
-import structlog
 
 
 logger = structlog.get_logger()
 
 
 class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
-    def __init__(self, model: _TModel, sheets: SheetLoader):
+    def __init__(self, model: _TModel, sheets: Sheets):
         self.model = model
         self.sheets = sheets
 
 
 class PersonRDFConverter(_ModelRDFConverter):
-    def __init__(self, model: Person, sheets: SheetLoader):
+    def __init__(self, model: Person, sheets: Sheets):
         super().__init__(model=model, sheets=sheets)
 
     @cached_property
@@ -51,7 +52,7 @@ class PersonRDFConverter(_ModelRDFConverter):
     def publication_label(self) -> str:
         publication = self.model.source_text_publication
 
-        publications_df = self.sheets.text_publications_sheet
+        publications_df: pd.DataFrame = self.sheets.text_publications
         mask = publications_df["Text identifier"] == publication
         publication_label = publications_df.loc[mask, "Edition"].iloc[0]
 
@@ -64,7 +65,7 @@ class PersonRDFConverter(_ModelRDFConverter):
         if (authority := self.model.authority) is None:
             return None
 
-        persons_df: pd.DataFrame = self.sheets.persons_sheet
+        persons_df: pd.DataFrame = self.sheets.persons
         mask = persons_df["ID string"] == authority
         _row = persons_df[mask]
 
@@ -469,7 +470,7 @@ class TripleGenerator[_TModel: BaseModel](Iterable[_Triple]):
     def __init__(
         self,
         df: pd.DataFrame,
-        sheets: SheetLoader,
+        sheets: Sheets,
         model_type: type[_TModel],
         model_converter: type[_ModelRDFConverter],
     ) -> None:

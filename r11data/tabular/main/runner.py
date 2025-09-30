@@ -3,7 +3,7 @@ from functools import cached_property
 import pandas as pd
 from r11data.tabular.main.models import Person
 from r11data.tabular.main.triple_generators import PersonRDFConverter, TripleGenerator
-from r11data.tabular.main.utils.df_utils import SheetLoader
+from r11data.tabular.main.utils.df_utils import Sheets
 from r11data.tabular.main.utils.paths import tabular_main_sources_path
 from r11data.tabular.main.utils.rdf_utils import RelevenGraph
 from r11data.utils.paths import output_tabular
@@ -30,8 +30,8 @@ from r11data.utils.paths import output_tabular
 # print(graph.serialize())
 
 ##################################################
-aleks_sheet_loader = SheetLoader(tabular_main_sources_path / "aleks.xlsx")
-aleks_persons_sheet: pd.DataFrame = aleks_sheet_loader.persons_sheet
+aleks_sheet_loader = Sheets(tabular_main_sources_path / "aleks.xlsx")
+aleks_persons_sheet: pd.DataFrame = aleks_sheet_loader.persons
 
 aleks_graph = RelevenGraph()
 
@@ -50,8 +50,8 @@ with open(output_tabular / "aleks_persons.ttl", "w") as f:
 
 ##################################################
 
-lewis_sheet_loader = SheetLoader(tabular_main_sources_path / "lewis.xlsx")
-lewis_persons_sheet: pd.DataFrame = lewis_sheet_loader.persons_sheet
+lewis_sheet_loader = Sheets(tabular_main_sources_path / "lewis.xlsx")
+lewis_persons_sheet: pd.DataFrame = lewis_sheet_loader.persons
 
 lewis_graph = RelevenGraph()
 
@@ -64,6 +64,7 @@ lewis_persons_triples = TripleGenerator(
 
 for triple in lewis_persons_triples:
     lewis_graph.add(triple)
+
 
 with open(output_tabular / "lewis_persons.ttl", "w") as f:
     f.write(lewis_graph.serialize())
