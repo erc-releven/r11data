@@ -2,10 +2,12 @@ from functools import cached_property
 import re
 
 import pandas as pd
+from rdflib import URIRef
 
 
 class Sheets:
-    def __init__(self, io, check: bool = False):
+    def __init__(self, owner_id: URIRef, io, check: bool = False):
+        self.owner_id = owner_id
         self.io = io
 
         if check:
