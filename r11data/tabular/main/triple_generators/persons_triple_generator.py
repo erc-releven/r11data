@@ -1,21 +1,16 @@
-"""Triple generators for main spreadsheet RDF conversion."""
+"""TripleGenerator for the Persons sheet."""
 
-from collections.abc import Iterable, Iterator
+from collections.abc import Iterator
 from functools import cached_property
 import itertools
 
-from rdflib import Literal, RDF, RDFS, URIRef
-import structlog
-
 from lodkit import _Triple, ttl
 import pandas as pd
-from pydantic import BaseModel
 from r11data.tabular.main.models import Person
-from r11data.tabular.main.utils.df_utils import Sheets
+from r11data.tabular.main.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.main.utils.rdf_utils import (
     crm,
     get_source_name_lang_tag,
-    lewis_uri,
     lrm,
     mkuri,
     r11,
@@ -23,21 +18,14 @@ from r11data.tabular.main.utils.rdf_utils import (
     r11spec,
     star,
 )
+from rdflib import Literal, RDF, RDFS, URIRef
+import structlog
 
 
 logger = structlog.get_logger()
 
 
-class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
-    def __init__(self, model: _TModel, sheets: Sheets):
-        self.model = model
-        self.sheets = sheets
-
-
-class PersonRDFConverter(_ModelRDFConverter):
-    def __init__(self, model: Person, sheets: Sheets):
-        super().__init__(model=model, sheets=sheets)
-
+class PersonRDFConverter(_ModelRDFConverter[Person]):
     @cached_property
     def person_uri(self):
         person_uri = (
@@ -158,7 +146,7 @@ class PersonRDFConverter(_ModelRDFConverter):
             (RDF.type, star.E13_lrmoo_R15),
             (crm.P140_assigned_attribute_to, passage_uri),
             (crm.P141_assigned, publication_uri),
-            (crm.P14_carried_out_by, lewis_uri),  # todo: get team member URIs
+            (crm.P14_carried_out_by, self.sheets.owner_id),
         )
 
         yield (publication_uri, crm.P67_refers_to, e13_lrmoo_r15_uri)
@@ -451,34 +439,3 @@ class PersonRDFConverter(_ModelRDFConverter):
             self.language_skill_triples(),
             self.religion_triples(),
         )
-
-
-class PlaceRDFConverter(_ModelRDFConverter):
-    pass
-
-
-class AuthorGroupRDFConverter(_ModelRDFConverter):
-    pass
-
-
-class TextPublicationRowRDFConverter(_ModelRDFConverter):
-    pass
-
-
-class TripleGenerator[_TModel: BaseModel](Iterable[_Triple]):
-    def __init__(
-        self,
-        df: pd.DataFrame,
-        sheets: Sheets,
-        model_type: type[_TModel],
-        model_converter: type[_ModelRDFConverter],
-    ) -> None:
-        self.df = df
-        self.sheets = sheets
-        self.model_type = model_type
-        self.model_converter = model_converter
-
-    def __iter__(self) -> Iterator[_Triple]:
-        for _, row_series in self.df.iterrows():
-            model_instance: _TModel = self.model_type(**row_series.to_dict())
-            yield from self.model_converter(model=model_instance, sheets=self.sheets)
