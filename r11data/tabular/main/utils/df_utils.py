@@ -61,7 +61,7 @@ class Sheets:
             return df_cleaned
 
         df = (
-            pd.read_excel(self.io, sheet_name=sheet_name, dtype=str)
+            pd.read_excel(self.io, sheet_name=sheet_name, dtype=str, engine="calamine")
             .pipe(lambda df: df.where(pd.notna(df), None))  # cast NaN to None
             .pipe(lambda df: df.dropna(how="all"))  # drop all-None rows
             .pipe(_filter_required)  # filter rows with non-truthy required fields
