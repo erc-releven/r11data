@@ -3,7 +3,7 @@ from r11data.tabular.main.triple_generators import PersonRDFConverter
 from r11data.tabular.main.triple_generators.bases import TripleGenerator
 from r11data.tabular.main.utils.df_utils import Sheets
 from r11data.tabular.main.utils.paths import tabular_main_sources_path
-from r11data.tabular.main.utils.rdf_utils import aleks_uri, lewis_uri
+from r11data.tabular.main.utils.rdf_utils import RelevenGraph, aleks_uri, lewis_uri
 
 
 ##################################################
@@ -43,8 +43,8 @@ lewis_person_triple_generator: TripleGenerator[Person] = TripleGenerator(
 )
 
 
-# lewis_persons_graph: RelevenGraph = lewis_person_triple_generator.to_graph()
-# print(len(lewis_persons_graph))
+lewis_persons_graph: RelevenGraph = lewis_person_triple_generator.to_graph()
+print(len(lewis_persons_graph))
 
 #### Aleks
 aleks_sheets_io = tabular_main_sources_path / "aleks.xlsx"

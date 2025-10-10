@@ -1,6 +1,7 @@
 """Base classes for triple generators."""
 
 from collections.abc import Iterable, Iterator
+from typing import overload
 
 from lodkit import _Triple
 import pandas as pd
@@ -33,6 +34,12 @@ class TripleGenerator[_TModel: BaseModel](Iterable[_Triple]):
         for _, row_series in self.focus_sheet.iterrows():
             model_instance: _TModel = self.model_type(**row_series.to_dict())
             yield from self.model_converter(model=model_instance, sheets=self.sheets)
+
+    @overload
+    def to_graph(self, graph: None = None) -> RelevenGraph: ...
+
+    @overload
+    def to_graph[TGraph: Graph](self, graph: TGraph) -> TGraph: ...
 
     def to_graph(self, graph: Graph | None = None) -> Graph:
         _graph: Graph = RelevenGraph() if graph is None else graph

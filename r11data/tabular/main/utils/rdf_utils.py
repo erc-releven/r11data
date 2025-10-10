@@ -1,9 +1,8 @@
 from typing import Literal as TypingLiteral
 
-from rdflib import Namespace
-
 from lodkit import ClosedOntologyNamespace, NamespaceGraph, URIConstructorFactory
 from r11data.utils.paths import ontologies_path
+from rdflib import Namespace
 
 
 crm = ClosedOntologyNamespace(ontology=ontologies_path / "crm.ttl")
@@ -22,8 +21,8 @@ aleks_uri = mkuri("0009-0007-1432-0127")
 
 
 class RelevenGraph(NamespaceGraph):
-    crm = crm
     crmdig = crmdig
+    crm = crm
 
     r11 = r11
     star = star
