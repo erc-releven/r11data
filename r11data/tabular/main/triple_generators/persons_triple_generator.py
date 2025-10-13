@@ -35,49 +35,6 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
         )
         return person_uri
 
-    @cached_property
-    def publication_label(self) -> str:
-        publication = self.model.source_text_publication
-
-        publications_df: pd.DataFrame = self.sheets.text_publications
-        mask = publications_df["Text identifier"] == publication
-        publication_label = publications_df.loc[mask, "Edition"].iloc[0]
-
-        return publication_label
-
-    @cached_property
-    def authority_data(self) -> tuple[URIRef, str] | None:
-        """Relational lookup for Authority."""
-
-        if (authority := self.model.authority) is None:
-            return None
-
-        persons_df: pd.DataFrame = self.sheets.persons
-        mask = persons_df["ID string"] == authority
-        _row = persons_df[mask]
-
-        if _row.empty:
-            msg = f"Relational lookup for Authority '{authority}' failed."
-            logger.warn(msg)
-            raise RuntimeError(msg)
-
-        row = _row.iloc[0]
-
-        _wisski_id = (
-            URIRef(_id)
-            if (_id := row["WissKI ID"]) is not None
-            else mkuri(row["Identifier"])
-        )
-        _identifier = persons_df.loc[mask, "Identifier"].iloc[0]
-
-        authority_uri: URIRef = (
-            mkuri(_identifier) if pd.isna(_wisski_id) else URIRef(_wisski_id)
-        )
-        authority_label = persons_df.loc[mask, "Descriptive name"].iloc[0]
-
-        assert authority_uri and authority_label
-        return authority_uri, authority_label
-
     def base_triples(self) -> Iterator[_Triple]:
         yield (self.person_uri, RDF.type, crm.E21_Person)
 

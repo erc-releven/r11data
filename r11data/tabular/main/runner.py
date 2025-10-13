@@ -1,5 +1,5 @@
-from r11data.tabular.main.models import Person
-from r11data.tabular.main.triple_generators import PersonRDFConverter
+from r11data.tabular.main.models import Person, Place
+from r11data.tabular.main.triple_generators import PersonRDFConverter, PlaceRDFConverter
 from r11data.tabular.main.triple_generators.bases import TripleGenerator
 from r11data.tabular.main.utils.df_utils import Sheets
 from r11data.tabular.main.utils.paths import tabular_main_sources_path
@@ -30,6 +30,8 @@ from r11data.tabular.main.utils.rdf_utils import RelevenGraph, aleks_uri, lewis_
 ##################################################
 
 
+##################################################
+##################################################
 #### Lewis
 lewis_sheets_io = tabular_main_sources_path / "lewis.xlsx"
 lewis_sheets: Sheets = Sheets(owner_id=lewis_uri, io=lewis_sheets_io)
@@ -43,9 +45,24 @@ lewis_person_triple_generator: TripleGenerator[Person] = TripleGenerator(
 )
 
 
-lewis_persons_graph: RelevenGraph = lewis_person_triple_generator.to_graph()
-print(len(lewis_persons_graph))
+# lewis_persons_graph: RelevenGraph = lewis_person_triple_generator.to_graph()
+# print(len(lewis_persons_graph))
 
+
+##################################################
+lewis_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
+    focus_sheet=lewis_sheets.places,
+    sheets=lewis_sheets,
+    model_type=Place,
+    model_converter=PlaceRDFConverter,
+)
+
+# lewis_places_graph = lewis_places_triple_generator.to_graph()
+# print(len(lewis_places_graph))
+# print(lewis_places_graph.serialize())
+
+##################################################
+##################################################
 #### Aleks
 aleks_sheets_io = tabular_main_sources_path / "aleks.xlsx"
 aleks_sheets: Sheets = Sheets(owner_id=aleks_uri, io=aleks_sheets_io)
@@ -61,3 +78,17 @@ aleks_person_triple_generator: TripleGenerator[Person] = TripleGenerator(
 
 # aleks_persons_graph: RelevenGraph = aleks_person_triple_generator.to_graph()
 # print(len(aleks_persons_graph))
+
+##################################################
+
+aleks_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
+    focus_sheet=aleks_sheets.places,
+    sheets=aleks_sheets,
+    model_type=Place,
+    model_converter=PlaceRDFConverter,
+)
+
+
+# aleks_places_graph: RelevenGraph = aleks_places_triple_generator.to_graph()
+# print(len(aleks_places_graph))
+# print(aleks_places_graph.serialize())

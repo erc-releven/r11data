@@ -10,6 +10,7 @@ from pydantic import (
     Field,
     model_validator,
 )
+
 from pydantic_extra_types.coordinate import Coordinate
 
 
@@ -94,7 +95,7 @@ class Place(BaseModel):
     succeeds_place: str | None = Field(validation_alias="Succeeds place")
     incorporates_place: str | None = Field(validation_alias="Incorporates place")
     had_population_group: str | None = Field(validation_alias="Had population group")
-    authority: str = Field(validation_alias="Authority")
+    authority: str | None = Field(validation_alias="Authority")
     authority_group: str | None = Field(validation_alias="Authority group")
     based_on: str | None = Field(validation_alias="Based on")
     source_text_publication: str | None = Field(
