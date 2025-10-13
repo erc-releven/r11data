@@ -5,7 +5,6 @@ from functools import cached_property
 import itertools
 
 from lodkit import _Triple, ttl
-import pandas as pd
 from r11data.tabular.main.models import Person
 from r11data.tabular.main.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.main.utils.rdf_utils import (

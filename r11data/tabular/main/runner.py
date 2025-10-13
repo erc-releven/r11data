@@ -3,7 +3,7 @@ from r11data.tabular.main.triple_generators import PersonRDFConverter, PlaceRDFC
 from r11data.tabular.main.triple_generators.bases import TripleGenerator
 from r11data.tabular.main.utils.df_utils import Sheets
 from r11data.tabular.main.utils.paths import tabular_main_sources_path
-from r11data.tabular.main.utils.rdf_utils import RelevenGraph, aleks_uri, lewis_uri
+from r11data.tabular.main.utils.rdf_utils import aleks_uri, lewis_uri
 
 
 ##################################################
