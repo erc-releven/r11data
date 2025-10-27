@@ -29,6 +29,10 @@ class Sheets:
         return self.load_sheet(sheet_name="Author groups")
 
     @cached_property
+    def actor_groups(self) -> pd.DataFrame:
+        return self.load_sheet(sheet_name="Actor groups")
+
+    @cached_property
     def text_publications(self) -> pd.DataFrame:
         return self.load_sheet(
             sheet_name="Text publications",

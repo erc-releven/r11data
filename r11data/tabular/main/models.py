@@ -10,7 +10,6 @@ from pydantic import (
     Field,
     model_validator,
 )
-
 from pydantic_extra_types.coordinate import Coordinate
 
 
@@ -126,6 +125,19 @@ class AuthorGroup(BaseModel):
         )
 
         return self
+
+
+class ActorGroup(BaseModel):
+    """ActorGroup model corresponding to the main 'Actor Group' sheet."""
+
+    group_identifier: str = Field(validation_alias="Group identifier")
+    group_member: str = Field(validation_alias="Group member")
+    authority: str = Field(validation_alias="Authority")
+    authority_group: str | None = Field(validation_alias="Authority group")
+    based_on: str | None = Field(validation_alias="Based on")
+    source_text_publication: str = Field(validation_alias="Source text/publication")
+    source_text_reference: str = Field(validation_alias="Source text/reference")
+    source_text_excerpt: str | None = Field(validation_alias="Source text/excerpt")
 
 
 class TextPublication(BaseModel):
