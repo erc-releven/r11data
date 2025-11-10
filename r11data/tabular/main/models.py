@@ -131,13 +131,30 @@ class ActorGroup(BaseModel):
     """ActorGroup model corresponding to the main 'Actor Group' sheet."""
 
     group_identifier: str = Field(validation_alias="Group identifier")
-    group_member: str = Field(validation_alias="Group member")
-    authority: str = Field(validation_alias="Authority")
+    # optional for Marton
+    group_member: str | None = Field(validation_alias="Group member")
+    # optional for Marton
+    authority: str | None = Field(validation_alias="Authority")
     authority_group: str | None = Field(validation_alias="Authority group")
     based_on: str | None = Field(validation_alias="Based on")
-    source_text_publication: str = Field(validation_alias="Source text/publication")
-    source_text_reference: str = Field(validation_alias="Source text/reference")
+    # optional for Marton
+    source_text_publication: str | None = Field(
+        validation_alias="Source text/publication"
+    )
+    # optional for Marton
+    source_text_reference: str | None = Field(validation_alias="Source text/reference")
     source_text_excerpt: str | None = Field(validation_alias="Source text/excerpt")
+
+    # duplicate validator from Person model
+    @model_validator(mode="after")
+    def _check_publication_reference_mutual_dependent(self) -> Self:
+        if (self.source_text_publication is None) != (
+            self.source_text_reference is None
+        ):
+            raise ValueError(
+                "Text Publication and Text Reference fields are mutually dependent."
+            )
+        return self
 
 
 class TextPublication(BaseModel):
@@ -160,3 +177,13 @@ class TextPublication(BaseModel):
     )
     source_text_reference: str | None = Field(validation_alias="Source text/reference")
     source_text_excerpt: str | None = Field(validation_alias="Source text/excerpt")
+
+    @model_validator(mode="after")
+    def _check_publication_reference_mutual_dependent(self) -> Self:
+        if (self.source_text_publication is None) != (
+            self.source_text_reference is None
+        ):
+            raise ValueError(
+                "Text Publication and Text Reference fields are mutually dependent."
+            )
+        return self

@@ -13,6 +13,7 @@ r11 = Namespace("https://r11.eu/rdf/resource/")
 star = Namespace("https://r11.eu/ns/star/")
 r11spec = Namespace("https://r11.eu/ns/spec/")
 r11pros = Namespace("https://r11.eu/ns/prosopography/")
+pwro = Namespace("https://ontology.swissartresearch.net/pwro/")
 
 mkuri = URIConstructorFactory(r11)
 

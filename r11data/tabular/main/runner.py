@@ -1,7 +1,10 @@
-from r11data.tabular.main.models import AuthorGroup, Person, Place
+from r11data.tabular.main.models import ActorGroup, AuthorGroup, Person, Place
 from r11data.tabular.main.triple_generators import PersonRDFConverter, PlaceRDFConverter
-from r11data.tabular.main.triple_generators.author_groups_triple_generator import (
+from r11data.tabular.main.triple_generators import (
+    ActorGroupsRDFConverter,
     AuthorGroupsRDFConverter,
+    PersonRDFConverter,
+    PlaceRDFConverter,
 )
 from r11data.tabular.main.triple_generators.bases import TripleGenerator
 from r11data.tabular.main.utils.df_utils import Sheets
@@ -147,3 +150,48 @@ marton_author_groups_triple_generator: TripleGenerator[AuthorGroup] = TripleGene
 # marton_author_groups_graph = marton_author_groups_triple_generator.to_graph()
 # print(len(marton_author_groups_graph))
 # print(marton_author_groups_graph.serialize())
+
+##################################################
+##################################################
+#### ActorGroups
+
+
+lewis_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenerator(
+    focus_sheet=lewis_sheets.actor_groups,
+    sheets=lewis_sheets,
+    model_type=ActorGroup,
+    model_converter=ActorGroupsRDFConverter,
+)
+
+
+# lewis_actor_groups_graph = lewis_actor_groups_triple_generator.to_graph()
+# print(lewis_actor_groups_graph.serialize())
+# print(len(lewis_actor_groups_graph))
+
+##################################################
+
+
+aleks_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenerator(
+    focus_sheet=aleks_sheets.actor_groups,
+    sheets=aleks_sheets,
+    model_type=ActorGroup,
+    model_converter=ActorGroupsRDFConverter,
+)
+
+# aleks_author_groups_graph = aleks_author_groups_triple_generator.to_graph()
+# print(aleks_author_groups_graph.serialize())
+# print(len(aleks_author_groups_graph))
+
+##################################################
+
+
+marton_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenerator(
+    focus_sheet=marton_sheets.actor_groups,
+    sheets=marton_sheets,
+    model_type=ActorGroup,
+    model_converter=ActorGroupsRDFConverter,
+)
+
+# marton_actor_groups_graph = marton_actor_groups_triple_generator.to_graph()
+# print(marton_actor_groups_graph.serialize())
+# print(len(marton_actor_groups_graph))
