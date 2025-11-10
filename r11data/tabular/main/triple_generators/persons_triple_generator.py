@@ -30,7 +30,7 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
         person_uri = (
             mkuri(self.model.identifier)
             if (_wisski_id := self.model.wisski_id) is None
-            else URIRef(_wisski_id)
+            else URIRef(str(_wisski_id))
         )
         return person_uri
 
