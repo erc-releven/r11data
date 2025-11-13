@@ -13,7 +13,42 @@ from pydantic import (
 from pydantic_extra_types.coordinate import Coordinate
 
 
-class Person(BaseModel):
+class _AuthoritySourceBase(BaseModel):
+    """Base model for Authority/Text data.
+
+    The fields and validators defined in this base model
+    are common across several sheets and ergo can be generalized.
+    """
+
+    authority: str | None = Field(validation_alias="Authority")
+    authority_group: str | None = Field(validation_alias="Authority group")
+    based_on: str | None = Field(validation_alias="Based on")
+    source_text_publication: str | None = Field(
+        validation_alias="Source text/publication"
+    )
+    source_text_reference: str | None = Field(validation_alias="Source text/reference")
+    source_text_excerpt: str | None = Field(validation_alias="Source text/excerpt")
+
+    @model_validator(mode="after")
+    def _check_authority_authority_group_mutual_exclusive(self) -> Self:
+        if self.authority and self.authority_group:
+            raise ValueError(
+                "Authority and Authority Group fields are mutually exclusive."
+            )
+        return self
+
+    # note: this urgently needs to be reflected in the triple generators
+    @model_validator(mode="after")
+    def _check_publication_reference_mutual_dependent(self) -> Self:
+        if (
+            self.source_text_reference is not None
+            and self.source_text_publication is None
+        ):
+            raise ValueError("Text Reference without Text Publication not allowed.")
+        return self
+
+
+class Person(_AuthoritySourceBase):
     """Person model corresponding to the main 'Persons' sheet."""
 
     identifier: str = Field(validation_alias="Identifier", coerce_numbers_to_str=True)
@@ -25,7 +60,6 @@ class Person(BaseModel):
     descriptive_name: str = Field(validation_alias="Descriptive name")
     id_string: str = Field(validation_alias="ID string")
 
-    # optional fields
     wisski_id: Annotated[
         AnyUrl | None, AfterValidator(lambda x: str(x) if x is not None else x)
     ] = Field(validation_alias="WissKI ID")
@@ -42,14 +76,6 @@ class Person(BaseModel):
     legal_role: str | None = Field(validation_alias="Legal role (C12)")
     language_skill: str | None = Field(validation_alias="Language skill")
     religion: str | None = Field(validation_alias="Religion")
-    authority: str | None = Field(validation_alias="Authority")
-    authority_group: str | None = Field(validation_alias="Authority group")
-    based_on: str | None = Field(validation_alias="Based on")
-    source_text_publication: str | None = Field(
-        validation_alias="Source text/publication"
-    )
-    source_text_reference: str | None = Field(validation_alias="Source text/reference")
-    source_text_excerpt: str | None = Field(validation_alias="Source text/excerpt")
 
     @model_validator(mode="before")
     @classmethod
@@ -58,26 +84,8 @@ class Person(BaseModel):
             data["Descriptive name"] = data["Identifier"]
         return data
 
-    @model_validator(mode="after")
-    def _check_publication_reference_mutual_dependent(self) -> Self:
-        if (self.source_text_publication is None) != (
-            self.source_text_reference is None
-        ):
-            raise ValueError(
-                "Text Publication and Text Reference fields are mutually dependent."
-            )
-        return self
 
-    @model_validator(mode="after")
-    def _check_authority_authority_group_mutual_exclusive(self) -> Self:
-        if self.authority and self.authority_group:
-            raise ValueError(
-                "Authority and Authority Group fields are mutually exclusive."
-            )
-        return self
-
-
-class Place(BaseModel):
+class Place(_AuthoritySourceBase):
     """Place model corresponding to the main 'Places' sheet."""
 
     reference_name: str = Field(validation_alias="Reference name")
@@ -94,19 +102,14 @@ class Place(BaseModel):
     succeeds_place: str | None = Field(validation_alias="Succeeds place")
     incorporates_place: str | None = Field(validation_alias="Incorporates place")
     had_population_group: str | None = Field(validation_alias="Had population group")
-    authority: str | None = Field(validation_alias="Authority")
-    authority_group: str | None = Field(validation_alias="Authority group")
-    based_on: str | None = Field(validation_alias="Based on")
-    source_text_publication: str | None = Field(
-        validation_alias="Source text/publication"
-    )
-    source_text_excerpt: str | None = Field(validation_alias="Source text/excerpt")
 
 
 class AuthorGroup(BaseModel):
     """AuthorGroup model corresponding to the main 'Author groups' sheet."""
 
-    wisski_id: AnyUrl | None = Field(validation_alias="WissKI ID")
+    wisski_id: Annotated[
+        AnyUrl | None, AfterValidator(lambda x: str(x) if x is not None else x)
+    ] = Field(validation_alias="WissKI ID")
 
     group_identifier: str = Field(validation_alias="Group identifier")
     group_member: str = Field(validation_alias="Group member")
@@ -127,37 +130,15 @@ class AuthorGroup(BaseModel):
         return self
 
 
-class ActorGroup(BaseModel):
+class ActorGroup(_AuthoritySourceBase):
     """ActorGroup model corresponding to the main 'Actor Group' sheet."""
 
     group_identifier: str = Field(validation_alias="Group identifier")
-    # optional for Marton
+    # optional only for Marton
     group_member: str | None = Field(validation_alias="Group member")
-    # optional for Marton
-    authority: str | None = Field(validation_alias="Authority")
-    authority_group: str | None = Field(validation_alias="Authority group")
-    based_on: str | None = Field(validation_alias="Based on")
-    # optional for Marton
-    source_text_publication: str | None = Field(
-        validation_alias="Source text/publication"
-    )
-    # optional for Marton
-    source_text_reference: str | None = Field(validation_alias="Source text/reference")
-    source_text_excerpt: str | None = Field(validation_alias="Source text/excerpt")
-
-    # duplicate validator from Person model
-    @model_validator(mode="after")
-    def _check_publication_reference_mutual_dependent(self) -> Self:
-        if (self.source_text_publication is None) != (
-            self.source_text_reference is None
-        ):
-            raise ValueError(
-                "Text Publication and Text Reference fields are mutually dependent."
-            )
-        return self
 
 
-class TextPublication(BaseModel):
+class TextPublication(_AuthoritySourceBase):
     """TextPublication model corresponding to the main 'Text publications' sheet."""
 
     text_identifier: str = Field(validation_alias="Text identifier")
@@ -171,21 +152,5 @@ class TextPublication(BaseModel):
 
     editor: str | None = Field(validation_alias="Editor")
     editor_group: str | None = Field(validation_alias="Editor group")
-    authority: str | None = Field(validation_alias="Authority")
-    authority_group: str | None = Field(validation_alias="Authority group")
 
-    source_text_publication: str | None = Field(
-        validation_alias="Source text/publication"
-    )
-    source_text_reference: str | None = Field(validation_alias="Source text/reference")
-    source_text_excerpt: str | None = Field(validation_alias="Source text/excerpt")
-
-    # @model_validator(mode="after")
-    # def _check_publication_reference_mutual_dependent(self) -> Self:
-    #     if (self.source_text_publication is None) != (
-    #         self.source_text_reference is None
-    #     ):
-    #         raise ValueError(
-    #             "Text Publication and Text Reference fields are mutually dependent."
-    #         )
-    #     return self
+    based_on: str | None = Field(default=None, exclude=True)  # based_on not in TP sheet
