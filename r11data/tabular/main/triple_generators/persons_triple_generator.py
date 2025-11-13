@@ -26,8 +26,8 @@ logger = structlog.get_logger()
 
 class PersonRDFConverter(_ModelRDFConverter[Person]):
     @cached_property
-    def person_uri(self):
-        person_uri = (
+    def person_uri(self) -> URIRef:
+        person_uri: URIRef = (
             mkuri(self.model.identifier)
             if (_wisski_id := self.model.wisski_id) is None
             else URIRef(str(_wisski_id))
@@ -35,10 +35,11 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
         return person_uri
 
     def base_triples(self) -> Iterator[_Triple]:
-        yield (self.person_uri, RDF.type, crm.E21_Person)
-
-        if (name := self.model.descriptive_name) is not None:
-            yield (self.person_uri, RDFS.label, Literal(name))
+        return ttl(
+            self.person_uri,
+            (RDF.type, crm.E21_Person),
+            (RDFS.label, Literal(self.model.descriptive_name)),
+        )
 
     def identifier_triples(self) -> Iterator[_Triple]:
         service_uri = URIRef(self.model.service)
@@ -62,7 +63,10 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
         if (reference := self.model.source_text_reference) is None:
             return
 
-        passage_uri = mkuri(f"{self.model.source_text_publication} - {reference}")
+        publication = self.model.source_text_publication
+        assert publication is not None
+
+        passage_uri = mkuri(f"{publication} - {reference}")
 
         yield from ttl(
             passage_uri, (RDF.type, crm.E33_Linguistic_Object), (RDFS.label, reference)
@@ -107,6 +111,7 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
 
         yield (publication_uri, crm.P67_refers_to, e13_lrmoo_r15_uri)
 
+    #
     def appellation_assertion_triples(self):
         e13_crm_p1_uri = mkuri()
         e33_e41_uri = mkuri()
@@ -384,6 +389,7 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
             self.base_triples(),
             self.identifier_triples(),
             self.passage_triples(),
+            #
             self.publication_triples(),
             self.complex_work_triples(),
             self.appellation_assertion_triples(),

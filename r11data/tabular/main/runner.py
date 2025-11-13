@@ -60,7 +60,7 @@ marton_sheets: Sheets = Sheets(owner_id=marton_uri, io=marton_sheets_io)
 
 ##################################################
 ##################################################
-#### Lewis
+#### Persons
 
 
 lewis_person_triple_generator: TripleGenerator[Person] = TripleGenerator(
@@ -72,26 +72,10 @@ lewis_person_triple_generator: TripleGenerator[Person] = TripleGenerator(
 
 
 lewis_persons_graph: RelevenGraph = lewis_person_triple_generator.to_graph()
+lewis_persons_graph.serialize()
 print(len(lewis_persons_graph))
 
-
 ##################################################
-lewis_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
-    focus_sheet=lewis_sheets.places,
-    sheets=lewis_sheets,
-    model_type=Place,
-    model_converter=PlaceRDFConverter,
-)
-
-
-# lewis_places_graph = lewis_places_triple_generator.to_graph()
-# print(len(lewis_places_graph))
-# print(lewis_places_graph.serialize())
-
-##################################################
-##################################################
-#### Aleks
-
 
 aleks_person_triple_generator: TripleGenerator[Person] = TripleGenerator(
     focus_sheet=aleks_sheets.persons,
@@ -102,8 +86,27 @@ aleks_person_triple_generator: TripleGenerator[Person] = TripleGenerator(
 
 
 aleks_persons_graph: RelevenGraph = aleks_person_triple_generator.to_graph()
+aleks_persons_graph.serialize()
 print(len(aleks_persons_graph))
 
+##################################################
+
+marton_person_triple_generator: TripleGenerator[Person] = TripleGenerator(
+    focus_sheet=marton_sheets.persons,
+    sheets=marton_sheets,
+    model_type=Person,
+    model_converter=PersonRDFConverter,
+)
+
+
+marton_persons_graph: RelevenGraph = marton_person_triple_generator.to_graph()
+marton_persons_graph.serialize()
+print(len(marton_persons_graph))
+
+##################################################
+##################################################
+##################################################
+##################################################
 ##################################################
 
 aleks_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
