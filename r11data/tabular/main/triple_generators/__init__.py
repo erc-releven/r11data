@@ -10,3 +10,6 @@ from r11data.tabular.main.triple_generators.persons_triple_generator import (
 from r11data.tabular.main.triple_generators.places_triple_generator import (
     PlaceRDFConverter as PlaceRDFConverter,
 )
+from r11data.tabular.main.triple_generators.text_publications_triple_generator import (
+    TextPublicationsRDFConverter as TextPublicationsRDFConverter,
+)

@@ -166,7 +166,9 @@ class TextPublication(BaseModel):
     creation_date: str | None = Field(validation_alias="Creation date")
     author: str | None = Field(validation_alias="Author")
     author_group: str | None = Field(validation_alias="Author group")
-    edition: str | None = Field(validation_alias="Edition")
+
+    edition: str = Field(validation_alias="Edition")
+
     editor: str | None = Field(validation_alias="Editor")
     editor_group: str | None = Field(validation_alias="Editor group")
     authority: str | None = Field(validation_alias="Authority")
@@ -178,12 +180,12 @@ class TextPublication(BaseModel):
     source_text_reference: str | None = Field(validation_alias="Source text/reference")
     source_text_excerpt: str | None = Field(validation_alias="Source text/excerpt")
 
-    @model_validator(mode="after")
-    def _check_publication_reference_mutual_dependent(self) -> Self:
-        if (self.source_text_publication is None) != (
-            self.source_text_reference is None
-        ):
-            raise ValueError(
-                "Text Publication and Text Reference fields are mutually dependent."
-            )
-        return self
+    # @model_validator(mode="after")
+    # def _check_publication_reference_mutual_dependent(self) -> Self:
+    #     if (self.source_text_publication is None) != (
+    #         self.source_text_reference is None
+    #     ):
+    #         raise ValueError(
+    #             "Text Publication and Text Reference fields are mutually dependent."
+    #         )
+    #     return self

@@ -4,10 +4,9 @@ from collections.abc import Iterable, Iterator
 from functools import cached_property
 from typing import overload
 
-from pydantic import BaseModel
-
 from lodkit import _Triple
 import pandas as pd
+from pydantic import BaseModel
 from r11data.tabular.main.utils.df_utils import Sheets
 from r11data.tabular.main.utils.rdf_utils import RelevenGraph, mkuri
 from rdflib import Graph, URIRef
@@ -50,20 +49,44 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
 
         row = _row.iloc[0]
 
-        _wisski_id = (
+        authority_uri = (
             URIRef(_id)
             if (_id := row["WissKI ID"]) is not None
             else mkuri(row["Identifier"])
         )
-        _identifier = persons_df.loc[mask, "Identifier"].iloc[0]
 
-        authority_uri: URIRef = (
-            mkuri(_identifier) if pd.isna(_wisski_id) else URIRef(_wisski_id)
-        )
         authority_label = persons_df.loc[mask, "Descriptive name"].iloc[0]
 
         assert authority_uri and authority_label
         return authority_uri, authority_label
+
+    def get_person_uri(self, person_id: str, strict: bool = True) -> URIRef:
+        """Relational Persons lookup.
+
+        The method takes a person_id and performs relational lookup
+        in the Persons sheet. If no WissKI URI is found,
+        a URI is created by hashing the 'Identifier' field.
+        """
+
+        persons_df: pd.DataFrame = self.sheets.persons
+        mask = persons_df["ID string"] == person_id
+        _row = persons_df[mask]
+
+        if _row.empty:
+            msg = f"Relational lookup for Person ID '{person_id}' failed."
+            logger.warn(msg)
+            if strict:
+                raise RuntimeError(msg)
+
+        row = _row.iloc[0]
+
+        person_uri = (
+            URIRef(_id)
+            if (_id := row["WissKI ID"]) is not None
+            else mkuri(row["Identifier"])
+        )
+
+        return person_uri
 
 
 class TripleGenerator[_TModel: BaseModel](Iterable[_Triple]):
