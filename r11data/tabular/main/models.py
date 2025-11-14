@@ -39,12 +39,18 @@ class _AuthoritySourceBase(BaseModel):
 
     # note: this urgently needs to be reflected in the triple generators
     @model_validator(mode="after")
-    def _check_publication_reference_mutual_dependent(self) -> Self:
+    def _check_publication_reference_dependency(self) -> Self:
         if (
             self.source_text_reference is not None
             and self.source_text_publication is None
         ):
             raise ValueError("Text Reference without Text Publication not allowed.")
+        return self
+
+    @model_validator(mode="after")
+    def _check_reference_excerpt_dependency(self) -> Self:
+        if self.source_text_excerpt is not None and self.source_text_reference is None:
+            raise ValueError("Text Excerpt without Text Reference not allowed.")
         return self
 
 
