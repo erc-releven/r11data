@@ -2,14 +2,15 @@
 
 from collections.abc import Iterable, Iterator
 from functools import cached_property
-from typing import overload
+from typing import Literal as TLiteral, overload
+
+from rdflib import Graph, URIRef
 
 from lodkit import _Triple
 import pandas as pd
 from pydantic import BaseModel
 from r11data.tabular.main.utils.df_utils import Sheets
-from r11data.tabular.main.utils.rdf_utils import RelevenGraph, mkuri
-from rdflib import Graph, URIRef
+from r11data.tabular.main.utils.rdf_utils import RelevenGraph, crm, mkuri
 import structlog
 
 
@@ -45,7 +46,8 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
         if _row.empty:
             msg = f"Relational lookup for Authority '{authority}' failed."
             logger.warn(msg)
-            raise RuntimeError(msg)
+            # raise RuntimeError(msg)
+            return None
 
         row = _row.iloc[0]
 
@@ -60,7 +62,15 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
         assert authority_uri and authority_label
         return authority_uri, authority_label
 
-    def get_person_uri(self, person_id: str, strict: bool = True) -> URIRef:
+    @overload
+    def get_person_uri(
+        self, person_id: str, strict: TLiteral[True] = True
+    ) -> URIRef: ...
+    @overload
+    def get_person_uri(
+        self, person_id: str, strict: TLiteral[False]
+    ) -> URIRef | None: ...
+    def get_person_uri(self, person_id: str, strict: bool = True) -> URIRef | None:
         """Relational Persons lookup.
 
         The method takes a person_id and performs relational lookup
@@ -77,6 +87,7 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
             logger.warn(msg)
             if strict:
                 raise RuntimeError(msg)
+            return None
 
         row = _row.iloc[0]
 
@@ -87,6 +98,30 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
         )
 
         return person_uri
+
+    def _p14_triples(self, e13: URIRef) -> Iterator[_Triple]:
+        """Perform a relational look up for an authority and assert P14 about an E13."""
+        if (authority_data := self.authority_data) is None:
+            return
+
+        authority_uri, _ = authority_data
+        yield (e13, crm.P14_carried_out_by, authority_uri)
+
+    def _p67_triples(self, e13: URIRef) -> Iterator[_Triple]:
+        """Construct a passage URI and assert P67 about a passage and an E13."""
+        reference = self.model.source_text_reference
+        excerpt = self.model.source_text_excerpt
+
+        if reference is None and excerpt is None:
+            return
+
+        passage_uri = mkuri(f"{reference} - {excerpt}")
+        yield (passage_uri, crm.P67_refers_to, e13)
+
+    def authority_passage_triples(self, e13: URIRef) -> Iterator[_Triple]:
+        """Triple generator for yielding authority and passage triples."""
+        yield from self._p14_triples(e13)
+        yield from self._p67_triples(e13)
 
 
 class TripleGenerator[_TModel: BaseModel](Iterable[_Triple]):
