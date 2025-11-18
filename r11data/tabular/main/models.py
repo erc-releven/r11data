@@ -159,4 +159,6 @@ class TextPublication(_AuthoritySourceBase):
     editor: str | None = Field(validation_alias="Editor")
     editor_group: str | None = Field(validation_alias="Editor group")
 
-    based_on: str | None = Field(default=None, exclude=True)  # based_on not in TP sheet
+    based_on: str | None = Field(
+        default=None, exclude=True
+    )  # overwrite; based_on not in TP sheet
