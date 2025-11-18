@@ -3,11 +3,12 @@
 from collections.abc import Iterator
 import itertools
 
+from rdflib import RDF, RDFS, URIRef
+
 from lodkit import _Triple, ttl
 from r11data.tabular.main.models import ActorGroup
 from r11data.tabular.main.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.main.utils.rdf_utils import crm, mkuri, pwro, star
-from rdflib import RDF, RDFS, URIRef
 
 
 class ActorGroupsRDFConverter(_ModelRDFConverter[ActorGroup]):
@@ -29,15 +30,8 @@ class ActorGroupsRDFConverter(_ModelRDFConverter[ActorGroup]):
             (crm.P141_assigned, [(RDF.type, crm.E74_Group)]),
         )
 
-        if (text_publication := self.model.source_text_publication) is not None:
-            passage_uri = mkuri(
-                f"{text_publication} - {self.model.source_text_reference}"
-            )
-            yield (passage_uri, crm.P67_refers_to, e13_pwro_wp5_uri)
-
-        if (authory_data := self.authority_data) is not None:
-            authority_uri, _ = authory_data
-            yield (e13_pwro_wp5_uri, crm.P14_carried_out_by, URIRef(authority_uri))
+        # authority + passage triples
+        yield from self.authority_passage_triples(e13_pwro_wp5_uri)
 
     def __iter__(self) -> Iterator[_Triple]:
         return itertools.chain(self.base_triples())

@@ -4,6 +4,8 @@ from collections.abc import Iterator
 from functools import cached_property
 import itertools
 
+from rdflib import Literal, RDF, RDFS, URIRef
+
 from lodkit import _Triple, ttl
 from r11data.tabular.main.models import TextPublication
 from r11data.tabular.main.triple_generators.bases import _ModelRDFConverter
@@ -16,7 +18,6 @@ from r11data.tabular.main.utils.rdf_utils import (
     r11spec,
     star,
 )
-from rdflib import Literal, RDF, RDFS, URIRef
 import structlog
 
 
@@ -27,18 +28,18 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.written_text_uri: URIRef = mkuri(
-            f"{self.model.text_identifier} - written text"
+        self.written_text_uri: URIRef = self._mktexturi("written text")
+        self.written_text_creation_uri: URIRef = self._mktexturi(
+            "written text creation"
         )
-        self.written_text_creation_uri: URIRef = mkuri(
-            f"{self.model.text_identifier} - written text creation"
+        self.text_edition_uri: URIRef = self._mktexturi("text edition")
+        self.text_edition_creation_uri: URIRef = self._mktexturi(
+            "text edition creation"
         )
-        self.text_edition_uri: URIRef = mkuri(
-            f"{self.model.text_identifier} - text edition"
-        )
-        self.text_edition_creation_uri: URIRef = mkuri(
-            f"{self.model.text_identifier} - text edition creation"
-        )
+
+    def _mktexturi(self, hash_part: str) -> URIRef:
+        """Helpter for creating a text_identifier based hashed URI."""
+        return mkuri(f"{self.model.text_identifier} - {hash_part}")
 
     def base_triples(self) -> Iterator[_Triple]:
         yield from ttl(
@@ -61,7 +62,7 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
         )
 
     def title_assertion_triples(self) -> Iterator[_Triple]:
-        if self.model.text_name is None:
+        if (text_name := self.model.text_name) is None:
             return
 
         e13_crm_p1_uri = mkuri()
@@ -75,13 +76,13 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
                 ttl(
                     mkuri(),
                     (RDF.type, crm.E33_E41_Linguistic_Appellation),
-                    (crm.P190_has_symbolic_content, self.model.text_name),
+                    (crm.P190_has_symbolic_content, text_name),
                 ),
             ),
         )
 
-        yield from self._p67_source_triples(e13_crm_p1_uri)
-        yield from self._p14_authority_triples(e13_crm_p1_uri)
+        # authority + passage triples
+        yield from self.authority_passage_triples(e13_crm_p1_uri)
 
     def creation_time_assertion_triples(self) -> Iterator[_Triple]:
         if self.model.creation_date is None:
@@ -103,11 +104,13 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
             ),
         )
 
-        yield from self._p67_source_triples(e13_crm_p4_uri)
-        yield from self._p14_authority_triples(e13_crm_p4_uri)
+        # authority + passage triples
+        yield from self.authority_passage_triples(e13_crm_p4_uri)
 
     def creation_author_assertion_triples(self) -> Iterator[_Triple]:
         if (author := self.model.author) is None:
+            return
+        if (person := self.get_person_uri(author, strict=False)) is None:
             return
 
         e13_crm_p14_uri = mkuri()
@@ -116,11 +119,11 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
             e13_crm_p14_uri,
             (RDF.type, star.E13_crm_P14),
             (crm.P140_assigned_attribute_to, self.written_text_creation_uri),
-            (crm.P141_assigned, self.get_person_uri(person_id=author)),
+            # (crm.P141_assigned, self.get_person_uri(person_id=author)),
+            (crm.P141_assigned, person),
         )
-
-        yield from self._p67_source_triples(e13_crm_p14_uri)
-        yield from self._p14_authority_triples(e13_crm_p14_uri)
+        # authority + passage triples
+        yield from self.authority_passage_triples(e13_crm_p14_uri)
 
     def edition_base_triples(self) -> Iterator[_Triple]:
         return ttl(
@@ -146,19 +149,20 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
     def edition_editor_assertion_triples(self) -> Iterator[_Triple]:
         if (editor_id := self.model.editor) is None:
             return
+        if (editor := self.get_person_uri(editor_id, strict=False)) is None:
+            return
 
-        editor = self.get_person_uri(editor_id)
         e13_crm_p14_uri = mkuri()
 
         yield from ttl(
             e13_crm_p14_uri,
             (RDF.type, star.E13_crm_P14),
-            (crm.P140_assigned_attribute_at, self.written_text_creation_uri),
+            (crm.P140_assigned_attribute_to, self.written_text_creation_uri),
             (crm.P141_assigned, editor),
         )
 
-        yield from self._p67_source_triples(e13_crm_p14_uri)
-        yield from self._p14_authority_triples(e13_crm_p14_uri)
+        # authority + passage triples
+        yield from self.authority_passage_triples(e13_crm_p14_uri)
 
     def edition_of_text_assertion_triples(self) -> Iterator[_Triple]:
         e13_lrmoo_r76_uri = mkuri()
@@ -170,40 +174,8 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
             (crm.P141_assigned, self.written_text_uri),
         )
 
-        yield from self._p67_source_triples(e13_lrmoo_r76_uri)
-        yield from self._p14_authority_triples(e13_lrmoo_r76_uri)
-
-    def _p67_source_triples(self, subject: URIRef) -> Iterator[_Triple]:
-        reference = self.model.source_text_reference
-        publication = self.model.source_text_publication
-
-        if reference is None and publication is None:
-            return
-
-        assert reference is not None
-        assert publication is not None
-
-        passage_uri = mkuri(f"{reference} - {publication}")
-
-        yield from ttl(
-            passage_uri,
-            (RDF.type, crm.E33_Linguistic_Object),
-            (RDFS.label, reference),
-            (crm.P67_refers_to, subject),
-        )
-
-        if (excerpt := self.model.source_text_excerpt) is not None:
-            yield (
-                passage_uri,
-                crm.P190_has_symbolic_content,
-                Literal(excerpt),
-            )
-
-    def _p14_authority_triples(self, subject: URIRef) -> Iterator[_Triple]:
-        if (authority_data := self.authority_data) is None:
-            return
-        authority_uri, _ = authority_data
-        yield (subject, crm.P14_carried_out_by, authority_uri)
+        # authority + passage triples
+        yield from self.authority_passage_triples(e13_lrmoo_r76_uri)
 
     def __iter__(self) -> Iterator[_Triple]:
         return itertools.chain(
@@ -212,4 +184,7 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
             self.creation_time_assertion_triples(),
             self.creation_author_assertion_triples(),
             self.edition_base_triples(),
+            self.edition_ceation_assertion_triples(),
+            self.edition_editor_assertion_triples(),
+            self.edition_of_text_assertion_triples(),
         )

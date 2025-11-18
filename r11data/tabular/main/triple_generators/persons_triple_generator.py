@@ -5,9 +5,9 @@ from functools import cached_property
 import itertools
 from typing import cast
 
-from lodkit import _Triple, ttl
 from rdflib import Literal, RDF, RDFS, URIRef
 
+from lodkit import _Triple, ttl
 from r11data.tabular.main.models import Person
 from r11data.tabular.main.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.main.utils.rdf_utils import (
@@ -152,15 +152,8 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
             (crm.P141_assigned, self.person_uri),
         )
 
-        if (authority_data := self.authority_data) is not None:
-            authority_uri, _ = authority_data
-            yield (e13_crm_p41_uri, crm.P14_carried_out_by, authority_uri)
-
-        reference = self.model.source_text_reference
-        excerpt = self.model.source_text_excerpt
-        if reference is not None and excerpt is not None:
-            passage_uri = mkuri(f"{reference} - {excerpt}")
-            yield (passage_uri, crm.P67_refers_to, e13_crm_p41_uri)
+        # authority + passage triples
+        yield from self.authority_passage_triples(e13_crm_p41_uri)
 
     def gender_identifier_triples(self) -> Iterator[_Triple]:
         if (gender := self.model.gender_assignment) is None:
@@ -176,15 +169,8 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
             (crm.P141_assigned, Literal(gender)),
         )
 
-        if (authority_data := self.authority_data) is not None:
-            authority_uri, _ = authority_data
-            yield (e13_crm_p42_uri, crm.P14_carried_out_by, authority_uri)
-
-        reference = self.model.source_text_reference
-        excerpt = self.model.source_text_excerpt
-        if reference is not None and excerpt is not None:
-            passage_uri = mkuri(f"{reference} - {excerpt}")
-            yield (passage_uri, crm.P67_refers_to, e13_crm_p42_uri)
+        # authority + passage triples
+        yield from self.authority_passage_triples(e13_crm_p42_uri)
 
     def ethnic_group_triples(self) -> Iterator[_Triple]:
         if (ethnicity := self.model.ethnicity) is None:
@@ -203,9 +189,8 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
             (crm.P141_assigned, self.person_uri),
         )
 
-        if (authory_data := self.authority_data) is not None:
-            authority_uri, _ = authory_data
-            yield (e13_crm_p107_uri, crm.P14_carried_out_by, authority_uri)
+        # authority + passage triples
+        yield from self.authority_passage_triples(e13_crm_p107_uri)
 
     def social_role_triples(self) -> Iterator[_Triple]:
         if (social_role := self.model.social_role) is None:
@@ -235,18 +220,9 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
             (crm.P141_assigned, social_role),
         )
 
-        # authority/passage triples
-        if (authory_data := self.authority_data) is not None:
-            authority_uri, _ = authory_data
-            yield (e13_sdhss_p14_uri, crm.P14_carried_out_by, URIRef(authority_uri))
-            yield (e13_sdhss_p13_uri, crm.P14_carried_out_by, URIRef(authority_uri))
-
-        reference = self.model.source_text_reference
-        excerpt = self.model.source_text_excerpt
-        if reference is not None and excerpt is not None:
-            passage_uri = mkuri(f"{reference} - {excerpt}")
-            yield (passage_uri, crm.P67_refers_to, e13_sdhss_p13_uri)
-            yield (passage_uri, crm.P67_refers_to, e13_sdhss_p14_uri)
+        # authority + passage triples
+        yield from self.authority_passage_triples(e13_sdhss_p13_uri)
+        yield from self.authority_passage_triples(e13_sdhss_p14_uri)
 
     def legal_role_triples(self) -> Iterator[_Triple]:
         if (legal_role := self.model.legal_role) is None:
@@ -275,18 +251,9 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
             (crm.P141_assigned, legal_role),
         )
 
-        # authority/passage triples
-        if (authory_data := self.authority_data) is not None:
-            authority_uri, _ = authory_data
-            yield (e13_sdhss_p26_uri, crm.P14_carried_out_by, URIRef(authority_uri))
-            yield (e13_sdhss_p33_uri, crm.P14_carried_out_by, URIRef(authority_uri))
-
-        reference = self.model.source_text_reference
-        excerpt = self.model.source_text_excerpt
-        if reference is not None and excerpt is not None:
-            passage_uri = mkuri(f"{reference} - {excerpt}")
-            yield (passage_uri, crm.P67_refers_to, e13_sdhss_p26_uri)
-            yield (passage_uri, crm.P67_refers_to, e13_sdhss_p33_uri)
+        # authority + passage triples
+        yield from self.authority_passage_triples(e13_sdhss_p26_uri)
+        yield from self.authority_passage_triples(e13_sdhss_p33_uri)
 
     def language_skill_triples(self) -> Iterator[_Triple]:
         if (language_skill := self.model.language_skill) is None:
@@ -313,18 +280,9 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
             (crm.P141_assigned, language_skill),
         )
 
-        # authority/passage triples
-        if (authory_data := self.authority_data) is not None:
-            authority_uri, _ = authory_data
-            yield (e13_sdhss_p38_uri, crm.P14_carried_out_by, URIRef(authority_uri))
-            yield (e13_sdhss_p37_uri, crm.P14_carried_out_by, URIRef(authority_uri))
-
-        reference = self.model.source_text_reference
-        excerpt = self.model.source_text_excerpt
-        if reference is not None and excerpt is not None:
-            passage_uri = mkuri(f"{reference} - {excerpt}")
-            yield (passage_uri, crm.P67_refers_to, e13_sdhss_p37_uri)
-            yield (passage_uri, crm.P67_refers_to, e13_sdhss_p38_uri)
+        # authority + passage triples
+        yield from self.authority_passage_triples(e13_sdhss_p37_uri)
+        yield from self.authority_passage_triples(e13_sdhss_p38_uri)
 
     def religion_triples(self) -> Iterator[_Triple]:
         if (religion := self.model.religion) is None:
@@ -354,18 +312,9 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
             (crm.P141_assigned, religion),
         )
 
-        # authority/passage triples
-        if (authory_data := self.authority_data) is not None:
-            authority_uri, _ = authory_data
-            yield (e13_sdhss_p36_uri, crm.P14_carried_out_by, URIRef(authority_uri))
-            yield (e13_sdhss_p35_uri, crm.P14_carried_out_by, URIRef(authority_uri))
-
-        reference = self.model.source_text_reference
-        excerpt = self.model.source_text_excerpt
-        if reference is not None and excerpt is not None:
-            passage_uri = mkuri(f"{reference} - {excerpt}")
-            yield (passage_uri, crm.P67_refers_to, e13_sdhss_p35_uri)
-            yield (passage_uri, crm.P67_refers_to, e13_sdhss_p36_uri)
+        # authority + passage triples
+        yield from self.authority_passage_triples(e13_sdhss_p35_uri)
+        yield from self.authority_passage_triples(e13_sdhss_p36_uri)
 
     def __iter__(self) -> Iterator[_Triple]:
         return itertools.chain(

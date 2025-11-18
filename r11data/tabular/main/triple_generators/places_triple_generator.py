@@ -4,13 +4,13 @@ from collections.abc import Iterator
 from functools import cached_property, partial
 import itertools
 
-from pydantic import AnyUrl
+from rdflib import Literal, OWL, RDF, RDFS, URIRef
 
 from lodkit import _Triple, ttl
+from pydantic import AnyUrl
 from r11data.tabular.main.models import Place
 from r11data.tabular.main.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.main.utils.rdf_utils import crm, lrm, mkuri, star
-from rdflib import Literal, OWL, RDF, RDFS, URIRef
 
 
 class PlaceRDFConverter(_ModelRDFConverter[Place]):
@@ -85,12 +85,11 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
             e13_crm_p89_uri,
             (RDF.type, star.E13_crm_P89),
             (crm.P140_assigned_attribute_to, self.place_uri),
-            (crm.P141.assigned, mkuri(incorporated_place)),
+            (crm.P141_assigned, mkuri(incorporated_place)),
         )
 
-        if (authority_data := self.authority_data) is not None:
-            authority_uri, _ = authority_data
-            yield (e13_crm_p89_uri, crm.P14_carried_out_by, URIRef(authority_uri))
+        # authority + passage triples
+        yield from self.authority_passage_triples(e13_crm_p89_uri)
 
     def place_type_triples(self) -> Iterator[_Triple]:
         if (place_type := self.model.place_type) is None:
@@ -105,9 +104,8 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
             (crm.P42_assigned, place_type),
         )
 
-        if (authority_data := self.authority_data) is not None:
-            authority_uri, _ = authority_data
-            yield (e17_uri, crm.P14_carried_out_by, URIRef(authority_uri))
+        # authority + passage triples
+        yield from self.authority_passage_triples(e17_uri)
 
     def place_succession_triples(self) -> Iterator[_Triple]:
         if (place_succession := self.model.succeeds_place) is None:
@@ -123,9 +121,8 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
             (crm.P141_assigned, mkuri(place_succession)),
         )
 
-        if (authority_data := self.authority_data) is not None:
-            authority_uri, _ = authority_data
-            yield (e13_spec_l3_uri, crm.P14_carried_out_by, URIRef(authority_uri))
+        # authority + passage triples
+        yield from self.authority_passage_triples(e13_spec_l3_uri)
 
     def place_population_triples(self) -> Iterator[_Triple]:
         if (population_group := self.model.had_population_group) is None:
@@ -136,13 +133,12 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
         yield from ttl(
             e13_crm_p53,
             (RDF.type, star.E13_crm_P53),
-            (crm.P140_assigned_attribute_to, self.place_uri),
-            (crm.P141_assigned, population_group),
+            (crm.P140_assigned_attribute_to, population_group),
+            (crm.P141_assigned, self.place_uri),
         )
 
-        if (authority_data := self.authority_data) is not None:
-            authority_uri, _ = authority_data
-            yield (e13_crm_p53, crm.P14_carried_out_by, URIRef(authority_uri))
+        # authority + passage triples
+        yield from self.authority_passage_triples(e13_crm_p53)
 
     def spatio_temporal_existence_triples(self) -> Iterator[_Triple]:
         e92_uri = mkuri()
@@ -163,9 +159,8 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
                 (crm.P141_assigned, ttl(e92_uri, (RDF.type, crm.E92_Spacetime_Volume))),
             )
 
-            if (authority_data := self.authority_data) is not None:
-                authority_uri, _ = authority_data
-                yield (e13_crm_p196_uri, crm.P14_carried_out_by, URIRef(authority_uri))
+            # authority + passage triples
+            yield from self.authority_passage_triples(e13_crm_p196_uri)
 
         def _temporal_begin_end_triples() -> Iterator[_Triple]:
             e52_uri = mkuri()
@@ -188,9 +183,8 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
             if end is not None:
                 yield (e13_crm_p160_uri, crm.P82b_end_of_the_end, Literal(end))
 
-            if (authority_data := self.authority_data) is not None:
-                authority_uri, _ = authority_data
-                yield (e13_crm_p160_uri, crm.P14_carried_out_by, URIRef(authority_uri))
+            # authority + passage triples
+            yield from self.authority_passage_triples(e13_crm_p160_uri)
 
         def _spatio_definition_triples() -> Iterator[_Triple]:
             if coordinates is None:
@@ -214,9 +208,8 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
                 ),
             )
 
-            if (authority_data := self.authority_data) is not None:
-                authority_uri, _ = authority_data
-                yield (e13_crm_p161_uri, crm.P14_carried_out_by, URIRef(authority_uri))
+            # authority + passage triples
+            yield from self.authority_passage_triples(e13_crm_p161_uri)
 
         return itertools.chain(
             _spatio_temporal_base_triples(),
