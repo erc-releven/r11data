@@ -4,13 +4,13 @@ from collections.abc import Iterable, Iterator
 from functools import cached_property
 from typing import Literal as TLiteral, overload
 
-from rdflib import Graph, URIRef
-
 from lodkit import _Triple
 import pandas as pd
 from pydantic import BaseModel
+from r11data.tabular.main.models import Person
 from r11data.tabular.main.utils.df_utils import Sheets
 from r11data.tabular.main.utils.rdf_utils import RelevenGraph, crm, mkuri
+from rdflib import Graph, URIRef
 import structlog
 
 
@@ -22,6 +22,7 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
         self.model = model
         self.sheets = sheets
 
+    # this too could be generalized; but is it worth the abstraction?
     @cached_property
     def publication_label(self) -> str:
         publication = self.model.source_text_publication  # type: ignore
@@ -32,52 +33,20 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
 
         return publication_label
 
-    @cached_property
-    def authority_data(self) -> tuple[URIRef, str] | None:
-        """Relational lookup for Authority."""
-
-        if (authority := self.model.authority) is None:  # type: ignore
-            return None
-
-        persons_df: pd.DataFrame = self.sheets.persons
-        mask = persons_df["ID string"] == authority
-        _row = persons_df[mask]
-
-        if _row.empty:
-            msg = f"Relational lookup for Authority '{authority}' failed."
-            logger.warn(msg)
-            # raise RuntimeError(msg)
-            return None
-
-        row = _row.iloc[0]
-
-        authority_uri = (
-            URIRef(_id)
-            if (_id := row["WissKI ID"]) is not None
-            else mkuri(row["Identifier"])
-        )
-
-        authority_label = persons_df.loc[mask, "Descriptive name"].iloc[0]
-
-        assert authority_uri and authority_label
-        return authority_uri, authority_label
-
     @overload
-    def get_person_uri(
+    def get_person_data(
         self, person_id: str, strict: TLiteral[True] = True
-    ) -> URIRef: ...
+    ) -> Person: ...
     @overload
-    def get_person_uri(
+    def get_person_data(
         self, person_id: str, strict: TLiteral[False]
-    ) -> URIRef | None: ...
-    def get_person_uri(self, person_id: str, strict: bool = True) -> URIRef | None:
+    ) -> Person | None: ...
+    def get_person_data(self, person_id: str, strict: bool = True) -> Person | None:
         """Relational Persons lookup.
 
-        The method takes a person_id and performs relational lookup
-        in the Persons sheet. If no WissKI URI is found,
-        a URI is created by hashing the 'Identifier' field.
+        Performa a lookup in the Persons sheet for the 'ID string' field
+        and return a Person model instance from the first matching row.
         """
-
         persons_df: pd.DataFrame = self.sheets.persons
         mask = persons_df["ID string"] == person_id
         _row = persons_df[mask]
@@ -90,22 +59,16 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
             return None
 
         row = _row.iloc[0]
-
-        person_uri = (
-            URIRef(_id)
-            if (_id := row["WissKI ID"]) is not None
-            else mkuri(row["Identifier"])
-        )
-
-        return person_uri
+        return Person(**row.to_dict())
 
     def _p14_triples(self, e13: URIRef) -> Iterator[_Triple]:
         """Perform a relational look up for an authority and assert P14 about an E13."""
-        if (authority_data := self.authority_data) is None:
+        if (authority := self.model.authority) is None:
+            return
+        if (authority_data := self.get_person_data(authority, strict=False)) is None:
             return
 
-        authority_uri, _ = authority_data
-        yield (e13, crm.P14_carried_out_by, authority_uri)
+        yield (e13, crm.P14_carried_out_by, authority_data.person_uri)
 
     def _p67_triples(self, e13: URIRef) -> Iterator[_Triple]:
         """Construct a passage URI and assert P67 about a passage and an E13."""
@@ -155,3 +118,11 @@ class TripleGenerator[_TModel: BaseModel](Iterable[_Triple]):
             _graph.add(triple)
 
         return _graph
+
+
+class Foo:
+    def get_person_data(self, person_id: str, strict: bool = True) -> Person | None:
+        pass
+
+    def get_person_uri(self, person_id: str, strict: bool = True) -> URIRef | None:
+        pass

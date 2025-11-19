@@ -4,8 +4,6 @@ from collections.abc import Iterator
 from functools import cached_property
 import itertools
 
-from rdflib import Literal, RDF, RDFS, URIRef
-
 from lodkit import _Triple, ttl
 from r11data.tabular.main.models import TextPublication
 from r11data.tabular.main.triple_generators.bases import _ModelRDFConverter
@@ -18,6 +16,7 @@ from r11data.tabular.main.utils.rdf_utils import (
     r11spec,
     star,
 )
+from rdflib import Literal, RDF, RDFS, URIRef
 import structlog
 
 
@@ -110,7 +109,7 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
     def creation_author_assertion_triples(self) -> Iterator[_Triple]:
         if (author := self.model.author) is None:
             return
-        if (person := self.get_person_uri(author, strict=False)) is None:
+        if (person_data := self.get_person_data(author, strict=False)) is None:
             return
 
         e13_crm_p14_uri = mkuri()
@@ -119,8 +118,7 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
             e13_crm_p14_uri,
             (RDF.type, star.E13_crm_P14),
             (crm.P140_assigned_attribute_to, self.written_text_creation_uri),
-            # (crm.P141_assigned, self.get_person_uri(person_id=author)),
-            (crm.P141_assigned, person),
+            (crm.P141_assigned, person_data.person_uri),
         )
         # authority + passage triples
         yield from self.authority_passage_triples(e13_crm_p14_uri)
@@ -149,7 +147,7 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
     def edition_editor_assertion_triples(self) -> Iterator[_Triple]:
         if (editor_id := self.model.editor) is None:
             return
-        if (editor := self.get_person_uri(editor_id, strict=False)) is None:
+        if (person_data := self.get_person_data(editor_id, strict=False)) is None:
             return
 
         e13_crm_p14_uri = mkuri()
@@ -158,7 +156,7 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
             e13_crm_p14_uri,
             (RDF.type, star.E13_crm_P14),
             (crm.P140_assigned_attribute_to, self.written_text_creation_uri),
-            (crm.P141_assigned, editor),
+            (crm.P141_assigned, person_data.person_uri),
         )
 
         # authority + passage triples

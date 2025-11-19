@@ -7,10 +7,14 @@ from pydantic import (
     AnyUrl,
     BaseModel,
     BeforeValidator,
+    ConfigDict,
     Field,
+    computed_field,
     model_validator,
 )
 from pydantic_extra_types.coordinate import Coordinate
+from r11data.tabular.main.utils.rdf_utils import mkuri
+from rdflib import URIRef
 
 
 class _AuthoritySourceBase(BaseModel):
@@ -57,6 +61,8 @@ class _AuthoritySourceBase(BaseModel):
 class Person(_AuthoritySourceBase):
     """Person model corresponding to the main 'Persons' sheet."""
 
+    model_config = ConfigDict(arbitrary_types_allowed=True)  # mainly for person_uri
+
     identifier: str = Field(validation_alias="Identifier", coerce_numbers_to_str=True)
     service: Annotated[
         str,
@@ -82,6 +88,15 @@ class Person(_AuthoritySourceBase):
     legal_role: str | None = Field(validation_alias="Legal role (C12)")
     language_skill: str | None = Field(validation_alias="Language skill")
     religion: str | None = Field(validation_alias="Religion")
+
+    @computed_field
+    @property
+    def person_uri(self) -> URIRef:
+        return (
+            URIRef(_id)
+            if (_id := self.wisski_id) is not None
+            else mkuri(self.identifier)
+        )
 
     @model_validator(mode="before")
     @classmethod

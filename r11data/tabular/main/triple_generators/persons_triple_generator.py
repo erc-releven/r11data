@@ -5,8 +5,6 @@ from functools import cached_property
 import itertools
 from typing import cast
 
-from rdflib import Literal, RDF, RDFS, URIRef
-
 from lodkit import _Triple, ttl
 from r11data.tabular.main.models import Person
 from r11data.tabular.main.triple_generators.bases import _ModelRDFConverter
@@ -20,6 +18,7 @@ from r11data.tabular.main.utils.rdf_utils import (
     r11spec,
     star,
 )
+from rdflib import Literal, RDF, RDFS, URIRef
 import structlog
 
 
@@ -123,10 +122,12 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
             yield (e33_e41_uri, crm.P141_assigned, Literal(name_transl, lang="en"))
 
         # authority triples + relational lookup
-        if (authority_data := self.authority_data) is None:
+        if (authority := self.model.authority) is None:
             return
 
-        person_uri, person_label = authority_data
+        person_data = self.get_person_data(person_id=authority)
+        person_uri, person_label = person_data.person_uri, person_data.descriptive_name
+
         yield from ttl(
             e13_crm_p1_uri,
             (
