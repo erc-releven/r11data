@@ -39,6 +39,10 @@ class Sheets:
             required_columns=["Text identifier"],
         )
 
+    @cached_property
+    def manuscripts(self) -> pd.DataFrame:
+        return self.load_sheet(sheet_name="Manuscripts")
+
     def load_sheet(
         self, sheet_name: str, required_columns: list[str] | None = None
     ) -> pd.DataFrame:

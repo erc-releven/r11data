@@ -177,3 +177,12 @@ class TextPublication(_AuthoritySourceBase):
     based_on: str | None = Field(
         default=None, exclude=True
     )  # overwrite; based_on not in TP sheet
+
+
+class Manuscript(_AuthoritySourceBase):
+    identifier: str = Field(validation_alias="Identifier")
+    dating: str = Field(validation_alias="Dating")
+    place_copied: str | None = Field(validation_alias="Place copied")
+    contains_text: str = Field(validation_alias="Contains text")
+    scribe: str = Field(validation_alias="Scribe")
+    commissioned_by: str | None = Field(validation_alias="Commissioned by")
