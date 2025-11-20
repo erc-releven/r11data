@@ -4,6 +4,7 @@ from lodkit import _Triple
 from r11data.tabular.main.models import (
     ActorGroup,
     AuthorGroup,
+    Manuscript,
     Person,
     Place,
     TextPublication,
@@ -17,6 +18,9 @@ from r11data.tabular.main.triple_generators import (
 )
 from r11data.tabular.main.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.main.triple_generators.bases import TripleGenerator
+from r11data.tabular.main.triple_generators.manuscript_triple_generator import (
+    ManuscriptRDFConverter,
+)
 from r11data.tabular.main.utils.df_utils import Sheets
 from r11data.tabular.main.utils.paths import tabular_main_sources_path
 from r11data.tabular.main.utils.rdf_utils import (
@@ -75,9 +79,9 @@ lewis_person_triple_generator: TripleGenerator[Person] = TripleGenerator(
 )
 
 
-lewis_persons_graph: RelevenGraph = lewis_person_triple_generator.to_graph()
-lewis_persons_graph.serialize()
-print(len(lewis_persons_graph))
+# lewis_persons_graph: RelevenGraph = lewis_person_triple_generator.to_graph()
+# lewis_persons_graph.serialize()
+# print(len(lewis_persons_graph))
 
 
 aleks_person_triple_generator: TripleGenerator[Person] = TripleGenerator(
@@ -88,9 +92,9 @@ aleks_person_triple_generator: TripleGenerator[Person] = TripleGenerator(
 )
 
 
-aleks_persons_graph: RelevenGraph = aleks_person_triple_generator.to_graph()
-aleks_persons_graph.serialize()
-print(len(aleks_persons_graph))
+# aleks_persons_graph: RelevenGraph = aleks_person_triple_generator.to_graph()
+# aleks_persons_graph.serialize()
+# print(len(aleks_persons_graph))
 
 
 marton_person_triple_generator: TripleGenerator[Person] = TripleGenerator(
@@ -116,9 +120,9 @@ lewis_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
     model_converter=PlaceRDFConverter,
 )
 
-lewis_places_graph: RelevenGraph = lewis_places_triple_generator.to_graph()
-lewis_places_graph.serialize()
-print(len(lewis_places_graph))
+# lewis_places_graph: RelevenGraph = lewis_places_triple_generator.to_graph()
+# lewis_places_graph.serialize()
+# print(len(lewis_places_graph))
 
 
 aleks_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
@@ -128,9 +132,9 @@ aleks_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
     model_converter=PlaceRDFConverter,
 )
 
-aleks_places_graph: RelevenGraph = aleks_places_triple_generator.to_graph()
-aleks_places_graph.serialize()
-print(len(aleks_places_graph))
+# aleks_places_graph: RelevenGraph = aleks_places_triple_generator.to_graph()
+# aleks_places_graph.serialize()
+# print(len(aleks_places_graph))
 
 
 marton_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
@@ -140,9 +144,9 @@ marton_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
     model_converter=PlaceRDFConverter,
 )
 
-marton_places_graph: RelevenGraph = marton_places_triple_generator.to_graph()
-marton_places_graph.serialize()
-print(len(marton_places_graph))
+# marton_places_graph: RelevenGraph = marton_places_triple_generator.to_graph()
+# marton_places_graph.serialize()
+# print(len(marton_places_graph))
 
 ##################################################
 ##################################################
@@ -156,9 +160,9 @@ lewis_author_groups_triple_generator: TripleGenerator[AuthorGroup] = TripleGener
 )
 
 
-lewis_author_groups_graph = lewis_author_groups_triple_generator.to_graph()
-lewis_author_groups_graph.serialize()
-print(len(lewis_author_groups_graph))
+# lewis_author_groups_graph = lewis_author_groups_triple_generator.to_graph()
+# lewis_author_groups_graph.serialize()
+# print(len(lewis_author_groups_graph))
 
 
 aleks_author_groups_triple_generator: TripleGenerator[AuthorGroup] = TripleGenerator(
@@ -168,9 +172,9 @@ aleks_author_groups_triple_generator: TripleGenerator[AuthorGroup] = TripleGener
     model_converter=AuthorGroupsRDFConverter,
 )
 
-aleks_author_groups_graph = aleks_author_groups_triple_generator.to_graph()
-aleks_author_groups_graph.serialize()
-print(len(aleks_author_groups_graph))
+# aleks_author_groups_graph = aleks_author_groups_triple_generator.to_graph()
+# aleks_author_groups_graph.serialize()
+# print(len(aleks_author_groups_graph))
 
 
 marton_author_groups_triple_generator: TripleGenerator[AuthorGroup] = TripleGenerator(
@@ -180,9 +184,9 @@ marton_author_groups_triple_generator: TripleGenerator[AuthorGroup] = TripleGene
     model_converter=AuthorGroupsRDFConverter,
 )
 
-marton_author_groups_graph = marton_author_groups_triple_generator.to_graph()
-marton_author_groups_graph.serialize()
-print(len(marton_author_groups_graph))
+# marton_author_groups_graph = marton_author_groups_triple_generator.to_graph()
+# marton_author_groups_graph.serialize()
+# print(len(marton_author_groups_graph))
 
 
 ##################################################
@@ -198,9 +202,9 @@ lewis_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenerat
 )
 
 
-lewis_actor_groups_graph = lewis_actor_groups_triple_generator.to_graph()
-lewis_actor_groups_graph.serialize()
-print(len(lewis_actor_groups_graph))
+# lewis_actor_groups_graph = lewis_actor_groups_triple_generator.to_graph()
+# lewis_actor_groups_graph.serialize()
+# print(len(lewis_actor_groups_graph))
 
 
 aleks_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenerator(
@@ -210,9 +214,9 @@ aleks_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenerat
     model_converter=ActorGroupsRDFConverter,
 )
 
-aleks_author_groups_graph = aleks_author_groups_triple_generator.to_graph()
-aleks_author_groups_graph.serialize()
-print(len(aleks_author_groups_graph))
+# aleks_author_groups_graph = aleks_author_groups_triple_generator.to_graph()
+# aleks_author_groups_graph.serialize()
+# print(len(aleks_author_groups_graph))
 
 
 marton_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenerator(
@@ -222,9 +226,9 @@ marton_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenera
     model_converter=ActorGroupsRDFConverter,
 )
 
-marton_actor_groups_graph = marton_actor_groups_triple_generator.to_graph()
-marton_actor_groups_graph.serialize()
-print(len(marton_actor_groups_graph))
+# marton_actor_groups_graph = marton_actor_groups_triple_generator.to_graph()
+# marton_actor_groups_graph.serialize()
+# print(len(marton_actor_groups_graph))
 
 ##################################################
 ##################################################
@@ -241,9 +245,9 @@ lewis_text_publications_triple_generator: TripleGenerator[TextPublication] = (
 )
 
 
-lewis_text_publications_graph = lewis_text_publications_triple_generator.to_graph()
-lewis_text_publications_graph.serialize()
-print(len(lewis_text_publications_graph))
+# lewis_text_publications_graph = lewis_text_publications_triple_generator.to_graph()
+# lewis_text_publications_graph.serialize()
+# print(len(lewis_text_publications_graph))
 
 
 aleks_text_publications_triple_generator: TripleGenerator[TextPublication] = (
@@ -255,9 +259,9 @@ aleks_text_publications_triple_generator: TripleGenerator[TextPublication] = (
     )
 )
 
-aleks_text_publications_graph = aleks_text_publications_triple_generator.to_graph()
-aleks_text_publications_graph.serialize()
-print(len(aleks_text_publications_graph))
+# aleks_text_publications_graph = aleks_text_publications_triple_generator.to_graph()
+# aleks_text_publications_graph.serialize()
+# print(len(aleks_text_publications_graph))
 
 
 marton_text_publications_triple_generator: TripleGenerator[TextPublication] = (
@@ -269,11 +273,42 @@ marton_text_publications_triple_generator: TripleGenerator[TextPublication] = (
     )
 )
 
-marton_text_publications_graph = marton_text_publications_triple_generator.to_graph()
-marton_text_publications_graph.serialize()
-print(len(marton_text_publications_graph))
+# marton_text_publications_graph = marton_text_publications_triple_generator.to_graph()
+# marton_text_publications_graph.serialize()
+# print(len(marton_text_publications_graph))
 
 ##################################################
 ##################################################
-##################################################
-##################################################
+#### Manuscripts
+lewis_manuscript_triple_generator: TripleGenerator[Manuscript] = TripleGenerator(
+    focus_sheet=lewis_sheets.manuscripts,
+    sheets=lewis_sheets,
+    model_type=Manuscript,
+    model_converter=ManuscriptRDFConverter,
+)
+
+lewis_manuscript_graph = lewis_manuscript_triple_generator.to_graph()
+lewis_manuscript_graph.serialize()
+print(len(lewis_manuscript_graph))
+
+aleks_manuscript_triple_generator: TripleGenerator[Manuscript] = TripleGenerator(
+    focus_sheet=aleks_sheets.manuscripts,
+    sheets=aleks_sheets,
+    model_type=Manuscript,
+    model_converter=ManuscriptRDFConverter,
+)
+
+aleks_manuscript_graph = aleks_manuscript_triple_generator.to_graph()
+aleks_manuscript_graph.serialize()
+print(len(aleks_manuscript_graph))
+
+marton_manuscript_triple_generator: TripleGenerator[Manuscript] = TripleGenerator(
+    focus_sheet=marton_sheets.manuscripts,
+    sheets=marton_sheets,
+    model_type=Manuscript,
+    model_converter=ManuscriptRDFConverter,
+)
+
+marton_manuscript_graph = marton_manuscript_triple_generator.to_graph()
+marton_manuscript_graph.serialize()
+print(len(marton_manuscript_graph))

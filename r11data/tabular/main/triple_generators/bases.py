@@ -33,6 +33,28 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
 
         return publication_label
 
+    def lookup[_TLookupModel: BaseModel](
+        self,
+        sheet: pd.DataFrame,
+        model: type[_TLookupModel],
+        column: str,
+        key: str,
+        strict: bool = True,
+    ) -> _TLookupModel | None:
+        """Primitive relational lookup abstraction."""
+        mask = sheet[column] == key
+        _row = sheet[mask]
+
+        if _row.empty:
+            msg = f"Relational lookup for '{column}' with value '{key}' failed."
+            logger.warn(msg)
+            if strict:
+                raise RuntimeError(msg)
+            return None
+
+        row = _row.iloc[0]
+        return model(**row.to_dict())
+
     @overload
     def get_person_data(
         self, person_id: str, strict: TLiteral[True] = True
