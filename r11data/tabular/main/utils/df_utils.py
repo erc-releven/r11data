@@ -48,6 +48,10 @@ class Sheets:
     def social_relationships(self) -> pd.DataFrame:
         return self.load_sheet(sheet_name="Social relationships")
 
+    @cached_property
+    def journeys(self) -> pd.DataFrame:
+        return self.load_sheet(sheet_name="Journeys")
+
     def load_sheet(
         self, sheet_name: str, required_columns: list[str] | None = None
     ) -> pd.DataFrame:

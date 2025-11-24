@@ -196,3 +196,26 @@ class SocialRelationship(_AuthoritySourceBase):
 
     start_date: str | None = Field(validation_alias="Start date")
     end_date: str | None = Field(validation_alias="End date")
+
+
+class Journey(_AuthoritySourceBase):
+    journey_id: str | None = Field(validation_alias="Journey id")
+
+    who_travelled: str = Field(validation_alias="Who travelled")
+    group_travelled: str | None = Field(validation_alias="Group travelled")
+
+    journey_type: str | None = Field(validation_alias="Journey type")
+
+    sent_by_person: str | None = Field(validation_alias="Sent by person")
+
+    visited_person: str | None = Field(validation_alias="Visited person")
+    visited_place: str | None = Field(validation_alias="Visited place")
+    visited_when: str | None = Field(validation_alias="Visited when")
+
+    des_origin: str | None = Field(validation_alias="Des. Origin")
+    des_destination: str | None = Field(validation_alias="Des. Destination")
+    real_origin: str | None = Field(validation_alias="Real Origin")
+    real_destination: str | None = Field(validation_alias="Real Dest.")
+
+    start_date: str | None = Field(validation_alias="Start date")
+    end_date: str | None = Field(validation_alias="End date")
