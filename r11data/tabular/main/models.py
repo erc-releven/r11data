@@ -253,3 +253,20 @@ class AuthorityStatus(_AuthoritySourceBase):
 
     temporal_start: str | None = Field(validation_alias="Temporal start")
     temporal_end: str | None = Field(validation_alias="Temporal end")
+
+
+class Correspondence(_AuthoritySourceBase):
+    letter_sent: str = Field(validation_alias="Letter sent")
+    text_therein: str = Field(validation_alias="Text therein")
+
+    from_whom: str = Field(validation_alias="From whom")
+    from_group: str | None = Field(validation_alias="From group")
+
+    to_whom: str | None = Field(validation_alias="To whom")
+    to_group: str | None = Field(validation_alias="To group")
+
+    when_sent: str | None = Field(validation_alias="When sent")
+    when_received: str | None = Field(validation_alias="When received")
+
+    where_sent: str | None = Field(validation_alias="Where sent")
+    where_received: str | None = Field(validation_alias="Where received")

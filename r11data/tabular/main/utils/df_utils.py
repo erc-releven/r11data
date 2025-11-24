@@ -60,6 +60,10 @@ class Sheets:
     def authority_status(self) -> pd.DataFrame:
         return self.load_sheet(sheet_name="Authority Status")
 
+    @cached_property
+    def correspondence(self) -> pd.DataFrame:
+        return self.load_sheet(sheet_name="Correspondence")
+
     def load_sheet(
         self, sheet_name: str, required_columns: list[str] | None = None
     ) -> pd.DataFrame:
