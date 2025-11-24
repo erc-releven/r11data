@@ -219,3 +219,26 @@ class Journey(_AuthoritySourceBase):
 
     start_date: str | None = Field(validation_alias="Start date")
     end_date: str | None = Field(validation_alias="End date")
+
+
+class GeopoliticalEvent(_AuthoritySourceBase):
+    event_label: str = Field(validation_alias="Event label")
+    event_date: str = Field(validation_alias="Event date")
+    event_type: str = Field(validation_alias="Event type")
+
+    involved_person: str | None = Field(validation_alias="Involved person")
+
+    created_place: str | None = Field(validation_alias="Created place")
+    destroyed_place: str | None = Field(validation_alias="Destroyed place")
+
+    challenge: str | None = Field(validation_alias="Challenge to authority status")
+
+    intended_target_place: str | None = Field(
+        validation_alias="Intended target place of attack"
+    )
+    intended_target_poplulation: str | None = Field(
+        validation_alias="Intended target population"
+    )
+
+    combatant: str | None = Field(validation_alias="Combatant individual")
+    combatant_group: str | None = Field(validation_alias="Combatant group")
