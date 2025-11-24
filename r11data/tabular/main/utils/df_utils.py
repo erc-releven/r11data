@@ -1,8 +1,9 @@
 from functools import cached_property
 import re
 
-import pandas as pd
 from rdflib import URIRef
+
+import pandas as pd
 
 
 class Sheets:
@@ -42,6 +43,10 @@ class Sheets:
     @cached_property
     def manuscripts(self) -> pd.DataFrame:
         return self.load_sheet(sheet_name="Manuscripts")
+
+    @cached_property
+    def social_relationships(self) -> pd.DataFrame:
+        return self.load_sheet(sheet_name="Social relationships")
 
     def load_sheet(
         self, sheet_name: str, required_columns: list[str] | None = None

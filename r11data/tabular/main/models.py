@@ -2,6 +2,8 @@
 
 from typing import Annotated, Any, Literal as TypingLiteral, Self
 
+from rdflib import URIRef
+
 from pydantic import (
     AfterValidator,
     AnyUrl,
@@ -14,7 +16,6 @@ from pydantic import (
 )
 from pydantic_extra_types.coordinate import Coordinate
 from r11data.tabular.main.utils.rdf_utils import mkuri
-from rdflib import URIRef
 
 
 class _AuthoritySourceBase(BaseModel):
@@ -186,3 +187,12 @@ class Manuscript(_AuthoritySourceBase):
     contains_text: str = Field(validation_alias="Contains text")
     scribe: str = Field(validation_alias="Scribe")
     commissioned_by: str | None = Field(validation_alias="Commissioned by")
+
+
+class SocialRelationship(_AuthoritySourceBase):
+    main_person: str = Field(validation_alias="Main person")
+    related_person: str = Field(validation_alias="Related person")
+    relationship_type: str = Field(validation_alias="Relationship type")
+
+    start_date: str | None = Field(validation_alias="Start date")
+    end_date: str | None = Field(validation_alias="End date")
