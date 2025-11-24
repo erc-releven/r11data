@@ -56,6 +56,10 @@ class Sheets:
     def geopolitical_events(self) -> pd.DataFrame:
         return self.load_sheet(sheet_name="Geopolitical Events")
 
+    @cached_property
+    def authority_status(self) -> pd.DataFrame:
+        return self.load_sheet(sheet_name="Authority Status")
+
     def load_sheet(
         self, sheet_name: str, required_columns: list[str] | None = None
     ) -> pd.DataFrame:

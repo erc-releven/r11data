@@ -242,3 +242,14 @@ class GeopoliticalEvent(_AuthoritySourceBase):
 
     combatant: str | None = Field(validation_alias="Combatant individual")
     combatant_group: str | None = Field(validation_alias="Combatant group")
+
+
+class AuthorityStatus(_AuthoritySourceBase):
+    authority_status_label: str = Field(validation_alias="Authority status label")
+    authority_status_type: str | None = Field(validation_alias="Status type")
+    authority_ascribed_by: str | None = Field(validation_alias="Authority ascribed by")
+
+    geographic_scope: str | None = Field(validation_alias="Geographic scope")
+
+    temporal_start: str | None = Field(validation_alias="Temporal start")
+    temporal_end: str | None = Field(validation_alias="Temporal end")
