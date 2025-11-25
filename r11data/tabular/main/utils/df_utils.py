@@ -64,6 +64,10 @@ class Sheets:
     def correspondence(self) -> pd.DataFrame:
         return self.load_sheet(sheet_name="Correspondence")
 
+    @cached_property
+    def birth_death(self) -> pd.DataFrame:
+        return self.load_sheet(sheet_name="Births and deaths")
+
     def load_sheet(
         self, sheet_name: str, required_columns: list[str] | None = None
     ) -> pd.DataFrame:

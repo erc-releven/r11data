@@ -270,3 +270,11 @@ class Correspondence(_AuthoritySourceBase):
 
     where_sent: str | None = Field(validation_alias="Where sent")
     where_received: str | None = Field(validation_alias="Where received")
+
+
+class BirthAndDeath(_AuthoritySourceBase):
+    who: str = Field(validation_alias="Who")
+    which: TypingLiteral["Birth", "Death"] = Field(validation_alias="Which")
+
+    when: str | None = Field(validation_alias="When")
+    where: str | None = Field(validation_alias="Where")
