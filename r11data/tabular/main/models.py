@@ -201,7 +201,7 @@ class SocialRelationship(_AuthoritySourceBase):
 class Journey(_AuthoritySourceBase):
     journey_id: str | None = Field(validation_alias="Journey id")
 
-    who_travelled: str = Field(validation_alias="Who travelled")
+    who_travelled: str | None = Field(validation_alias="Who travelled")
     group_travelled: str | None = Field(validation_alias="Group travelled")
 
     journey_type: str | None = Field(validation_alias="Journey type")
@@ -219,6 +219,13 @@ class Journey(_AuthoritySourceBase):
 
     start_date: str | None = Field(validation_alias="Start date")
     end_date: str | None = Field(validation_alias="End date")
+
+    @model_validator(mode="after")
+    def _check_traveller(self) -> Self:
+        if not (self.who_travelled or self.group_travelled):
+            msg = "Travelling party required. Expected either 'who_travelled' or 'group_travelled'."
+            raise ValueError(msg)
+        return self
 
 
 class GeopoliticalEvent(_AuthoritySourceBase):
