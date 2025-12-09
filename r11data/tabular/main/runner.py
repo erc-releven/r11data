@@ -4,6 +4,7 @@ from lodkit import _Triple
 from r11data.tabular.main.models import (
     ActorGroup,
     AuthorGroup,
+    BirthAndDeath,
     Manuscript,
     Person,
     Place,
@@ -12,6 +13,7 @@ from r11data.tabular.main.models import (
 from r11data.tabular.main.triple_generators import (
     ActorGroupsRDFConverter,
     AuthorGroupsRDFConverter,
+    BirthDeathEventRDFConverter,
     PersonRDFConverter,
     PlaceRDFConverter,
     TextPublicationsRDFConverter,
@@ -287,9 +289,9 @@ lewis_manuscript_triple_generator: TripleGenerator[Manuscript] = TripleGenerator
     model_converter=ManuscriptRDFConverter,
 )
 
-lewis_manuscript_graph = lewis_manuscript_triple_generator.to_graph()
-lewis_manuscript_graph.serialize()
-print(len(lewis_manuscript_graph))
+# lewis_manuscript_graph = lewis_manuscript_triple_generator.to_graph()
+# lewis_manuscript_graph.serialize()
+# print(len(lewis_manuscript_graph))
 
 aleks_manuscript_triple_generator: TripleGenerator[Manuscript] = TripleGenerator(
     focus_sheet=aleks_sheets.manuscripts,
@@ -298,9 +300,9 @@ aleks_manuscript_triple_generator: TripleGenerator[Manuscript] = TripleGenerator
     model_converter=ManuscriptRDFConverter,
 )
 
-aleks_manuscript_graph = aleks_manuscript_triple_generator.to_graph()
-aleks_manuscript_graph.serialize()
-print(len(aleks_manuscript_graph))
+# aleks_manuscript_graph = aleks_manuscript_triple_generator.to_graph()
+# aleks_manuscript_graph.serialize()
+# print(len(aleks_manuscript_graph))
 
 marton_manuscript_triple_generator: TripleGenerator[Manuscript] = TripleGenerator(
     focus_sheet=marton_sheets.manuscripts,
@@ -309,6 +311,44 @@ marton_manuscript_triple_generator: TripleGenerator[Manuscript] = TripleGenerato
     model_converter=ManuscriptRDFConverter,
 )
 
-marton_manuscript_graph = marton_manuscript_triple_generator.to_graph()
-marton_manuscript_graph.serialize()
-print(len(marton_manuscript_graph))
+# marton_manuscript_graph = marton_manuscript_triple_generator.to_graph()
+# marton_manuscript_graph.serialize()
+# print(len(marton_manuscript_graph))
+
+##################################################
+##################################################
+#### Birth Death
+
+# lewis_birth_death_triple_generator: TripleGenerator[BirthAndDeath] = TripleGenerator(
+#     focus_sheet=lewis_sheets.birth_death,
+#     sheets=lewis_sheets,
+#     model_type=BirthAndDeath,
+#     model_converter=BirthDeathEventRDFConverter,
+# )
+
+# lewis_birth_death_graph = lewis_birth_death_triple_generator.to_graph()
+# lewis_birth_death_graph.serialize()
+# print(len(lewis_birth_death_graph))
+
+# aleks_birth_death_triple_generator: TripleGenerator[BirthAndDeath] = TripleGenerator(
+#     focus_sheet=aleks_sheets.birth_death,
+#     sheets=aleks_sheets,
+#     model_type=BirthAndDeath,
+#     model_converter=BirthDeathEventRDFConverter,
+# )
+
+# aleks_birth_death_graph = aleks_birth_death_triple_generator.to_graph()
+# aleks_birth_death_graph.serialize()
+# print(len(aleks_birth_death_graph))
+
+
+# marton_birth_death_triple_generator: TripleGenerator[BirthAndDeath] = TripleGenerator(
+#     focus_sheet=marton_sheets.birth_death,
+#     sheets=marton_sheets,
+#     model_type=BirthAndDeath,
+#     model_converter=BirthDeathEventRDFConverter,
+# )
+
+# marton_birth_death_graph = marton_birth_death_triple_generator.to_graph()
+# marton_birth_death_graph.serialize()
+# print(len(marton_birth_death_graph))

@@ -2,8 +2,6 @@
 
 from typing import Annotated, Any, Literal as TypingLiteral, Self
 
-from rdflib import URIRef
-
 from pydantic import (
     AfterValidator,
     AnyUrl,
@@ -16,6 +14,7 @@ from pydantic import (
 )
 from pydantic_extra_types.coordinate import Coordinate
 from r11data.tabular.main.utils.rdf_utils import mkuri
+from rdflib import URIRef
 
 
 class _AuthoritySourceBase(BaseModel):
