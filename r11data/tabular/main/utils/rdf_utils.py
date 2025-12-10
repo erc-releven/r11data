@@ -17,6 +17,7 @@ pwro = Namespace("https://ontology.swissartresearch.net/pwro/")
 
 mkuri = URIConstructorFactory(r11)
 
+tara_uri = mkuri("0000-0001-6930-3470")
 lewis_uri = mkuri("0009-0007-3535-6823")
 aleks_uri = mkuri("0009-0007-1432-0127")
 marton_uri = mkuri("0000-0003-3547-0750")

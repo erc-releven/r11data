@@ -70,7 +70,7 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
         and return a Person model instance from the first matching row.
         """
         persons_df: pd.DataFrame = self.sheets.persons
-        mask = persons_df["ID string"] == person_id
+        mask = persons_df["ID string"].str.lower() == person_id.lower()
         _row = persons_df[mask]
 
         if _row.empty:

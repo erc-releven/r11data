@@ -8,6 +8,7 @@ from r11data.tabular.main.models import (
     Manuscript,
     Person,
     Place,
+    SocialRelationship,
     TextPublication,
 )
 from r11data.tabular.main.triple_generators import (
@@ -16,6 +17,7 @@ from r11data.tabular.main.triple_generators import (
     BirthDeathEventRDFConverter,
     PersonRDFConverter,
     PlaceRDFConverter,
+    SocialRelationshipRDFConverter,
     TextPublicationsRDFConverter,
 )
 from r11data.tabular.main.triple_generators.bases import _ModelRDFConverter
@@ -352,3 +354,48 @@ marton_manuscript_triple_generator: TripleGenerator[Manuscript] = TripleGenerato
 # marton_birth_death_graph = marton_birth_death_triple_generator.to_graph()
 # marton_birth_death_graph.serialize()
 # print(len(marton_birth_death_graph))
+
+##################################################
+##################################################
+
+
+lewis_social_relationship_triple_generator: TripleGenerator[SocialRelationship] = (
+    TripleGenerator(
+        focus_sheet=lewis_sheets.social_relationships,
+        sheets=lewis_sheets,
+        model_type=SocialRelationship,
+        model_converter=SocialRelationshipRDFConverter,
+    )
+)
+
+# lewis_social_relationship_graph = lewis_social_relationship_triple_generator.to_graph()
+# lewis_social_relationship_graph.serialize()
+# print(len(lewis_social_relationship_graph))
+
+aleks_social_relationship_triple_generator: TripleGenerator[SocialRelationship] = (
+    TripleGenerator(
+        focus_sheet=aleks_sheets.social_relationships,
+        sheets=aleks_sheets,
+        model_type=SocialRelationship,
+        model_converter=SocialRelationshipRDFConverter,
+    )
+)
+
+# aleks_social_relationship_graph = aleks_social_relationship_triple_generator.to_graph()
+# aleks_social_relationship_graph.serialize()
+# print(len(aleks_social_relationship_graph))
+
+marton_social_relationship_triple_generator: TripleGenerator[SocialRelationship] = (
+    TripleGenerator(
+        focus_sheet=marton_sheets.social_relationships,
+        sheets=marton_sheets,
+        model_type=SocialRelationship,
+        model_converter=SocialRelationshipRDFConverter,
+    )
+)
+
+# marton_social_relationship_graph = (
+#     marton_social_relationship_triple_generator.to_graph()
+# )
+# marton_social_relationship_graph.serialize()
+# print(len(marton_social_relationship_graph))
