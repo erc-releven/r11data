@@ -1,8 +1,9 @@
 from typing import Literal as TypingLiteral
 
+from rdflib import Namespace
+
 from lodkit import ClosedOntologyNamespace, NamespaceGraph, URIConstructorFactory
 from r11data.utils.paths import ontologies_path
-from rdflib import Namespace
 
 
 crm = ClosedOntologyNamespace(ontology=ontologies_path / "crm.ttl")
@@ -14,6 +15,8 @@ star = Namespace("https://r11.eu/ns/star/")
 r11spec = Namespace("https://r11.eu/ns/spec/")
 r11pros = Namespace("https://r11.eu/ns/prosopography/")
 pwro = Namespace("https://ontology.swissartresearch.net/pwro/")
+
+aaao = Namespace("https://ontology.swissartresearch.net/aaao/")
 
 mkuri = URIConstructorFactory(r11)
 

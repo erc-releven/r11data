@@ -4,6 +4,9 @@ from r11data.tabular.main.triple_generators.actor_groups_triple_generator import
 from r11data.tabular.main.triple_generators.author_groups_triple_generator import (
     AuthorGroupsRDFConverter as AuthorGroupsRDFConverter,
 )
+from r11data.tabular.main.triple_generators.authority_status_triple_generator import (
+    AuthorityStatusRDFConverter as AuthorityStatusRDFConverter,
+)
 from r11data.tabular.main.triple_generators.birth_death_event_triple_generator import (
     BirthDeathEventRDFConverter as BirthDeathEventRDFConverter,
 )

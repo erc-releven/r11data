@@ -1,9 +1,12 @@
 from collections.abc import Iterator
 
+from rdflib import Literal, URIRef
+
 from lodkit import _Triple
 from r11data.tabular.main.models import (
     ActorGroup,
     AuthorGroup,
+    AuthorityStatus,
     BirthAndDeath,
     Manuscript,
     Person,
@@ -14,6 +17,7 @@ from r11data.tabular.main.models import (
 from r11data.tabular.main.triple_generators import (
     ActorGroupsRDFConverter,
     AuthorGroupsRDFConverter,
+    AuthorityStatusRDFConverter,
     BirthDeathEventRDFConverter,
     PersonRDFConverter,
     PlaceRDFConverter,
@@ -33,7 +37,6 @@ from r11data.tabular.main.utils.rdf_utils import (
     lewis_uri,
     marton_uri,
 )
-from rdflib import Literal, URIRef
 
 
 ##################################################
@@ -357,7 +360,7 @@ marton_manuscript_triple_generator: TripleGenerator[Manuscript] = TripleGenerato
 
 ##################################################
 ##################################################
-
+#### Social relationship
 
 lewis_social_relationship_triple_generator: TripleGenerator[SocialRelationship] = (
     TripleGenerator(
@@ -399,3 +402,47 @@ marton_social_relationship_triple_generator: TripleGenerator[SocialRelationship]
 # )
 # marton_social_relationship_graph.serialize()
 # print(len(marton_social_relationship_graph))
+
+##################################################
+##################################################
+#### Authority Status
+
+lewis_authority_status_triple_generator: TripleGenerator[AuthorityStatus] = (
+    TripleGenerator(
+        focus_sheet=lewis_sheets.authority_status,
+        sheets=lewis_sheets,
+        model_type=AuthorityStatus,
+        model_converter=AuthorityStatusRDFConverter,
+    )
+)
+
+# lewis_authority_status_graph = lewis_authority_status_triple_generator.to_graph()
+# lewis_authority_status_graph.serialize()
+# print(len(lewis_authority_status_graph))
+
+
+aleks_authority_status_triple_generator: TripleGenerator[AuthorityStatus] = (
+    TripleGenerator(
+        focus_sheet=aleks_sheets.authority_status,
+        sheets=aleks_sheets,
+        model_type=AuthorityStatus,
+        model_converter=AuthorityStatusRDFConverter,
+    )
+)
+
+# aleks_authority_status_graph = aleks_authority_status_triple_generator.to_graph()
+# aleks_authority_status_graph.serialize()
+# print(len(aleks_authority_status_graph))
+
+marton_authority_status_triple_generator: TripleGenerator[AuthorityStatus] = (
+    TripleGenerator(
+        focus_sheet=marton_sheets.authority_status,
+        sheets=marton_sheets,
+        model_type=AuthorityStatus,
+        model_converter=AuthorityStatusRDFConverter,
+    )
+)
+
+# marton_authority_status_graph = marton_authority_status_triple_generator.to_graph()
+# marton_authority_status_graph.serialize()
+# print(len(marton_authority_status_graph))

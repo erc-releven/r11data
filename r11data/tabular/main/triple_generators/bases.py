@@ -4,13 +4,14 @@ from collections.abc import Iterable, Iterator
 from functools import cached_property
 from typing import Literal as TLiteral, overload
 
+from rdflib import Graph, URIRef
+
 from lodkit import _Triple
 import pandas as pd
 from pydantic import BaseModel
 from r11data.tabular.main.models import Person
 from r11data.tabular.main.utils.df_utils import Sheets
 from r11data.tabular.main.utils.rdf_utils import RelevenGraph, crm, mkuri
-from rdflib import Graph, URIRef
 import structlog
 
 
@@ -32,6 +33,25 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
         publication_label = publications_df.loc[mask, "Edition"].iloc[0]
 
         return publication_label
+
+    @overload
+    def lookup[_TLookupModel: BaseModel](
+        self,
+        sheet: pd.DataFrame,
+        model: type[_TLookupModel],
+        column: str,
+        key: str,
+        strict: TLiteral[False],
+    ) -> _TLookupModel | None: ...
+    @overload
+    def lookup[_TLookupModel: BaseModel](
+        self,
+        sheet: pd.DataFrame,
+        model: type[_TLookupModel],
+        column: str,
+        key: str,
+        strict: TLiteral[True],
+    ) -> _TLookupModel: ...
 
     def lookup[_TLookupModel: BaseModel](
         self,

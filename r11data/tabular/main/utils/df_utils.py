@@ -58,7 +58,9 @@ class Sheets:
 
     @cached_property
     def authority_status(self) -> pd.DataFrame:
-        return self.load_sheet(sheet_name="Authority Status")
+        return self.load_sheet(
+            sheet_name="Authority Status", required_columns=["Authority ascribed"]
+        )
 
     @cached_property
     def correspondence(self) -> pd.DataFrame:

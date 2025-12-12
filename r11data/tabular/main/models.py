@@ -2,6 +2,8 @@
 
 from typing import Annotated, Any, Literal as TypingLiteral, Self
 
+from rdflib import URIRef
+
 from pydantic import (
     AfterValidator,
     AnyUrl,
@@ -14,7 +16,6 @@ from pydantic import (
 )
 from pydantic_extra_types.coordinate import Coordinate
 from r11data.tabular.main.utils.rdf_utils import mkuri
-from rdflib import URIRef
 
 
 class _AuthoritySourceBase(BaseModel):
@@ -251,7 +252,9 @@ class GeopoliticalEvent(_AuthoritySourceBase):
 
 
 class AuthorityStatus(_AuthoritySourceBase):
+    authority_ascribed: str = Field(validation_alias="Authority ascribed")
     authority_status_label: str = Field(validation_alias="Authority status label")
+
     authority_status_type: str | None = Field(validation_alias="Status type")
     authority_ascribed_by: str | None = Field(validation_alias="Authority ascribed by")
 
