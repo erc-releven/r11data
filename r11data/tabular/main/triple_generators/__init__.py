@@ -10,6 +10,9 @@ from r11data.tabular.main.triple_generators.authority_status_triple_generator im
 from r11data.tabular.main.triple_generators.birth_death_event_triple_generator import (
     BirthDeathEventRDFConverter as BirthDeathEventRDFConverter,
 )
+from r11data.tabular.main.triple_generators.correspondence_triple_generator import (
+    CorrespondenceRDFConverter as CorrespondenceRDFConverter,
+)
 from r11data.tabular.main.triple_generators.manuscript_triple_generator import (
     ManuscriptRDFConverter as ManuscriptRDFConverter,
 )

@@ -1,13 +1,12 @@
 from collections.abc import Iterator
 
-from rdflib import Literal, URIRef
-
 from lodkit import _Triple
 from r11data.tabular.main.models import (
     ActorGroup,
     AuthorGroup,
     AuthorityStatus,
     BirthAndDeath,
+    Correspondence,
     Manuscript,
     Person,
     Place,
@@ -19,6 +18,7 @@ from r11data.tabular.main.triple_generators import (
     AuthorGroupsRDFConverter,
     AuthorityStatusRDFConverter,
     BirthDeathEventRDFConverter,
+    CorrespondenceRDFConverter,
     PersonRDFConverter,
     PlaceRDFConverter,
     SocialRelationshipRDFConverter,
@@ -37,6 +37,7 @@ from r11data.tabular.main.utils.rdf_utils import (
     lewis_uri,
     marton_uri,
 )
+from rdflib import Literal, URIRef
 
 
 ##################################################
@@ -446,3 +447,47 @@ marton_authority_status_triple_generator: TripleGenerator[AuthorityStatus] = (
 # marton_authority_status_graph = marton_authority_status_triple_generator.to_graph()
 # marton_authority_status_graph.serialize()
 # print(len(marton_authority_status_graph))
+
+##################################################
+##################################################
+#### Correspondence
+
+lewis_correspondence_triple_generator: TripleGenerator[Correspondence] = (
+    TripleGenerator(
+        focus_sheet=lewis_sheets.correspondence,
+        sheets=lewis_sheets,
+        model_type=Correspondence,
+        model_converter=CorrespondenceRDFConverter,
+    )
+)
+
+lewis_correspondence_graph = lewis_correspondence_triple_generator.to_graph()
+lewis_correspondence_graph.serialize()
+print(len(lewis_correspondence_graph))
+
+
+aleks_correspondence_triple_generator: TripleGenerator[Correspondence] = (
+    TripleGenerator(
+        focus_sheet=aleks_sheets.correspondence,
+        sheets=aleks_sheets,
+        model_type=Correspondence,
+        model_converter=CorrespondenceRDFConverter,
+    )
+)
+
+aleks_correspondence_graph = aleks_correspondence_triple_generator.to_graph()
+aleks_correspondence_graph.serialize()
+print(len(aleks_correspondence_graph))
+
+marton_correspondence_triple_generator: TripleGenerator[Correspondence] = (
+    TripleGenerator(
+        focus_sheet=marton_sheets.correspondence,
+        sheets=marton_sheets,
+        model_type=Correspondence,
+        model_converter=CorrespondenceRDFConverter,
+    )
+)
+
+marton_correspondence_graph = marton_correspondence_triple_generator.to_graph()
+marton_correspondence_graph.serialize()
+print(len(marton_correspondence_graph))
