@@ -4,14 +4,13 @@ from collections.abc import Iterable, Iterator
 from functools import cached_property
 from typing import Literal as TLiteral, overload
 
-from rdflib import Graph, URIRef
-
 from lodkit import _Triple
 import pandas as pd
 from pydantic import BaseModel
 from r11data.tabular.main.models import Person
 from r11data.tabular.main.utils.df_utils import Sheets
 from r11data.tabular.main.utils.rdf_utils import RelevenGraph, crm, mkuri
+from rdflib import Graph, URIRef
 import structlog
 
 
@@ -160,11 +159,3 @@ class TripleGenerator[_TModel: BaseModel](Iterable[_Triple]):
             _graph.add(triple)
 
         return _graph
-
-
-class Foo:
-    def get_person_data(self, person_id: str, strict: bool = True) -> Person | None:
-        pass
-
-    def get_person_uri(self, person_id: str, strict: bool = True) -> URIRef | None:
-        pass
