@@ -6,6 +6,7 @@ from r11data.tabular.main.models import (
     AuthorGroup,
     AuthorityStatus,
     BirthAndDeath,
+    Boulloteria,
     Correspondence,
     Manuscript,
     Person,
@@ -461,9 +462,9 @@ lewis_correspondence_triple_generator: TripleGenerator[Correspondence] = (
     )
 )
 
-lewis_correspondence_graph = lewis_correspondence_triple_generator.to_graph()
-lewis_correspondence_graph.serialize()
-print(len(lewis_correspondence_graph))
+# lewis_correspondence_graph = lewis_correspondence_triple_generator.to_graph()
+# lewis_correspondence_graph.serialize()
+# print(len(lewis_correspondence_graph))
 
 
 aleks_correspondence_triple_generator: TripleGenerator[Correspondence] = (
@@ -475,9 +476,9 @@ aleks_correspondence_triple_generator: TripleGenerator[Correspondence] = (
     )
 )
 
-aleks_correspondence_graph = aleks_correspondence_triple_generator.to_graph()
-aleks_correspondence_graph.serialize()
-print(len(aleks_correspondence_graph))
+# aleks_correspondence_graph = aleks_correspondence_triple_generator.to_graph()
+# aleks_correspondence_graph.serialize()
+# print(len(aleks_correspondence_graph))
 
 marton_correspondence_triple_generator: TripleGenerator[Correspondence] = (
     TripleGenerator(
@@ -488,6 +489,22 @@ marton_correspondence_triple_generator: TripleGenerator[Correspondence] = (
     )
 )
 
-marton_correspondence_graph = marton_correspondence_triple_generator.to_graph()
-marton_correspondence_graph.serialize()
-print(len(marton_correspondence_graph))
+# marton_correspondence_graph = marton_correspondence_triple_generator.to_graph()
+# marton_correspondence_graph.serialize()
+# print(len(marton_correspondence_graph))
+
+
+##################################################
+##################################################
+#### Boulloteria
+
+# marton_boulloteria_triple_generator: TripleGenerator[Boulloteria] = TripleGenerator(
+#     focus_sheet=marton_sheets,
+#     sheets=marton_sheets.boulloteria,
+#     model_type=Correspondence,
+#     model_converter=CorrespondenceRDFConverter,
+# )
+
+# marton_correspondence_graph = marton_correspondence_triple_generator.to_graph()
+# marton_correspondence_graph.serialize()
+# print(len(marton_correspondence_graph))

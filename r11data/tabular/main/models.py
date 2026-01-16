@@ -2,8 +2,6 @@
 
 from typing import Annotated, Any, Literal as TypingLiteral, Self
 
-from rdflib import URIRef
-
 from pydantic import (
     AfterValidator,
     AnyUrl,
@@ -16,6 +14,7 @@ from pydantic import (
 )
 from pydantic_extra_types.coordinate import Coordinate
 from r11data.tabular.main.utils.rdf_utils import mkuri
+from rdflib import URIRef
 
 
 class _AuthoritySourceBase(BaseModel):
@@ -287,3 +286,61 @@ class BirthAndDeath(_AuthoritySourceBase):
 
     when: str | None = Field(validation_alias="When")
     where: str | None = Field(validation_alias="Where")
+
+
+class Boulloteria(_AuthoritySourceBase):
+    boulloterion_title: str = Field(validation_alias="Boulloterion title")
+    dating: str = Field(validation_alias="Dating")
+
+    external_url: Annotated[
+        AnyUrl | None, AfterValidator(lambda x: str(x) if x is not None else x)
+    ] = Field(validation_alias="External URL")
+
+    owner: str | None = Field(validation_alias="Owner")
+
+    text_obverse: str | None = Field(validation_alias="Text obverse")
+    transl_obverse: str | None = Field(validation_alias="Transl. obverse")
+
+    text_reverse: str | None = Field(validation_alias="Text reverse")
+    transl_reverse: str | None = Field(validation_alias="Transl. reverse")
+
+
+class LeadSeals(BaseModel):
+    seal_id: str = Field(validation_alias="Seal ID")
+    seal_collection: str = Field(validation_alias="Seal collection")
+    boulloterion: str = Field(validation_alias="Boulloterion")
+
+    external_url: Annotated[
+        AnyUrl | None, AfterValidator(lambda x: str(x) if x is not None else x)
+    ] = Field(validation_alias="External url")
+
+
+class OtherObjects(_AuthoritySourceBase):
+    title: str = Field(validation_alias="Title")
+
+    external_id: Annotated[
+        AnyUrl | None, AfterValidator(lambda x: str(x) if x is not None else x)
+    ] = Field(validation_alias="External identifier")
+
+    description: str | None = Field(validation_alias="Description")
+    object_type: str | None = Field(validation_alias="Type")
+
+    # not in Marton sheet; default=None
+    bears_text: str | None = Field(validation_alias="Bears text", default=None)
+
+    documented_location: str | None = Field(validation_alias="Documented location")
+    documented_date: str | None = Field(validation_alias="Documented date")
+
+    creation_location: str | None = Field(validation_alias="Creation location")
+    creation_date: str | None = Field(validation_alias="Creation date")
+
+    decoration_material: str | None = Field(validation_alias="Decoration material")
+    design_element: str | None = Field(validation_alias="Design element")
+    material: str | None = Field(validation_alias="Material")
+
+    # not in Marton sheet; default=None
+    comissioned_by: str | None = Field(validation_alias="Comissioned by", default=None)
+
+    owned_by_group: str | None = Field(validation_alias="Owned by group")
+    owned_when: str | None = Field(validation_alias="Owned when")
+    owned_where: str | None = Field(validation_alias="Owned where")

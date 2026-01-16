@@ -1,9 +1,8 @@
 from functools import cached_property
 import re
 
-from rdflib import URIRef
-
 import pandas as pd
+from rdflib import URIRef
 
 
 class Sheets:
@@ -69,6 +68,18 @@ class Sheets:
     @cached_property
     def birth_death(self) -> pd.DataFrame:
         return self.load_sheet(sheet_name="Births and deaths")
+
+    @cached_property
+    def boulloteria(self) -> pd.DataFrame:
+        return self.load_sheet(sheet_name="Boulloteria")
+
+    @cached_property
+    def lead_seals(self) -> pd.DataFrame:
+        return self.load_sheet(sheet_name="Lead seals")
+
+    @cached_property
+    def other_objects(self) -> pd.DataFrame:
+        return self.load_sheet(sheet_name="Other objects")
 
     def load_sheet(
         self, sheet_name: str, required_columns: list[str] | None = None
