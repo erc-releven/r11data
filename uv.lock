@@ -745,7 +745,7 @@ requires-dist = [
     { name = "sparqlwrapper", specifier = ">=2.0.0,<3" },
     { name = "structlog", specifier = ">=25.4.0" },
     { name = "toolz", specifier = ">=0.12.1,<0.13" },
-    { name = "wisskas", git = "https://github.com/acdh-oeaw/wisskas" },
+    { name = "wisskas", git = "https://github.com/acdh-oeaw/wisskas/?branch=dev" },
 ]
 
 [package.metadata.requires-dev]
@@ -951,7 +951,7 @@ wheels = [
 [[package]]
 name = "wisskas"
 version = "0.1.0"
-source = { git = "https://github.com/acdh-oeaw/wisskas#97c91e5a4152294446d1c726bcdde079c43e5522" }
+source = { git = "https://github.com/acdh-oeaw/wisskas/?branch=dev#73e0ac50ee636b8615ae5a7be43adec8cf366db3" }
 dependencies = [
     { name = "jinja2" },
     { name = "lxml" },

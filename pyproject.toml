@@ -37,7 +37,8 @@ dev = [
 [tool.uv]
 
 [tool.uv.sources]
-wisskas = { git = "https://github.com/acdh-oeaw/wisskas" }
+# wisskas = { git = "https://github.com/acdh-oeaw/wisskas" }
+wisskas = { git = "https://github.com/acdh-oeaw/wisskas/", branch="dev"}
 
 [build-system]
 requires = ["hatchling"]
