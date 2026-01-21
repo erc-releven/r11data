@@ -8,6 +8,7 @@ from r11data.tabular.main.models import (
     BirthAndDeath,
     Boulloteria,
     Correspondence,
+    LeadSeals,
     Manuscript,
     Person,
     Place,
@@ -27,6 +28,12 @@ from r11data.tabular.main.triple_generators import (
 )
 from r11data.tabular.main.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.main.triple_generators.bases import TripleGenerator
+from r11data.tabular.main.triple_generators.boulloteria_triple_generator import (
+    BoulloteriaRDFConverter,
+)
+from r11data.tabular.main.triple_generators.lead_seals_triple_generator import (
+    LeadSealsRDFConverter,
+)
 from r11data.tabular.main.triple_generators.manuscript_triple_generator import (
     ManuscriptRDFConverter,
 )
@@ -498,13 +505,28 @@ marton_correspondence_triple_generator: TripleGenerator[Correspondence] = (
 ##################################################
 #### Boulloteria
 
-# marton_boulloteria_triple_generator: TripleGenerator[Boulloteria] = TripleGenerator(
-#     focus_sheet=marton_sheets,
-#     sheets=marton_sheets.boulloteria,
-#     model_type=Correspondence,
-#     model_converter=CorrespondenceRDFConverter,
-# )
+marton_boulloteria_triple_generator: TripleGenerator[Boulloteria] = TripleGenerator(
+    focus_sheet=marton_sheets.boulloteria,
+    sheets=marton_sheets,
+    model_type=Boulloteria,
+    model_converter=BoulloteriaRDFConverter,
+)
 
-# marton_correspondence_graph = marton_correspondence_triple_generator.to_graph()
-# marton_correspondence_graph.serialize()
-# print(len(marton_correspondence_graph))
+# marton_boulloteria_graph = marton_boulloteria_triple_generator.to_graph()
+# marton_boulloteria_graph.serialize()
+# print(len(marton_boulloteria_graph))
+
+##################################################
+##################################################
+#### LeadSeals
+
+marton_lead_seals_triple_generator: TripleGenerator[LeadSeals] = TripleGenerator(
+    focus_sheet=marton_sheets.lead_seals,
+    sheets=marton_sheets,
+    model_type=LeadSeals,
+    model_converter=LeadSealsRDFConverter,
+)
+
+# marton_lead_seals_graph = marton_lead_seals_triple_generator.to_graph()
+# marton_lead_seals_graph.serialize()
+# print(len(marton_lead_seals_graph))
