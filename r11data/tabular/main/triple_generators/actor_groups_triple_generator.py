@@ -3,7 +3,7 @@
 from collections.abc import Iterator
 import itertools
 
-from rdflib import RDF, RDFS, URIRef
+from rdflib import RDF, RDFS
 
 from lodkit import _Triple, ttl
 from r11data.tabular.main.models import ActorGroup

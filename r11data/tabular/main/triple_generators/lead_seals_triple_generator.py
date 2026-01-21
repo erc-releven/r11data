@@ -6,7 +6,7 @@ from lodkit import _Triple, ttl
 from r11data.tabular.main.models import LeadSeals
 from r11data.tabular.main.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.main.utils.rdf_utils import crm, mkuri, r11spec, so, star
-from rdflib import OWL, RDF, RDFS, URIRef
+from rdflib import RDF, RDFS, URIRef
 
 
 class LeadSealsRDFConverter(_ModelRDFConverter[LeadSeals]):

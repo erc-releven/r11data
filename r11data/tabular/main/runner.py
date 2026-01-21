@@ -1,11 +1,8 @@
-from collections.abc import Iterator
 
-from lodkit import _Triple
 from r11data.tabular.main.models import (
     ActorGroup,
     AuthorGroup,
     AuthorityStatus,
-    BirthAndDeath,
     Boulloteria,
     Correspondence,
     LeadSeals,
@@ -19,14 +16,12 @@ from r11data.tabular.main.triple_generators import (
     ActorGroupsRDFConverter,
     AuthorGroupsRDFConverter,
     AuthorityStatusRDFConverter,
-    BirthDeathEventRDFConverter,
     CorrespondenceRDFConverter,
     PersonRDFConverter,
     PlaceRDFConverter,
     SocialRelationshipRDFConverter,
     TextPublicationsRDFConverter,
 )
-from r11data.tabular.main.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.main.triple_generators.bases import TripleGenerator
 from r11data.tabular.main.triple_generators.boulloteria_triple_generator import (
     BoulloteriaRDFConverter,
@@ -40,12 +35,10 @@ from r11data.tabular.main.triple_generators.manuscript_triple_generator import (
 from r11data.tabular.main.utils.df_utils import Sheets
 from r11data.tabular.main.utils.paths import tabular_main_sources_path
 from r11data.tabular.main.utils.rdf_utils import (
-    RelevenGraph,
     aleks_uri,
     lewis_uri,
     marton_uri,
 )
-from rdflib import Literal, URIRef
 
 
 ##################################################

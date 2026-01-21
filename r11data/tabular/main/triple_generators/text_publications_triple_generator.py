@@ -1,7 +1,6 @@
 """TripleGenerator for the Persons sheet."""
 
 from collections.abc import Iterator
-from functools import cached_property
 import itertools
 
 from lodkit import _Triple, ttl
@@ -11,12 +10,10 @@ from r11data.tabular.main.utils.rdf_utils import (
     crm,
     lrm,
     mkuri,
-    r11,
-    r11pros,
     r11spec,
     star,
 )
-from rdflib import Literal, RDF, RDFS, URIRef
+from rdflib import RDF, RDFS, URIRef
 import structlog
 
 

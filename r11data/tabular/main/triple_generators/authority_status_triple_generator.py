@@ -7,7 +7,7 @@ import itertools
 from rdflib import Literal, RDF, RDFS, URIRef
 
 from lodkit import _Triple, ttl
-from r11data.tabular.main.models import AuthorityStatus, Person, Place
+from r11data.tabular.main.models import AuthorityStatus, Place
 from r11data.tabular.main.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.main.utils.rdf_utils import aaao, crm, mkuri, r11spec, star
 
