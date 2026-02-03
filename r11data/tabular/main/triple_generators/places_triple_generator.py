@@ -4,13 +4,12 @@ from collections.abc import Iterator
 from functools import cached_property, partial
 import itertools
 
-from rdflib import Literal, OWL, RDF, RDFS, URIRef
-
 from lodkit import _Triple, ttl
 from pydantic import AnyUrl
 from r11data.tabular.main.models import Place
 from r11data.tabular.main.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.main.utils.rdf_utils import crm, lrm, mkuri, star
+from rdflib import Literal, OWL, RDF, RDFS, URIRef
 
 
 class PlaceRDFConverter(_ModelRDFConverter[Place]):
@@ -96,12 +95,13 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
             return
 
         e17_uri = mkuri()
+        place_type_uri = mkuri(place_type)
 
         yield from ttl(
             e17_uri,
             (RDF.type, crm.E17_Type_Assignment),
             (crm.P41_classified, self.place_uri),
-            (crm.P42_assigned, place_type),
+            (crm.P42_assigned, ttl(place_type_uri, (RDF.type, crm.E55_Type))),
         )
 
         # authority + passage triples
