@@ -1,3 +1,5 @@
+from collections.abc import Iterable
+from pathlib import Path
 
 from r11data.tabular.main.models import (
     ActorGroup,
@@ -35,32 +37,13 @@ from r11data.tabular.main.triple_generators.manuscript_triple_generator import (
 from r11data.tabular.main.utils.df_utils import Sheets
 from r11data.tabular.main.utils.paths import tabular_main_sources_path
 from r11data.tabular.main.utils.rdf_utils import (
+    RelevenGraph,
+    TripleChain,
     aleks_uri,
     lewis_uri,
     marton_uri,
 )
 
-
-##################################################
-# #### spot-check generated triples
-
-# # test_ioannes_df: pd.DataFrame = lewis_persons_sheet.iloc[[254]]
-
-# # test_lewis_person_triples = TripleGenerator(
-# #     df=test_ioannes_df,
-# #     sheets=lewis_sheet_loader,
-# #     model_type=Person,
-# #     model_converter=PersonRDFConverter,
-# # )
-
-
-# # graph = RelevenGraph()
-
-# # for triple in test_lewis_person_triples:
-# #     graph.add(triple)
-
-# # print(len(graph))
-# # print(graph.serialize())
 
 ##################################################
 ##################################################
@@ -87,23 +70,12 @@ lewis_person_triple_generator: TripleGenerator[Person] = TripleGenerator(
     model_converter=PersonRDFConverter,
 )
 
-
-# lewis_persons_graph: RelevenGraph = lewis_person_triple_generator.to_graph()
-# lewis_persons_graph.serialize()
-# print(len(lewis_persons_graph))
-
-
 aleks_person_triple_generator: TripleGenerator[Person] = TripleGenerator(
     focus_sheet=aleks_sheets.persons,
     sheets=aleks_sheets,
     model_type=Person,
     model_converter=PersonRDFConverter,
 )
-
-
-# aleks_persons_graph: RelevenGraph = aleks_person_triple_generator.to_graph()
-# aleks_persons_graph.serialize()
-# print(len(aleks_persons_graph))
 
 
 marton_person_triple_generator: TripleGenerator[Person] = TripleGenerator(
@@ -114,9 +86,17 @@ marton_person_triple_generator: TripleGenerator[Person] = TripleGenerator(
 )
 
 
-# marton_persons_graph: RelevenGraph = marton_person_triple_generator.to_graph()
-# marton_persons_graph.serialize()
-# print(len(marton_persons_graph))
+person_triples = TripleChain(
+    lewis_person_triple_generator,
+    aleks_person_triple_generator,
+    marton_person_triple_generator,
+)
+
+
+if __name__ == "__main__":
+    with open("./output/person.ttl", "w+") as f:
+        f.write(person_triples.to_graph().serialize())
+
 
 ##################################################
 ##################################################
