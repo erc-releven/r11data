@@ -1,8 +1,16 @@
-from typing import Literal as TypingLiteral
+from collections.abc import Iterable
+import itertools
+from typing import Literal as TypingLiteral, Self
+import warnings
 
-from lodkit import ClosedOntologyNamespace, NamespaceGraph, URIConstructorFactory
+from lodkit import (
+    ClosedOntologyNamespace,
+    NamespaceGraph,
+    URIConstructorFactory,
+    _Triple,
+)
 from r11data.utils.paths import ontologies_path
-from rdflib import Namespace
+from rdflib import Graph, Namespace
 
 
 crm = ClosedOntologyNamespace(ontology=ontologies_path / "crm.ttl")
@@ -52,3 +60,30 @@ def get_source_name_lang_tag(
             return "ar"
         case _:
             return None
+
+
+class TripleChain(itertools.chain[_Triple]):
+    """A simple itertools.chain for chaining lodkit._Triple iterables.
+
+    TripleChain implements a fluid chain interface,
+    i.e TripleChain objects can be chained repeatedly.
+
+    TripleChain also exposes a to_graph method that generates a Graph
+    from the triples stored in the TripleChain.
+    Note that calling to_graph exhausts the TripleChain object.
+    """
+
+    def chain(self, *others: Iterable[_Triple]) -> Self:
+        return self.__class__(self, *others)
+
+    def to_graph(self: Iterable[_Triple], graph: Graph | None = None) -> Graph:
+        _graph: Graph = Graph() if graph is None else graph
+
+        for triple in self:
+            _graph.add(triple)
+
+        if not _graph:
+            msg = f"Graph object '{_graph}' is empty. This might indicate an exhausted iterator."
+            warnings.warn(msg)
+
+        return _graph
