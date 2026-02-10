@@ -101,7 +101,10 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
             e17_uri,
             (RDF.type, crm.E17_Type_Assignment),
             (crm.P41_classified, self.place_uri),
-            (crm.P42_assigned, ttl(place_type_uri, (RDF.type, crm.E55_Type))),
+            (
+                crm.P42_assigned,
+                ttl(place_type_uri, (RDF.type, crm.E55_Type), (RDFS.label, place_type)),
+            ),
         )
 
         # authority + passage triples

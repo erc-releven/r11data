@@ -5,6 +5,7 @@ from r11data.tabular.main.models import (
     ActorGroup,
     AuthorGroup,
     AuthorityStatus,
+    BirthAndDeath,
     Boulloteria,
     Correspondence,
     LeadSeals,
@@ -18,6 +19,7 @@ from r11data.tabular.main.triple_generators import (
     ActorGroupsRDFConverter,
     AuthorGroupsRDFConverter,
     AuthorityStatusRDFConverter,
+    BirthDeathEventRDFConverter,
     CorrespondenceRDFConverter,
     PersonRDFConverter,
     PlaceRDFConverter,
@@ -92,11 +94,8 @@ person_triples = TripleChain(
     marton_person_triple_generator,
 )
 
-
-if __name__ == "__main__":
-    with open("./output/person.ttl", "w+") as f:
-        f.write(person_triples.to_graph().serialize())
-
+with open("./output/persons.ttl", "w") as f:
+    f.write(person_triples.to_graph().serialize())
 
 ##################################################
 ##################################################
@@ -109,22 +108,12 @@ lewis_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
     model_converter=PlaceRDFConverter,
 )
 
-# lewis_places_graph: RelevenGraph = lewis_places_triple_generator.to_graph()
-# lewis_places_graph.serialize()
-# print(len(lewis_places_graph))
-
-
 aleks_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
     focus_sheet=aleks_sheets.places,
     sheets=aleks_sheets,
     model_type=Place,
     model_converter=PlaceRDFConverter,
 )
-
-# aleks_places_graph: RelevenGraph = aleks_places_triple_generator.to_graph()
-# aleks_places_graph.serialize()
-# print(len(aleks_places_graph))
-
 
 marton_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
     focus_sheet=marton_sheets.places,
@@ -133,9 +122,15 @@ marton_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
     model_converter=PlaceRDFConverter,
 )
 
-# marton_places_graph: RelevenGraph = marton_places_triple_generator.to_graph()
-# marton_places_graph.serialize()
-# print(len(marton_places_graph))
+places_triples = TripleChain(
+    lewis_places_triple_generator,
+    aleks_places_triple_generator,
+    marton_places_triple_generator,
+)
+
+with open("./output/places.ttl", "w") as f:
+    f.write(places_triples.to_graph().serialize())
+
 
 ##################################################
 ##################################################
@@ -149,21 +144,12 @@ lewis_author_groups_triple_generator: TripleGenerator[AuthorGroup] = TripleGener
 )
 
 
-# lewis_author_groups_graph = lewis_author_groups_triple_generator.to_graph()
-# lewis_author_groups_graph.serialize()
-# print(len(lewis_author_groups_graph))
-
-
 aleks_author_groups_triple_generator: TripleGenerator[AuthorGroup] = TripleGenerator(
     focus_sheet=aleks_sheets.author_groups,
     sheets=aleks_sheets,
     model_type=AuthorGroup,
     model_converter=AuthorGroupsRDFConverter,
 )
-
-# aleks_author_groups_graph = aleks_author_groups_triple_generator.to_graph()
-# aleks_author_groups_graph.serialize()
-# print(len(aleks_author_groups_graph))
 
 
 marton_author_groups_triple_generator: TripleGenerator[AuthorGroup] = TripleGenerator(
@@ -172,10 +158,6 @@ marton_author_groups_triple_generator: TripleGenerator[AuthorGroup] = TripleGene
     model_type=AuthorGroup,
     model_converter=AuthorGroupsRDFConverter,
 )
-
-# marton_author_groups_graph = marton_author_groups_triple_generator.to_graph()
-# marton_author_groups_graph.serialize()
-# print(len(marton_author_groups_graph))
 
 
 ##################################################
@@ -191,21 +173,12 @@ lewis_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenerat
 )
 
 
-# lewis_actor_groups_graph = lewis_actor_groups_triple_generator.to_graph()
-# lewis_actor_groups_graph.serialize()
-# print(len(lewis_actor_groups_graph))
-
-
 aleks_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenerator(
     focus_sheet=aleks_sheets.actor_groups,
     sheets=aleks_sheets,
     model_type=ActorGroup,
     model_converter=ActorGroupsRDFConverter,
 )
-
-# aleks_author_groups_graph = aleks_author_groups_triple_generator.to_graph()
-# aleks_author_groups_graph.serialize()
-# print(len(aleks_author_groups_graph))
 
 
 marton_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenerator(
@@ -214,10 +187,6 @@ marton_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenera
     model_type=ActorGroup,
     model_converter=ActorGroupsRDFConverter,
 )
-
-# marton_actor_groups_graph = marton_actor_groups_triple_generator.to_graph()
-# marton_actor_groups_graph.serialize()
-# print(len(marton_actor_groups_graph))
 
 ##################################################
 ##################################################
@@ -234,11 +203,6 @@ lewis_text_publications_triple_generator: TripleGenerator[TextPublication] = (
 )
 
 
-# lewis_text_publications_graph = lewis_text_publications_triple_generator.to_graph()
-# lewis_text_publications_graph.serialize()
-# print(len(lewis_text_publications_graph))
-
-
 aleks_text_publications_triple_generator: TripleGenerator[TextPublication] = (
     TripleGenerator(
         focus_sheet=aleks_sheets.text_publications,
@@ -248,11 +212,6 @@ aleks_text_publications_triple_generator: TripleGenerator[TextPublication] = (
     )
 )
 
-# aleks_text_publications_graph = aleks_text_publications_triple_generator.to_graph()
-# aleks_text_publications_graph.serialize()
-# print(len(aleks_text_publications_graph))
-
-
 marton_text_publications_triple_generator: TripleGenerator[TextPublication] = (
     TripleGenerator(
         focus_sheet=marton_sheets.text_publications,
@@ -261,10 +220,6 @@ marton_text_publications_triple_generator: TripleGenerator[TextPublication] = (
         model_converter=TextPublicationsRDFConverter,
     )
 )
-
-# marton_text_publications_graph = marton_text_publications_triple_generator.to_graph()
-# marton_text_publications_graph.serialize()
-# print(len(marton_text_publications_graph))
 
 ##################################################
 ##################################################
@@ -276,10 +231,6 @@ lewis_manuscript_triple_generator: TripleGenerator[Manuscript] = TripleGenerator
     model_converter=ManuscriptRDFConverter,
 )
 
-# lewis_manuscript_graph = lewis_manuscript_triple_generator.to_graph()
-# lewis_manuscript_graph.serialize()
-# print(len(lewis_manuscript_graph))
-
 aleks_manuscript_triple_generator: TripleGenerator[Manuscript] = TripleGenerator(
     focus_sheet=aleks_sheets.manuscripts,
     sheets=aleks_sheets,
@@ -287,9 +238,6 @@ aleks_manuscript_triple_generator: TripleGenerator[Manuscript] = TripleGenerator
     model_converter=ManuscriptRDFConverter,
 )
 
-# aleks_manuscript_graph = aleks_manuscript_triple_generator.to_graph()
-# aleks_manuscript_graph.serialize()
-# print(len(aleks_manuscript_graph))
 
 marton_manuscript_triple_generator: TripleGenerator[Manuscript] = TripleGenerator(
     focus_sheet=marton_sheets.manuscripts,
@@ -298,47 +246,33 @@ marton_manuscript_triple_generator: TripleGenerator[Manuscript] = TripleGenerato
     model_converter=ManuscriptRDFConverter,
 )
 
-# marton_manuscript_graph = marton_manuscript_triple_generator.to_graph()
-# marton_manuscript_graph.serialize()
-# print(len(marton_manuscript_graph))
-
 ##################################################
 ##################################################
 #### Birth Death
 
-# lewis_birth_death_triple_generator: TripleGenerator[BirthAndDeath] = TripleGenerator(
-#     focus_sheet=lewis_sheets.birth_death,
-#     sheets=lewis_sheets,
-#     model_type=BirthAndDeath,
-#     model_converter=BirthDeathEventRDFConverter,
-# )
-
-# lewis_birth_death_graph = lewis_birth_death_triple_generator.to_graph()
-# lewis_birth_death_graph.serialize()
-# print(len(lewis_birth_death_graph))
-
-# aleks_birth_death_triple_generator: TripleGenerator[BirthAndDeath] = TripleGenerator(
-#     focus_sheet=aleks_sheets.birth_death,
-#     sheets=aleks_sheets,
-#     model_type=BirthAndDeath,
-#     model_converter=BirthDeathEventRDFConverter,
-# )
-
-# aleks_birth_death_graph = aleks_birth_death_triple_generator.to_graph()
-# aleks_birth_death_graph.serialize()
-# print(len(aleks_birth_death_graph))
+lewis_birth_death_triple_generator: TripleGenerator[BirthAndDeath] = TripleGenerator(
+    focus_sheet=lewis_sheets.birth_death,
+    sheets=lewis_sheets,
+    model_type=BirthAndDeath,
+    model_converter=BirthDeathEventRDFConverter,
+)
 
 
-# marton_birth_death_triple_generator: TripleGenerator[BirthAndDeath] = TripleGenerator(
-#     focus_sheet=marton_sheets.birth_death,
-#     sheets=marton_sheets,
-#     model_type=BirthAndDeath,
-#     model_converter=BirthDeathEventRDFConverter,
-# )
+aleks_birth_death_triple_generator: TripleGenerator[BirthAndDeath] = TripleGenerator(
+    focus_sheet=aleks_sheets.birth_death,
+    sheets=aleks_sheets,
+    model_type=BirthAndDeath,
+    model_converter=BirthDeathEventRDFConverter,
+)
 
-# marton_birth_death_graph = marton_birth_death_triple_generator.to_graph()
-# marton_birth_death_graph.serialize()
-# print(len(marton_birth_death_graph))
+
+marton_birth_death_triple_generator: TripleGenerator[BirthAndDeath] = TripleGenerator(
+    focus_sheet=marton_sheets.birth_death,
+    sheets=marton_sheets,
+    model_type=BirthAndDeath,
+    model_converter=BirthDeathEventRDFConverter,
+)
+
 
 ##################################################
 ##################################################
@@ -353,10 +287,6 @@ lewis_social_relationship_triple_generator: TripleGenerator[SocialRelationship] 
     )
 )
 
-# lewis_social_relationship_graph = lewis_social_relationship_triple_generator.to_graph()
-# lewis_social_relationship_graph.serialize()
-# print(len(lewis_social_relationship_graph))
-
 aleks_social_relationship_triple_generator: TripleGenerator[SocialRelationship] = (
     TripleGenerator(
         focus_sheet=aleks_sheets.social_relationships,
@@ -365,10 +295,6 @@ aleks_social_relationship_triple_generator: TripleGenerator[SocialRelationship] 
         model_converter=SocialRelationshipRDFConverter,
     )
 )
-
-# aleks_social_relationship_graph = aleks_social_relationship_triple_generator.to_graph()
-# aleks_social_relationship_graph.serialize()
-# print(len(aleks_social_relationship_graph))
 
 marton_social_relationship_triple_generator: TripleGenerator[SocialRelationship] = (
     TripleGenerator(
@@ -379,11 +305,15 @@ marton_social_relationship_triple_generator: TripleGenerator[SocialRelationship]
     )
 )
 
-# marton_social_relationship_graph = (
-#     marton_social_relationship_triple_generator.to_graph()
-# )
-# marton_social_relationship_graph.serialize()
-# print(len(marton_social_relationship_graph))
+social_relationship_triples = TripleChain(
+    lewis_social_relationship_triple_generator,
+    aleks_social_relationship_triple_generator,
+    marton_social_relationship_triple_generator,
+)
+
+
+with open("./output/social_relations.ttl", "w") as f:
+    f.write(social_relationship_triples.to_graph().serialize())
 
 ##################################################
 ##################################################
@@ -398,10 +328,6 @@ lewis_authority_status_triple_generator: TripleGenerator[AuthorityStatus] = (
     )
 )
 
-# lewis_authority_status_graph = lewis_authority_status_triple_generator.to_graph()
-# lewis_authority_status_graph.serialize()
-# print(len(lewis_authority_status_graph))
-
 
 aleks_authority_status_triple_generator: TripleGenerator[AuthorityStatus] = (
     TripleGenerator(
@@ -412,9 +338,6 @@ aleks_authority_status_triple_generator: TripleGenerator[AuthorityStatus] = (
     )
 )
 
-# aleks_authority_status_graph = aleks_authority_status_triple_generator.to_graph()
-# aleks_authority_status_graph.serialize()
-# print(len(aleks_authority_status_graph))
 
 marton_authority_status_triple_generator: TripleGenerator[AuthorityStatus] = (
     TripleGenerator(
@@ -425,9 +348,6 @@ marton_authority_status_triple_generator: TripleGenerator[AuthorityStatus] = (
     )
 )
 
-# marton_authority_status_graph = marton_authority_status_triple_generator.to_graph()
-# marton_authority_status_graph.serialize()
-# print(len(marton_authority_status_graph))
 
 ##################################################
 ##################################################
@@ -456,9 +376,6 @@ aleks_correspondence_triple_generator: TripleGenerator[Correspondence] = (
     )
 )
 
-# aleks_correspondence_graph = aleks_correspondence_triple_generator.to_graph()
-# aleks_correspondence_graph.serialize()
-# print(len(aleks_correspondence_graph))
 
 marton_correspondence_triple_generator: TripleGenerator[Correspondence] = (
     TripleGenerator(
@@ -468,10 +385,6 @@ marton_correspondence_triple_generator: TripleGenerator[Correspondence] = (
         model_converter=CorrespondenceRDFConverter,
     )
 )
-
-# marton_correspondence_graph = marton_correspondence_triple_generator.to_graph()
-# marton_correspondence_graph.serialize()
-# print(len(marton_correspondence_graph))
 
 
 ##################################################
@@ -485,9 +398,6 @@ marton_boulloteria_triple_generator: TripleGenerator[Boulloteria] = TripleGenera
     model_converter=BoulloteriaRDFConverter,
 )
 
-# marton_boulloteria_graph = marton_boulloteria_triple_generator.to_graph()
-# marton_boulloteria_graph.serialize()
-# print(len(marton_boulloteria_graph))
 
 ##################################################
 ##################################################
@@ -499,7 +409,3 @@ marton_lead_seals_triple_generator: TripleGenerator[LeadSeals] = TripleGenerator
     model_type=LeadSeals,
     model_converter=LeadSealsRDFConverter,
 )
-
-# marton_lead_seals_graph = marton_lead_seals_triple_generator.to_graph()
-# marton_lead_seals_graph.serialize()
-# print(len(marton_lead_seals_graph))

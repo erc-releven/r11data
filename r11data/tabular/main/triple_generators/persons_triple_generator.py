@@ -29,7 +29,7 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
     @cached_property
     def person_uri(self) -> URIRef:
         person_uri: URIRef = (
-            mkuri(self.model.identifier)
+            mkuri(self.model.id_string)
             if (_wisski_id := self.model.wisski_id) is None
             else URIRef(str(_wisski_id))
         )
@@ -53,10 +53,12 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
             (crm.P140_assigned_attribute_to, self.person_uri),
             (
                 crm.P37_assigned,
-                [
+                ttl(
+                    mkuri(),
                     (RDF.type, crm.E42_Identifier),
                     (crm.P190_has_symbolic_content, self.model.identifier),
-                ],
+                    (RDFS.label, self.model.identifier),
+                ),
             ),
         )
 
@@ -141,7 +143,7 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
             return
 
         e13_crm_p41_uri = mkuri()
-        gender_assignment_uri = mkuri(f"{self.model.identifier} - gender")
+        gender_assignment_uri = mkuri(f"{self.model.id_string} - gender")
 
         yield from ttl(
             e13_crm_p41_uri,
@@ -161,7 +163,7 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
             return
 
         e13_crm_p42_uri = mkuri()
-        gender_assignment_uri = mkuri(f"{self.model.identifier} - gender")
+        gender_assignment_uri = mkuri(f"{self.model.id_string} - gender")
 
         yield from ttl(
             e13_crm_p42_uri,

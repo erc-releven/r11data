@@ -23,15 +23,12 @@ logger = structlog.get_logger()
 
 
 class SocialRelationshipRDFConverter(_ModelRDFConverter[SocialRelationship]):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
     @cached_property
     def main_person_uri(self) -> URIRef:
         person_model = self.get_person_data(self.model.main_person)
 
         person_uri: URIRef = (
-            mkuri(person_model.identifier)
+            mkuri(person_model.id_string)
             if (_wisski_id := person_model.wisski_id) is None
             else URIRef(str(_wisski_id))
         )
@@ -42,7 +39,7 @@ class SocialRelationshipRDFConverter(_ModelRDFConverter[SocialRelationship]):
         person_model = self.get_person_data(self.model.related_person)
 
         person_uri: URIRef = (
-            mkuri(person_model.identifier)
+            mkuri(person_model.id_string)
             if (_wisski_id := person_model.wisski_id) is None
             else URIRef(str(_wisski_id))
         )
@@ -93,7 +90,14 @@ class SocialRelationshipRDFConverter(_ModelRDFConverter[SocialRelationship]):
             e17_uri,
             (RDF.type, crm.E17_Type_Assignment),
             (crm.P14_carried_out_by, tara_uri),
-            (crm.P41_classified, mkuri(self.model.relationship_type)),
+            (
+                crm.P41_classified,
+                ttl(
+                    mkuri(self.model.relationship_type),
+                    (RDF.type, crm.E55_Type),
+                    (RDFS.label, self.model.relationship_type),
+                ),
+            ),
             (
                 crm.P42_assigned,
                 ttl(

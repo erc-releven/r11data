@@ -24,6 +24,8 @@ class _AuthoritySourceBase(BaseModel):
     are common across several sheets and ergo can be generalized.
     """
 
+    model_config = ConfigDict(str_strip_whitespace=True)
+
     authority: str | None = Field(validation_alias="Authority")
     authority_group: str | None = Field(validation_alias="Authority group")
     based_on: str | None = Field(validation_alias="Based on")
@@ -64,11 +66,13 @@ class Person(_AuthoritySourceBase):
     model_config = ConfigDict(arbitrary_types_allowed=True)  # mainly for person_uri
 
     identifier: str = Field(validation_alias="Identifier", coerce_numbers_to_str=True)
+
     service: Annotated[
         str,
         Field(validation_alias="Service"),
         BeforeValidator(lambda x: "https://r11.eu/" if x is None else x),
     ]
+
     descriptive_name: str = Field(validation_alias="Descriptive name")
     id_string: str = Field(validation_alias="ID string")
 
@@ -127,6 +131,8 @@ class Place(_AuthoritySourceBase):
 
 class AuthorGroup(BaseModel):
     """AuthorGroup model corresponding to the main 'Author groups' sheet."""
+
+    model_config = ConfigDict(str_strip_whitespace=True)
 
     wisski_id: Annotated[
         AnyUrl | None, AfterValidator(lambda x: str(x) if x is not None else x)
@@ -191,7 +197,10 @@ class Manuscript(_AuthoritySourceBase):
 class SocialRelationship(_AuthoritySourceBase):
     main_person: str = Field(validation_alias="Main person")
     related_person: str = Field(validation_alias="Related person")
-    relationship_type: str = Field(validation_alias="Relationship type")
+    relationship_type: Annotated[
+        str,
+        Field(validation_alias="Relationship type"),
+    ]
 
     start_date: str | None = Field(validation_alias="Start date")
     end_date: str | None = Field(validation_alias="End date")
