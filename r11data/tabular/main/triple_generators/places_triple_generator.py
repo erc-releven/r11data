@@ -95,7 +95,7 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
             return
 
         e17_uri = mkuri()
-        place_type_uri = mkuri(place_type)
+        place_type_uri = mkuri("Place type", place_type)
 
         yield from ttl(
             e17_uri,
@@ -131,17 +131,17 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
         if (population_group := self.model.had_population_group) is None:
             return
 
-        e13_crm_p53 = mkuri()
+        e13_crm_p53_uri = mkuri()
 
         yield from ttl(
-            e13_crm_p53,
+            e13_crm_p53_uri,
             (RDF.type, star.E13_crm_P53),
             (crm.P140_assigned_attribute_to, population_group),
             (crm.P141_assigned, self.place_uri),
         )
 
         # authority + passage triples
-        yield from self.authority_passage_triples(e13_crm_p53)
+        yield from self.authority_passage_triples(e13_crm_p53_uri)
 
     def spatio_temporal_existence_triples(self) -> Iterator[_Triple]:
         e92_uri = mkuri()

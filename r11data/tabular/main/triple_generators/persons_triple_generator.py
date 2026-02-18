@@ -29,7 +29,7 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
     @cached_property
     def person_uri(self) -> URIRef:
         person_uri: URIRef = (
-            mkuri(self.model.id_string)
+            mkuri(self.model.identifier, self.model.service)
             if (_wisski_id := self.model.wisski_id) is None
             else URIRef(str(_wisski_id))
         )
@@ -76,10 +76,10 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
         reference = self.model.source_text_reference
         excerpt = self.model.source_text_excerpt
 
-        if excerpt is None:
+        if (excerpt is None) or (reference is None):
             return
 
-        passage_uri = mkuri(f"{reference} - {excerpt}")
+        passage_uri = mkuri(reference, excerpt)
         yield from ttl(
             passage_uri,
             (RDF.type, crm.E33_Linguistic_Object),
@@ -111,8 +111,9 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
 
         reference = self.model.source_text_reference
         excerpt = self.model.source_text_excerpt
+
         if reference is not None and excerpt is not None:
-            passage_uri = mkuri(f"{reference} - {excerpt}")
+            passage_uri = mkuri(reference, excerpt)
             yield (passage_uri, crm.P67_refers_to, e13_crm_p1_uri)
 
         # name triples
@@ -143,7 +144,9 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
             return
 
         e13_crm_p41_uri = mkuri()
-        gender_assignment_uri = mkuri(f"{self.model.id_string} - gender")
+        gender_assignment_uri = mkuri(
+            self.model.id_string, "gender"
+        )  # hashing for internal connection
 
         yield from ttl(
             e13_crm_p41_uri,
@@ -163,13 +166,20 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
             return
 
         e13_crm_p42_uri = mkuri()
-        gender_assignment_uri = mkuri(f"{self.model.id_string} - gender")
+        gender_assignment_uri = mkuri(self.model.id_string, "gender")
 
         yield from ttl(
             e13_crm_p42_uri,
             (RDF.type, star.E13_crm_P42),
             (crm.P140_assigned_attribute_to, gender_assignment_uri),
-            (crm.P141_assigned, Literal(gender)),
+            (
+                crm.P141_assigned,
+                ttl(
+                    mkuri("Gender", gender),
+                    (RDF.type, r11pros.C11),
+                    (RDFS.label, gender),
+                ),
+            ),
         )
 
         # authority + passage triples
@@ -180,14 +190,14 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
             return
 
         e13_crm_p107_uri = mkuri()
-        ethnic_group_uri = mkuri(ethnicity)
+        ethnic_group_uri = mkuri("Ethnicity", ethnicity)
 
         yield from ttl(
             e13_crm_p107_uri,
             (RDF.type, star.E13_crm_P107),
             (
                 crm.P140_assigned_attribute_to,
-                ttl(ethnic_group_uri, (RDF.value, ethnicity)),
+                ttl(ethnic_group_uri, (RDF.value, ethnicity), (RDFS.label, ethnicity)),
             ),
             (crm.P141_assigned, self.person_uri),
         )
@@ -201,14 +211,14 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
 
         # P13 triples
         e13_sdhss_p13_uri = mkuri()
-        social_role_uri = mkuri()
+        social_role_uri = mkuri("Social role (C2)", social_role)
 
         yield from ttl(
             e13_sdhss_p13_uri,
             (RDF.type, star.E13_sdhss_P13),
             (
                 crm.P140_assigned_attribute_to,
-                ttl(social_role_uri, (RDF.type, r11pros.C1)),
+                ttl(social_role_uri, (RDF.type, r11pros.C1), (RDFS.label, social_role)),
             ),
             (crm.P141_assigned, self.person_uri),
         )
@@ -233,14 +243,18 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
 
         # P26 triples
         e13_sdhss_p26_uri = mkuri()
-        legal_role_uri = mkuri()
+        legal_role_uri = mkuri("Legal role (C12)", legal_role)
 
         yield from ttl(
             e13_sdhss_p26_uri,
             (RDF.type, star.E13_sdhss_P26),
             (
                 crm.P140_assigned_attribute_to,
-                ttl(legal_role_uri, (RDF.type, r11pros.C13)),
+                ttl(
+                    legal_role_uri,
+                    (RDF.type, r11pros.C13),
+                    (RDFS.label, legal_role_uri),
+                ),
             ),
             (crm.P141_assigned, self.person_uri),
         )
@@ -264,13 +278,20 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
 
         # P38 triples
         e13_sdhss_p38_uri = mkuri()
-        language_skill_uri = mkuri()
+        language_skill_uri = mkuri("Language", language_skill)
 
         yield from ttl(
             e13_sdhss_p38_uri,
             (RDF.type, star.E13_sdhss_P38),
             (crm.P140_assigned_attribute_to, self.person_uri),
-            (crm.P141_assigned, ttl(language_skill_uri, (RDF.type, r11pros.C21))),
+            (
+                crm.P141_assigned,
+                ttl(
+                    language_skill_uri,
+                    (RDF.type, r11pros.C21),
+                    (RDFS.label, language_skill),
+                ),
+            ),
         )
 
         # P37 triples
@@ -293,14 +314,14 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
 
         # P36 triples
         e13_sdhss_p36_uri = mkuri()
-        religion_uri = mkuri()
+        religion_uri = mkuri("Religious affiliation", religion)
 
         yield from ttl(
             e13_sdhss_p36_uri,
             (RDF.type, star.E13_sdhss_P36),
             (
                 crm.P140_assigned_attribute_to,
-                ttl(religion_uri, (RDF.type, r11pros.Religion)),
+                ttl(religion_uri, (RDF.type, r11pros.Religion), (RDFS.label, religion)),
             ),
             (crm.P141_assigned, self.person_uri),
         )

@@ -26,6 +26,7 @@ dependencies = [
     "httpx>=0.28.1",
     "structlog>=25.4.0",
     "python-calamine>=0.5.3",
+    "sparqlx>=0.10.0",
 ]
 
 [dependency-groups]

@@ -1,16 +1,34 @@
 from collections.abc import Iterable
+from hashlib import sha256
 import itertools
 from typing import Literal as TypingLiteral, Self
+from uuid import uuid4
 import warnings
 
-from lodkit import (
-    ClosedOntologyNamespace,
-    NamespaceGraph,
-    URIConstructorFactory,
-    _Triple,
-)
+from lodkit import ClosedOntologyNamespace, NamespaceGraph, _Triple
 from r11data.utils.paths import ontologies_path
-from rdflib import Graph, Namespace
+from rdflib import Graph, Namespace, Namespace, URIRef
+
+
+class URIConstructorFactory:
+    def __init__(
+        self,
+        namespace: str,
+    ) -> None:
+        self.namespace = Namespace(namespace)
+
+    def __call__(self, *hash_values: str) -> URIRef:
+        if not hash_values:
+            segment = str(uuid4())
+            return self.namespace[segment]
+
+        _hash_values: Iterable[str] = map(lambda x: x.strip().lower(), hash_values)
+        hash_value: bytes = " / ".join(_hash_values).encode("utf8")
+
+        digest = sha256(hash_value).hexdigest()
+        segment = digest[:36]
+
+        return self.namespace[segment]
 
 
 crm = ClosedOntologyNamespace(ontology=ontologies_path / "crm.ttl")

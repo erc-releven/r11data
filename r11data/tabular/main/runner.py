@@ -94,8 +94,8 @@ person_triples = TripleChain(
     marton_person_triple_generator,
 )
 
-with open("./output/persons.ttl", "w") as f:
-    f.write(person_triples.to_graph().serialize())
+# with open("./output/persons.ttl", "w") as f:
+#     f.write(person_triples.to_graph().serialize())
 
 ##################################################
 ##################################################
@@ -128,8 +128,8 @@ places_triples = TripleChain(
     marton_places_triple_generator,
 )
 
-with open("./output/places.ttl", "w") as f:
-    f.write(places_triples.to_graph().serialize())
+# with open("./output/places.ttl", "w") as f:
+#     f.write(places_triples.to_graph().serialize())
 
 
 ##################################################
@@ -312,8 +312,8 @@ social_relationship_triples = TripleChain(
 )
 
 
-with open("./output/social_relations.ttl", "w") as f:
-    f.write(social_relationship_triples.to_graph().serialize())
+# with open("./output/social_relations.ttl", "w") as f:
+#     f.write(social_relationship_triples.to_graph().serialize())
 
 ##################################################
 ##################################################

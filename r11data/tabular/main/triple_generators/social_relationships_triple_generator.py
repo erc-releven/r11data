@@ -25,10 +25,10 @@ logger = structlog.get_logger()
 class SocialRelationshipRDFConverter(_ModelRDFConverter[SocialRelationship]):
     @cached_property
     def main_person_uri(self) -> URIRef:
-        person_model = self.get_person_data(self.model.main_person)
+        person_model = self.get_person_data(self.model.main_person, strict=True)
 
         person_uri: URIRef = (
-            mkuri(person_model.id_string)
+            mkuri(person_model.identifier, person_model.service)
             if (_wisski_id := person_model.wisski_id) is None
             else URIRef(str(_wisski_id))
         )
@@ -39,7 +39,7 @@ class SocialRelationshipRDFConverter(_ModelRDFConverter[SocialRelationship]):
         person_model = self.get_person_data(self.model.related_person)
 
         person_uri: URIRef = (
-            mkuri(person_model.id_string)
+            mkuri(person_model.identifier, person_model.service)
             if (_wisski_id := person_model.wisski_id) is None
             else URIRef(str(_wisski_id))
         )
@@ -47,7 +47,7 @@ class SocialRelationshipRDFConverter(_ModelRDFConverter[SocialRelationship]):
 
     def relationship_base_triples(self) -> Iterator[_Triple]:
         self.social_relationship_uri = mkuri(
-            f"{self.main_person_uri} - {self.related_person_uri}"
+            self.main_person_uri, self.related_person_uri
         )
         e13_sdhss_p16_uri, e13_sdhss_p17_uri, e13_sdhss_p18_uri, e17_uri = (
             mkuri(),

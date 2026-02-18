@@ -713,6 +713,7 @@ dependencies = [
     { name = "rdflib" },
     { name = "rich" },
     { name = "sparqlwrapper" },
+    { name = "sparqlx" },
     { name = "structlog" },
     { name = "toolz" },
     { name = "wisskas" },
@@ -743,6 +744,7 @@ requires-dist = [
     { name = "rdflib", specifier = ">=7.0.0,<8" },
     { name = "rich", specifier = ">=13.7.1,<14" },
     { name = "sparqlwrapper", specifier = ">=2.0.0,<3" },
+    { name = "sparqlx", specifier = ">=0.10.0" },
     { name = "structlog", specifier = ">=25.4.0" },
     { name = "toolz", specifier = ">=0.12.1,<0.13" },
     { name = "wisskas", git = "https://github.com/acdh-oeaw/wisskas/?branch=dev" },
@@ -756,14 +758,14 @@ dev = [
 
 [[package]]
 name = "rdflib"
-version = "7.1.4"
+version = "7.6.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "pyparsing" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/e8/7e/cb2d74466bd8495051ebe2d241b1cb1d4acf9740d481126aef19ef2697f5/rdflib-7.1.4.tar.gz", hash = "sha256:fed46e24f26a788e2ab8e445f7077f00edcf95abb73bcef4b86cefa8b62dd174", size = 4692745 }
+sdist = { url = "https://files.pythonhosted.org/packages/98/f5/18bb77b7af9526add0c727a3b2048959847dc5fb030913e2918bf384fec3/rdflib-7.6.0.tar.gz", hash = "sha256:6c831288d5e4a5a7ece85d0ccde9877d512a3d0f02d7c06455d00d6d0ea379df", size = 4943826 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/f4/31/e9b6f04288dcd3fa60cb3179260d6dad81b92aef3063d679ac7d80a827ea/rdflib-7.1.4-py3-none-any.whl", hash = "sha256:72f4adb1990fa5241abd22ddaf36d7cafa5d91d9ff2ba13f3086d339b213d997", size = 565051 },
+    { url = "https://files.pythonhosted.org/packages/10/c2/6604a71269e0c1bd75656d5a001432d16f2cc5b8c057140ec797155c295e/rdflib-7.6.0-py3-none-any.whl", hash = "sha256:30c0a3ebf4c0e09215f066be7246794b6492e054e782d7ac2a34c9f70a15e0dd", size = 615416 },
 ]
 
 [[package]]
@@ -877,6 +879,19 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/4e/cc/453752fffa759ef41a3ceadb3f167e13dae1a74c1db057d9f6a7affa9240/SPARQLWrapper-2.0.0.tar.gz", hash = "sha256:3fed3ebcc77617a4a74d2644b86fd88e0f32e7f7003ac7b2b334c026201731f1", size = 98429 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/31/89/176e3db96e31e795d7dfd91dd67749d3d1f0316bb30c6931a6140e1a0477/SPARQLWrapper-2.0.0-py3-none-any.whl", hash = "sha256:c99a7204fff676ee28e6acef327dc1ff8451c6f7217dcd8d49e8872f324a8a20", size = 28620 },
+]
+
+[[package]]
+name = "sparqlx"
+version = "0.10.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "httpx" },
+    { name = "rdflib" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/5b/0a/56d5c004c53303a740554d6792466c815726a0dd1ba8d83d07066adf5fb9/sparqlx-0.10.0.tar.gz", hash = "sha256:30fe27702ceb50e8725e3580646ba691bb1417f986f1e8078b6883fcaadaa77f", size = 94096 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/de/d4/58365dde361f395bd9f0f6a7f6e72c1b875aa12600cd8f2dcf92382f3587/sparqlx-0.10.0-py3-none-any.whl", hash = "sha256:ae0ab447633127402073bcfe089ebd38caf9efc9258aa82806addace8725dc71", size = 28013 },
 ]
 
 [[package]]
