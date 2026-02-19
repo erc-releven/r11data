@@ -1,0 +1,461 @@
+@prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://r11.eu/rdf/resource/043e8b6f-0f5a-4eae-92ec-3a6aeddd2fe0> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Niketas, protosynkellos of Hagia Sophia; Georgios, kouboukleisios and nomikos of Hierissos",
+        "Nikolaos Serblias, krites of Boleron, Strymon and Thessalonike; Petros, asekretis under Nikolaos Serblias" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/ccb168b5-03fc-4392-aad5-7c8bcc902e3d>,
+        <https://r11.eu/rdf/resource/ff7e6595-5191-4379-9b61-1c2ea790273c> .
+
+<https://r11.eu/rdf/resource/04896ebd971b622f9f680799818de036c79c> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Bak, János M.; Rychterová, Pavlína" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/929b92e9a95f0b0b2eb5d73313d8cbcb9377>,
+        <https://r11.eu/rdf/resource/a5c39f376376f3eeea38c42badccf4df3e46> .
+
+<https://r11.eu/rdf/resource/0eecad28-d85f-49e9-b018-ad0c1390a422> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Maria, daughter of Stephanos Sthlabotas; Anna, landowner at Thessalonike; Agathe, landowner at Thessalonike; Niketas, librarian of Hagia Sophia of Thessalonike" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/23e02df2-0e8f-4929-8ac9-f3246756f293>,
+        <https://r11.eu/rdf/resource/be3fca70-77ee-42b5-9300-6fc09a342c42> .
+
+<https://r11.eu/rdf/resource/110d79e2-b7a2-4512-b242-1044d822495f> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Lefort, Jacques; Oikonomidès, Nicolas; Papachryssanthou, Denise; Kravari, Vassiliki; Métrévéli, Hélène",
+        "Lefort, Jacques; Oikonomidès, Nicolas; Papachryssanthou, Denise; Métrévéli, Hélène" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/170a39f5-a746-4a19-a9a7-731e5eb7a08b>,
+        <https://r11.eu/rdf/resource/d33877c7-88cd-47f9-baa8-194e90d406be> .
+
+<https://r11.eu/rdf/resource/11a7322e2bc15759b02c07daf2ea8e88f294> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Szentpétery, Imre; Domanovszky, Sándor" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/68d0438154db5656e3897ed5e7a7320cb0f3>,
+        <https://r11.eu/rdf/resource/f88e6f58cfd314e1dfe53dc1f56dd8e52556> .
+
+<https://r11.eu/rdf/resource/127074bb-e88a-4973-a87f-5eca84748c91> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Paulos, hegoumenos of Docheiariou and protos of Athos; Sabas, hegoumenos of Vatopedi on Athos; Thomas, oikonomos of Athos; Theodoulos, hegoumenos of Zygos on Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/37073d42-065b-4394-a871-8cc06cd22d3e>,
+        <https://r11.eu/rdf/resource/55744993-5f03-47cd-b267-7f086462eadd> .
+
+<https://r11.eu/rdf/resource/1358245e-42b1-47dc-a10b-f890f3c26968> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Nikolaos, bishop of Hierissos; Theodosios, domestikos and nomikos of Hierissos",
+        "Osti, Letizia; Munt, Harry" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/d2ad46ef-20c4-48ab-ba63-305c427bfb85>,
+        <https://r11.eu/rdf/resource/fc9993ce-9d20-4328-97ec-331ca7995374> .
+
+<https://r11.eu/rdf/resource/1b382a1a-1e36-4646-92a7-a705125ed82e> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Miklosich, Franz; Müller, Joseph",
+        "Miklošič, Franc; Müller, Joseph" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/342de304-b9f7-4606-bbcc-5db6faef12b0>,
+        <https://r11.eu/rdf/resource/a81c3160-b557-4be9-a76a-cd5f1cc1500d> .
+
+<https://r11.eu/rdf/resource/1f4fe796-cb23-4a6b-a347-be73b87fe378> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Gregorios, hegoumenos of Hagioi Apostoloi tou Dometiou on Athos; Theophylaktos, protos of Mount Athos; Athanasios, monk of kyr Sisoe on Athos",
+        "Hilarion, protos of Athos; Euthymios, monk and scribe on Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/0d4697ab-dedd-4b68-8a0f-98fd88d4457c>,
+        <https://r11.eu/rdf/resource/a490f60b-9160-43b1-bac5-669f8a5d0a2a> .
+
+<https://r11.eu/rdf/resource/20e4231d-05c5-47ca-bc05-b199affcd05a> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Bompaire, Jacques; Lefort, Jacques; Kravari, Vassiliki; Giros, Christophe" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/d028c6fe-31a5-49ce-a7a9-22dfcbcadaa7>,
+        <https://r11.eu/rdf/resource/f509835c-7343-49f1-85bb-6d5301ce709c> .
+
+<https://r11.eu/rdf/resource/210cc614-8813-4047-9ada-818a3db89c92> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Symbatios Pakourianos, kouropalates and patron of Iveron; Ioannes Hagiotessarakontites, notarios and taboularios",
+        "Symeon Polites, hegoumenos of Theotokos on Athos; Theoktistos, hegoumenos of Esphigmenou and protos of Athos; Iakobos, monk and presbyter on Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/35576441-5c83-4b13-9eb0-13854a37e957>,
+        <https://r11.eu/rdf/resource/e09f02ab-977f-4be0-b3d8-be49901cd3ad> .
+
+<https://r11.eu/rdf/resource/21c90cb3-4130-451b-8222-7b0a2753078d> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Ioannes, metropolitan of Philippi [1028, 1029]; Leon, klerikos of Hagios Theodoros at Serres",
+        "Jeffreys, Michael J.; Karágiṓrgou, ́Olga" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/5899ec1d-0570-4041-a37a-f58c34932f3a>,
+        <https://r11.eu/rdf/resource/dd1d061e-4064-4034-a252-102c9f3803dc> .
+
+<https://r11.eu/rdf/resource/2298fef4-11ea-4e4e-bfab-0ed56c07f423> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Empress Theodora; Ioannes, spatharokandidatos and notarios",
+        "Gabriel, hegoumenos of kyr Nikolaos Hesychast on Athos; Ignatios, hegoumenos of kyr Nikolaos Hesychast on Athos; Antonios, monk and presbyter on Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/32f9f640-6023-4bb3-b90a-a74706c53b77>,
+        <https://r11.eu/rdf/resource/884d41ca-cda9-486c-85ca-d9877782e25d>,
+        <https://r11.eu/rdf/resource/c09012e4-2c23-4c48-8926-2dc6cbe04d7f> .
+
+<https://r11.eu/rdf/resource/28c26963804be92c4a9023057173fe536ae4> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Otto, Count of Somogy; George, Bishop of Veszprém" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/3211797d721c11342db3c9d6c087d287df2c>,
+        <https://r11.eu/rdf/resource/5dd75f7743826146405b2b8a02a6538772b1> .
+
+<https://r11.eu/rdf/resource/294f407f-e7f2-4cdb-9ba6-e510675b5414> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Stephanos, metropolitan of Serres; Kyriakos, nomikos of Serres",
+        "Symbatios Pakourianos, kouropalates and patron of Iveron; Ioannes Hagiotessarakontites, notarios and taboularios" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/57247557-8c57-416f-ac6d-460c3df9d88f>,
+        <https://r11.eu/rdf/resource/ad507860-55ec-4c47-9791-caa01c9d9c97> .
+
+<https://r11.eu/rdf/resource/2b1402d9-169e-4874-b33f-ed4b99497d92> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Lemerle, Paul; Guillou, André; Svoronos, Nicolas; Papachryssanthou, Denise" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/47b7b1a5-928c-4342-9de3-f6d24bb9e534>,
+        <https://r11.eu/rdf/resource/de2ea6f5-4f54-4f90-91a8-7585a1329218> .
+
+<https://r11.eu/rdf/resource/2be297b8-34c5-4bb8-a7b0-395fc8c84c7e> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Symeon Polites, hegoumenos of Theotokos on Athos; Theoktistos, hegoumenos of Esphigmenou and protos of Athos; Iakobos, monk and presbyter on Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/5510d81c-c532-4514-a043-a3e177dedf5d>,
+        <https://r11.eu/rdf/resource/55b61378-898e-4f02-bdb0-4e1df24c6413> .
+
+<https://r11.eu/rdf/resource/3a5ee2cd-1b10-4173-8483-34420200bb20> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Papacostas, Tassos; Andrews, Tara Lee",
+        "Papacostas, Tassos; Osti, Letizia; Munt, Harry" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/50312c78-fe04-4281-ab82-24b2ce602ac3>,
+        <https://r11.eu/rdf/resource/c2a2692e-8e03-469f-ab54-daebf6d4c0da>,
+        <https://r11.eu/rdf/resource/fc9993ce-9d20-4328-97ec-331ca7995374> .
+
+<https://r11.eu/rdf/resource/3b43529d-816d-484b-ac44-ae152bcdf84b> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Christodoulos, hegoumenos of Katzare on Athos; Ioannes, monk at Katzare on Athos; Iakobos, monk and presbyter on Athos",
+        "Christophoros, krites of the velon and of Boleron, Strymon and Thessalonike; Nikolaos, protospatharios and man of krites of the velon Christophoros" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/2dd02ba2-24d4-487e-b16b-28506e12ea51>,
+        <https://r11.eu/rdf/resource/44e1ff08-68f4-44e4-959d-2834757ec7d6>,
+        <https://r11.eu/rdf/resource/5510d81c-c532-4514-a043-a3e177dedf5d>,
+        <https://r11.eu/rdf/resource/b77098b1-7e27-430b-b3cf-af8d047946e6> .
+
+<https://r11.eu/rdf/resource/3e963f4e-4672-4b9b-a488-88ca46aec3de> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Bartholomaios, monk and scribe at Esphigmenou on Athos; Theoktistos, hegoumenos of Esphigmenou and protos of Athos",
+        "Bollig, I; de Lagarde, P",
+        "Bompaire, Jacques; Lefort, Jacques; Kravari, Vassiliki; Giros, Christophe" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/15e88437-f91b-4b46-8d9a-a90feb8f9b4c>,
+        <https://r11.eu/rdf/resource/71445467-0f45-447f-ace8-b17a3fc1412f>,
+        <https://r11.eu/rdf/resource/a2eb9865-b69c-4f28-92a5-5f4cdfbea501>,
+        <https://r11.eu/rdf/resource/e3c83415-0b0e-40d5-87b3-51a32e80a45f> .
+
+<https://r11.eu/rdf/resource/4454722a-88df-49e8-a21d-08f8a1f1b122> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Duffy, John M.; O'Meara, Dominic J." ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/59cdd0a3-e677-46a0-8b0e-f79478b3797b>,
+        <https://r11.eu/rdf/resource/d3d7ed1e-3db6-4ae8-9433-5600e1c267d7> .
+
+<https://r11.eu/rdf/resource/44d70e9b-9b7d-47bc-86ab-10c04ccfb2af> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Lefort, Jacques; Oikonomidès, Nicolas; Papachryssanthou, Denise; Métrévéli, Hélène" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/71445467-0f45-447f-ace8-b17a3fc1412f>,
+        <https://r11.eu/rdf/resource/74ba5e18-9247-44a0-ac92-08b32a46e218> .
+
+<https://r11.eu/rdf/resource/4e2a0c3305e11310a85d5acfd40c491a8c02> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Živojinović, Mirjana; Kravari, Vassiliki; Giros, Christophe" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/33b6a735-b6b4-41e4-8018-7442cf42cff8>,
+        <https://r11.eu/rdf/resource/d028c6fe-31a5-49ce-a7a9-22dfcbcadaa7>,
+        <https://r11.eu/rdf/resource/f9a17333-c84c-4f08-b7a6-99c674da5002> .
+
+<https://r11.eu/rdf/resource/50f2406f-2cf5-4646-86dc-36aa01937a68> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Lefort, Jacques; Oikonomidès, Nicolas; Papachryssanthou, Denise; Kravari, Vassiliki; Métrévéli, Hélène" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/74ba5e18-9247-44a0-ac92-08b32a46e218>,
+        <https://r11.eu/rdf/resource/d028c6fe-31a5-49ce-a7a9-22dfcbcadaa7> .
+
+<https://r11.eu/rdf/resource/6527d8610385c> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Theodoulos, bishop of Ezoba; Leon Tzainos, protopapas of Ezoba bishopric; Ioannes, nomikos of Chrysopolis" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/6773dd0d-2389-4c4c-ac1c-e9922862f228>,
+        <https://r11.eu/rdf/resource/ef78fc1e-9649-4682-96ea-d5ba9bd5fd37> .
+
+<https://r11.eu/rdf/resource/7178c872-d9d5-40b4-80e4-ce23436b17d8> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Bompaire, Jacques; Lefort, Jacques; Kravari, Vassiliki; Giros, Christophe",
+        "Brunet de Presle, Wladimir; Bekker, Immanuel" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/33b6a735-b6b4-41e4-8018-7442cf42cff8>,
+        <https://r11.eu/rdf/resource/6e502c42-13ea-443d-9daf-4ded45ec60ef> .
+
+<https://r11.eu/rdf/resource/72721472-d75a-4706-8735-541ed4a35362> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Lefort, Jacques; Oikonomidès, Nicolas; Papachryssanthou, Denise; Kravari, Vassiliki; Métrévéli, Hélène" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/71445467-0f45-447f-ace8-b17a3fc1412f>,
+        <https://r11.eu/rdf/resource/d33877c7-88cd-47f9-baa8-194e90d406be> .
+
+<https://r11.eu/rdf/resource/73dde19b-2964-4d31-a3f5-02c96bdb0352> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Paulos, hegoumenos of Docheiariou and protos of Athos; Gregorios, scribe and hegoumenos of Gerakare on Athos",
+        "Paulos, hegoumenos of Docheiariou and protos of Athos; Michael, scribe and monk on Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/28d75788-0274-4239-9cd3-d7dbfe6a6e60>,
+        <https://r11.eu/rdf/resource/3593f6a3-7e26-435d-a5a3-f429e87c7488>,
+        <https://r11.eu/rdf/resource/55744993-5f03-47cd-b267-7f086462eadd> .
+
+<https://r11.eu/rdf/resource/74d2e9f17ead368f8c8cd337040bcfc47cc9> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Knoll, Paul W.; Schaer, Frank" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/4154cd65b6bfd15e41fa3a980efdebcee723>,
+        <https://r11.eu/rdf/resource/af65200cf88afeec5f28198333cf4e28dd70> .
+
+<https://r11.eu/rdf/resource/761d0c4335df5258010aa5b4b0b7586dd675> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Vranoúsīs, Léandros I.; Nystazopoúlou-Pelekídou, María" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/1144df84-9296-4259-8c29-b1a7c98729e4>,
+        <https://r11.eu/rdf/resource/dd1c318c-492d-4ce5-9c15-30c0eb51c6ca> .
+
+<https://r11.eu/rdf/resource/764a14c3-1b42-4ffd-8137-e66d3ddcb17f> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Leon of Ohrid, archbishop of Bulgaria; Humbert, cardinal bishop of Silva Candida",
+        "Loukas, hegoumenos of Galeagra on Athos; Iakobos, monk at Galeagra on Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/3f43b12f-9b4b-434c-bb12-6fde9a71e37c>,
+        <https://r11.eu/rdf/resource/b78a4805-c2d7-40b3-99ce-35d937b68d90>,
+        <https://r11.eu/rdf/resource/d0e7dfcd-16e3-45e0-a9d5-8f5e13814c57> .
+
+<https://r11.eu/rdf/resource/76fac15d-949a-42b4-98ea-0622c9bd3710> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Nikolaos Serblias, krites of Boleron, Strymon and Thessalonike; Petros, asekretis under Nikolaos Serblias",
+        "Nikolaos, bishop of Hierissos; Theodosios, domestikos and nomikos of Hierissos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/6c627577-6fbb-4450-b512-82a8cd719b2e>,
+        <https://r11.eu/rdf/resource/b56d6788-029f-449d-9dfb-0bc2b795f2fc> .
+
+<https://r11.eu/rdf/resource/77449b4c-68de-457d-ae4a-246deeb55a09> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Theodoros, monk at Galeagra on Athos; Iakobos, monk at Galeagra on Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/158952e5-f508-4f48-b28c-850a38a8b36b>,
+        <https://r11.eu/rdf/resource/6675b1d5-15eb-4dc4-ba27-ad629d0a285d> .
+
+<https://r11.eu/rdf/resource/776afbb3-bc98-427c-adcf-61bf8baf6fa1> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Reinsch, Diether Roderich; Kambylis, Athanasios" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/7964c0c3-8452-4a1c-b0a5-22c06ab0f6a7>,
+        <https://r11.eu/rdf/resource/9cb14a2e-a0d7-4072-8fbb-606cbb23a2e6> .
+
+<https://r11.eu/rdf/resource/797349c0-5e45-481b-bce9-92b2720a1b16> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Lefort, Jacques; Oikonomidès, Nicolas; Papachryssanthou, Denise; Métrévéli, Hélène",
+        "Lemerle, Paul; Dagron, Gilbert; Ćirković, Sima M." ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/170a39f5-a746-4a19-a9a7-731e5eb7a08b>,
+        <https://r11.eu/rdf/resource/de2ea6f5-4f54-4f90-91a8-7585a1329218> .
+
+<https://r11.eu/rdf/resource/81f72193-67bf-41c2-9c20-066314f391fa> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Gabriel, hegoumenos of kyr Nikolaos Hesychast on Athos; Ignatios, hegoumenos of kyr Nikolaos Hesychast on Athos; Antonios, monk and presbyter on Athos",
+        "Gregorios Xeros, monk, dikaiophylax and anagrapheus; Michael, vestes and imperial notarios of the oikeiaka" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/72b9df64-f36b-4c48-8f33-fac51e6ded0d>,
+        <https://r11.eu/rdf/resource/d510106d-5892-4947-ad47-08a5ccf33aa3>,
+        <https://r11.eu/rdf/resource/e87acbe5-53a0-4aaf-96e4-99663738e6b8> .
+
+<https://r11.eu/rdf/resource/83007627e04554e75ba82c7c6188c78990c2> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Theodoulos, bishop of Ezoba; Leon Tzainos, protopapas of Ezoba bishopric; Ioannes, nomikos of Chrysopolis" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/4a980e4d-d2c3-4e9a-95da-6ccf2e2110bb> .
+
+<https://r11.eu/rdf/resource/8fa4648ffb009e2373df00743c3255423579> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Seibt, Werner; Šandrovskaja, Valentina S." ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/216340a2f4ae0f7cb4e69b1dd5a4c079cc29>,
+        <https://r11.eu/rdf/resource/a529d32300d89e326e64d3a10faf1dcb4c6c> .
+
+<https://r11.eu/rdf/resource/90040592-16c5-4f74-981e-3e861ddd7529> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Soravia, Bruna; Munt, Harry",
+        "Stephanos, metropolitan of Serres; Kyriakos, nomikos of Serres" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/3e21baff-9152-4dbf-88f8-8d2e7e3284fa>,
+        <https://r11.eu/rdf/resource/7a0b3d4a-6db8-4e6d-a065-d4fc83b3c896>,
+        <https://r11.eu/rdf/resource/c4c990c0-8907-42cb-9def-6558daefcd1c> .
+
+<https://r11.eu/rdf/resource/92acb860-00df-4ddb-b69f-7c8cc4a7e776> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Athanasios, hegoumenos of Vatopedi on Athos; Georgios III Hagiorites/Mt'ac'mindeli, hegoumenos of Iveron; Ioannes, hegoumenos of Zygos on Athos; Neophytos, hegoumenos of Lavra on Athos; Theophylaktos, protos of Mount Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/5c720fc0-a97a-462a-b324-a2834cd7beee>,
+        <https://r11.eu/rdf/resource/ba554147-0315-4c8e-accf-4ecde529e9ed> .
+
+<https://r11.eu/rdf/resource/92af7c83f4d493e9867400b77e2c69bf6cab> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Giesebrecht, Wilhelm von; Oefele, Edmund von" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/c7055de65929b238e01bf3429a73cb2aa669>,
+        <https://r11.eu/rdf/resource/d3e9f14f0a2ecfd4ee4f9dc12f760c2c02cb> .
+
+<https://r11.eu/rdf/resource/964cfef4-e48c-4d5d-be90-2d53690e1603> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Nesbitt, John W.; Wiita, John Earl",
+        "Niketas Xiphilinos, krites and anagrapheus of Boleron, Strymon and Thessalonike; Anna Dalassene" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/028e945b-b5bf-48af-9c29-0a046e65f308>,
+        <https://r11.eu/rdf/resource/5cb3fd37-2af8-4779-9da7-d1ac1368599b>,
+        <https://r11.eu/rdf/resource/6505ccbb-8755-44f1-a553-6f969fa78ee1> .
+
+<https://r11.eu/rdf/resource/9754a82b-f2bd-42ec-80e8-bef54e40def9> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Athanasios, hegoumenos of Vatopedi on Athos; Georgios III Hagiorites/Mt'ac'mindeli, hegoumenos of Iveron; Ioannes, hegoumenos of Zygos on Athos; Neophytos, hegoumenos of Lavra on Athos; Theophylaktos, protos of Mount Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/6bb94088-5908-4e59-b6c7-13b5a031263b>,
+        <https://r11.eu/rdf/resource/fe9da688-6b9a-4a1c-bc76-b6c29126b4ed> .
+
+<https://r11.eu/rdf/resource/97a7c062-705e-4e6c-beca-4e9d15a9f0c9> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Hilarion, protos of Athos; Laurentios, monk and scribe at Docheiariou on Athos",
+        "Hilarion, protos of Athos; Niphon, monk and scribe on Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/01c43448-04e7-45d3-b842-16ebf9eaf740>,
+        <https://r11.eu/rdf/resource/a490f60b-9160-43b1-bac5-669f8a5d0a2a> .
+
+<https://r11.eu/rdf/resource/9d113318-c69a-4dd9-820a-a7b881019b7a> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Brunet de Presle, Wladimir; Bekker, Immanuel",
+        "Canard, Marius; Pērpērean, Hayk",
+        "Christodoulos of Patmos; Georgios, priest and notary of Euripos, formerly of Strobilos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/08bccd16-7f12-4c1f-a2f5-3aeef485c037>,
+        <https://r11.eu/rdf/resource/21f62cac-107b-4850-b1c5-a506832e1489>,
+        <https://r11.eu/rdf/resource/7dd36a52-7b84-4c2e-a872-df0d3510578c>,
+        <https://r11.eu/rdf/resource/d175cd6a-2a29-41ec-b439-42b5673782af>,
+        <https://r11.eu/rdf/resource/e92d32c9-32ee-4d14-8fe3-63bcd01063fc> .
+
+<https://r11.eu/rdf/resource/9ff45a88-b859-468c-9115-7663e3b5d0b1> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Athanasios, hegoumenos of Vatopedi on Athos; Georgios III Hagiorites/Mt'ac'mindeli, hegoumenos of Iveron; Ioannes, hegoumenos of Zygos on Athos; Neophytos, hegoumenos of Lavra on Athos; Theophylaktos, protos of Mount Athos",
+        "Bartholomaios, monk and scribe at Esphigmenou on Athos; Theoktistos, hegoumenos of Esphigmenou and protos of Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/2dd0141c-8a68-4b6f-a6cc-64ff3d0d56e6>,
+        <https://r11.eu/rdf/resource/55b61378-898e-4f02-bdb0-4e1df24c6413> .
+
+<https://r11.eu/rdf/resource/a081fe4f-a76e-41a9-940a-bce4e94d19aa> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Hilarion, protos of Athos; Niphon, monk and scribe on Athos",
+        "Huygens, R.B.C.; Mayer, Hans Eberhard; Rösch, Gerhard" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/150951cc-705a-4c44-9b32-a4e84c9c0856>,
+        <https://r11.eu/rdf/resource/5aa7f333-553e-4f84-8b0c-79f8986d02b8> .
+
+<https://r11.eu/rdf/resource/a2934930-3be3-4eb5-a210-cb7edf71356e> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Christophoros, krites of the velon and of Boleron, Strymon and Thessalonike; Nikolaos, protospatharios and man of krites of the velon Christophoros",
+        "Dionysios, monk and scribe at Berroiotou on Athos; Germanos, hegoumenos of Theotokos Katadaimonon on Athos; Petros, hegoumenos of Theotokos Katadaimonon on Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/0d9c2f3a-4182-4ae0-81dc-e5ca4aa20fe1>,
+        <https://r11.eu/rdf/resource/33fc3b5c-0dd8-40b2-a315-e584382f8a44>,
+        <https://r11.eu/rdf/resource/7c742c4b-c58e-4020-ab21-c8acb9e21277>,
+        <https://r11.eu/rdf/resource/cb664d37-64ec-4dcb-9519-77193d64668f> .
+
+<https://r11.eu/rdf/resource/a61b00b4-f2bc-4587-b6f4-fdbe4fdc43b4> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Paulos, hegoumenos of Docheiariou and protos of Athos; Nikephoros, monk at Hilandar on Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/55744993-5f03-47cd-b267-7f086462eadd>,
+        <https://r11.eu/rdf/resource/af39fba4-ade7-4a9d-a95f-18c4d83b7cf0> .
+
+<https://r11.eu/rdf/resource/a8f708d9-b2af-4259-a9df-cac06676f6d3> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Niketas Xiphilinos, krites and anagrapheus of Boleron, Strymon and Thessalonike; Emperor Alexios I Komnenos",
+        "Niketas, protosynkellos of Hagia Sophia; Georgios, kouboukleisios and nomikos of Hierissos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/3ac28083-8104-445c-8798-9fe4db9cd7f8>,
+        <https://r11.eu/rdf/resource/a2240086-5ce3-4509-814a-01e48bf7b99b> .
+
+<https://r11.eu/rdf/resource/ab82c34f-d8a7-4849-9cf2-d5ec16d20a29> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Gregorios Xeros, monk, dikaiophylax and anagrapheus; Michael, vestes and imperial notarios of the oikeiaka",
+        "Gregorios, hegoumenos of Hagioi Apostoloi tou Dometiou on Athos; Theophylaktos, protos of Mount Athos; Athanasios, monk of kyr Sisoe on Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/2dd0141c-8a68-4b6f-a6cc-64ff3d0d56e6>,
+        <https://r11.eu/rdf/resource/7758a30b-57e9-405f-8a7b-567bb9a7dcda>,
+        <https://r11.eu/rdf/resource/dd0401b1-3816-413c-ad4e-5b48e4e27b80> .
+
+<https://r11.eu/rdf/resource/ab918641c7f69338f3ec571571bad7fc634a> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Andrew I, King of Hungary; Nicholas, Bishop of Győr" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/9d60a61279f16341f330c351d498ae71c46b>,
+        <https://r11.eu/rdf/resource/b33e91d1782a313c291f5060f37c83b2f821> .
+
+<https://r11.eu/rdf/resource/b2b7582f-5916-4c56-9221-e7f4c5acee26> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Huygens, R.B.C.; Mayer, Hans Eberhard; Rösch, Gerhard",
+        "Iakobos tou Kalaphatou, monk on Athos; monk (Theodoros?) at Lavra on Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/5f9a475e-59e7-4c49-b673-8724e3d5f977>,
+        <https://r11.eu/rdf/resource/6fb32929-ccbc-4207-8178-10a2419f376e>,
+        <https://r11.eu/rdf/resource/9d0f2d0e-bf78-4ecb-bb40-98278973b4cd>,
+        <https://r11.eu/rdf/resource/f08d87ef-bf3f-4fdb-b0de-491d9acd4b81> .
+
+<https://r11.eu/rdf/resource/b3492101-fb8c-43bb-9eba-661c241835c4> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Papacostas, Tassos; Osti, Letizia; Munt, Harry",
+        "Paulos, hegoumenos of Docheiariou and protos of Athos; Gregorios, scribe and hegoumenos of Gerakare on Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/55744993-5f03-47cd-b267-7f086462eadd>,
+        <https://r11.eu/rdf/resource/7a0b3d4a-6db8-4e6d-a065-d4fc83b3c896> .
+
+<https://r11.eu/rdf/resource/b4d4c2b8-6a91-406e-9b2f-73d0d06bb33b> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Kale, wife of Symbatios Pakourianos; Eleutherios, notarios attached to the Hagioi Tessarakonta",
+        "Kurtz, Eduard; Drexl, Franz" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/3e7c0191-bfac-4f70-9971-c3494408e57a>,
+        <https://r11.eu/rdf/resource/681f7b4a-5bf9-4eb3-a89d-428e21d1a631>,
+        <https://r11.eu/rdf/resource/c3ef2e7d-9b80-4a2a-b890-7631bcf56aa7> .
+
+<https://r11.eu/rdf/resource/b4e993f9-4285-4e20-8d11-5a386dc05ac3> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Ioannes VIII Xiphilinos, patriarch of Constantinople; Kyriakos, nomikos of Serres",
+        "Ioannes, hegoumenos of Lavra; Ioannes, spatharokandidatos and notarios",
+        "Ioannes, metropolitan of Philippi [1028, 1029]; Leon, klerikos of Hagios Theodoros at Serres" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/89959fda-92bb-4a82-8407-2d450706cac6>,
+        <https://r11.eu/rdf/resource/ad507860-55ec-4c47-9791-caa01c9d9c97>,
+        <https://r11.eu/rdf/resource/bc375ff5-2e50-40f3-8a3a-72c3b7b2b235>,
+        <https://r11.eu/rdf/resource/c09012e4-2c23-4c48-8926-2dc6cbe04d7f>,
+        <https://r11.eu/rdf/resource/f4a5eb88-0bdc-48e0-9e04-f558c5455c05> .
+
+<https://r11.eu/rdf/resource/b64605d6df529f012590e3e8ac3a5a1340a0> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Theoktistos, hegoumenos of Esphigmenou and protos of Athos; Iakobos, monk and presbyter on Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/5510d81c-c532-4514-a043-a3e177dedf5d>,
+        <https://r11.eu/rdf/resource/55b61378-898e-4f02-bdb0-4e1df24c6413> .
+
+<https://r11.eu/rdf/resource/b75a19c8-0b5d-41c1-aa94-8c11e8cfe53f> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Lemerle, Paul; Dagron, Gilbert; Ćirković, Sima M." ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/2d812269-a301-4db5-80e4-202d3da2ec64>,
+        <https://r11.eu/rdf/resource/4d938846-bc14-4acb-8a88-b28ecccd63fc> .
+
+<https://r11.eu/rdf/resource/bf59d015591cf03f8c337c3af7bbccc10404> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Aristenos, protasekretis; Ioannes, libelisios; Leon, Epi ton deeseon" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/2919f93e-836c-488a-ac63-817b09165baf>,
+        <https://r11.eu/rdf/resource/2f4e1f8a-620b-44a7-a786-b9d1e02b42a0>,
+        <https://r11.eu/rdf/resource/6dbbfdbe-a09f-402f-9825-b26ee78b29c9> .
+
+<https://r11.eu/rdf/resource/c0ba6460121dffa086d8ded3ad89ba4b3179> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Mark of Kált; anonymous scribes" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/bd71bf92cd2798347b3e4789dd43d30e424f>,
+        <https://r11.eu/rdf/resource/f4abf0402ac3e1576589cbee14c1572dd870> .
+
+<https://r11.eu/rdf/resource/c60e1f8a-09bd-455a-854a-7206f8627360> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Niketas Xiphilinos, krites and anagrapheus of Boleron, Strymon and Thessalonike; Anna Dalassene",
+        "Niketas Xiphilinos, krites and anagrapheus of Boleron, Strymon and Thessalonike; Emperor Alexios I Komnenos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/3ac28083-8104-445c-8798-9fe4db9cd7f8>,
+        <https://r11.eu/rdf/resource/822f27b4-f6c0-40f0-b1db-4d4b408be0d4> .
+
+<https://r11.eu/rdf/resource/ca720c96-7438-4839-a7f5-da38c532a208> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Osti, Letizia; Munt, Harry",
+        "Papacostas, Tassos; Andrews, Tara Lee" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/7a0b3d4a-6db8-4e6d-a065-d4fc83b3c896>,
+        <https://r11.eu/rdf/resource/c2a2692e-8e03-469f-ab54-daebf6d4c0da> .
+
+<https://r11.eu/rdf/resource/d1e8bfb5-853c-41e3-a473-32c094b4ef49> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Paulos, hegoumenos of Docheiariou and protos of Athos; Sabas, hegoumenos of Vatopedi on Athos; Thomas, oikonomos of Athos; Theodoulos, hegoumenos of Zygos on Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/4080c768-b2b9-4967-9e28-7089c0a68c0f>,
+        <https://r11.eu/rdf/resource/8e6db52c-f85b-47b0-b121-2b996f0d91fb> .
+
+<https://r11.eu/rdf/resource/d53d4f1a89f77cb3f8bd6a6e6dac8a1cedeb> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Odilo, Abbot of Saint-Gilles; anonymous scribe" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/1876a6dac4b6026dfade3c67fe2b45a62461>,
+        <https://r11.eu/rdf/resource/d502bbb37a097a8cf41c01badc70bcee398d> .
+
+<https://r11.eu/rdf/resource/d8ae2986433c27452c5dc3698c973fad9fb1> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "RELEVEN group" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/50312c78-fe04-4281-ab82-24b2ce602ac3>,
+        <https://r11.eu/rdf/resource/51a15f538c436c88a788aa4152167e213c3a>,
+        <https://r11.eu/rdf/resource/a64508c42b9f894b4769a76045483c398fb3>,
+        <https://r11.eu/rdf/resource/c1ecd7eb5eee5636560770c61296e8654a6f>,
+        <https://r11.eu/rdf/resource/fac893ffa3071eed4add6a8de84bbd9148a9> .
+
+<https://r11.eu/rdf/resource/da9a5eb6-d11d-4501-9e57-4c82a4b50e09> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Rízou-Kouroúpou, Matoúla; Vannier, Jean-François" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/81053f6d-c32c-4073-840e-d0b6d0722ba8>,
+        <https://r11.eu/rdf/resource/869e3a44-5610-40e6-8768-1e4abf9aa432> .
+
+<https://r11.eu/rdf/resource/e0666592-b305-4340-bf83-8157b7909e14> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Leon Thylakas, krites of Boleron, Strymon and Thessalonike; Ioannes, spatharokandidatos and notarios" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/b8e0c156-0e24-4765-ae43-06463845687c>,
+        <https://r11.eu/rdf/resource/c09012e4-2c23-4c48-8926-2dc6cbe04d7f> .
+
+<https://r11.eu/rdf/resource/e0e95b00245f22544cc0425e403c1b86f5cd> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Melikʻ-Adamyan, Mambre; Ter-Mikʻayelyan, Nerses" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/560bf349af7806c1c7520d0456f2f8e5746c>,
+        <https://r11.eu/rdf/resource/ae3a7a93179af6e194fd4f3d5611ddfaf3de> .
+
+<https://r11.eu/rdf/resource/e1f7b376-86ca-424a-acbe-f7ad1c291638> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Rállēs, Geṓrgios A.; Potlēs, Michaēl" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/1438da01-c479-4fe4-a93a-e38533a20760>,
+        <https://r11.eu/rdf/resource/b232d60d-a75f-46ba-b199-5a3dc8d7e13e> .
+
+<https://r11.eu/rdf/resource/eba98d4e-8dce-4766-b161-f8b437c603ec> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Loukas, hegoumenos of Galeagra on Athos; Iakobos, monk at Galeagra on Athos",
+        "Maria, daughter of Stephanos Sthlabotas; Anna, landowner at Thessalonike; Agathe, landowner at Thessalonike; Niketas, librarian of Hagia Sophia of Thessalonike" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/158952e5-f508-4f48-b28c-850a38a8b36b>,
+        <https://r11.eu/rdf/resource/15b24462-f5d3-43ff-ad50-09dbc4e39566>,
+        <https://r11.eu/rdf/resource/cc1c44e4-5558-4154-9b0a-9fd8f947e984> .
+
+<https://r11.eu/rdf/resource/ed81a5b3e025eaca8d923c0e5889a9a347ee> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "̓Orlándos, ̓Anastásios K.; Vranoúsīs, Léandros I." ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/45131fb4-7c6d-4e6f-95b0-a0ece1ccbf01>,
+        <https://r11.eu/rdf/resource/e21f02f0-36d1-4067-a1d1-d1e2459f27ff> .
+
+<https://r11.eu/rdf/resource/ef3f7798-1bbb-4707-b7d5-3eab39e11a07> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Markos, hegoumenos of Kyparissiou on Athos; Basileios, monk and scribe on Athos (Iveron?)",
+        "Miklosich, Franz; Müller, Joseph" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/891d0ce9-bac9-4ead-b5ab-bed494826e70>,
+        <https://r11.eu/rdf/resource/9fe09523-4e32-46c2-88fb-ef82adb655e8>,
+        <https://r11.eu/rdf/resource/c88ab871-24ef-4700-b5f1-086451281d80> .
+
+<https://r11.eu/rdf/resource/f11f5c7f-cd4e-49c1-8926-080f407bf629> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Hilarion, protos of Athos; Euthymios, monk and scribe on Athos",
+        "Hilarion, protos of Athos; Laurentios, monk and scribe at Docheiariou on Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/85f9f488-8a8e-4fd9-a2b3-451f3250762e>,
+        <https://r11.eu/rdf/resource/a490f60b-9160-43b1-bac5-669f8a5d0a2a> .
+
+<https://r11.eu/rdf/resource/f13bc456-2d72-449a-9595-5acbdf8a4ba4> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Athanasios, hegoumenos of Bouleuteria on Athos; Theodosios, monk and presbyter on Athos" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/afefb909-620b-4529-b002-c1b0a1896783>,
+        <https://r11.eu/rdf/resource/bb7fec5a-3cb3-47e2-9778-54f150bca90f> .
+
+<https://r11.eu/rdf/resource/f979233d87e18f3f2c4cdea17c629ea2c974> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Whitby, Mary; Jeffreys, Michael J.; Karágiṓrgou, ́Olga" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/a5f30890-1766-40bb-a1be-933ab0f2aaff>,
+        <https://r11.eu/rdf/resource/dd1d061e-4064-4034-a252-102c9f3803dc>,
+        <https://r11.eu/rdf/resource/eeccfdd8-bd1e-4183-98fa-7caa62ab0052> .
+
+<https://r11.eu/rdf/resource/f9c394d7-e42e-4d5f-afc5-68b61297e203> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Jeffreys, Michael J.; Karágiṓrgou, ́Olga",
+        "Jeffreys, Michael J.; Whitby, Mary",
+        "Kale, wife of Symbatios Pakourianos; Eleutherios, notarios attached to the Hagioi Tessarakonta" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/a5f30890-1766-40bb-a1be-933ab0f2aaff>,
+        <https://r11.eu/rdf/resource/dd1d061e-4064-4034-a252-102c9f3803dc>,
+        <https://r11.eu/rdf/resource/dec1b821-1dbe-40df-9e9a-973687946d26>,
+        <https://r11.eu/rdf/resource/eeccfdd8-bd1e-4183-98fa-7caa62ab0052> .
+
+<https://r11.eu/rdf/resource/fb078319-3aa1-4843-9eef-0dc1810511df> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Lemerle, Paul; Guillou, André; Svoronos, Nicolas; Papachryssanthou, Denise" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/b2758c69-cf0d-40e4-a926-49da6f764893>,
+        <https://r11.eu/rdf/resource/d33877c7-88cd-47f9-baa8-194e90d406be> .
+

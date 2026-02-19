@@ -97,9 +97,9 @@ class Person(_AuthoritySourceBase):
     @property
     def person_uri(self) -> URIRef:
         return (
-            URIRef(_id)
+            URIRef(str(_id))
             if (_id := self.wisski_id) is not None
-            else mkuri(self.identifier)
+            else mkuri(self.identifier, self.service)
         )
 
     @model_validator(mode="before")

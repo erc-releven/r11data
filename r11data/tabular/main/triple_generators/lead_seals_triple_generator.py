@@ -1,6 +1,8 @@
 """TripleGenerator for the Lead seals sheet."""
 
 from collections.abc import Iterator
+from functools import cached_property
+import itertools
 
 from lodkit import _Triple, ttl
 from r11data.tabular.main.models import LeadSeals
@@ -10,9 +12,11 @@ from rdflib import RDF, RDFS, URIRef
 
 
 class LeadSealsRDFConverter(_ModelRDFConverter[LeadSeals]):
-    def base_triples(self) -> Iterator[_Triple]:
-        self.seal_uri = mkuri(self.model.seal_id)
+    @cached_property
+    def seal_uri(self) -> URIRef:
+        return mkuri(self.model.seal_id)
 
+    def base_triples(self) -> Iterator[_Triple]:
         yield from ttl(
             self.seal_uri,
             (RDF.type, r11spec.Lead_Seal),
@@ -43,4 +47,4 @@ class LeadSealsRDFConverter(_ModelRDFConverter[LeadSeals]):
     def __iter__(self) -> Iterator[_Triple]:
         ## the collection data in the table is currently incorrect;
         ## collection triple generation is therefore blocked/deferred
-        return self.base_triples()
+        return itertools.chain(self.base_triples(), self.seal_collection_triples())

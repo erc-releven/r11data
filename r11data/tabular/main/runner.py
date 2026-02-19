@@ -26,6 +26,7 @@ from r11data.tabular.main.triple_generators import (
     SocialRelationshipRDFConverter,
     TextPublicationsRDFConverter,
 )
+from r11data.tabular.main.triple_generators import boulloteria_triple_generator
 from r11data.tabular.main.triple_generators.bases import TripleGenerator
 from r11data.tabular.main.triple_generators.boulloteria_triple_generator import (
     BoulloteriaRDFConverter,
@@ -160,6 +161,16 @@ marton_author_groups_triple_generator: TripleGenerator[AuthorGroup] = TripleGene
 )
 
 
+author_groups_triples = TripleChain(
+    lewis_author_groups_triple_generator,
+    aleks_author_groups_triple_generator,
+    marton_author_groups_triple_generator,
+)
+
+# with open("./output/author_groups.ttl", "w") as f:
+#     f.write(author_groups_triples.to_graph().serialize())
+
+
 ##################################################
 ##################################################
 #### ActorGroups
@@ -187,6 +198,17 @@ marton_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenera
     model_type=ActorGroup,
     model_converter=ActorGroupsRDFConverter,
 )
+
+#
+actor_groups_triples = TripleChain(
+    lewis_actor_groups_triple_generator,
+    aleks_actor_groups_triple_generator,
+    marton_actor_groups_triple_generator,
+)
+
+# with open("./output/actor_groups.ttl", "w") as f:
+#     f.write(actor_groups_triples.to_graph().serialize())
+
 
 ##################################################
 ##################################################
@@ -273,6 +295,15 @@ marton_birth_death_triple_generator: TripleGenerator[BirthAndDeath] = TripleGene
     model_converter=BirthDeathEventRDFConverter,
 )
 
+birth_death_triples = TripleChain(
+    lewis_birth_death_triple_generator,
+    aleks_birth_death_triple_generator,
+    marton_birth_death_triple_generator,
+)
+
+# with open("./output/birth_death.ttl", "w") as f:
+#     f.write(birth_death_triples.to_graph().serialize())
+
 
 ##################################################
 ##################################################
@@ -349,6 +380,15 @@ marton_authority_status_triple_generator: TripleGenerator[AuthorityStatus] = (
 )
 
 
+authority_status_triples = TripleChain(
+    lewis_authority_status_triple_generator,
+    aleks_authority_status_triple_generator,
+    marton_authority_status_triple_generator,
+)
+
+# with open("./output/authority_status.ttl", "w") as f:
+#     f.write(authority_status_triples.to_graph().serialize())
+
 ##################################################
 ##################################################
 #### Correspondence
@@ -398,6 +438,9 @@ marton_boulloteria_triple_generator: TripleGenerator[Boulloteria] = TripleGenera
     model_converter=BoulloteriaRDFConverter,
 )
 
+# with open("./output/boulloteria.ttl", "w") as f:
+#     f.write(marton_boulloteria_triple_generator.to_graph().serialize())
+
 
 ##################################################
 ##################################################
@@ -409,3 +452,6 @@ marton_lead_seals_triple_generator: TripleGenerator[LeadSeals] = TripleGenerator
     model_type=LeadSeals,
     model_converter=LeadSealsRDFConverter,
 )
+
+# with open("./output/lead_seals.ttl", "w") as f:
+#     f.write(marton_lead_seals_triple_generator.to_graph().serialize())

@@ -4,29 +4,25 @@ from collections.abc import Iterator
 from functools import cached_property
 import itertools
 
-from rdflib import Literal, RDF, RDFS, URIRef
-
 from lodkit import _Triple, ttl
 from r11data.tabular.main.models import AuthorityStatus, Place
 from r11data.tabular.main.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.main.utils.rdf_utils import aaao, crm, mkuri, r11spec, star
+from rdflib import Literal, RDF, RDFS, URIRef
 
 
 class AuthorityStatusRDFConverter(_ModelRDFConverter[AuthorityStatus]):
     @cached_property
     def person_uri(self) -> URIRef:
         person_model = self.get_person_data(self.model.authority_ascribed)
+        return person_model.person_uri
 
-        person_uri: URIRef = (
-            mkuri(person_model.identifier)
-            if (_wisski_id := person_model.wisski_id) is None
-            else URIRef(str(_wisski_id))
-        )
-        return person_uri
+    @cached_property
+    def status_uri(self) -> URIRef:
+        return mkuri(self.model.authority_status_label)
 
     def base_triples(self) -> Iterator[_Triple]:
         e13_aaao_zp96_uri = mkuri()
-        self.status_uri = mkuri()
 
         yield from ttl(
             e13_aaao_zp96_uri,
@@ -47,15 +43,17 @@ class AuthorityStatusRDFConverter(_ModelRDFConverter[AuthorityStatus]):
         if (status_type := self.model.authority_status_type) is None:
             return
 
+        authority_type_uri: URIRef = mkuri("Authority status type", status_type)
+
         yield from ttl(
             mkuri(),
             (RDF.type, crm.E17_Type_Assignment),
             (crm.P14_carried_out_by, self.sheets.owner_id),
-            (crm.P41_classified, self.status_uri),
+            (crm.P41_classified, mkuri(self.model.authority_status_label)),
             (
                 crm.P42_assigned,
                 ttl(
-                    mkuri(status_type),
+                    authority_type_uri,
                     (RDF.type, r11spec.Authority_Type),
                     (RDFS.label, status_type),
                 ),
@@ -67,9 +65,8 @@ class AuthorityStatusRDFConverter(_ModelRDFConverter[AuthorityStatus]):
             return
 
         authority_model = self.get_person_data(authority)
-        # duplicate
         authority_uri: URIRef = (
-            mkuri(authority_model.identifier)
+            mkuri(authority_model.identifier, authority_model.service)
             if (_wisski_id := authority_model.wisski_id) is None
             else URIRef(str(_wisski_id))
         )

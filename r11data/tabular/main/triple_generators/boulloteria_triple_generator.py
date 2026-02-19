@@ -1,6 +1,7 @@
 """TripleGenerator for the Boulloteria sheet."""
 
 from collections.abc import Iterator
+from functools import cached_property
 import itertools
 
 from lodkit import _Triple, ttl
@@ -11,9 +12,11 @@ from rdflib import RDF, RDFS, URIRef
 
 
 class BoulloteriaRDFConverter(_ModelRDFConverter[Boulloteria]):
-    def base_triples(self) -> Iterator[_Triple]:
-        self.boulloterion_uri = mkuri(self.model.boulloterion_title)
+    @cached_property
+    def boulloterion_uri(self) -> URIRef:
+        return mkuri(self.model.boulloterion_title)
 
+    def base_triples(self) -> Iterator[_Triple]:
         yield from ttl(
             self.boulloterion_uri,
             (RDF.type, r11spec.Boulloterion),
@@ -66,12 +69,8 @@ class BoulloteriaRDFConverter(_ModelRDFConverter[Boulloteria]):
         yield from self.authority_passage_triples(e13_spec_l1_uri)
 
     def ownership_triples(self) -> Iterator[_Triple]:
-        e13_crm_p24_uri = mkuri()
-        e13_crm_p4_uri = mkuri()
-
-        self.ownership_uri: URIRef = (
-            mkuri() if (owner := self.model.owner) is None else mkuri(owner)
-        )
+        e13_crm_p24_uri, e13_crm_p4_uri = mkuri(), mkuri()
+        ownership_uri = mkuri()
 
         # ownership: base
         yield from ttl(
@@ -79,7 +78,7 @@ class BoulloteriaRDFConverter(_ModelRDFConverter[Boulloteria]):
             (RDF.type, star.E13_crm_P24),
             (
                 crm.P140_assigned_attribute_to,
-                ttl(self.ownership_uri, (RDF.type, crm.E8_Acquisition)),
+                ttl(ownership_uri, (RDF.type, crm.E8_Acquisition)),
             ),
             (crm.P141_assigned, self.boulloterion_uri),
         )
@@ -88,7 +87,7 @@ class BoulloteriaRDFConverter(_ModelRDFConverter[Boulloteria]):
         yield from ttl(
             e13_crm_p4_uri,
             (RDF.type, star.E13_crm_P4),
-            (crm.P140_assigned_attribute_to, self.ownership_uri),
+            (crm.P140_assigned_attribute_to, ownership_uri),
             (
                 crm.P141_assigned,
                 ttl(
@@ -105,14 +104,14 @@ class BoulloteriaRDFConverter(_ModelRDFConverter[Boulloteria]):
 
         # ownership: owner
         if (owner := self.model.owner) is not None:
-            person_model: Person = self.get_person_data(person_id=owner)
+            owner_model: Person = self.get_person_data(person_id=owner)
             e13_crm_p22 = mkuri()
 
             yield from ttl(
                 e13_crm_p22,
                 (RDF.type, star.E13_crm_P22),
-                (crm.P140_assigned_attribute_to, self.ownership_uri),
-                (crm.P141_assigned, person_model.person_uri),
+                (crm.P140_assigned_attribute_to, ownership_uri),
+                (crm.P141_assigned, owner_model.person_uri),
             )
 
             yield from self.authority_passage_triples(e13_crm_p22)

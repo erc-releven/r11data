@@ -5,31 +5,24 @@ from functools import cached_property
 import itertools
 
 from lodkit import _Triple, ttl
-from r11data.tabular.main.models import BirthAndDeath
+from r11data.tabular.main.models import BirthAndDeath, Person
 from r11data.tabular.main.triple_generators.bases import _ModelRDFConverter
-from r11data.tabular.main.utils.rdf_utils import (
-    crm,
-    mkuri,
-    star,
-)
+from r11data.tabular.main.utils.rdf_utils import crm, mkuri, star
 from rdflib import RDF, RDFS, URIRef
 
 
 class BirthDeathEventRDFConverter(_ModelRDFConverter[BirthAndDeath]):
     @cached_property
     def person_uri(self) -> URIRef:
-        person_model = self.get_person_data(self.model.who)
+        person_model: Person = self.get_person_data(self.model.who, strict=True)
+        return person_model.person_uri
 
-        person_uri: URIRef = (
-            mkuri(person_model.identifier)
-            if (_wisski_id := person_model.wisski_id) is None
-            else URIRef(str(_wisski_id))
-        )
-        return person_uri
+    @cached_property
+    def event_uri(self) -> URIRef:
+        return mkuri(self.model.who, self.model.which)
 
     def base_triples(self) -> Iterator[_Triple]:
         event_assertion_uri = mkuri()
-        self.event_uri = mkuri(f"{self.model.who} - {self.model.which}")
 
         match self.model.which:
             case "Birth":
@@ -100,7 +93,7 @@ class BirthDeathEventRDFConverter(_ModelRDFConverter[BirthAndDeath]):
             return
 
         e13_crm_p7_uri = mkuri()
-        place_uri = mkuri(place)  # connect to Places sheet
+        place_uri = mkuri(place)  # connect to Places sheet ('Reference name')
 
         yield from ttl(
             e13_crm_p7_uri,
