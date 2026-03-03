@@ -7,328 +7,328 @@
 
 <https://pbw2016.kdl.kcl.ac.uk/> ns1:ID7_matches r11:0b88e937f18b10edaafe07f95aceb492318f .
 
-r11:21773076249a8dd1bb1284d8fb7f2ee81778 crm:P67_refers_to r11:206a9e39-523e-43f6-aaea-af813ecd87c2,
-        r11:33b071b8-0dab-4bbf-87dd-3106b81a1096,
-        r11:3dabcba4-0c32-4e11-af0b-36269050d9d3,
-        r11:b6473f1f-2595-4ac4-84b1-10bb1e7a912e .
+r11:06a86544-b77e-4742-8eac-0d8b7282edf6 a crm:E15_Identifier_Assignment ;
+    crm:P140_assigned_attribute_to r11:b2eb4f3b424a31d37836a5cb486388361833 ;
+    crm:P37_assigned r11:c3dae150-505f-405e-bbc2-56661ee65dda .
 
-r11:2fdd5a4a-0a49-4e45-b902-6f072d66009c a crm:E15_Identifier_Assignment ;
-    crm:P140_assigned_attribute_to r11:de00873416c8f774843d146a0778b7252af6 ;
-    crm:P37_assigned r11:c873ac98-a8d5-4c1e-a1c7-c43f72ff9bd5 .
+r11:21773076249a8dd1bb1284d8fb7f2ee81778 crm:P67_refers_to r11:09d45d86-6fa8-414e-b130-48bb5124c6e5,
+        r11:2c5d00fa-5211-4ede-a451-3f1f6e90fabf,
+        r11:2f0add19-c4d4-4b0c-b6d5-1e6498d7e3f7,
+        r11:b21e233b-a22f-42ee-92ca-6c7450e36b83 .
 
-r11:3b332e87fe4c8a16d96704fe9795fe3b709a crm:P67_refers_to r11:48da7550-c929-4aaf-b27f-c64d35638efc,
-        r11:62765c8f-da16-44da-b6ba-26c3924a88ab,
-        r11:b95a54cf-478b-4254-870a-5066615904c7,
-        r11:fc8b2782-c69d-4612-915d-76bd12886fbd .
-
-r11:4d12e2c7-324d-4b6c-9a45-a5e83b8aa485 a crm:E15_Identifier_Assignment ;
-    crm:P140_assigned_attribute_to r11:0b88e937f18b10edaafe07f95aceb492318f ;
-    crm:P37_assigned r11:ba358ede-e57a-4b6b-a906-82b5fa27c8fb .
-
-r11:4f961818-ccf3-4c30-b92f-d77f50cca3a2 a crm:E15_Identifier_Assignment ;
-    crm:P140_assigned_attribute_to r11:b739d70c739443b18dc0f236f5b61584113d ;
-    crm:P37_assigned r11:a3648c5f-3a66-4082-b6d6-03272a2b9078 .
-
-r11:58801abe-8908-4875-a979-ab38a1c6dcee a crm:E15_Identifier_Assignment ;
-    crm:P140_assigned_attribute_to r11:0b88e937f18b10edaafe07f95aceb492318f ;
-    crm:P37_assigned r11:d1fb36be-aadc-4668-85dc-cac4b1dad42b .
-
-r11:5e022205-93c6-4144-9195-fc91dc641c84 a crm:E15_Identifier_Assignment ;
+r11:22a1eda9-a713-4aff-bb05-e2a7876ca11c a crm:E15_Identifier_Assignment ;
     crm:P140_assigned_attribute_to r11:0acec22dd93b4c2ae5bc276ec1aaf108e3d0 ;
-    crm:P37_assigned r11:62c71c65-89ae-42b8-bf03-93990ebfec67 .
+    crm:P37_assigned r11:2a3dfd7d-8a48-4e94-acc8-8e1ef0276f1f .
 
-r11:7503efef-2fdb-4230-b5ec-5bea7995d942 a crm:E15_Identifier_Assignment ;
-    crm:P140_assigned_attribute_to r11:b2eb4f3b424a31d37836a5cb486388361833 ;
-    crm:P37_assigned r11:e39d37b1-8be8-414c-b60c-63bccf7edc20 .
+r11:3b332e87fe4c8a16d96704fe9795fe3b709a crm:P67_refers_to r11:ad82734b-6785-41ee-87d1-c12f6ca549c7,
+        r11:b6e9025e-da7d-4bfb-a13f-686098f316da,
+        r11:e9e9a2d9-446d-4829-a6c6-4df3242876ea,
+        r11:f373d68b-d3d2-47c6-8622-cefffb015a6a .
 
-r11:8a5ffb49-c64d-4851-80b4-71ce66722170 a crm:E15_Identifier_Assignment ;
-    crm:P140_assigned_attribute_to r11:b2eb4f3b424a31d37836a5cb486388361833 ;
-    crm:P37_assigned r11:efed426e-cdda-489b-bdb0-4baf8915bf35 .
-
-r11:8e6eb9d91ead0d853c4a41a822eca668cba1 crm:P67_refers_to r11:21222554-5b06-41f5-b286-b9f71f0637bc,
-        r11:834fbd56-e223-4481-b1b9-fac61209fc4f,
-        r11:b33274b7-dbeb-4050-935e-7db2845ef8f1,
-        r11:d2b10cc8-0067-4114-beb9-0aabba28bd7e .
-
-r11:91d298d1-4a63-48ba-a0fa-6a949955e0dd a crm:E15_Identifier_Assignment ;
-    crm:P140_assigned_attribute_to r11:b739d70c739443b18dc0f236f5b61584113d ;
-    crm:P37_assigned r11:b745d912-a7e6-4d5f-96f1-77ee1894a6c5 .
-
-r11:98f3c5e2-2b0e-45ed-a933-643693d8b692 a crm:E15_Identifier_Assignment ;
-    crm:P140_assigned_attribute_to r11:b2eb4f3b424a31d37836a5cb486388361833 ;
-    crm:P37_assigned r11:5023c740-9827-4320-8744-eb876588ef97 .
-
-r11:a2f0d504-86a4-4bc6-87fb-4a035b968e05 a crm:E15_Identifier_Assignment ;
+r11:3e7504f2-fad6-41d5-ac6b-69f1036d4051 a crm:E15_Identifier_Assignment ;
     crm:P140_assigned_attribute_to r11:8535e86c8118bbbb0a18ac72d15d3a2b37b1 ;
-    crm:P37_assigned r11:9a085aaa-b7a4-4e0f-97c3-d57f77f359e6 .
+    crm:P37_assigned r11:1b0ac739-6a58-4043-b4bc-ea1f7a01a02d .
 
-r11:baaf1b73a40a8f394fa080105374765c36eb crm:P67_refers_to r11:0aa3ebcd-b986-4aec-b272-92b32867b3ac,
-        r11:4de7ced0-8c27-4884-b697-4ea72a8956a8,
-        r11:5b468a63-e11c-4ecb-9b7d-76c0b1e42be8,
-        r11:88651443-6ef5-440c-b4ba-ca1485d029ec,
-        r11:8c6cd96e-08a6-434c-a80a-c7436a5d674f,
-        r11:9d05e440-3bbe-4f7b-900e-e73f7437d929,
-        r11:a0ec9156-18ac-4d4b-9132-9ef62c5572c5,
-        r11:ade75810-89bf-4467-822d-a50ccd62217c,
-        r11:af2e802f-6c72-4668-ba79-f576801a18e2,
-        r11:c1ce23fe-f73a-430e-a343-ad5611e0706d,
-        r11:d2ac3b37-a801-4f90-af18-e8cc91425023,
-        r11:d5b80921-c78b-4b72-987d-e94d7791a367,
-        r11:e551deb0-5f90-4372-98bd-985d3fcde5c6 .
+r11:4f4dbf26-f420-40b6-bf16-cab8b1c351db a crm:E15_Identifier_Assignment ;
+    crm:P140_assigned_attribute_to r11:b739d70c739443b18dc0f236f5b61584113d ;
+    crm:P37_assigned r11:ab3ec245-132a-452f-abc6-fe7233d25dc2 .
 
-r11:c4563dc83fb16e39bfebc8f34b0b03e69cd2 crm:P67_refers_to r11:23498fc7-8956-4502-833f-b1f20ebad685,
-        r11:bf0a0720-ce2b-4cb6-8800-17bcdd1ba730 .
+r11:54a84f76-02a7-4be5-9129-d842d12c0c71 a crm:E15_Identifier_Assignment ;
+    crm:P140_assigned_attribute_to r11:de00873416c8f774843d146a0778b7252af6 ;
+    crm:P37_assigned r11:b74edc36-e4fe-43be-b2af-dd986ae124eb .
 
-r11:c8b943537cc2bee853ded4e567d341336a93 crm:P67_refers_to r11:3a43b2ec-84ba-4837-b62e-eef6dbfe2abd,
-        r11:8672a2a9-0305-443d-a919-99c8b954cc3b,
-        r11:a3628abb-b4c3-4c83-af20-bf6b00d142d2,
-        r11:b36c8b5a-0371-4636-a50e-3e4eca4a901a .
+r11:5d997c7f-d750-4b28-b9cf-e77af156851e a crm:E15_Identifier_Assignment ;
+    crm:P140_assigned_attribute_to r11:0b88e937f18b10edaafe07f95aceb492318f ;
+    crm:P37_assigned r11:0276d496-8f6d-4fb4-8654-cab4e151bc96 .
 
-r11:e58fe593-737c-4f55-9e7b-9188c40397d8 a crm:E15_Identifier_Assignment ;
+r11:8e6eb9d91ead0d853c4a41a822eca668cba1 crm:P67_refers_to r11:17205daa-1009-4f76-ad36-4b174938191e,
+        r11:1c9d77c4-7760-4668-a3e1-6009aa9a48ce,
+        r11:c4238a3a-d5ac-4eac-8570-a40628e1aa3e,
+        r11:f427fa40-a913-4cac-9dea-b933baf5b0ed .
+
+r11:8f4c2bb9-0033-41c4-a625-b9a276f97872 a crm:E15_Identifier_Assignment ;
+    crm:P140_assigned_attribute_to r11:b739d70c739443b18dc0f236f5b61584113d ;
+    crm:P37_assigned r11:7793c70b-e465-46a1-ab2e-8cc5876b28e3 .
+
+r11:a0981e2c-aaa8-4b9f-83a2-41820a45c63d a crm:E15_Identifier_Assignment ;
+    crm:P140_assigned_attribute_to r11:b2eb4f3b424a31d37836a5cb486388361833 ;
+    crm:P37_assigned r11:13f702ed-c6b2-4d0c-bd9f-370303beef1e .
+
+r11:baaf1b73a40a8f394fa080105374765c36eb crm:P67_refers_to r11:134c955b-9943-40f7-804f-4e019939769c,
+        r11:14ed5d18-3679-4d04-a4d5-7654f9f1ad79,
+        r11:36115dd3-52d7-450d-911a-9ce6c5056f3a,
+        r11:4d92cb9c-309f-4fd2-a88e-28cbe6710e9a,
+        r11:5fd692da-5cf5-4d83-af4d-815d7df6dc0c,
+        r11:6f01b0d7-382f-4493-b449-c03987a4f96b,
+        r11:76c2fd36-a183-4eec-b3af-6feafcc39dab,
+        r11:94fe6c9d-df61-4030-91ba-168a6164269f,
+        r11:ea351af7-2a61-444f-ad55-c6dc99718490,
+        r11:ea7309f8-332f-46dd-b973-892d7ab41818,
+        r11:f2ed168f-0112-40c0-85de-3f3df175a3a1,
+        r11:f777b5c9-396b-4e90-8672-0fd99e863dcc,
+        r11:fb388185-49d0-499c-b3a7-a5ef8f93e690 .
+
+r11:c4563dc83fb16e39bfebc8f34b0b03e69cd2 crm:P67_refers_to r11:39df5289-6aab-4fa9-8049-47ffda9d2673,
+        r11:7f3dfdef-0490-405e-8667-bef86e3fed9e .
+
+r11:c8b943537cc2bee853ded4e567d341336a93 crm:P67_refers_to r11:1d1b2d6d-1d3f-4dd7-ae8e-a7d42894adad,
+        r11:2c93e75d-29c4-49db-ac54-92ee87c112b2,
+        r11:e1eb3a65-353f-462b-b0c3-46b7ff906637,
+        r11:fcc54cc9-a628-4f7b-8102-34e67ce4d123 .
+
+r11:e1146177-6f23-4543-b559-b3bf10d84d61 a crm:E15_Identifier_Assignment ;
+    crm:P140_assigned_attribute_to r11:b2eb4f3b424a31d37836a5cb486388361833 ;
+    crm:P37_assigned r11:da908eeb-82bf-4fa5-b3ab-a909514fe80f .
+
+r11:f3048aa9-1a3d-4c4e-9d6f-a2725652ed6f a crm:E15_Identifier_Assignment ;
     crm:P140_assigned_attribute_to r11:0acec22dd93b4c2ae5bc276ec1aaf108e3d0 ;
-    crm:P37_assigned r11:5609acd8-d897-4297-a207-b80658cde5a7 .
+    crm:P37_assigned r11:3523f75b-84c4-4d46-b432-92a1d7335aca .
 
-r11:0aa3ebcd-b986-4aec-b272-92b32867b3ac a star:E13_crm_P24 ;
-    crm:P140_assigned_attribute_to r11:a210f893-09d8-4bbc-99e8-a498ca6f2928 ;
-    crm:P141_assigned r11:b2eb4f3b424a31d37836a5cb486388361833 ;
-    crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
+r11:feef70b8-35a4-4d5e-b544-bdfc44808c6c a crm:E15_Identifier_Assignment ;
+    crm:P140_assigned_attribute_to r11:0b88e937f18b10edaafe07f95aceb492318f ;
+    crm:P37_assigned r11:6875eb59-72c2-4eba-bc75-2930f9ac3dc2 .
 
-r11:206a9e39-523e-43f6-aaea-af813ecd87c2 a star:E13_crm_P24 ;
-    crm:P140_assigned_attribute_to r11:8b7f45a4-c96a-46dc-881e-be8f61c6ce3c ;
-    crm:P141_assigned r11:b2eb4f3b424a31d37836a5cb486388361833 .
+r11:0276d496-8f6d-4fb4-8654-cab4e151bc96 a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "Theodoros son of Het‘oum kouropalates and doux of Melitene (Boulloterion ID)" .
 
-r11:21222554-5b06-41f5-b286-b9f71f0637bc a star:E13_crm_P22 ;
-    crm:P140_assigned_attribute_to r11:2a378899-b3cd-4f62-a552-35bd84c7cff5 ;
-    crm:P141_assigned r11:ff73f8a1df13c1e2ef04395672b32555f147 ;
-    crm:P14_carried_out_by r11:665a100964d02 .
-
-r11:23498fc7-8956-4502-833f-b1f20ebad685 a star:E13_crm_P24 ;
-    crm:P140_assigned_attribute_to r11:d5d7ca59-52e1-4a4f-9488-8340b5e3f971 ;
-    crm:P141_assigned r11:8535e86c8118bbbb0a18ac72d15d3a2b37b1 ;
-    crm:P14_carried_out_by r11:665a100964d02 .
-
-r11:2f1d9fdc-1370-49d5-a260-5293c63fae32 a crm:E52_Time-Span ;
-    rdfs:label "J 1080 [TAQ]" .
-
-r11:33b071b8-0dab-4bbf-87dd-3106b81a1096 a star:E13_crm_P22 ;
-    crm:P140_assigned_attribute_to r11:8b7f45a4-c96a-46dc-881e-be8f61c6ce3c ;
-    crm:P141_assigned r11:93fb3006-38ad-4726-921d-b7396d369351 .
-
-r11:3a43b2ec-84ba-4837-b62e-eef6dbfe2abd a star:E13_crm_P24 ;
-    crm:P140_assigned_attribute_to r11:456decc9-5938-45ee-bce9-fe9f3b7783fb ;
-    crm:P141_assigned r11:b739d70c739443b18dc0f236f5b61584113d ;
-    crm:P14_carried_out_by r11:665a100964d02 .
-
-r11:3af0487a-5f3e-4781-8908-444602023c23 a crm:E52_Time-Span ;
-    rdfs:label "J 1100 [TAQ]" .
-
-r11:3c3a8d04-2ee3-4c1b-beec-f6c94a70ea4a a crm:E52_Time-Span ;
-    rdfs:label "J 1100 [TAQ]" .
-
-r11:3dabcba4-0c32-4e11-af0b-36269050d9d3 a star:E13_spec_L1 ;
+r11:09d45d86-6fa8-414e-b130-48bb5124c6e5 a star:E13_spec_L1 ;
     crm:P140_assigned_attribute_to r11:b2eb4f3b424a31d37836a5cb486388361833 ;
     crm:P141_assigned r11:959da030e79c33092447ca80178594cea12a .
 
-r11:48220961-9e3d-428f-b2fa-2d554d23e3cb a crm:E52_Time-Span ;
-    rdfs:label "J 1001 [TPQ]" .
+r11:134c955b-9943-40f7-804f-4e019939769c a star:E13_crm_P4 ;
+    crm:P140_assigned_attribute_to r11:2cbb9d3a-e83b-4c7e-93f6-07a7e619edc4 ;
+    crm:P141_assigned r11:abd11234-f6a6-4777-8146-fbfaad284051 ;
+    crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
 
-r11:48da7550-c929-4aaf-b27f-c64d35638efc a star:E13_crm_P4 ;
-    crm:P140_assigned_attribute_to r11:e4e00adf-60a3-4072-91e9-7b7b866518d0 ;
-    crm:P141_assigned r11:3c3a8d04-2ee3-4c1b-beec-f6c94a70ea4a ;
-    crm:P14_carried_out_by r11:665a100964d02 .
+r11:13f702ed-c6b2-4d0c-bd9f-370303beef1e a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "Theodoros son of Het‘oum kouropalates and doux of Melitene (Version 1) (Boulloterion ID)" .
 
-r11:4de7ced0-8c27-4884-b697-4ea72a8956a8 a star:E13_crm_P24 ;
-    crm:P140_assigned_attribute_to r11:df15f340-e937-422a-8504-f4fd722da13f ;
+r11:14ed5d18-3679-4d04-a4d5-7654f9f1ad79 a star:E13_crm_P24 ;
+    crm:P140_assigned_attribute_to r11:622ea1ac-1bb9-4b45-b75f-3c84482411db ;
     crm:P141_assigned r11:b2eb4f3b424a31d37836a5cb486388361833 ;
     crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
 
-r11:5023c740-9827-4320-8744-eb876588ef97 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "Theodoros son of Het‘oum kouropalates and doux of Melitene (Version 1) (Boulloterion ID)" .
-
-r11:5609acd8-d897-4297-a207-b80658cde5a7 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "Gregorios Radenos? (Boulloterion ID)" .
-
-r11:5b468a63-e11c-4ecb-9b7d-76c0b1e42be8 a star:E13_crm_P4 ;
-    crm:P140_assigned_attribute_to r11:df15f340-e937-422a-8504-f4fd722da13f ;
-    crm:P141_assigned r11:f4ed5041-9f4b-447c-94d0-911ff2d03840 ;
-    crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
-
-r11:62765c8f-da16-44da-b6ba-26c3924a88ab a star:E13_crm_P24 ;
-    crm:P140_assigned_attribute_to r11:da39fd02-7001-4932-ac68-d39af20f8313 ;
-    crm:P141_assigned r11:0acec22dd93b4c2ae5bc276ec1aaf108e3d0 ;
+r11:17205daa-1009-4f76-ad36-4b174938191e a star:E13_crm_P24 ;
+    crm:P140_assigned_attribute_to r11:42958246-6e61-4e62-a74c-8aa63d8adf2f ;
+    crm:P141_assigned r11:de00873416c8f774843d146a0778b7252af6 ;
     crm:P14_carried_out_by r11:665a100964d02 .
 
-r11:62c71c65-89ae-42b8-bf03-93990ebfec67 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "Gregorios Radenos? (Boulloterion ID)" .
+r11:19303f05-45c4-4169-bb27-ea0eb0203ad7 a crm:E52_Time-Span ;
+    rdfs:label "J 1080 [TAQ]" .
 
-r11:746bba63-31da-4fe6-8ae0-8bb6f29de7ac a crm:E52_Time-Span ;
-    rdfs:label "J 1074" .
-
-r11:7ea96ef2-c6c5-417c-b270-e07b20f061a3 a crm:E52_Time-Span ;
-    rdfs:label "J 1075 [TPQ]" .
-
-r11:834fbd56-e223-4481-b1b9-fac61209fc4f a star:E13_crm_P4 ;
-    crm:P140_assigned_attribute_to r11:2a378899-b3cd-4f62-a552-35bd84c7cff5 ;
-    crm:P141_assigned r11:ebec2e8f-3c59-4951-9b9e-697e91ec7c22 ;
-    crm:P14_carried_out_by r11:665a100964d02 .
-
-r11:8672a2a9-0305-443d-a919-99c8b954cc3b a star:E13_crm_P4 ;
-    crm:P140_assigned_attribute_to r11:6672bee5-b554-42f1-bc9b-7f1b6e050a62 ;
-    crm:P141_assigned r11:3af0487a-5f3e-4781-8908-444602023c23 ;
-    crm:P14_carried_out_by r11:665a100964d02 .
-
-r11:88651443-6ef5-440c-b4ba-ca1485d029ec a star:E13_crm_P4 ;
-    crm:P140_assigned_attribute_to r11:a7cfd2f9-ec0b-4eba-9817-bbf555ac1b14 ;
-    crm:P141_assigned r11:a69d8b4b-4d62-42df-ad21-e5c06313d7f0 ;
-    crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
-
-r11:8c6cd96e-08a6-434c-a80a-c7436a5d674f a star:E13_crm_P22 ;
-    crm:P140_assigned_attribute_to r11:1512df94-83c2-44e8-9af0-f2735cacd0d0 ;
-    crm:P141_assigned r11:93fb3006-38ad-4726-921d-b7396d369351 ;
-    crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
-
-r11:9a085aaa-b7a4-4e0f-97c3-d57f77f359e6 a crm:E42_Identifier ;
+r11:1b0ac739-6a58-4043-b4bc-ea1f7a01a02d a crm:E42_Identifier ;
     crm:P190_has_symbolic_content "Leo (Boulloterion ID)" .
 
-r11:9d05e440-3bbe-4f7b-900e-e73f7437d929 a star:E13_crm_P4 ;
-    crm:P140_assigned_attribute_to r11:a210f893-09d8-4bbc-99e8-a498ca6f2928 ;
-    crm:P141_assigned r11:2f1d9fdc-1370-49d5-a260-5293c63fae32 ;
-    crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
+r11:1c9d77c4-7760-4668-a3e1-6009aa9a48ce a star:E13_crm_P22 ;
+    crm:P140_assigned_attribute_to r11:42958246-6e61-4e62-a74c-8aa63d8adf2f ;
+    crm:P141_assigned r11:ff73f8a1df13c1e2ef04395672b32555f147 ;
+    crm:P14_carried_out_by r11:665a100964d02 .
 
-r11:a0ec9156-18ac-4d4b-9132-9ef62c5572c5 a star:E13_spec_L1 ;
-    crm:P140_assigned_attribute_to r11:b2eb4f3b424a31d37836a5cb486388361833 ;
-    crm:P141_assigned r11:959da030e79c33092447ca80178594cea12a ;
-    crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
+r11:1d1b2d6d-1d3f-4dd7-ae8e-a7d42894adad a star:E13_crm_P4 ;
+    crm:P140_assigned_attribute_to r11:b6154164-9ee5-4d33-8844-50f226a00eed ;
+    crm:P141_assigned r11:1ee24541-c47c-47c3-a6cf-3c89c0c3e6cd ;
+    crm:P14_carried_out_by r11:665a100964d02 .
 
-r11:a3628abb-b4c3-4c83-af20-bf6b00d142d2 a star:E13_crm_P24 ;
-    crm:P140_assigned_attribute_to r11:6672bee5-b554-42f1-bc9b-7f1b6e050a62 ;
+r11:1ee24541-c47c-47c3-a6cf-3c89c0c3e6cd a crm:E52_Time-Span ;
+    rdfs:label "J 1075 [TPQ]" .
+
+r11:21d58481-7fac-4759-a1d9-cbe50b39b17f a crm:E52_Time-Span ;
+    rdfs:label "J 1078 [TPQ]" .
+
+r11:29338bfa-dbd6-4ab8-b40c-76157cce66d0 a crm:E52_Time-Span ;
+    rdfs:label "J 1100" .
+
+r11:2a3dfd7d-8a48-4e94-acc8-8e1ef0276f1f a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "Gregorios Radenos? (Boulloterion ID)" .
+
+r11:2c5d00fa-5211-4ede-a451-3f1f6e90fabf a star:E13_crm_P22 ;
+    crm:P140_assigned_attribute_to r11:128ea1c5-789d-4007-931f-18424286fa1c ;
+    crm:P141_assigned r11:93fb3006-38ad-4726-921d-b7396d369351 .
+
+r11:2c93e75d-29c4-49db-ac54-92ee87c112b2 a star:E13_crm_P24 ;
+    crm:P140_assigned_attribute_to r11:b6154164-9ee5-4d33-8844-50f226a00eed ;
     crm:P141_assigned r11:b739d70c739443b18dc0f236f5b61584113d ;
     crm:P14_carried_out_by r11:665a100964d02 .
 
-r11:a3648c5f-3a66-4082-b6d6-03272a2b9078 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "Ioannes proedros (Boulloterion ID)" .
+r11:2f0add19-c4d4-4b0c-b6d5-1e6498d7e3f7 a star:E13_crm_P24 ;
+    crm:P140_assigned_attribute_to r11:128ea1c5-789d-4007-931f-18424286fa1c ;
+    crm:P141_assigned r11:b2eb4f3b424a31d37836a5cb486388361833 .
 
-r11:a69d8b4b-4d62-42df-ad21-e5c06313d7f0 a crm:E52_Time-Span ;
+r11:3523f75b-84c4-4d46-b432-92a1d7335aca a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "Gregorios Radenos? (Boulloterion ID)" .
+
+r11:36115dd3-52d7-450d-911a-9ce6c5056f3a a star:E13_crm_P4 ;
+    crm:P140_assigned_attribute_to r11:fcb6730a-44d9-43ca-b29e-7fdc292e2dc7 ;
+    crm:P141_assigned r11:19303f05-45c4-4169-bb27-ea0eb0203ad7 ;
+    crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
+
+r11:39df5289-6aab-4fa9-8049-47ffda9d2673 a star:E13_crm_P24 ;
+    crm:P140_assigned_attribute_to r11:f7f0b14c-017b-474f-bdd3-cfae2c5b09fc ;
+    crm:P141_assigned r11:8535e86c8118bbbb0a18ac72d15d3a2b37b1 ;
+    crm:P14_carried_out_by r11:665a100964d02 .
+
+r11:425ce78a-75c6-45dc-8d87-d935f4da0a22 a crm:E52_Time-Span ;
     rdfs:label "J 1080 [TAQ]" .
 
-r11:aa898353-c357-413e-bc2f-dbff8d94c299 a crm:E52_Time-Span ;
-    rdfs:label "J 1100" .
-
-r11:ade75810-89bf-4467-822d-a50ccd62217c a star:E13_spec_L1 ;
+r11:4d92cb9c-309f-4fd2-a88e-28cbe6710e9a a star:E13_spec_L1 ;
     crm:P140_assigned_attribute_to r11:0b88e937f18b10edaafe07f95aceb492318f ;
     crm:P141_assigned r11:3de8392541ace28284aca7f2724273739fcf ;
     crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
 
-r11:af2e802f-6c72-4668-ba79-f576801a18e2 a star:E13_spec_L1 ;
+r11:5fd692da-5cf5-4d83-af4d-815d7df6dc0c a star:E13_crm_P24 ;
+    crm:P140_assigned_attribute_to r11:fcb6730a-44d9-43ca-b29e-7fdc292e2dc7 ;
+    crm:P141_assigned r11:0b88e937f18b10edaafe07f95aceb492318f ;
+    crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
+
+r11:6875eb59-72c2-4eba-bc75-2930f9ac3dc2 a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "Theodoros son of Het‘oum kouropalates and doux of Melitene (Boulloterion ID)" .
+
+r11:6f01b0d7-382f-4493-b449-c03987a4f96b a star:E13_spec_L1 ;
     crm:P140_assigned_attribute_to r11:b2eb4f3b424a31d37836a5cb486388361833 ;
     crm:P141_assigned r11:959da030e79c33092447ca80178594cea12a ;
     crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
 
-r11:b33274b7-dbeb-4050-935e-7db2845ef8f1 a star:E13_spec_L1 ;
+r11:76c2fd36-a183-4eec-b3af-6feafcc39dab a star:E13_spec_L1 ;
+    crm:P140_assigned_attribute_to r11:b2eb4f3b424a31d37836a5cb486388361833 ;
+    crm:P141_assigned r11:959da030e79c33092447ca80178594cea12a ;
+    crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
+
+r11:7793c70b-e465-46a1-ab2e-8cc5876b28e3 a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "Ioannes proedros (Boulloterion ID)" .
+
+r11:7f3dfdef-0490-405e-8667-bef86e3fed9e a star:E13_crm_P4 ;
+    crm:P140_assigned_attribute_to r11:f7f0b14c-017b-474f-bdd3-cfae2c5b09fc ;
+    crm:P141_assigned r11:29338bfa-dbd6-4ab8-b40c-76157cce66d0 ;
+    crm:P14_carried_out_by r11:665a100964d02 .
+
+r11:94fe6c9d-df61-4030-91ba-168a6164269f a star:E13_crm_P24 ;
+    crm:P140_assigned_attribute_to r11:2cbb9d3a-e83b-4c7e-93f6-07a7e619edc4 ;
+    crm:P141_assigned r11:b2eb4f3b424a31d37836a5cb486388361833 ;
+    crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
+
+r11:ab3ec245-132a-452f-abc6-fe7233d25dc2 a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "Ioannes proedros (Boulloterion ID)" .
+
+r11:abd11234-f6a6-4777-8146-fbfaad284051 a crm:E52_Time-Span ;
+    rdfs:label "J 1078 [TPQ]" .
+
+r11:ad82734b-6785-41ee-87d1-c12f6ca549c7 a star:E13_crm_P24 ;
+    crm:P140_assigned_attribute_to r11:fae9012b-f19e-4dea-b3b5-0da9ce04be8c ;
+    crm:P141_assigned r11:0acec22dd93b4c2ae5bc276ec1aaf108e3d0 ;
+    crm:P14_carried_out_by r11:665a100964d02 .
+
+r11:b21e233b-a22f-42ee-92ca-6c7450e36b83 a star:E13_crm_P4 ;
+    crm:P140_assigned_attribute_to r11:128ea1c5-789d-4007-931f-18424286fa1c ;
+    crm:P141_assigned r11:cb84f7b1-6932-4d69-aa54-0f7c307cdff0 .
+
+r11:b6e9025e-da7d-4bfb-a13f-686098f316da a star:E13_crm_P24 ;
+    crm:P140_assigned_attribute_to r11:9c93071c-f66a-4414-9e89-05ae95201f01 ;
+    crm:P141_assigned r11:0acec22dd93b4c2ae5bc276ec1aaf108e3d0 ;
+    crm:P14_carried_out_by r11:665a100964d02 .
+
+r11:b74edc36-e4fe-43be-b2af-dd986ae124eb a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "Michael, grandson of Samuel (Boulloterion ID)" .
+
+r11:bfbc4784-f931-489e-a19f-8b95ee3cfd4d a crm:E52_Time-Span ;
+    rdfs:label "J 1001 [TPQ]" .
+
+r11:c3dae150-505f-405e-bbc2-56661ee65dda a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "Theodoros son of Het‘oum kouropalates and doux of Melitene (Version 1) (Boulloterion ID)" .
+
+r11:c4238a3a-d5ac-4eac-8570-a40628e1aa3e a star:E13_crm_P4 ;
+    crm:P140_assigned_attribute_to r11:42958246-6e61-4e62-a74c-8aa63d8adf2f ;
+    crm:P141_assigned r11:e5c2b1fb-ec4e-4a6c-8e21-3a930e13042d ;
+    crm:P14_carried_out_by r11:665a100964d02 .
+
+r11:cb84f7b1-6932-4d69-aa54-0f7c307cdff0 a crm:E52_Time-Span ;
+    rdfs:label "J 1074" .
+
+r11:da908eeb-82bf-4fa5-b3ab-a909514fe80f a crm:E42_Identifier ;
+    crm:P190_has_symbolic_content "Theodoros son of Het‘oum kouropalates and doux of Melitene (Version 1) (Boulloterion ID)" .
+
+r11:e1eb3a65-353f-462b-b0c3-46b7ff906637 a star:E13_crm_P4 ;
+    crm:P140_assigned_attribute_to r11:6f6d0f74-8710-46a4-bd24-84b503c3a630 ;
+    crm:P141_assigned r11:f1b1f409-65b6-4b64-8a4d-88ff95700c3e ;
+    crm:P14_carried_out_by r11:665a100964d02 .
+
+r11:e5c2b1fb-ec4e-4a6c-8e21-3a930e13042d a crm:E52_Time-Span ;
+    rdfs:label "J 1075 [TPQ]" .
+
+r11:e9e9a2d9-446d-4829-a6c6-4df3242876ea a star:E13_crm_P4 ;
+    crm:P140_assigned_attribute_to r11:fae9012b-f19e-4dea-b3b5-0da9ce04be8c ;
+    crm:P141_assigned r11:fd3b6828-e368-4b1e-be24-e33f6ea8795b ;
+    crm:P14_carried_out_by r11:665a100964d02 .
+
+r11:ea351af7-2a61-444f-ad55-c6dc99718490 a star:E13_crm_P4 ;
+    crm:P140_assigned_attribute_to r11:8ca35dd0-940a-48f9-a262-787077b28af6 ;
+    crm:P141_assigned r11:21d58481-7fac-4759-a1d9-cbe50b39b17f ;
+    crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
+
+r11:ea7309f8-332f-46dd-b973-892d7ab41818 a star:E13_crm_P22 ;
+    crm:P140_assigned_attribute_to r11:8ca35dd0-940a-48f9-a262-787077b28af6 ;
+    crm:P141_assigned r11:93fb3006-38ad-4726-921d-b7396d369351 ;
+    crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
+
+r11:f1b1f409-65b6-4b64-8a4d-88ff95700c3e a crm:E52_Time-Span ;
+    rdfs:label "J 1100 [TAQ]" .
+
+r11:f2ed168f-0112-40c0-85de-3f3df175a3a1 a star:E13_crm_P24 ;
+    crm:P140_assigned_attribute_to r11:8ca35dd0-940a-48f9-a262-787077b28af6 ;
+    crm:P141_assigned r11:0b88e937f18b10edaafe07f95aceb492318f ;
+    crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
+
+r11:f373d68b-d3d2-47c6-8622-cefffb015a6a a star:E13_crm_P4 ;
+    crm:P140_assigned_attribute_to r11:9c93071c-f66a-4414-9e89-05ae95201f01 ;
+    crm:P141_assigned r11:bfbc4784-f931-489e-a19f-8b95ee3cfd4d ;
+    crm:P14_carried_out_by r11:665a100964d02 .
+
+r11:f427fa40-a913-4cac-9dea-b933baf5b0ed a star:E13_spec_L1 ;
     crm:P140_assigned_attribute_to r11:de00873416c8f774843d146a0778b7252af6 ;
     crm:P141_assigned r11:7ba3d0eb107ff31566ee96efb356dd2d0b94 ;
     crm:P14_carried_out_by r11:665a100964d02 .
 
-r11:b36c8b5a-0371-4636-a50e-3e4eca4a901a a star:E13_crm_P4 ;
-    crm:P140_assigned_attribute_to r11:456decc9-5938-45ee-bce9-fe9f3b7783fb ;
-    crm:P141_assigned r11:7ea96ef2-c6c5-417c-b270-e07b20f061a3 ;
-    crm:P14_carried_out_by r11:665a100964d02 .
-
-r11:b6473f1f-2595-4ac4-84b1-10bb1e7a912e a star:E13_crm_P4 ;
-    crm:P140_assigned_attribute_to r11:8b7f45a4-c96a-46dc-881e-be8f61c6ce3c ;
-    crm:P141_assigned r11:746bba63-31da-4fe6-8ae0-8bb6f29de7ac .
-
-r11:b745d912-a7e6-4d5f-96f1-77ee1894a6c5 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "Ioannes proedros (Boulloterion ID)" .
-
-r11:b95a54cf-478b-4254-870a-5066615904c7 a star:E13_crm_P4 ;
-    crm:P140_assigned_attribute_to r11:da39fd02-7001-4932-ac68-d39af20f8313 ;
-    crm:P141_assigned r11:48220961-9e3d-428f-b2fa-2d554d23e3cb ;
-    crm:P14_carried_out_by r11:665a100964d02 .
-
-r11:ba358ede-e57a-4b6b-a906-82b5fa27c8fb a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "Theodoros son of Het‘oum kouropalates and doux of Melitene (Boulloterion ID)" .
-
-r11:bf0a0720-ce2b-4cb6-8800-17bcdd1ba730 a star:E13_crm_P4 ;
-    crm:P140_assigned_attribute_to r11:d5d7ca59-52e1-4a4f-9488-8340b5e3f971 ;
-    crm:P141_assigned r11:aa898353-c357-413e-bc2f-dbff8d94c299 ;
-    crm:P14_carried_out_by r11:665a100964d02 .
-
-r11:c1ce23fe-f73a-430e-a343-ad5611e0706d a star:E13_spec_L1 ;
+r11:f777b5c9-396b-4e90-8672-0fd99e863dcc a star:E13_spec_L1 ;
     crm:P140_assigned_attribute_to r11:0b88e937f18b10edaafe07f95aceb492318f ;
     crm:P141_assigned r11:3de8392541ace28284aca7f2724273739fcf ;
     crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
 
-r11:c873ac98-a8d5-4c1e-a1c7-c43f72ff9bd5 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "Michael, grandson of Samuel (Boulloterion ID)" .
-
-r11:cbe59789-c587-4796-89b2-68e334bcf7bf a crm:E52_Time-Span ;
-    rdfs:label "J 1078 [TPQ]" .
-
-r11:d1fb36be-aadc-4668-85dc-cac4b1dad42b a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "Theodoros son of Het‘oum kouropalates and doux of Melitene (Boulloterion ID)" .
-
-r11:d2ac3b37-a801-4f90-af18-e8cc91425023 a star:E13_crm_P4 ;
-    crm:P140_assigned_attribute_to r11:1512df94-83c2-44e8-9af0-f2735cacd0d0 ;
-    crm:P141_assigned r11:cbe59789-c587-4796-89b2-68e334bcf7bf ;
+r11:fb388185-49d0-499c-b3a7-a5ef8f93e690 a star:E13_crm_P4 ;
+    crm:P140_assigned_attribute_to r11:622ea1ac-1bb9-4b45-b75f-3c84482411db ;
+    crm:P141_assigned r11:425ce78a-75c6-45dc-8d87-d935f4da0a22 ;
     crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
 
-r11:d2b10cc8-0067-4114-beb9-0aabba28bd7e a star:E13_crm_P24 ;
-    crm:P140_assigned_attribute_to r11:2a378899-b3cd-4f62-a552-35bd84c7cff5 ;
-    crm:P141_assigned r11:de00873416c8f774843d146a0778b7252af6 ;
+r11:fcc54cc9-a628-4f7b-8102-34e67ce4d123 a star:E13_crm_P24 ;
+    crm:P140_assigned_attribute_to r11:6f6d0f74-8710-46a4-bd24-84b503c3a630 ;
+    crm:P141_assigned r11:b739d70c739443b18dc0f236f5b61584113d ;
     crm:P14_carried_out_by r11:665a100964d02 .
 
-r11:d5b80921-c78b-4b72-987d-e94d7791a367 a star:E13_crm_P24 ;
-    crm:P140_assigned_attribute_to r11:a7cfd2f9-ec0b-4eba-9817-bbf555ac1b14 ;
-    crm:P141_assigned r11:0b88e937f18b10edaafe07f95aceb492318f ;
-    crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
+r11:fd3b6828-e368-4b1e-be24-e33f6ea8795b a crm:E52_Time-Span ;
+    rdfs:label "J 1100 [TAQ]" .
 
-r11:e39d37b1-8be8-414c-b60c-63bccf7edc20 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "Theodoros son of Het‘oum kouropalates and doux of Melitene (Version 1) (Boulloterion ID)" .
+r11:2cbb9d3a-e83b-4c7e-93f6-07a7e619edc4 a crm:E8_Acquisition .
 
-r11:e551deb0-5f90-4372-98bd-985d3fcde5c6 a star:E13_crm_P24 ;
-    crm:P140_assigned_attribute_to r11:1512df94-83c2-44e8-9af0-f2735cacd0d0 ;
-    crm:P141_assigned r11:0b88e937f18b10edaafe07f95aceb492318f ;
-    crm:P14_carried_out_by r11:c575c91eb1f2f743bf52898ecae201da1d01 .
+r11:622ea1ac-1bb9-4b45-b75f-3c84482411db a crm:E8_Acquisition .
 
-r11:ebec2e8f-3c59-4951-9b9e-697e91ec7c22 a crm:E52_Time-Span ;
-    rdfs:label "J 1075 [TPQ]" .
-
-r11:efed426e-cdda-489b-bdb0-4baf8915bf35 a crm:E42_Identifier ;
-    crm:P190_has_symbolic_content "Theodoros son of Het‘oum kouropalates and doux of Melitene (Version 1) (Boulloterion ID)" .
-
-r11:f4ed5041-9f4b-447c-94d0-911ff2d03840 a crm:E52_Time-Span ;
-    rdfs:label "J 1078 [TPQ]" .
-
-r11:fc8b2782-c69d-4612-915d-76bd12886fbd a star:E13_crm_P24 ;
-    crm:P140_assigned_attribute_to r11:e4e00adf-60a3-4072-91e9-7b7b866518d0 ;
-    crm:P141_assigned r11:0acec22dd93b4c2ae5bc276ec1aaf108e3d0 ;
-    crm:P14_carried_out_by r11:665a100964d02 .
-
-r11:456decc9-5938-45ee-bce9-fe9f3b7783fb a crm:E8_Acquisition .
-
-r11:6672bee5-b554-42f1-bc9b-7f1b6e050a62 a crm:E8_Acquisition .
+r11:6f6d0f74-8710-46a4-bd24-84b503c3a630 a crm:E8_Acquisition .
 
 r11:8535e86c8118bbbb0a18ac72d15d3a2b37b1 a r11spec:Boulloterion ;
     rdfs:label "Leo" .
 
-r11:a210f893-09d8-4bbc-99e8-a498ca6f2928 a crm:E8_Acquisition .
+r11:9c93071c-f66a-4414-9e89-05ae95201f01 a crm:E8_Acquisition .
 
-r11:a7cfd2f9-ec0b-4eba-9817-bbf555ac1b14 a crm:E8_Acquisition .
+r11:b6154164-9ee5-4d33-8844-50f226a00eed a crm:E8_Acquisition .
 
-r11:d5d7ca59-52e1-4a4f-9488-8340b5e3f971 a crm:E8_Acquisition .
+r11:f7f0b14c-017b-474f-bdd3-cfae2c5b09fc a crm:E8_Acquisition .
 
-r11:da39fd02-7001-4932-ac68-d39af20f8313 a crm:E8_Acquisition .
+r11:fae9012b-f19e-4dea-b3b5-0da9ce04be8c a crm:E8_Acquisition .
 
-r11:df15f340-e937-422a-8504-f4fd722da13f a crm:E8_Acquisition .
+r11:fcb6730a-44d9-43ca-b29e-7fdc292e2dc7 a crm:E8_Acquisition .
 
-r11:e4e00adf-60a3-4072-91e9-7b7b866518d0 a crm:E8_Acquisition .
+r11:128ea1c5-789d-4007-931f-18424286fa1c a crm:E8_Acquisition .
 
-r11:1512df94-83c2-44e8-9af0-f2735cacd0d0 a crm:E8_Acquisition .
+r11:42958246-6e61-4e62-a74c-8aa63d8adf2f a crm:E8_Acquisition .
 
-r11:2a378899-b3cd-4f62-a552-35bd84c7cff5 a crm:E8_Acquisition .
-
-r11:8b7f45a4-c96a-46dc-881e-be8f61c6ce3c a crm:E8_Acquisition .
+r11:8ca35dd0-940a-48f9-a262-787077b28af6 a crm:E8_Acquisition .
 
 r11:de00873416c8f774843d146a0778b7252af6 a r11spec:Boulloterion ;
     rdfs:label "Michael, grandson of Samuel" .

@@ -4,21 +4,21 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix star: <https://r11.eu/ns/star/> .
 
-r11:5e257983-6703-43ed-81e7-f2adf208bfcc a star:E13_crm_P46 ;
-    crm:P140_assigned_attribute_to r11:e8e8157c45da1d707cb0890804e55aaa39de ;
-    crm:P141_assigned r11:7ba3d0eb107ff31566ee96efb356dd2d0b94 .
+r11:5d18f02b-e310-461d-b5fa-89e84c23578e a star:E13_crm_P46 ;
+    crm:P140_assigned_attribute_to r11:160dc5dbfb79e31d8208710b2240dc5974d9 ;
+    crm:P141_assigned r11:fa7aec4efb728534ef32c172197c9560097c .
 
-r11:b4b7bf62-6ebc-43b6-816c-62273af20253 a star:E13_crm_P46 ;
+r11:5ed9d3e0-3df4-431f-bf63-9bba12ce40ed a star:E13_crm_P46 ;
     crm:P140_assigned_attribute_to r11:cf05412b04b5d62cf362b1536e460b6d9a66 ;
     crm:P141_assigned r11:959da030e79c33092447ca80178594cea12a .
 
-r11:eed324d1-df61-4bb4-90d1-324b0a56469a a star:E13_crm_P46 ;
+r11:8542970a-c3b3-4065-bf12-0145b5d8756a a star:E13_crm_P46 ;
     crm:P140_assigned_attribute_to r11:160dc5dbfb79e31d8208710b2240dc5974d9 ;
     crm:P141_assigned r11:3de8392541ace28284aca7f2724273739fcf .
 
-r11:fda44c9c-6cd3-46e1-a067-220099666237 a star:E13_crm_P46 ;
-    crm:P140_assigned_attribute_to r11:160dc5dbfb79e31d8208710b2240dc5974d9 ;
-    crm:P141_assigned r11:fa7aec4efb728534ef32c172197c9560097c .
+r11:ca1e9e5c-e614-4941-84cd-17fc1036ab05 a star:E13_crm_P46 ;
+    crm:P140_assigned_attribute_to r11:e8e8157c45da1d707cb0890804e55aaa39de ;
+    crm:P141_assigned r11:7ba3d0eb107ff31566ee96efb356dd2d0b94 .
 
 r11:3de8392541ace28284aca7f2724273739fcf a r11spec:Lead_Seal ;
     rdfs:label "615 (Seal ID)" .
