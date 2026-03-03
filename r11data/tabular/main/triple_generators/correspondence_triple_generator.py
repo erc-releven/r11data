@@ -1,6 +1,7 @@
 """TripleGenerator for the Correspondence sheet."""
 
 from collections.abc import Iterator
+from functools import cached_property
 import itertools
 
 from lodkit import _Triple, ttl
@@ -11,18 +12,27 @@ from rdflib import RDF, RDFS, URIRef
 
 
 class CorrespondenceRDFConverter(_ModelRDFConverter[Correspondence]):
-    def base_triples(self) -> Iterator[_Triple]:
-        self.correspondence_uri = mkuri(self.model.letter_sent)
+    @cached_property
+    def letter_uri(self) -> URIRef:
+        return mkuri(self.model.letter_sent, "Letter")
 
+    @cached_property
+    def correspondence_uri(self) -> URIRef:
+        return mkuri(self.model.letter_sent, "Correspondence")
+
+    @cached_property
+    def dispatch_uri(self) -> URIRef:
+        return mkuri(self.model.letter_sent, "Dispatch")
+
+    def base_triples(self) -> Iterator[_Triple]:
         return ttl(
             self.correspondence_uri,
             (RDF.type, r11spec.Corresponence),
-            (RDFS.label, f"{self.model.letter_sent} (Corresponence)"),
+            (RDFS.label, f"{self.model.letter_sent} (Correspondence)"),
         )
 
     def letter_triples(self) -> Iterator[_Triple]:
-        e13_crm_p128_uri, e13_spec_l2_uri, e13_crm_p106, letter_uri = (
-            mkuri(),
+        e13_crm_p128_uri, e13_spec_l2_uri, e13_crm_p106 = (
             mkuri(),
             mkuri(),
             mkuri(),
@@ -35,7 +45,7 @@ class CorrespondenceRDFConverter(_ModelRDFConverter[Correspondence]):
             (
                 crm.P141_assigned,
                 ttl(
-                    letter_uri,
+                    self.letter_uri,
                     (RDF.type, r11spec.Letter),
                     (RDFS.label, f"{self.model.letter_sent} (Letter)"),
                 ),
@@ -51,7 +61,7 @@ class CorrespondenceRDFConverter(_ModelRDFConverter[Correspondence]):
         yield from ttl(
             e13_crm_p106,
             (RDF.type, star.E13_crm_P106),
-            (crm.P140_assigned_attribute_to, letter_uri),
+            (crm.P140_assigned_attribute_to, self.letter_uri),
             (
                 crm.P141_assigned,
                 ttl(
@@ -73,7 +83,7 @@ class CorrespondenceRDFConverter(_ModelRDFConverter[Correspondence]):
             yield from ttl(
                 e13_spec_l2_uri,
                 (RDF.type, star.E13_spec_L2),
-                (crm.P140_assigned_attribute_to, letter_uri),
+                (crm.P140_assigned_attribute_to, self.letter_uri),
                 (crm.P141_assigned, person_model.person_uri),
             )
 
@@ -81,14 +91,14 @@ class CorrespondenceRDFConverter(_ModelRDFConverter[Correspondence]):
             yield from self.authority_passage_triples(e13_spec_l2_uri)
 
     def dispatch_triples(self) -> Iterator[_Triple]:
-        e13_crm_p25_uri, dispatch_uri = mkuri(), mkuri()
+        e13_crm_p25_uri = mkuri()
 
         yield from ttl(
             e13_crm_p25_uri,
             (RDF.type, star.E13_crm_P25),
             (
                 crm.P140_assigned_attribute_to,
-                ttl(dispatch_uri, (RDF.type, pwro.WE12_Sending)),
+                ttl(self.dispatch_uri, (RDF.type, pwro.WE12_Sending)),
             ),
             (crm.P141_assigned, self.correspondence_uri),
         )
@@ -103,10 +113,14 @@ class CorrespondenceRDFConverter(_ModelRDFConverter[Correspondence]):
             yield from ttl(
                 e13_pwro_wp13_uri,
                 (RDF.type, star.E13_pwro_WP13),
-                (crm.P140_assigned_attribute_to, dispatch_uri),
+                (crm.P140_assigned_attribute_to, self.dispatch_uri),
                 (
                     crm.P141_assigned,
-                    ttl(mkuri(), (RDF.type, crm.E27_Site), (RDFS.label, where_sent)),
+                    ttl(
+                        mkuri(where_sent),  # hashed like Places
+                        (RDF.type, crm.E27_Site),
+                        (RDFS.label, where_sent),
+                    ),
                 ),
             )
 
@@ -120,11 +134,13 @@ class CorrespondenceRDFConverter(_ModelRDFConverter[Correspondence]):
             yield from ttl(
                 e13_pwro_wp4_uri,
                 (RDF.type, star.E13_pwro_WP9),
-                (crm.P140_assigned_attribute_to, dispatch_uri),
+                (crm.P140_assigned_attribute_to, self.dispatch_uri),
                 (
                     crm.P141_assigned,
                     ttl(
-                        mkuri(), (RDF.type, crm.E27_Site), (RDFS.label, where_received)
+                        mkuri(where_received),  # hashed like Places
+                        (RDF.type, crm.E27_Site),
+                        (RDFS.label, where_received),
                     ),
                 ),
             )

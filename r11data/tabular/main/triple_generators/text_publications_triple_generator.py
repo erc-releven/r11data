@@ -6,13 +6,7 @@ import itertools
 from lodkit import _Triple, ttl
 from r11data.tabular.main.models import TextPublication
 from r11data.tabular.main.triple_generators.bases import _ModelRDFConverter
-from r11data.tabular.main.utils.rdf_utils import (
-    crm,
-    lrm,
-    mkuri,
-    r11spec,
-    star,
-)
+from r11data.tabular.main.utils.rdf_utils import crm, lrm, mkuri, r11spec, star
 from rdflib import RDF, RDFS, URIRef
 import structlog
 
@@ -24,18 +18,16 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        self.written_text_uri: URIRef = self._mktexturi("written text")
-        self.written_text_creation_uri: URIRef = self._mktexturi(
-            "written text creation"
-        )
-        self.text_edition_uri: URIRef = self._mktexturi("text edition")
+        self.written_text_uri: URIRef = self._mktexturi("Text Expression")
+        self.written_text_creation_uri: URIRef = self._mktexturi("Expression Creation")
+        self.text_edition_uri: URIRef = self._mktexturi("Publication")
         self.text_edition_creation_uri: URIRef = self._mktexturi(
             "text edition creation"
         )
 
     def _mktexturi(self, hash_part: str) -> URIRef:
         """Helpter for creating a text_identifier based hashed URI."""
-        return mkuri(f"{self.model.text_identifier} - {hash_part}")
+        return mkuri(self.model.text_identifier, hash_part)
 
     def base_triples(self) -> Iterator[_Triple]:
         yield from ttl(
