@@ -1,4 +1,3 @@
-
 from r11data.tabular.models import (
     ActorGroup,
     AuthorGroup,
