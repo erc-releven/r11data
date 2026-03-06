@@ -4,9 +4,3 @@
 
 Releven Data/Graph Integration: A place for conjuring Releven STAR-model compliant RDF from various sources.
 
-## r11tabular
-
-## r11scrapers
-
-## starlegs
-
