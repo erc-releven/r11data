@@ -4,6 +4,7 @@ from typing import Annotated, Any, Literal as TypingLiteral, Self
 
 from pydantic import (
     AfterValidator,
+    AliasChoices,
     AnyUrl,
     BaseModel,
     BeforeValidator,
@@ -353,3 +354,61 @@ class OtherObjects(_AuthoritySourceBase):
     owned_by_group: str | None = Field(validation_alias="Owned by group")
     owned_when: str | None = Field(validation_alias="Owned when")
     owned_where: str | None = Field(validation_alias="Owned where")
+
+
+class _SingleSheetModel(BaseModel):
+    model_config = ConfigDict(arbitrary_types_allowed=True)  # mainly for person_uri
+
+    @computed_field
+    @property
+    def identifier(self) -> str:
+        return f"{self.name.strip()} {self.code.strip()}"
+
+    @computed_field
+    def person_uri(self) -> URIRef:
+        return mkuri(self.identifier, "https://pbw2016.kdl.kcl.ac.uk/")
+
+    name: str = Field(validation_alias="Name")
+    code: str = Field(validation_alias="Code")
+
+    source: str = Field(validation_alias="Source")
+    source_loc: str | None = Field(validation_alias="Source loc")
+
+    pbw_description: str = Field(
+        validation_alias=AliasChoices("Description in PBW", "Description")
+    )
+
+    date: str | None = Field(validation_alias=AliasChoices("Death date", "Date"))
+    dating_authority: str | None = Field(validation_alias="Dating authority")
+
+    outside_source: str | None = Field(
+        validation_alias="Outside Source",
+        default=None,
+        description="Default value required because column not in Marton sheet lol.",
+    )
+
+    notes: str | None = Field(
+        validation_alias="Notes",
+        default=None,
+        description="Default value required because column not in Marton sheet lol.",
+    )
+
+
+class DeathSheetModel(_SingleSheetModel):
+    pass
+
+
+class LocationSheetModel(_SingleSheetModel):
+    factoid_id: str | None = Field(validation_alias="Factoid ID")
+
+    location: str | None = Field(validation_alias="Location")
+
+    pleiades_id: str | None = Field(validation_alias="Pleiades")
+    geonames_id: str | None = Field(validation_alias="Geonames")
+
+    releven_formula: str | None = Field(
+        validation_alias="Releven formula",
+        default=None,
+        description="Default value required because column not in Aleks sheet lol.",
+    )
+    releven_location_type: str | None = Field(validation_alias="RELEVEN location type")

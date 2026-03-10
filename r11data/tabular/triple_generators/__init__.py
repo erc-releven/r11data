@@ -13,6 +13,12 @@ from r11data.tabular.triple_generators.birth_death_event_triple_generator import
 from r11data.tabular.triple_generators.correspondence_triple_generator import (
     CorrespondenceRDFConverter as CorrespondenceRDFConverter,
 )
+from r11data.tabular.triple_generators.deaths_triple_generator import (
+    DeathsTripleGenerator as DeathsTripleGenerator,
+)
+from r11data.tabular.triple_generators.locations_triple_generator import (
+    LocationsTripleGenerator as LocationsTripleGenerator,
+)
 from r11data.tabular.triple_generators.manuscript_triple_generator import (
     ManuscriptRDFConverter as ManuscriptRDFConverter,
 )

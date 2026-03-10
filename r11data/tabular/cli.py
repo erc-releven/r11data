@@ -7,7 +7,9 @@ from r11data.tabular.generators import (
     birth_death_triples,
     boulloteria_triples,
     correspondence_triples,
+    death_triples,
     lead_seals_triples,
+    location_triples,
     manuscripts_triples,
     persons_triples,
     places_triples,
@@ -33,6 +35,8 @@ GENERATORS = {
     "places": places_triples,
     "social_relationships": social_relationships_triples,
     "text_publications": text_publications_triples,
+    "deaths": death_triples,
+    "locations": location_triples,
 }
 
 

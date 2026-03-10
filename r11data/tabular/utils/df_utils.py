@@ -1,8 +1,41 @@
-from functools import cached_property
+from functools import cached_property, partial
 import re
+from typing import Any
 
 import pandas as pd
 from rdflib import URIRef
+
+
+def load_df(io, sheet_name: Any = 0, required_columns: list[str] | None = None):
+    def _filter_required(df: pd.DataFrame) -> pd.DataFrame:
+        _required_columns = list() if required_columns is None else required_columns
+
+        for column in _required_columns:
+            df = df[df[column].astype(bool)]  # type: ignore
+        return df
+
+    def _clean_whitespace(df: pd.DataFrame) -> pd.DataFrame:
+        df_cleaned = df.copy()
+
+        for col in df_cleaned.columns:
+            if df_cleaned[col].dtype == "object":
+                df_cleaned[col] = df_cleaned[col].apply(
+                    lambda x: re.sub(r"\s+", " ", str(x).strip())
+                    if pd.notna(x) and x is not None
+                    else x
+                )
+
+        return df_cleaned
+
+    df = (
+        pd.read_excel(io=io, sheet_name=sheet_name, dtype=str, engine="calamine")
+        .pipe(lambda df: df.where(pd.notna(df), None))  # cast NaN to None
+        .pipe(lambda df: df.dropna(how="all"))  # drop all-None rows
+        .pipe(_filter_required)  # filter rows with non-truthy required fields
+        .pipe(_clean_whitespace)  # sanitize whitespace
+    )
+
+    return df
 
 
 class Sheets:
@@ -85,33 +118,8 @@ class Sheets:
         self, sheet_name: str, required_columns: list[str] | None = None
     ) -> pd.DataFrame:
         """Load an Excel file and prepare a sheet for processing."""
-
-        def _filter_required(df: pd.DataFrame) -> pd.DataFrame:
-            _required_columns = list() if required_columns is None else required_columns
-
-            for column in _required_columns:
-                df = df[df[column].astype(bool)]
-            return df
-
-        def _clean_whitespace(df: pd.DataFrame) -> pd.DataFrame:
-            df_cleaned = df.copy()
-
-            for col in df_cleaned.columns:
-                if df_cleaned[col].dtype == "object":
-                    df_cleaned[col] = df_cleaned[col].apply(
-                        lambda x: re.sub(r"\s+", " ", str(x).strip())
-                        if pd.notna(x) and x is not None
-                        else x
-                    )
-
-            return df_cleaned
-
-        df = (
-            pd.read_excel(self.io, sheet_name=sheet_name, dtype=str, engine="calamine")
-            .pipe(lambda df: df.where(pd.notna(df), None))  # cast NaN to None
-            .pipe(lambda df: df.dropna(how="all"))  # drop all-None rows
-            .pipe(_filter_required)  # filter rows with non-truthy required fields
-            .pipe(_clean_whitespace)  # sanitize whitespace
+        df = load_df(
+            io=self.io, sheet_name=sheet_name, required_columns=required_columns
         )
 
         assert isinstance(df, pd.DataFrame)  # type narrow

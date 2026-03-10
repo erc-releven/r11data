@@ -1,3 +1,8 @@
+from collections.abc import Iterator
+import itertools
+
+from lodkit import _Triple as Triple
+import pandas as pd
 from r11data.tabular.models import (
     ActorGroup,
     AuthorGroup,
@@ -5,7 +10,9 @@ from r11data.tabular.models import (
     BirthAndDeath,
     Boulloteria,
     Correspondence,
+    DeathSheetModel,
     LeadSeals,
+    LocationSheetModel,
     Manuscript,
     Person,
     Place,
@@ -18,6 +25,8 @@ from r11data.tabular.triple_generators import (
     AuthorityStatusRDFConverter,
     BirthDeathEventRDFConverter,
     CorrespondenceRDFConverter,
+    DeathsTripleGenerator,
+    LocationsTripleGenerator,
     PersonRDFConverter,
     PlaceRDFConverter,
     SocialRelationshipRDFConverter,
@@ -33,7 +42,7 @@ from r11data.tabular.triple_generators.lead_seals_triple_generator import (
 from r11data.tabular.triple_generators.manuscript_triple_generator import (
     ManuscriptRDFConverter,
 )
-from r11data.tabular.utils.df_utils import Sheets
+from r11data.tabular.utils.df_utils import Sheets, load_df
 from r11data.tabular.utils.paths import tabular_main_sources_path
 from r11data.tabular.utils.rdf_utils import (
     TripleChain,
@@ -55,6 +64,20 @@ aleks_sheets: Sheets = Sheets(owner_id=aleks_uri, io=aleks_sheets_io)
 marton_sheets_io = tabular_main_sources_path / "marton.xlsx"
 marton_sheets: Sheets = Sheets(owner_id=marton_uri, io=marton_sheets_io)
 
+
+aleks_deaths_io = tabular_main_sources_path / "c11deaths-AA.xlsx"
+marton_deaths_io = tabular_main_sources_path / "c11deaths-MR.xlsx"
+
+aleks_deaths_df = load_df(aleks_deaths_io)
+marton_deaths_df = load_df(marton_deaths_io)
+
+lewis_locations_io = tabular_main_sources_path / "LFact-Lewis.xlsx"
+aleks_locations_io = tabular_main_sources_path / "LFact-Aleks.xlsx"
+marton_locations_io = tabular_main_sources_path / "LFact-Marton.xlsx"
+
+lewis_locations_df = load_df(lewis_locations_io)
+aleks_locations_df = load_df(aleks_locations_io)
+marton_locations_df = load_df(marton_locations_io)
 
 ##################################################
 #### Persons
@@ -424,4 +447,33 @@ lead_seals_triples: TripleGenerator[LeadSeals] = TripleGenerator(
     sheets=marton_sheets,
     model_type=LeadSeals,
     model_converter=LeadSealsRDFConverter,
+)
+
+##################################################
+##################################################
+#### Deaths
+
+
+rows = (row for df in [aleks_deaths_df, marton_deaths_df] for _, row in df.iterrows())
+
+death_triples: Iterator[Triple] = TripleChain(
+    *[DeathsTripleGenerator(model=DeathSheetModel(**row.to_dict())) for row in rows]
+)
+
+##################################################
+#### Locations
+
+
+rows = (
+    row
+    for df in [lewis_locations_df, aleks_locations_df, marton_locations_df]
+    for _, row in df.iterrows()
+)
+
+
+location_triples: Iterator[Triple] = TripleChain(
+    *[
+        LocationsTripleGenerator(model=LocationSheetModel(**row.to_dict()))
+        for row in rows
+    ]
 )

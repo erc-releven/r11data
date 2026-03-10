@@ -1,33 +1,34 @@
 # Releven Spreadsheet Conversion
 
-The package contains triple generation logic for converting Releven spreadsheet data to STAR Graph RDF.
+The module contains triple generation logic for converting Releven spreadsheet data to STAR Graph RDF.
 
-## URI Reconciliation
+## URI Minting
 
 The triple generators implemented here generally use UUID4 for unique URI generation and SHA256 hashing for reproducible URIs according to a common hash value.
 
-Legacy URIs in the Releven GraphDB store do not use URI hashing and erog need `owl:sameAs` reconciliation.
-This can be achieved by denoting a common identifier, usually a common `rdfs:label` value, and running a reconciliation INSERT request.
+See [DataModelSchemas PR #21](https://github.com/erc-releven/DataModelSchemas/pull/21) or the respective [DataModelSchemas branch](https://github.com/erc-releven/DataModelSchemas/tree/lupl/uri-policy-readme).
 
-E.g. for reconciliation of `crm:E21_Person`:
 
-```sparql
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX crm: <http://www.cidoc-crm.org/cidoc-crm/>
+## Command Line Interface
 
-insert {
-graph <https://r11.eu/rdf/resource/connections> {
-	?person1 owl:sameAs ?person2 .
-  }
-}
-where {
-  ?person1 a crm:E21_Person ;
-		   rdfs:label ?label .
+The module features a simple CLI for running the triple generators and serializing RDF to files on disc.
 
-  ?person2 a crm:E21_Person ;
-		   rdfs:label ?label .
+```shell
+uv run python cli.py --help
+```
 
-  filter (str(?person1) < str(?person2))
-}
+The above command displays a help page including all currently defined triple generators.
+
+To run all defined triple generators, simply execute the CLI without arguments, optionally with an `--output` option:
+
+```shell
+uv run python cli.py --output somewhere/
+```
+
+The default output location is `output/` relativ to the shell the script is run in.
+
+To run only a selection of triple generators, pass the triple generator names as arguments:
+
+```shell
+uv run python cli.py persons places social_relationships
 ```
