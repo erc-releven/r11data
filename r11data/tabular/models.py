@@ -365,14 +365,27 @@ class _SingleSheetModel(BaseModel):
         return f"{self.name.strip()} {self.code.strip()}"
 
     @computed_field
+    @property
     def person_uri(self) -> URIRef:
         return mkuri(self.identifier, "https://pbw2016.kdl.kcl.ac.uk/")
+
+    @computed_field
+    @property
+    def publication_uri(self) -> URIRef:
+        return mkuri(self.source, "https://r11.eu/")
+
+    @computed_field
+    @property
+    def passage_uri(self) -> URIRef:
+        return mkuri(self.publication_uri, str(self.source_loc))
 
     name: str = Field(validation_alias="Name")
     code: str = Field(validation_alias="Code")
 
     source: str = Field(validation_alias="Source")
-    source_loc: str | None = Field(validation_alias="Source loc")
+    source_loc: Annotated[
+        str, BeforeValidator(lambda x: "undefined" if x is None else x)
+    ] = Field(validation_alias="Source loc")
 
     pbw_description: str = Field(
         validation_alias=AliasChoices("Description in PBW", "Description")

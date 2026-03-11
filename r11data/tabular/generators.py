@@ -1,8 +1,8 @@
+"""The module defines TripleChain factories for Spreadsheet conversions."""
+
 from collections.abc import Iterator
-import itertools
 
 from lodkit import _Triple as Triple
-import pandas as pd
 from r11data.tabular.models import (
     ActorGroup,
     AuthorGroup,
@@ -83,397 +83,421 @@ marton_locations_df = load_df(marton_locations_io)
 #### Persons
 
 
-lewis_persons_triple_generator: TripleGenerator[Person] = TripleGenerator(
-    focus_sheet=lewis_sheets.persons,
-    sheets=lewis_sheets,
-    model_type=Person,
-    model_converter=PersonRDFConverter,
-)
+def person_triples() -> Iterator[Triple]:
+    lewis_persons_triple_generator: TripleGenerator[Person] = TripleGenerator(
+        focus_sheet=lewis_sheets.persons,
+        sheets=lewis_sheets,
+        model_type=Person,
+        model_converter=PersonRDFConverter,
+    )
 
-aleks_persons_triple_generator: TripleGenerator[Person] = TripleGenerator(
-    focus_sheet=aleks_sheets.persons,
-    sheets=aleks_sheets,
-    model_type=Person,
-    model_converter=PersonRDFConverter,
-)
+    aleks_persons_triple_generator: TripleGenerator[Person] = TripleGenerator(
+        focus_sheet=aleks_sheets.persons,
+        sheets=aleks_sheets,
+        model_type=Person,
+        model_converter=PersonRDFConverter,
+    )
 
+    marton_persons_triple_generator: TripleGenerator[Person] = TripleGenerator(
+        focus_sheet=marton_sheets.persons,
+        sheets=marton_sheets,
+        model_type=Person,
+        model_converter=PersonRDFConverter,
+    )
 
-marton_persons_triple_generator: TripleGenerator[Person] = TripleGenerator(
-    focus_sheet=marton_sheets.persons,
-    sheets=marton_sheets,
-    model_type=Person,
-    model_converter=PersonRDFConverter,
-)
-
-
-persons_triples = TripleChain(
-    lewis_persons_triple_generator,
-    aleks_persons_triple_generator,
-    marton_persons_triple_generator,
-)
+    return TripleChain(
+        lewis_persons_triple_generator,
+        aleks_persons_triple_generator,
+        marton_persons_triple_generator,
+    )
 
 
 ##################################################
 #### Places
 
-lewis_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
-    focus_sheet=lewis_sheets.places,
-    sheets=lewis_sheets,
-    model_type=Place,
-    model_converter=PlaceRDFConverter,
-)
 
-aleks_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
-    focus_sheet=aleks_sheets.places,
-    sheets=aleks_sheets,
-    model_type=Place,
-    model_converter=PlaceRDFConverter,
-)
+def places_triples() -> Iterator[Triple]:
+    lewis_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
+        focus_sheet=lewis_sheets.places,
+        sheets=lewis_sheets,
+        model_type=Place,
+        model_converter=PlaceRDFConverter,
+    )
 
-marton_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
-    focus_sheet=marton_sheets.places,
-    sheets=marton_sheets,
-    model_type=Place,
-    model_converter=PlaceRDFConverter,
-)
+    aleks_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
+        focus_sheet=aleks_sheets.places,
+        sheets=aleks_sheets,
+        model_type=Place,
+        model_converter=PlaceRDFConverter,
+    )
 
-places_triples = TripleChain(
-    lewis_places_triple_generator,
-    aleks_places_triple_generator,
-    marton_places_triple_generator,
-)
+    marton_places_triple_generator: TripleGenerator[Place] = TripleGenerator(
+        focus_sheet=marton_sheets.places,
+        sheets=marton_sheets,
+        model_type=Place,
+        model_converter=PlaceRDFConverter,
+    )
+
+    return TripleChain(
+        lewis_places_triple_generator,
+        aleks_places_triple_generator,
+        marton_places_triple_generator,
+    )
 
 
 ##################################################
 #### AuthorGroups
 
-lewis_author_groups_triple_generator: TripleGenerator[AuthorGroup] = TripleGenerator(
-    focus_sheet=lewis_sheets.author_groups,
-    sheets=lewis_sheets,
-    model_type=AuthorGroup,
-    model_converter=AuthorGroupsRDFConverter,
-)
 
+def author_groups_triples() -> Iterator[Triple]:
+    lewis_author_groups_triple_generator: TripleGenerator[AuthorGroup] = (
+        TripleGenerator(
+            focus_sheet=lewis_sheets.author_groups,
+            sheets=lewis_sheets,
+            model_type=AuthorGroup,
+            model_converter=AuthorGroupsRDFConverter,
+        )
+    )
 
-aleks_author_groups_triple_generator: TripleGenerator[AuthorGroup] = TripleGenerator(
-    focus_sheet=aleks_sheets.author_groups,
-    sheets=aleks_sheets,
-    model_type=AuthorGroup,
-    model_converter=AuthorGroupsRDFConverter,
-)
+    aleks_author_groups_triple_generator: TripleGenerator[AuthorGroup] = (
+        TripleGenerator(
+            focus_sheet=aleks_sheets.author_groups,
+            sheets=aleks_sheets,
+            model_type=AuthorGroup,
+            model_converter=AuthorGroupsRDFConverter,
+        )
+    )
 
+    marton_author_groups_triple_generator: TripleGenerator[AuthorGroup] = (
+        TripleGenerator(
+            focus_sheet=marton_sheets.author_groups,
+            sheets=marton_sheets,
+            model_type=AuthorGroup,
+            model_converter=AuthorGroupsRDFConverter,
+        )
+    )
 
-marton_author_groups_triple_generator: TripleGenerator[AuthorGroup] = TripleGenerator(
-    focus_sheet=marton_sheets.author_groups,
-    sheets=marton_sheets,
-    model_type=AuthorGroup,
-    model_converter=AuthorGroupsRDFConverter,
-)
-
-
-author_groups_triples = TripleChain(
-    lewis_author_groups_triple_generator,
-    aleks_author_groups_triple_generator,
-    marton_author_groups_triple_generator,
-)
+    return TripleChain(
+        lewis_author_groups_triple_generator,
+        aleks_author_groups_triple_generator,
+        marton_author_groups_triple_generator,
+    )
 
 
 ##################################################
 #### ActorGroups
 
-lewis_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenerator(
-    focus_sheet=lewis_sheets.actor_groups,
-    sheets=lewis_sheets,
-    model_type=ActorGroup,
-    model_converter=ActorGroupsRDFConverter,
-)
 
+def actor_groups_triples() -> Iterator[Triple]:
+    lewis_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenerator(
+        focus_sheet=lewis_sheets.actor_groups,
+        sheets=lewis_sheets,
+        model_type=ActorGroup,
+        model_converter=ActorGroupsRDFConverter,
+    )
 
-aleks_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenerator(
-    focus_sheet=aleks_sheets.actor_groups,
-    sheets=aleks_sheets,
-    model_type=ActorGroup,
-    model_converter=ActorGroupsRDFConverter,
-)
+    aleks_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenerator(
+        focus_sheet=aleks_sheets.actor_groups,
+        sheets=aleks_sheets,
+        model_type=ActorGroup,
+        model_converter=ActorGroupsRDFConverter,
+    )
 
+    marton_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenerator(
+        focus_sheet=marton_sheets.actor_groups,
+        sheets=marton_sheets,
+        model_type=ActorGroup,
+        model_converter=ActorGroupsRDFConverter,
+    )
 
-marton_actor_groups_triple_generator: TripleGenerator[ActorGroup] = TripleGenerator(
-    focus_sheet=marton_sheets.actor_groups,
-    sheets=marton_sheets,
-    model_type=ActorGroup,
-    model_converter=ActorGroupsRDFConverter,
-)
-
-#
-actor_groups_triples = TripleChain(
-    lewis_actor_groups_triple_generator,
-    aleks_actor_groups_triple_generator,
-    marton_actor_groups_triple_generator,
-)
+    return TripleChain(
+        lewis_actor_groups_triple_generator,
+        aleks_actor_groups_triple_generator,
+        marton_actor_groups_triple_generator,
+    )
 
 
 ##################################################
 #### TextPublications
 
-lewis_text_publications_triple_generator: TripleGenerator[TextPublication] = (
-    TripleGenerator(
-        focus_sheet=lewis_sheets.text_publications,
-        sheets=lewis_sheets,
-        model_type=TextPublication,
-        model_converter=TextPublicationsRDFConverter,
+
+def text_publication_triples() -> Iterator[Triple]:
+    lewis_text_publications_triple_generator: TripleGenerator[TextPublication] = (
+        TripleGenerator(
+            focus_sheet=lewis_sheets.text_publications,
+            sheets=lewis_sheets,
+            model_type=TextPublication,
+            model_converter=TextPublicationsRDFConverter,
+        )
     )
-)
 
-
-aleks_text_publications_triple_generator: TripleGenerator[TextPublication] = (
-    TripleGenerator(
-        focus_sheet=aleks_sheets.text_publications,
-        sheets=aleks_sheets,
-        model_type=TextPublication,
-        model_converter=TextPublicationsRDFConverter,
+    aleks_text_publications_triple_generator: TripleGenerator[TextPublication] = (
+        TripleGenerator(
+            focus_sheet=aleks_sheets.text_publications,
+            sheets=aleks_sheets,
+            model_type=TextPublication,
+            model_converter=TextPublicationsRDFConverter,
+        )
     )
-)
 
-marton_text_publications_triple_generator: TripleGenerator[TextPublication] = (
-    TripleGenerator(
-        focus_sheet=marton_sheets.text_publications,
-        sheets=marton_sheets,
-        model_type=TextPublication,
-        model_converter=TextPublicationsRDFConverter,
+    marton_text_publications_triple_generator: TripleGenerator[TextPublication] = (
+        TripleGenerator(
+            focus_sheet=marton_sheets.text_publications,
+            sheets=marton_sheets,
+            model_type=TextPublication,
+            model_converter=TextPublicationsRDFConverter,
+        )
     )
-)
 
-text_publications_triples = TripleChain(
-    lewis_text_publications_triple_generator,
-    aleks_text_publications_triple_generator,
-    marton_text_publications_triple_generator,
-)
+    return TripleChain(
+        lewis_text_publications_triple_generator,
+        aleks_text_publications_triple_generator,
+        marton_text_publications_triple_generator,
+    )
+
 
 ##################################################
 #### Manuscripts
-lewis_manuscripts_triple_generator: TripleGenerator[Manuscript] = TripleGenerator(
-    focus_sheet=lewis_sheets.manuscripts,
-    sheets=lewis_sheets,
-    model_type=Manuscript,
-    model_converter=ManuscriptRDFConverter,
-)
+def manuscript_triples() -> Iterator[Triple]:
+    lewis_manuscripts_triple_generator: TripleGenerator[Manuscript] = TripleGenerator(
+        focus_sheet=lewis_sheets.manuscripts,
+        sheets=lewis_sheets,
+        model_type=Manuscript,
+        model_converter=ManuscriptRDFConverter,
+    )
 
-aleks_manuscripts_triple_generator: TripleGenerator[Manuscript] = TripleGenerator(
-    focus_sheet=aleks_sheets.manuscripts,
-    sheets=aleks_sheets,
-    model_type=Manuscript,
-    model_converter=ManuscriptRDFConverter,
-)
+    aleks_manuscripts_triple_generator: TripleGenerator[Manuscript] = TripleGenerator(
+        focus_sheet=aleks_sheets.manuscripts,
+        sheets=aleks_sheets,
+        model_type=Manuscript,
+        model_converter=ManuscriptRDFConverter,
+    )
 
+    marton_manuscripts_triple_generator: TripleGenerator[Manuscript] = TripleGenerator(
+        focus_sheet=marton_sheets.manuscripts,
+        sheets=marton_sheets,
+        model_type=Manuscript,
+        model_converter=ManuscriptRDFConverter,
+    )
 
-marton_manuscripts_triple_generator: TripleGenerator[Manuscript] = TripleGenerator(
-    focus_sheet=marton_sheets.manuscripts,
-    sheets=marton_sheets,
-    model_type=Manuscript,
-    model_converter=ManuscriptRDFConverter,
-)
+    return TripleChain(
+        lewis_manuscripts_triple_generator,
+        aleks_manuscripts_triple_generator,
+        marton_manuscripts_triple_generator,
+    )
 
-manuscripts_triples = TripleChain(
-    lewis_manuscripts_triple_generator,
-    aleks_manuscripts_triple_generator,
-    marton_manuscripts_triple_generator,
-)
 
 ##################################################
 #### Birth Death
 
-lewis_birth_death_triple_generator: TripleGenerator[BirthAndDeath] = TripleGenerator(
-    focus_sheet=lewis_sheets.birth_death,
-    sheets=lewis_sheets,
-    model_type=BirthAndDeath,
-    model_converter=BirthDeathEventRDFConverter,
-)
 
+def birth_death_triples() -> Iterator[Triple]:
+    lewis_birth_death_triple_generator: TripleGenerator[BirthAndDeath] = (
+        TripleGenerator(
+            focus_sheet=lewis_sheets.birth_death,
+            sheets=lewis_sheets,
+            model_type=BirthAndDeath,
+            model_converter=BirthDeathEventRDFConverter,
+        )
+    )
 
-aleks_birth_death_triple_generator: TripleGenerator[BirthAndDeath] = TripleGenerator(
-    focus_sheet=aleks_sheets.birth_death,
-    sheets=aleks_sheets,
-    model_type=BirthAndDeath,
-    model_converter=BirthDeathEventRDFConverter,
-)
+    aleks_birth_death_triple_generator: TripleGenerator[BirthAndDeath] = (
+        TripleGenerator(
+            focus_sheet=aleks_sheets.birth_death,
+            sheets=aleks_sheets,
+            model_type=BirthAndDeath,
+            model_converter=BirthDeathEventRDFConverter,
+        )
+    )
 
+    marton_birth_death_triple_generator: TripleGenerator[BirthAndDeath] = (
+        TripleGenerator(
+            focus_sheet=marton_sheets.birth_death,
+            sheets=marton_sheets,
+            model_type=BirthAndDeath,
+            model_converter=BirthDeathEventRDFConverter,
+        )
+    )
 
-marton_birth_death_triple_generator: TripleGenerator[BirthAndDeath] = TripleGenerator(
-    focus_sheet=marton_sheets.birth_death,
-    sheets=marton_sheets,
-    model_type=BirthAndDeath,
-    model_converter=BirthDeathEventRDFConverter,
-)
-
-birth_death_triples = TripleChain(
-    lewis_birth_death_triple_generator,
-    aleks_birth_death_triple_generator,
-    marton_birth_death_triple_generator,
-)
+    return TripleChain(
+        lewis_birth_death_triple_generator,
+        aleks_birth_death_triple_generator,
+        marton_birth_death_triple_generator,
+    )
 
 
 ##################################################
 #### Social relationship
 
-lewis_social_relationships_triple_generator: TripleGenerator[SocialRelationship] = (
-    TripleGenerator(
-        focus_sheet=lewis_sheets.social_relationships,
-        sheets=lewis_sheets,
-        model_type=SocialRelationship,
-        model_converter=SocialRelationshipRDFConverter,
-    )
-)
 
-aleks_social_relationships_triple_generator: TripleGenerator[SocialRelationship] = (
-    TripleGenerator(
-        focus_sheet=aleks_sheets.social_relationships,
-        sheets=aleks_sheets,
-        model_type=SocialRelationship,
-        model_converter=SocialRelationshipRDFConverter,
+def social_relationships_triples() -> Iterator[Triple]:
+    lewis_social_relationships_triple_generator: TripleGenerator[SocialRelationship] = (
+        TripleGenerator(
+            focus_sheet=lewis_sheets.social_relationships,
+            sheets=lewis_sheets,
+            model_type=SocialRelationship,
+            model_converter=SocialRelationshipRDFConverter,
+        )
     )
-)
 
-marton_social_relationships_triple_generator: TripleGenerator[SocialRelationship] = (
-    TripleGenerator(
+    aleks_social_relationships_triple_generator: TripleGenerator[SocialRelationship] = (
+        TripleGenerator(
+            focus_sheet=aleks_sheets.social_relationships,
+            sheets=aleks_sheets,
+            model_type=SocialRelationship,
+            model_converter=SocialRelationshipRDFConverter,
+        )
+    )
+
+    marton_social_relationships_triple_generator: TripleGenerator[
+        SocialRelationship
+    ] = TripleGenerator(
         focus_sheet=marton_sheets.social_relationships,
         sheets=marton_sheets,
         model_type=SocialRelationship,
         model_converter=SocialRelationshipRDFConverter,
     )
-)
 
-social_relationships_triples = TripleChain(
-    lewis_social_relationships_triple_generator,
-    aleks_social_relationships_triple_generator,
-    marton_social_relationships_triple_generator,
-)
+    return TripleChain(
+        lewis_social_relationships_triple_generator,
+        aleks_social_relationships_triple_generator,
+        marton_social_relationships_triple_generator,
+    )
 
 
 ##################################################
 ##################################################
 #### Authority Status
 
-lewis_authority_status_triple_generator: TripleGenerator[AuthorityStatus] = (
-    TripleGenerator(
-        focus_sheet=lewis_sheets.authority_status,
-        sheets=lewis_sheets,
-        model_type=AuthorityStatus,
-        model_converter=AuthorityStatusRDFConverter,
+
+def authority_status_triples() -> Iterator[Triple]:
+    lewis_authority_status_triple_generator: TripleGenerator[AuthorityStatus] = (
+        TripleGenerator(
+            focus_sheet=lewis_sheets.authority_status,
+            sheets=lewis_sheets,
+            model_type=AuthorityStatus,
+            model_converter=AuthorityStatusRDFConverter,
+        )
     )
-)
 
-
-aleks_authority_status_triple_generator: TripleGenerator[AuthorityStatus] = (
-    TripleGenerator(
-        focus_sheet=aleks_sheets.authority_status,
-        sheets=aleks_sheets,
-        model_type=AuthorityStatus,
-        model_converter=AuthorityStatusRDFConverter,
+    aleks_authority_status_triple_generator: TripleGenerator[AuthorityStatus] = (
+        TripleGenerator(
+            focus_sheet=aleks_sheets.authority_status,
+            sheets=aleks_sheets,
+            model_type=AuthorityStatus,
+            model_converter=AuthorityStatusRDFConverter,
+        )
     )
-)
 
-
-marton_authority_status_triple_generator: TripleGenerator[AuthorityStatus] = (
-    TripleGenerator(
-        focus_sheet=marton_sheets.authority_status,
-        sheets=marton_sheets,
-        model_type=AuthorityStatus,
-        model_converter=AuthorityStatusRDFConverter,
+    marton_authority_status_triple_generator: TripleGenerator[AuthorityStatus] = (
+        TripleGenerator(
+            focus_sheet=marton_sheets.authority_status,
+            sheets=marton_sheets,
+            model_type=AuthorityStatus,
+            model_converter=AuthorityStatusRDFConverter,
+        )
     )
-)
 
+    return TripleChain(
+        lewis_authority_status_triple_generator,
+        aleks_authority_status_triple_generator,
+        marton_authority_status_triple_generator,
+    )
 
-authority_status_triples = TripleChain(
-    lewis_authority_status_triple_generator,
-    aleks_authority_status_triple_generator,
-    marton_authority_status_triple_generator,
-)
 
 ##################################################
 #### Correspondence
 
-lewis_correspondence_triple_generator: TripleGenerator[Correspondence] = (
-    TripleGenerator(
-        focus_sheet=lewis_sheets.correspondence,
-        sheets=lewis_sheets,
-        model_type=Correspondence,
-        model_converter=CorrespondenceRDFConverter,
+
+def correspondence_triples() -> Iterator[Triple]:
+    lewis_correspondence_triple_generator: TripleGenerator[Correspondence] = (
+        TripleGenerator(
+            focus_sheet=lewis_sheets.correspondence,
+            sheets=lewis_sheets,
+            model_type=Correspondence,
+            model_converter=CorrespondenceRDFConverter,
+        )
     )
-)
 
-
-aleks_correspondence_triple_generator: TripleGenerator[Correspondence] = (
-    TripleGenerator(
-        focus_sheet=aleks_sheets.correspondence,
-        sheets=aleks_sheets,
-        model_type=Correspondence,
-        model_converter=CorrespondenceRDFConverter,
+    aleks_correspondence_triple_generator: TripleGenerator[Correspondence] = (
+        TripleGenerator(
+            focus_sheet=aleks_sheets.correspondence,
+            sheets=aleks_sheets,
+            model_type=Correspondence,
+            model_converter=CorrespondenceRDFConverter,
+        )
     )
-)
 
-
-marton_correspondence_triple_generator: TripleGenerator[Correspondence] = (
-    TripleGenerator(
-        focus_sheet=marton_sheets.correspondence,
-        sheets=marton_sheets,
-        model_type=Correspondence,
-        model_converter=CorrespondenceRDFConverter,
+    marton_correspondence_triple_generator: TripleGenerator[Correspondence] = (
+        TripleGenerator(
+            focus_sheet=marton_sheets.correspondence,
+            sheets=marton_sheets,
+            model_type=Correspondence,
+            model_converter=CorrespondenceRDFConverter,
+        )
     )
-)
 
-correspondence_triples = TripleChain(
-    lewis_correspondence_triple_generator,
-    aleks_correspondence_triple_generator,
-    marton_correspondence_triple_generator,
-)
+    return TripleChain(
+        lewis_correspondence_triple_generator,
+        aleks_correspondence_triple_generator,
+        marton_correspondence_triple_generator,
+    )
 
 
 ##################################################
 #### Boulloteria
 
-boulloteria_triples: TripleGenerator[Boulloteria] = TripleGenerator(
-    focus_sheet=marton_sheets.boulloteria,
-    sheets=marton_sheets,
-    model_type=Boulloteria,
-    model_converter=BoulloteriaRDFConverter,
-)
+
+def boulloteria_triples() -> Iterator[Triple]:
+    return TripleChain(
+        TripleGenerator(
+            focus_sheet=marton_sheets.boulloteria,
+            sheets=marton_sheets,
+            model_type=Boulloteria,
+            model_converter=BoulloteriaRDFConverter,
+        )
+    )
 
 
 ##################################################
 #### LeadSeals
 
-lead_seals_triples: TripleGenerator[LeadSeals] = TripleGenerator(
-    focus_sheet=marton_sheets.lead_seals,
-    sheets=marton_sheets,
-    model_type=LeadSeals,
-    model_converter=LeadSealsRDFConverter,
-)
+
+def lead_seals_triples() -> Iterator[Triple]:
+    return TripleChain(
+        TripleGenerator(
+            focus_sheet=marton_sheets.lead_seals,
+            sheets=marton_sheets,
+            model_type=LeadSeals,
+            model_converter=LeadSealsRDFConverter,
+        )
+    )
+
 
 ##################################################
 ##################################################
 #### Deaths
 
 
-rows = (row for df in [aleks_deaths_df, marton_deaths_df] for _, row in df.iterrows())
+def death_triples() -> Iterator[Triple]:
+    return TripleChain(
+        *[
+            DeathsTripleGenerator(model=DeathSheetModel(**row.to_dict()))
+            for df in [aleks_deaths_df, marton_deaths_df]
+            for _, row in df.iterrows()
+        ]
+    )
 
-death_triples: Iterator[Triple] = TripleChain(
-    *[DeathsTripleGenerator(model=DeathSheetModel(**row.to_dict())) for row in rows]
-)
 
 ##################################################
 #### Locations
 
 
-rows = (
-    row
-    for df in [lewis_locations_df, aleks_locations_df, marton_locations_df]
-    for _, row in df.iterrows()
-)
-
-
-location_triples: Iterator[Triple] = TripleChain(
-    *[
-        LocationsTripleGenerator(model=LocationSheetModel(**row.to_dict()))
-        for row in rows
-    ]
-)
+def location_triples() -> Iterator[Triple]:
+    return TripleChain(
+        *[
+            LocationsTripleGenerator(model=LocationSheetModel(**row.to_dict()))
+            for df in [lewis_locations_df, aleks_locations_df, marton_locations_df]
+            for _, row in df.iterrows()
+        ]
+    )

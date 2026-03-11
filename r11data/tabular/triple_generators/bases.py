@@ -119,7 +119,7 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
         if reference is None and excerpt is None:
             return
 
-        passage_uri = mkuri(f"{reference} - {excerpt}")
+        passage_uri = mkuri(reference, excerpt)
         yield (passage_uri, crm.P67_refers_to, e13)
 
     def authority_passage_triples(self, e13: URIRef) -> Iterator[_Triple]:

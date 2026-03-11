@@ -10,11 +10,11 @@ from r11data.tabular.generators import (
     death_triples,
     lead_seals_triples,
     location_triples,
-    manuscripts_triples,
-    persons_triples,
+    manuscript_triples,
+    person_triples,
     places_triples,
     social_relationships_triples,
-    text_publications_triples,
+    text_publication_triples,
 )
 import typer
 
@@ -30,11 +30,11 @@ GENERATORS = {
     "boulloteria": boulloteria_triples,
     "correspondence": correspondence_triples,
     "lead_seals": lead_seals_triples,
-    "manuscripts": manuscripts_triples,
-    "persons": persons_triples,
+    "manuscripts": manuscript_triples,
+    "persons": person_triples,
     "places": places_triples,
     "social_relationships": social_relationships_triples,
-    "text_publications": text_publications_triples,
+    "text_publications": text_publication_triples,
     "deaths": death_triples,
     "locations": location_triples,
 }
@@ -70,7 +70,7 @@ def cli(
         generator = GENERATORS[name]
 
         with open(output_file_path, "w") as f:
-            f.write(generator.to_graph().serialize(format="ttl"))
+            f.write(generator().to_graph().serialize(format="ttl"))
 
     typer.echo(f"Done. Output written to: {output.resolve()}")
 

@@ -1,43 +1,40 @@
-@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
-@prefix r11: <https://r11.eu/rdf/resource/> .
-@prefix r11spec: <https://r11.eu/ns/spec/> .
+@prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix star: <https://r11.eu/ns/star/> .
 
-r11:1f1c6bdf-7b5a-4cb5-96f2-f22caf474b27 a star:E13_crm_P46 ;
-    crm:P140_assigned_attribute_to r11:160dc5dbfb79e31d8208710b2240dc5974d9 ;
-    crm:P141_assigned r11:fa7aec4efb728534ef32c172197c9560097c .
+<https://r11.eu/rdf/resource/2ee594aa-f9b5-4225-b1a0-24245b918458> a <https://r11.eu/ns/star/E13_crm_P46> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/160dc5dbfb79e31d8208710b2240dc5974d9> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/3de8392541ace28284aca7f2724273739fcf> .
 
-r11:4b4c32b6-53f9-4417-951b-bbcc39affc17 a star:E13_crm_P46 ;
-    crm:P140_assigned_attribute_to r11:160dc5dbfb79e31d8208710b2240dc5974d9 ;
-    crm:P141_assigned r11:3de8392541ace28284aca7f2724273739fcf .
+<https://r11.eu/rdf/resource/4022b415-d160-497f-bb04-1c6c56137802> a <https://r11.eu/ns/star/E13_crm_P46> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/cf05412b04b5d62cf362b1536e460b6d9a66> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/959da030e79c33092447ca80178594cea12a> .
 
-r11:563ed388-e8f4-46b7-9ad9-1ef4a322fb9c a star:E13_crm_P46 ;
-    crm:P140_assigned_attribute_to r11:cf05412b04b5d62cf362b1536e460b6d9a66 ;
-    crm:P141_assigned r11:959da030e79c33092447ca80178594cea12a .
+<https://r11.eu/rdf/resource/ae872d1c-9c6a-4f2f-85ca-2838f6cd16eb> a <https://r11.eu/ns/star/E13_crm_P46> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e8e8157c45da1d707cb0890804e55aaa39de> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/7ba3d0eb107ff31566ee96efb356dd2d0b94> .
 
-r11:8fb24018-16b3-4171-b4ad-55cd16f5c13b a star:E13_crm_P46 ;
-    crm:P140_assigned_attribute_to r11:e8e8157c45da1d707cb0890804e55aaa39de ;
-    crm:P141_assigned r11:7ba3d0eb107ff31566ee96efb356dd2d0b94 .
+<https://r11.eu/rdf/resource/e8e09dcd-a077-4b64-9681-bc7cab70bd6b> a <https://r11.eu/ns/star/E13_crm_P46> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/160dc5dbfb79e31d8208710b2240dc5974d9> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/fa7aec4efb728534ef32c172197c9560097c> .
 
-r11:3de8392541ace28284aca7f2724273739fcf a r11spec:Lead_Seal ;
+<https://r11.eu/rdf/resource/3de8392541ace28284aca7f2724273739fcf> a <https://r11.eu/ns/spec/Lead_Seal> ;
     rdfs:label "615 (Seal ID)" .
 
-r11:7ba3d0eb107ff31566ee96efb356dd2d0b94 a r11spec:Lead_Seal ;
+<https://r11.eu/rdf/resource/7ba3d0eb107ff31566ee96efb356dd2d0b94> a <https://r11.eu/ns/spec/Lead_Seal> ;
     rdfs:label "Melnitsa 41 (Seal ID)" .
 
-r11:959da030e79c33092447ca80178594cea12a a r11spec:Lead_Seal ;
+<https://r11.eu/rdf/resource/959da030e79c33092447ca80178594cea12a> a <https://r11.eu/ns/spec/Lead_Seal> ;
     rdfs:label "M-8008 (Seal ID)" .
 
-r11:cf05412b04b5d62cf362b1536e460b6d9a66 a crm:E78_Curated_Holding ;
+<https://r11.eu/rdf/resource/cf05412b04b5d62cf362b1536e460b6d9a66> a ns1:E78_Curated_Holding ;
     rdfs:label "Hermitage" .
 
-r11:e8e8157c45da1d707cb0890804e55aaa39de a crm:E78_Curated_Holding ;
+<https://r11.eu/rdf/resource/e8e8157c45da1d707cb0890804e55aaa39de> a ns1:E78_Curated_Holding ;
     rdfs:label "Bulgarian private collections" .
 
-r11:fa7aec4efb728534ef32c172197c9560097c a r11spec:Lead_Seal ;
+<https://r11.eu/rdf/resource/fa7aec4efb728534ef32c172197c9560097c> a <https://r11.eu/ns/spec/Lead_Seal> ;
     rdfs:label "614 (Seal ID)" .
 
-r11:160dc5dbfb79e31d8208710b2240dc5974d9 a crm:E78_Curated_Holding ;
+<https://r11.eu/rdf/resource/160dc5dbfb79e31d8208710b2240dc5974d9> a ns1:E78_Curated_Holding ;
     rdfs:label "Auktion Lanz 154" .
 

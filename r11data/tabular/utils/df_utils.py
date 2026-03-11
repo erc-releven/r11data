@@ -1,4 +1,4 @@
-from functools import cached_property, partial
+from functools import cached_property
 import re
 from typing import Any
 
