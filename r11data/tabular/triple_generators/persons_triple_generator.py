@@ -26,31 +26,22 @@ logger = structlog.get_logger()
 
 
 class PersonRDFConverter(_ModelRDFConverter[Person]):
-    @cached_property
-    def person_uri(self) -> URIRef:
-        person_uri: URIRef = (
-            mkuri(self.model.identifier, self.model.service)
-            if (_wisski_id := self.model.wisski_id) is None
-            else URIRef(str(_wisski_id))
-        )
-        return person_uri
-
     def base_triples(self) -> Iterator[_Triple]:
         return ttl(
-            self.person_uri,
+            self.model.person_uri,
             (RDF.type, crm.E21_Person),
             (RDFS.label, Literal(self.model.descriptive_name)),
         )
 
     def identifier_triples(self) -> Iterator[_Triple]:
         service_uri = URIRef(self.model.service)
-
         yield (service_uri, RDF.type, lrm.F11_Corporate_Body)
+
         yield from ttl(
             mkuri(),
             (RDF.type, crm.E15_Identifier_Assignment),
             (crm.P14_carried_out_by, service_uri),
-            (crm.P140_assigned_attribute_to, self.person_uri),
+            (crm.P140_assigned_attribute_to, self.model.person_uri),
             (
                 crm.P37_assigned,
                 ttl(
@@ -343,14 +334,14 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
     def __iter__(self) -> Iterator[_Triple]:
         return itertools.chain(
             self.base_triples(),
-            self.identifier_triples(),
-            self.passage_triples(),
-            self.appellation_assertion_triples(),
-            self.gender_appellation_triples(),
-            self.gender_identifier_triples(),
-            self.ethnic_group_triples(),
-            self.social_role_triples(),
-            self.legal_role_triples(),
-            self.language_skill_triples(),
-            self.religion_triples(),
+            # self.identifier_triples(),
+            # self.passage_triples(),
+            # self.appellation_assertion_triples(),
+            # self.gender_appellation_triples(),
+            # self.gender_identifier_triples(),
+            # self.ethnic_group_triples(),
+            # self.social_role_triples(),
+            # self.legal_role_triples(),
+            # self.language_skill_triples(),
+            # self.religion_triples(),
         )

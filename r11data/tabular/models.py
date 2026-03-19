@@ -29,12 +29,6 @@ class _AuthoritySourceBase(BaseModel):
 
     authority: str | None = Field(validation_alias="Authority")
     authority_group: str | None = Field(validation_alias="Authority group")
-    based_on: str | None = Field(validation_alias="Based on")
-    source_text_publication: str | None = Field(
-        validation_alias="Source text/publication"
-    )
-    source_text_reference: str | None = Field(validation_alias="Source text/reference")
-    source_text_excerpt: str | None = Field(validation_alias="Source text/excerpt")
 
     @model_validator(mode="after")
     def _check_authority_authority_group_mutual_exclusive(self) -> Self:
@@ -43,6 +37,14 @@ class _AuthoritySourceBase(BaseModel):
                 "Authority and Authority Group fields are mutually exclusive."
             )
         return self
+
+    based_on: str | None = Field(validation_alias="Based on")
+
+    source_text_publication: str | None = Field(
+        validation_alias="Source text/publication"
+    )
+    source_text_reference: str | None = Field(validation_alias="Source text/reference")
+    source_text_excerpt: str | None = Field(validation_alias="Source text/excerpt")
 
     # note: this urgently needs to be reflected in the triple generators
     @model_validator(mode="after")
@@ -67,13 +69,11 @@ class Person(_AuthoritySourceBase):
     model_config = ConfigDict(arbitrary_types_allowed=True)  # mainly for person_uri
 
     identifier: str = Field(validation_alias="Identifier", coerce_numbers_to_str=True)
-
     service: Annotated[
         str,
         Field(validation_alias="Service"),
         BeforeValidator(lambda x: "https://r11.eu/" if x is None else x),
     ]
-
     descriptive_name: str = Field(validation_alias="Descriptive name")
     id_string: str = Field(validation_alias="ID string")
 
@@ -97,11 +97,7 @@ class Person(_AuthoritySourceBase):
     @computed_field
     @property
     def person_uri(self) -> URIRef:
-        return (
-            URIRef(str(_id))
-            if (_id := self.wisski_id) is not None
-            else mkuri(self.identifier, self.service)
-        )
+        return mkuri(self.identifier, self.service)
 
     @model_validator(mode="before")
     @classmethod
