@@ -1,5 +1,6 @@
 """Pydantic models for main table to RDF conversion."""
 
+from functools import partial
 from typing import Annotated, Any, Literal as TypingLiteral, Self
 
 from pydantic import (
@@ -25,7 +26,7 @@ class _AuthoritySourceBase(BaseModel):
     are common across several sheets and ergo can be generalized.
     """
 
-    model_config = ConfigDict(str_strip_whitespace=True)
+    model_config = ConfigDict(str_strip_whitespace=True, arbitrary_types_allowed=True)
 
     authority: str | None = Field(validation_alias="Authority")
     authority_group: str | None = Field(validation_alias="Authority group")
@@ -61,6 +62,31 @@ class _AuthoritySourceBase(BaseModel):
         if self.source_text_excerpt is not None and self.source_text_reference is None:
             raise ValueError("Text Excerpt without Text Reference not allowed.")
         return self
+
+    @computed_field
+    @property
+    def publication_uri(self) -> URIRef | None:
+        if (publication := self.source_text_publication) is None:
+            return None
+
+        return mkuri(publication, "https://r11.eu/")
+
+    @computed_field
+    @property
+    def passage_uri(self) -> URIRef | None:
+        publication_uri = self.publication_uri
+        reference = self.source_text_reference
+        excerpt = self.source_text_excerpt
+
+        if publication_uri is None:
+            return None
+
+        _passage_uri_factory = partial(mkuri, publication_uri, reference)
+        passage_uri: URIRef = (
+            _passage_uri_factory() if excerpt is None else _passage_uri_factory(excerpt)
+        )
+
+        return passage_uri
 
 
 class Person(_AuthoritySourceBase):

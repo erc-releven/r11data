@@ -1,7 +1,7 @@
 """TripleGenerator for the Persons sheet."""
 
 from collections.abc import Iterator
-from functools import cached_property
+from functools import cached_property, partial
 import itertools
 from typing import cast
 
@@ -38,14 +38,14 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
         yield (service_uri, RDF.type, lrm.F11_Corporate_Body)
 
         yield from ttl(
-            mkuri(),
+            mkuri("Identifier_Assignment", self.model.identifier, service_uri),
             (RDF.type, crm.E15_Identifier_Assignment),
             (crm.P14_carried_out_by, service_uri),
             (crm.P140_assigned_attribute_to, self.model.person_uri),
             (
                 crm.P37_assigned,
                 ttl(
-                    mkuri(),
+                    mkuri("Identifier", self.model.identifier, service_uri),
                     (RDF.type, crm.E42_Identifier),
                     (crm.P190_has_symbolic_content, self.model.identifier),
                     (RDFS.label, self.model.identifier),
@@ -54,81 +54,67 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
         )
 
     def passage_triples(self) -> Iterator[_Triple]:
-        if (publication := self.model.source_text_publication) is None:
+        if (publication_uri := self.model.publication_uri) is None:
             return
 
-        publication_uri = mkuri(publication)
         yield from ttl(
             publication_uri,
             (RDF.type, r11.Publication),
             (RDFS.label, self.publication_label),
         )
 
-        reference = self.model.source_text_reference
-        excerpt = self.model.source_text_excerpt
+        # passage assertions
+        passage_uri = self.model.passage_uri
+        assert isinstance(passage_uri, URIRef)
 
-        if (excerpt is None) or (reference is None):
-            return
-
-        passage_uri = mkuri(reference, excerpt)
         yield from ttl(
             passage_uri,
             (RDF.type, crm.E33_Linguistic_Object),
-            (RDFS.label, cast(str, reference)),  # if excerpt -> reference
-            (crm.P190_has_symbolic_content, excerpt),
+            (RDFS.label, self.model.source_text_reference),
         )
+        if (excerpt := self.model.source_text_excerpt) is not None:
+            yield (passage_uri, crm.P190_has_symbolic_content, Literal(excerpt))
 
+        # R15 assertions
         e13_lrmoo_r15_uri = mkuri()
         yield from ttl(
             e13_lrmoo_r15_uri,
             (RDF.type, star.E13_lrmoo_R15),
-            (crm.P140_assigned_attribute_to, passage_uri),
-            (crm.P141_assigned, publication_uri),
-            (crm.P14_carried_out_by, self.sheets.owner_id),
+            (crm.P140_assigned_attribute_to, publication_uri),
+            (crm.P141_assigned, passage_uri),
         )
-        yield (publication_uri, crm.P67_refers_to, e13_lrmoo_r15_uri)
+
+        yield from self.authority_passage_triples(
+            e13_uri=e13_lrmoo_r15_uri, authority_uri=self.sheets.owner_id
+        )
 
     def appellation_assertion_triples(self) -> Iterator[_Triple]:
-        # base appellation triples
         e13_crm_p1_uri = mkuri()
         e33_e41_uri = mkuri()
 
         yield from ttl(
             e13_crm_p1_uri,
             (RDF.type, star.E13_crm_P1),
-            (crm.P140_assigned_attribute_to, self.person_uri),
+            (crm.P140_assigned_attribute_to, self.model.person_uri),
             (crm.P141_assigned, e33_e41_uri),
         )
 
-        reference = self.model.source_text_reference
-        excerpt = self.model.source_text_excerpt
-
-        if reference is not None and excerpt is not None:
-            passage_uri = mkuri(reference, excerpt)
-            yield (passage_uri, crm.P67_refers_to, e13_crm_p1_uri)
-
-        # name triples
         if (name_orig := self.model.name_in_sources_orig) is not None:
             lang = get_source_name_lang_tag(name_orig)
-            yield (e33_e41_uri, crm.P141_assigned, Literal(name_orig, lang=lang))
+            yield (
+                e33_e41_uri,
+                crm.P190_has_symbolic_content,
+                Literal(name_orig, lang=lang),
+            )
 
         if (name_transl := self.model.name_in_sources_transl) is not None:
-            yield (e33_e41_uri, crm.P141_assigned, Literal(name_transl, lang="en"))
+            yield (
+                e33_e41_uri,
+                crm.P190_has_symbolic_content,
+                Literal(name_transl, lang="en"),
+            )
 
-        # authority triples + relational lookup
-        if (authority := self.model.authority) is None:
-            return
-
-        person_data = self.get_person_data(person_id=authority)
-        person_uri, person_label = person_data.person_uri, person_data.descriptive_name
-
-        yield from ttl(
-            e13_crm_p1_uri,
-            (
-                crm.P14_carried_out_by,
-                ttl(person_uri, (RDF.type, crm.E21_Person), (RDFS.label, person_label)),
-            ),
-        )
+        yield from self.authority_passage_triples(e13_crm_p1_uri)
 
     def gender_appellation_triples(self) -> Iterator[_Triple]:
         if self.model.gender_assignment is None:
@@ -146,7 +132,7 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
                 crm.P140_assigned_attribute_to,
                 ttl(gender_assignment_uri, (RDF.type, r11spec.Gender_Assignment)),
             ),
-            (crm.P141_assigned, self.person_uri),
+            (crm.P141_assigned, self.model.person_uri),
         )
 
         # authority + passage triples
@@ -190,7 +176,7 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
                 crm.P140_assigned_attribute_to,
                 ttl(ethnic_group_uri, (RDF.value, ethnicity), (RDFS.label, ethnicity)),
             ),
-            (crm.P141_assigned, self.person_uri),
+            (crm.P141_assigned, self.model.person_uri),
         )
 
         # authority + passage triples
@@ -211,7 +197,7 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
                 crm.P140_assigned_attribute_to,
                 ttl(social_role_uri, (RDF.type, r11pros.C1), (RDFS.label, social_role)),
             ),
-            (crm.P141_assigned, self.person_uri),
+            (crm.P141_assigned, self.model.person_uri),
         )
 
         # P14 triples
@@ -244,10 +230,10 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
                 ttl(
                     legal_role_uri,
                     (RDF.type, r11pros.C13),
-                    (RDFS.label, legal_role_uri),
+                    (RDFS.label, legal_role),
                 ),
             ),
-            (crm.P141_assigned, self.person_uri),
+            (crm.P141_assigned, self.model.person_uri),
         )
 
         # P33 triples
@@ -274,7 +260,7 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
         yield from ttl(
             e13_sdhss_p38_uri,
             (RDF.type, star.E13_sdhss_P38),
-            (crm.P140_assigned_attribute_to, self.person_uri),
+            (crm.P140_assigned_attribute_to, self.model.person_uri),
             (
                 crm.P141_assigned,
                 ttl(
@@ -312,9 +298,9 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
             (RDF.type, star.E13_sdhss_P36),
             (
                 crm.P140_assigned_attribute_to,
-                ttl(religion_uri, (RDF.type, r11pros.Religion), (RDFS.label, religion)),
+                ttl(religion_uri, (RDF.type, r11pros.C23), (RDFS.label, religion)),
             ),
-            (crm.P141_assigned, self.person_uri),
+            (crm.P141_assigned, self.model.person_uri),
         )
 
         # P37 triples
@@ -334,14 +320,14 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
     def __iter__(self) -> Iterator[_Triple]:
         return itertools.chain(
             self.base_triples(),
-            # self.identifier_triples(),
-            # self.passage_triples(),
-            # self.appellation_assertion_triples(),
-            # self.gender_appellation_triples(),
-            # self.gender_identifier_triples(),
-            # self.ethnic_group_triples(),
-            # self.social_role_triples(),
-            # self.legal_role_triples(),
-            # self.language_skill_triples(),
-            # self.religion_triples(),
+            self.identifier_triples(),
+            self.passage_triples(),
+            self.appellation_assertion_triples(),
+            self.gender_appellation_triples(),
+            self.gender_identifier_triples(),
+            self.ethnic_group_triples(),
+            self.social_role_triples(),
+            self.legal_role_triples(),
+            self.language_skill_triples(),
+            self.religion_triples(),
         )

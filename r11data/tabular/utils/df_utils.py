@@ -6,12 +6,26 @@ import pandas as pd
 from rdflib import URIRef
 
 
-def load_df(io, sheet_name: Any = 0, required_columns: list[str] | None = None):
-    def _filter_required(df: pd.DataFrame) -> pd.DataFrame:
-        _required_columns = list() if required_columns is None else required_columns
+def load_df(
+    io,
+    sheet_name: Any = 0,
+    required_columns: list[str] | None = None,
+    exclude_columns: list[str] | None = None,
+):
+    def _filter_columns(df: pd.DataFrame) -> pd.DataFrame:
+        req = [] if required_columns is None else required_columns
+        excl = [] if exclude_columns is None else exclude_columns
 
-        for column in _required_columns:
-            df = df[df[column].astype(bool)]  # type: ignore
+        # keep rows where required columns have values
+        for column in req:
+            mask = df[column].notna() & df[column].astype(str).str.strip().ne("")
+            df = df[mask]
+
+        # keep rows where forbidden columns are empty
+        for column in excl:
+            mask = df[column].isna() | df[column].astype(str).str.strip().eq("")
+            df = df[mask]
+
         return df
 
     def _clean_whitespace(df: pd.DataFrame) -> pd.DataFrame:
@@ -31,8 +45,8 @@ def load_df(io, sheet_name: Any = 0, required_columns: list[str] | None = None):
         pd.read_excel(io=io, sheet_name=sheet_name, dtype=str, engine="calamine")
         .pipe(lambda df: df.where(pd.notna(df), None))  # cast NaN to None
         .pipe(lambda df: df.dropna(how="all"))  # drop all-None rows
-        .pipe(_filter_required)  # filter rows with non-truthy required fields
         .pipe(_clean_whitespace)  # sanitize whitespace
+        .pipe(_filter_columns)  # filter rows with non-truthy required fields
     )
 
     return df
@@ -51,6 +65,7 @@ class Sheets:
         return self.load_sheet(
             sheet_name="Persons",
             required_columns=["Identifier"],
+            exclude_columns=["WissKI ID"],
         )
 
     @cached_property
@@ -115,11 +130,17 @@ class Sheets:
         return self.load_sheet(sheet_name="Other objects")
 
     def load_sheet(
-        self, sheet_name: str, required_columns: list[str] | None = None
+        self,
+        sheet_name: str,
+        required_columns: list[str] | None = None,
+        exclude_columns: list[str] | None = None,
     ) -> pd.DataFrame:
         """Load an Excel file and prepare a sheet for processing."""
         df = load_df(
-            io=self.io, sheet_name=sheet_name, required_columns=required_columns
+            io=self.io,
+            sheet_name=sheet_name,
+            required_columns=required_columns,
+            exclude_columns=exclude_columns,
         )
 
         assert isinstance(df, pd.DataFrame)  # type narrow

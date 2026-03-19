@@ -1,13 +1,13 @@
 """Base classes for triple generators."""
 
 from collections.abc import Iterable, Iterator
-from functools import cached_property
+from functools import cached_property, partial
 from typing import Literal as TLiteral, overload
 
 from lodkit import _Triple
 import pandas as pd
 from pydantic import BaseModel
-from r11data.tabular.models import Person
+from r11data.tabular.models import Person, _AuthoritySourceBase
 from r11data.tabular.utils.df_utils import Sheets
 from r11data.tabular.utils.rdf_utils import RelevenGraph, crm, mkuri
 from rdflib import Graph, URIRef
@@ -22,7 +22,6 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
         self.model = model
         self.sheets = sheets
 
-    # this too could be generalized; but is it worth the abstraction?
     @cached_property
     def publication_label(self) -> str:
         publication = self.model.source_text_publication  # type: ignore
@@ -102,30 +101,42 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
         row = _row.iloc[0]
         return Person(**row.to_dict())
 
-    def _p14_triples(self, e13: URIRef) -> Iterator[_Triple]:
+    def _p14_triples(
+        self, e13_uri: URIRef, authority_uri: URIRef | None = None
+    ) -> Iterator[_Triple]:
         """Perform a relational look up for an authority and assert P14 about an E13."""
-        if (authority := self.model.authority) is None:
-            return
-        if (authority_data := self.get_person_data(authority, strict=False)) is None:
-            return
+        if authority_uri is None:
+            authority_id = getattr(self.model, "authority", None)
+            if authority_id is None:
+                return
 
-        yield (e13, crm.P14_carried_out_by, authority_data.person_uri)
+            authority_model: Person | None = self.get_person_data(
+                person_id=authority_id,
+                strict=False,
+            )
+            if authority_model is None:
+                return
 
-    def _p67_triples(self, e13: URIRef) -> Iterator[_Triple]:
+            authority_uri = authority_model.person_uri
+
+        assert isinstance(authority_uri, URIRef)
+        yield (e13_uri, crm.P14_carried_out_by, authority_uri)
+
+    def _p67_triples(self, e13_uri: URIRef) -> Iterator[_Triple]:
         """Construct a passage URI and assert P67 about a passage and an E13."""
-        reference = self.model.source_text_reference
-        excerpt = self.model.source_text_excerpt
 
-        if reference is None and excerpt is None:
+        assert isinstance(self.model, _AuthoritySourceBase)
+        if (passage_uri := self.model.passage_uri) is None:
             return
 
-        passage_uri = mkuri(reference, excerpt)
-        yield (passage_uri, crm.P67_refers_to, e13)
+        yield (passage_uri, crm.P67_refers_to, e13_uri)
 
-    def authority_passage_triples(self, e13: URIRef) -> Iterator[_Triple]:
+    def authority_passage_triples(
+        self, e13_uri: URIRef, authority_uri: URIRef | None = None
+    ) -> Iterator[_Triple]:
         """Triple generator for yielding authority and passage triples."""
-        yield from self._p14_triples(e13)
-        yield from self._p67_triples(e13)
+        yield from self._p14_triples(e13_uri=e13_uri, authority_uri=authority_uri)
+        yield from self._p67_triples(e13_uri=e13_uri)
 
 
 class TripleGenerator[_TModel: BaseModel](Iterable[_Triple]):
