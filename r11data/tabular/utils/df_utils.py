@@ -65,7 +65,7 @@ class Sheets:
         return self.load_sheet(
             sheet_name="Persons",
             required_columns=["Identifier"],
-            exclude_columns=["WissKI ID"],
+            # exclude_columns=["WissKI ID"],
         )
 
     @cached_property

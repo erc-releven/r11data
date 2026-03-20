@@ -296,7 +296,7 @@ def generate_time_triples(e52_uri: URIRef, date_value: str | None) -> Iterator[T
         try:
             parsed_date = R11DateParser(date_value=date_value)
         except Exception:
-            msg = f"Failed to parse death date value '{date_value}'."
+            msg = f"Failed to parse date value '{date_value}'."
             logger.warning(msg)
         else:
             yield from _generate_julian_day_triples(

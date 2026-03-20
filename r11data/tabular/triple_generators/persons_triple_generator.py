@@ -38,14 +38,14 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
         yield (service_uri, RDF.type, lrm.F11_Corporate_Body)
 
         yield from ttl(
-            mkuri("Identifier_Assignment", self.model.identifier, service_uri),
+            mkuri(crm.E15_Identifier_Assignment, self.model.identifier, service_uri),
             (RDF.type, crm.E15_Identifier_Assignment),
             (crm.P14_carried_out_by, service_uri),
             (crm.P140_assigned_attribute_to, self.model.person_uri),
             (
                 crm.P37_assigned,
                 ttl(
-                    mkuri("Identifier", self.model.identifier, service_uri),
+                    mkuri(crm.E42_Identifier, self.model.identifier, service_uri),
                     (RDF.type, crm.E42_Identifier),
                     (crm.P190_has_symbolic_content, self.model.identifier),
                     (RDFS.label, self.model.identifier),
