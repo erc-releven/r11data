@@ -1,0 +1,152 @@
+@prefix : <https://r11.eu/ns/spec/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
+@base <https://r11.eu/ns/spec/> .
+
+<https://r11.eu/ns/spec> rdf:type owl:Ontology ;
+                          owl:imports lrmoo: ,
+                                      <http://www.cidoc-crm.org/cidoc-crm/7.1.2> ;
+                          rdfs:comment "This ontology contains the subclasses of and shortcuts for CIDOC-CRM elements that are necessary for distinguishing different sorts of RELEVEN data that belong to the same CRM superclass."@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://r11.eu/ns/spec/L1_was_used_to_produce
+:L1_was_used_to_produce rdf:type owl:ObjectProperty ;
+                        rdfs:domain crm:E70_Thing ;
+                        rdfs:range crm:E24_Physical_Human-Made_Thing ;
+                        owl:propertyChainAxiom ( crm:P16i_was_used_for
+                                                 crm:P108_has_produced
+                                               ) .
+
+
+###  https://r11.eu/ns/spec/L2_had_addressee
+:L2_had_addressee rdf:type owl:ObjectProperty ;
+                  rdfs:domain :Letter ;
+                  rdfs:range crm:E39_Actor .
+
+
+###  https://r11.eu/ns/spec/L3_succeeded_by
+:L3_succeeded_by rdf:type owl:ObjectProperty ,
+                          owl:IrreflexiveProperty ;
+                 rdfs:domain crm:E53_Place ;
+                 rdfs:range crm:E53_Place .
+
+
+###  https://r11.eu/ns/spec/L4_coterminous_with
+:L4_coterminous_with rdf:type owl:ObjectProperty ,
+                              owl:SymmetricProperty ,
+                              owl:IrreflexiveProperty ;
+                     rdfs:domain crm:E4_Period ;
+                     rdfs:range crm:E4_Period ;
+                     owl:propertyChainAxiom ( crm:P4_has_time-span
+                                              crm:P4i_is_time-span_of
+                                            ) .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://r11.eu/ns/spec/Author_Group
+:Author_Group rdf:type owl:Class ;
+              rdfs:subClassOf crm:E74_Group .
+
+
+###  https://r11.eu/ns/spec/Authority_Status_Type
+:Authority_Status_Type rdf:type owl:Class ;
+                       rdfs:subClassOf crm:E55_Type .
+
+
+###  https://r11.eu/ns/spec/Bibliography
+:Bibliography rdf:type owl:Class ;
+              rdfs:subClassOf crm:E73_Information_Object .
+
+
+###  https://r11.eu/ns/spec/Boulloterion
+:Boulloterion rdf:type owl:Class ;
+              rdfs:subClassOf crm:E22_Human-Made_Object .
+
+
+###  https://r11.eu/ns/spec/Boulloterion_Type
+:Boulloterion_Type rdf:type owl:Class ;
+                   rdfs:subClassOf crm:E55_Type .
+
+
+###  https://r11.eu/ns/spec/Correspondence
+:Correspondence rdf:type owl:Class ;
+                rdfs:subClassOf crm:E22_Human-Made_Object .
+
+
+###  https://r11.eu/ns/spec/Ethnic_Group
+:Ethnic_Group rdf:type owl:Class ;
+              rdfs:subClassOf crm:E74_Group .
+
+
+###  https://r11.eu/ns/spec/Gender_Assignment
+:Gender_Assignment rdf:type owl:Class ;
+                   rdfs:subClassOf crm:E17_Type_Assignment .
+
+
+###  https://r11.eu/ns/spec/Geopolitical_Event
+:Geopolitical_Event rdf:type owl:Class ;
+                         rdfs:subClassOf crm:E7_Activity .
+
+
+###  https://r11.eu/ns/spec/Geopolitical_Event_Type
+:Geopolitical_Event_Type rdf:type owl:Class ;
+                         rdfs:subClassOf crm:E55_Type .
+
+
+###  https://r11.eu/ns/spec/Lead_Seal
+:Lead_Seal rdf:type owl:Class ;
+           rdfs:subClassOf crm:E22_Human-Made_Object .
+
+
+###  https://r11.eu/ns/spec/Letter
+:Letter rdf:type owl:Class ;
+        rdfs:subClassOf lrmoo:F2_Expression .
+
+
+###  https://r11.eu/ns/spec/Manuscript
+:Manuscript rdf:type owl:Class ;
+            rdfs:subClassOf crm:E22_Human-Made_Object .
+
+
+###  https://r11.eu/ns/spec/Manuscript_Type
+:Manuscript_Type rdf:type owl:Class ;
+                 rdfs:subClassOf crm:E55_Type .
+
+
+###  https://r11.eu/ns/spec/Passage
+:Passage rdf:type owl:Class ;
+         rdfs:subClassOf crm:E33_Linguistic_Object .
+
+
+###  https://r11.eu/ns/spec/Place_Type
+:Place_Type rdf:type owl:Class ;
+            rdfs:subClassOf crm:E55_Type .
+
+
+###  https://r11.eu/ns/spec/Publication
+:Publication rdf:type owl:Class ;
+             rdfs:subClassOf lrmoo:F2_Expression .
+
+
+###  https://r11.eu/ns/spec/Relationship_Category
+:Relationship_Category rdf:type owl:Class ;
+                       rdfs:subClassOf crm:E55_Type .
+
+
+###  https://r11.eu/ns/spec/Text_Expression
+:Text_Expression rdf:type owl:Class ;
+                 rdfs:subClassOf lrmoo:F2_Expression .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

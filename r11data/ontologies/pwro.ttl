@@ -1,0 +1,143 @@
+@prefix : <http://www.ics.forth.gr/isl/CRMdig/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix aaao: <https://ontology.swissartresearch.net/aaao/> .
+@prefix lrmoo: <http://iflastandards.info/ns/lrm/lrmoo/> .
+@prefix pwro: <https://ontology.swissartresearch.net/pwro/> .
+@base <https://ontology.swissartresearch.net/pwro/> .
+
+<https://ontology.swissartresearch.net/pwro/> rdf:type owl:Ontology ;
+                                       owl:versionIRI <https://ontology.swissartresearch.net/pwro/1.0.0> ;
+                                       owl:imports <https://ontology.swissartresearch.net/pwro/1.0.0> ;
+                                       rdfs:comment "This ontology is still in development. Only relevant classes for releven have been placed in this document. Full documentation can be found at https://ontome.net/namespace/280."@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://ontology.swissartresearch.net/pwro/WP16_had_combatant
+pwro:WP16_had_combatant rdf:type owl:ObjectProperty ;
+                     rdfs:domain pwro:WE6_Attack ;
+                     rdfs:range pwro:WE3_Embodied_Actor ;
+                     rdfs:comment "This property links an event of attack to instances of embodied actor who actively took part in the physical act of attacking."@en ;
+                     rdfs:label "had combatant"@en .
+                     
+
+###  https://ontology.swissartresearch.net/pwro/WP6_had_intended_target
+pwro:WP6_had_intended_target rdf:type owl:ObjectProperty ;
+                     rdfs:domain pwro:WE6_Attack ;
+                     rdfs:range crm:E18_Physical_Thing ;
+                     rdfs:comment "This property relates an instance of attack to the intended target of that attack."@en ;
+                     rdfs:label "had intended target"@en .
+
+
+###  https://ontology.swissartresearch.net/pwro/WP12_had_addressee
+pwro:WP12_had_addressee rdf:type owl:ObjectProperty ;
+                     rdfs:domain pwro:WE11_Correspondence_Event ;
+                     rdfs:range aaao:ZE36_Persons ;
+                     rdfs:comment "This property links an instance of correspondence event to an instance of  persons to whom it is addressed. This property enables the documentation in a chain of communication of the intended receiver of a particular act of communicating a message."@en ;
+                     rdfs:label "had addressee"@en .
+
+###  https://ontology.swissartresearch.net/pwro/WP13_had_declared_origin
+pwro:WP13_had_declared_origin rdf:type owl:ObjectProperty ;
+                     rdfs:domain pwro:WE12_Sending ;
+                     rdfs:range crm:E53_Place ;
+                     rdfs:comment "This property links an instance of sending (and its subclasses) with a place of intended origin for the sending of the object. This property links the act of sending with the referenced place through intention, enabling the representation of the intended originating location of the sending activity. In documentation, an intended origin destination may be known in distinction to the actual origin destination of the sending, and indeed the intended origin location and the final origin location may actually differ. This property allows the description of this nuance. The property crm:P27_moved_from should be used to document an actual origin location. For more complex, multi part actions of sending, an event forming part of the overall sending may document the final origin place of the sending (be that at its intended or another location)."@en ;
+                     rdfs:label "had declared origin"@en .
+
+###  https://ontology.swissartresearch.net/pwro/WP9_had_declared_destination
+pwro:WP9_had_declared_destination rdf:type owl:ObjectProperty ;
+                     rdfs:domain pwro:WE12_Sending ;
+                     rdfs:range crm:E53_Place ;
+                     rdfs:comment "This property links an instance of sending (and its subclasses) with a place of intended destination for the sending of the object. This property links the act of sending with the referenced place through intention, enabling the representation of the intended final arrival spot of the sent object. In documentation, an intended destination may be known rather than an actual destination of arrival for the sent object, or the intended destination and the final destination differ. This property allows the description of this nuance. The property crm:P26_moved_to should be used to document an actual move. For more complex, multi part actions of sending, an event forming part of the overall sending may document the final arrival place of the object (be that at its intended or another location)."@en ;
+                     rdfs:label "had declared destination"@en .
+                     
+###  https://ontology.swissartresearch.net/pwro/WP14_visited
+pwro:WP14_visited rdf:type owl:ObjectProperty ;
+                     rdfs:domain pwro:WE13_Visit ;
+                     rdfs:range crm:E53_Place ;
+                     rdfs:comment "This property enables the documentation of the relation of an intance of visit event to the place visited. The relation holding between the visit event and the place differs from the typical documentation of the place at which an event occurs. The documented of the visit relation indicates the intententional activity of the actors involved to interact with and observe the place visited and the objects / events occuring within this place frame."@en ;
+                     rdfs:label "visited"@en .
+                     
+###  https://ontology.swissartresearch.net/pwro/WP7_was_undertaken_by
+pwro:WP7_was_undertaken_by rdf:type owl:ObjectProperty ;
+                     rdfs:domain pwro:WE7_Voyage ;
+                     rdfs:range pwro:WE3_Embodied_Actor ;
+                     rdfs:comment "This property links an instance of voyage to an instance of embodied actor that undertook that voyage. The related embodied actor is both the agent carrying out the voyage and the object moved. "@en ;
+                     rdfs:label "was undertaken by"@en .
+                     
+###  https://ontology.swissartresearch.net/pwro/WP5_was_manifestation_of
+pwro:WP5_was_manifestation_of rdf:type owl:ObjectProperty ;
+                              rdfs:domain pwro:WE4_Manifest_Group ;
+                              rdfs:range crm:E74_Group ;
+                              rdfs:comment "This property relates an instance of manifest group as a realized collection of real individuals formed together in a coherent space time volume at some time to the abstract group with which they are otherwise identified."@en ;
+                              rdfs:label "was manifestation of"@en .
+                     
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://ontology.swissartresearch.net/pwro/WE3_Embodied_Actor
+pwro:WE3_Embodied_Actor rdf:type owl:Class ;
+                              rdfs:subClassOf crm:E20_Biological_Object ;
+                              rdfs:subClassOf crm:E39_Actor ;
+                              rdfs:comment "This class comprises persons be they animal or more specifically human animals, individually or collectively in embodied form. The substance of embodied actor is physical persons. Instances of embodied actor come to be when the individual be it singular or plural is fully manifest in reality and agentially capable (in the broad sense of the term). Instances of embodied actor cease to exist when, if individual, they are materially and/or agentially defunct, having undergone physical or noetic disintegration, and when, if groupped, they are substantially dispersed after they have come together for a particular purpose." ;
+                              rdfs:label "Embodied Actor"@en .
+                              
+###  https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group
+pwro:WE4_Manifest_Group rdf:type owl:Class ;
+                              rdfs:subClassOf pwro:WE3_Embodied_Actor ;
+                              rdfs:subClassOf crm:E74_Group ;
+                              rdfs:comment "This class comprises a defined set of persons who are able to act together as a single collective in intentional action and who are moreover gathered together physically to bring about this end. The substance of manifest groups is physical persons qua embodied actor. Instances of manifest group come into existence when an intentional group maintains a continuous co-presence in spacetime. Instances of manifest group cease to exist when this co-presence ends." ;
+                              rdfs:label "Manifest Group"@en .
+                              
+###  https://ontology.swissartresearch.net/pwro/WE6_Attack
+pwro:WE6_Attack rdf:type owl:Class ;
+                              rdfs:subClassOf aaao:ZE53_Symbolic_Act ;
+                              rdfs:comment "This class comprises instances of agressive physical action by one party towards another in which the instigator intends to cause damage to the target." ;
+                              rdfs:label "Attack"@en .
+                              
+###  https://ontology.swissartresearch.net/pwro/WE7_Voyage
+pwro:WE7_Voyage rdf:type owl:Class ;
+                              rdfs:subClassOf pwro:WE12_Sending ;
+                              rdfs:comment "This class comprises events in which physical objects are moved from one place to another and wherein either the main or one of the main objects being moved is the person or persons undertaking the voyage. The substance of this class is that of an intentional event. Instance of voyage come into existence when the intention to voyage is declared and the associated preparative actions are begun with the intention of actually leaving. An instance of voyage may come to an end when it reaches its intended destination. It may also end if the intention to voyage is abandoned or the means by which to achieve it are no longer available." ;
+                              rdfs:label "Voyage"@en .
+
+###  https://ontology.swissartresearch.net/pwro/WE8_Intentional_Destruction
+pwro:WE8_Intentional_Destruction rdf:type owl:Class ;
+                              rdfs:subClassOf crm:E6_Destruction ;
+                              rdfs:subClassOf pwro:WE9_Destructive_Physical_Modification ;
+                              rdfs:comment "This class comprises events which are deliberately undertaken to cause the destruction of some physical thing and which succeed in that effort. The substance of this class is intentional activity with intent to destroy. Instances of this class come into existence when an actor begins an action that is intended to and capable of bringing about the end of existence of a physical object through a deliatory action. Instances of this class cease to be when the aim of destroying the object is achieved and the object is destroyed." ;
+                              rdfs:label "Intentional Destruction"@en .
+
+###  https://ontology.swissartresearch.net/pwro/WE9_Destructive_Physical_Modification
+pwro:WE9_Destructive_Physical_Modification rdf:type owl:Class ;
+                              rdfs:subClassOf crm:E7_Activity ;
+                              rdfs:comment "This class comprises instances of intentional action by actors that are undertaken to physically bring about constitutional degradataion and harm to physical things An instance of this class comes into existence when an actor undertakes to bring about damage to a physical thing with appropriate equipment and planning according to the context and intended object of damage to bring about such harm. Instances of this class come to a halt when the intended damage has been achieved or if the initiated action is given up part way through through lack of will or means." ;
+                              rdfs:label "Destructive Physical Modification"@en .
+
+###  https://ontology.swissartresearch.net/pwro/WE11_Correspondence_Event
+pwro:WE11_Correspondence_Event rdf:type owl:Class ;
+                              rdfs:subClassOf lrmoo:F28_Expression_Creation ;
+                              rdfs:comment "Instances of this class represent communicative acts in which an actor addresses a message to another person or set of persons. " ;
+                              rdfs:label "Correspondence Event"@en .
+                              
+###  https://ontology.swissartresearch.net/pwro/WE12_Sending
+pwro:WE12_Sending rdf:type owl:Class ;
+                              rdfs:subClassOf crm:E9_Move ;
+                              rdfs:comment "This class comprises events in which physical objects are moved from one place to another and wherein the sending person is not also the object of the event. The substance of this class is that of an intentional event. Particularly, it is typical to know the declared origin and destination of an instance of sending but not necessarily its eventual outcome. An Instance of sending comes into existence when the requisite actions are undertaken to initiate the dispatch of a physical object from one place to another are put it place and the sending made possible. An instance of sending may come to an end when the object sent has reached its intended destination. It may also end if the intention to send is abandoned or the means by which to achieve it are no longer available. " ;
+                              rdfs:label "Sending"@en .
+                              
+###  https://ontology.swissartresearch.net/pwro/WE13_Visit
+pwro:WE13_Visit rdf:type owl:Class ;
+                              rdfs:subClassOf crm:E7_Activity ;
+                              rdfs:comment "Instances of this class involve the intentional activity of actors to spend time in a geographic location for the sake of exploring and generally 'being' at that place for a period of time. Instances of visit entail an intentional relation to the place visited by the intending actor, engaging in interaction with and observation of the place that they visit and the various things to met in that space. Instaces of visit begin with the arrival of the visiting actor within the place to be visited. Instances of visit end when the visting actor leaves the place visisted. Instances of visit may further end if the actor gives up the intention or loses the means by which to continue the visit or themselves expire. " ;
+                              rdfs:label "Visit"@en .
+
+
+###  Generated by the Denitsa Nenova (18-11-2024)

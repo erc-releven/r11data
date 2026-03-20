@@ -1,0 +1,394 @@
+@prefix : <https://r11.eu/ns/prosopography/> .
+@prefix crm: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://r11.eu/ns/prosopography/> .
+
+<https://r11.eu/ns/prosopography> rdf:type owl:Ontology ;
+                                   owl:versionIRI <https://r11.eu/ns/prosopography/0.1> ;
+                                   rdfs:comment "This ontology contains the classes and properties borrowed from the SDHSS project (https://ontome.net/project/8) and used in our project for person information. Since the SDHSS ontologies aren't formally published, we have linked the entities we use more directly to the CIDOC-CRM superclasses than the original ontology suggests; this is to protect our use against any reorganisation of the intermediate classes that may occur in the meantime."@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.cidoc-crm.org/cidoc-crm/P2_has_type
+crm:P2_has_type rdf:type owl:ObjectProperty ;
+                owl:inverseOf crm:P2i_is_type_of .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/P2i_is_type_of
+crm:P2i_is_type_of rdf:type owl:ObjectProperty .
+
+
+###  https://r11.eu/ns/prosopography/P13
+:P13 rdf:type owl:ObjectProperty ;
+     owl:inverseOf :P13i ;
+     rdfs:domain :C1 ;
+     rdfs:range crm:E39_Actor ;
+     rdfs:comment "This property associates the actor (person or group) concerned by the social quality."@en ;
+     rdfs:isDefinedBy "https://ontome.net/property/1411/namespace/112"@en ;
+     rdfs:label "pertains to"@en .
+
+
+###  https://r11.eu/ns/prosopography/P13i
+:P13i rdf:type owl:ObjectProperty ;
+      rdfs:domain crm:E39_Actor ;
+      rdfs:range :C1 ;
+      rdfs:label "has quality"@en .
+
+
+###  https://r11.eu/ns/prosopography/P14
+:P14 rdf:type owl:ObjectProperty ;
+     owl:inverseOf :P14i ;
+     rdfs:domain :C1 ;
+     rdfs:range :C2 ;
+     rdfs:comment "Associates the considered social quality. The maximal cardinality is one for social qualities because each of them has to be associated to the actor separately. This is because no only each quality sould be considered individually, but the time span of each of them is usually different. Therefore it cannot be expressed in just one temporal entity instance"@en ;
+     rdfs:isDefinedBy "https://ontome.net/property/1412/namespace/112"@en ;
+     rdfs:label "has social quality"@en .
+
+
+###  https://r11.eu/ns/prosopography/P14i
+:P14i rdf:type owl:ObjectProperty ;
+      rdfs:domain :C2 ;
+      rdfs:range :C1 ;
+      rdfs:label "is social quality of"@en .
+
+
+###  https://r11.eu/ns/prosopography/P15
+:P15 rdf:type owl:ObjectProperty ;
+     rdfs:domain :C3 ;
+     rdfs:range crm:E39_Actor ;
+     rdfs:label "involves partner"@en .
+
+
+###  https://r11.eu/ns/prosopography/P16
+:P16 rdf:type owl:ObjectProperty ;
+     rdfs:subPropertyOf crm:P2_has_type ;
+     owl:inverseOf :P16i ;
+     rdfs:domain :C3 ;
+     rdfs:range :C4 ;
+     rdfs:label "has relationship type"@en .
+
+
+###  https://r11.eu/ns/prosopography/P16i
+:P16i rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf crm:P2i_is_type_of ;
+      rdfs:domain :C4 ;
+      rdfs:range :C3 ;
+      rdfs:label "is relationship type of"@en .
+
+
+###  https://r11.eu/ns/prosopography/P17
+:P17 rdf:type owl:ObjectProperty ;
+     owl:inverseOf :P17i ;
+     rdf:type owl:FunctionalProperty ;
+     rdfs:domain :C3 ;
+     rdfs:range crm:E39_Actor ;
+     owl:propertyDisjointWith :P18 ;
+     rdfs:label "has relationship source"@en .
+
+
+###  https://r11.eu/ns/prosopography/P17i
+:P17i rdf:type owl:ObjectProperty ;
+      rdfs:domain crm:E39_Actor ;
+      rdfs:range :C3 ;
+      rdfs:label "is source in relationship"@en .
+
+
+###  https://r11.eu/ns/prosopography/P18
+:P18 rdf:type owl:ObjectProperty ;
+     owl:inverseOf :P18i ;
+     rdf:type owl:FunctionalProperty ;
+     rdfs:domain :C3 ;
+     rdfs:range crm:E39_Actor ;
+     rdfs:label "has relationship target"@en .
+
+
+###  https://r11.eu/ns/prosopography/P18i
+:P18i rdf:type owl:ObjectProperty ;
+      rdfs:domain crm:E39_Actor ;
+      rdfs:range :C3 ;
+      rdfs:label "is target in relationship"@en .
+
+
+###  https://r11.eu/ns/prosopography/P26
+:P26 rdf:type owl:ObjectProperty ;
+     rdfs:subPropertyOf :P13 ;
+     owl:inverseOf :P26i ;
+     rdfs:domain :C13 ;
+     rdfs:range crm:E39_Actor ;
+     rdfs:comment "This property associates a person or group to the embodiment of social actor, i.e. the fact of acting in the quality and virtue of being the human actor who realises a social actor, an abstract individual possessing more or less clearly defined rights and duties."@en ;
+     rdfs:isDefinedBy "https://ontome.net/property/1626/namespace/112"@en ;
+     rdfs:label "is embodiment by"@en .
+
+
+###  https://r11.eu/ns/prosopography/P26i
+:P26i rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf :P13i ;
+      rdfs:domain crm:E39_Actor ;
+      rdfs:range :C13 ;
+      rdfs:label "embodies"@en .
+
+
+###  https://r11.eu/ns/prosopography/P33
+:P33 rdf:type owl:ObjectProperty ;
+     owl:inverseOf :P33i ;
+     rdfs:domain :C13 ;
+     rdfs:range :C12 ;
+     rdfs:comment "This property associates the social role of an actor, understood as a time-indexed quality of it, with the instance of the Social Actor class, i.e. with the  abstract individual that the actor (as group or person) embodies."@en ;
+     rdfs:isDefinedBy "https://ontome.net/property/1634/namespace/112"@en ;
+     rdfs:label "is embodiment of"@en .
+
+
+###  https://r11.eu/ns/prosopography/P33i
+:P33i rdf:type owl:ObjectProperty ;
+      rdfs:domain :C12 ;
+      rdfs:range :C13 ;
+      rdfs:label "is embodied by"@en .
+
+
+###  https://r11.eu/ns/prosopography/P35
+:P35 rdf:type owl:ObjectProperty ;
+     owl:inverseOf :P35i ;
+     rdfs:domain :C23 ;
+     rdfs:range :C24 ;
+     rdfs:comment "Associates a religious identity (temporal entity) with the type which defines its identity"@en ;
+     rdfs:isDefinedBy "https://ontome.net/property/1643/namespace/112"@en ;
+     rdfs:label "is defined by"@en .
+
+
+###  https://r11.eu/ns/prosopography/P35i
+:P35i rdf:type owl:ObjectProperty ;
+      rdfs:domain :C24 ;
+      rdfs:range :C23 ;
+      rdfs:label "defines"@en .
+
+
+###  https://r11.eu/ns/prosopography/P36
+:P36 rdf:type owl:ObjectProperty ;
+     owl:inverseOf :P36i ;
+     rdfs:domain :C23 ;
+     rdfs:range crm:E21_Person ;
+     rdfs:comment "This property associates the the spatio-temporal, physical religious identity to the person holding that identity."@en ;
+     rdfs:isDefinedBy "https://ontome.net/property/1739/namespace/112"@en ;
+     rdfs:label "pertains to"@en .
+
+
+###  https://r11.eu/ns/prosopography/P36i
+:P36i rdf:type owl:ObjectProperty ;
+      rdfs:domain crm:E21_Person ;
+      rdfs:range :C23 ;
+      rdfs:label "has religious identity"@en .
+
+
+###  https://r11.eu/ns/prosopography/P37
+:P37 rdf:type owl:ObjectProperty ;
+     owl:inverseOf :P37i ;
+     rdfs:domain :C21 ;
+     rdfs:range :C29 ;
+     rdfs:comment "This property associates to the personal skill the know-how it concerns, i.e. it is about and more or less efficiently realizes."@en ;
+     rdfs:isDefinedBy "https://ontome.net/property/1746/namespace/3"@en ;
+     rdfs:label "concerns"@en .
+
+
+###  https://r11.eu/ns/prosopography/P37i
+:P37i rdf:type owl:ObjectProperty ;
+      rdfs:domain :C29 ;
+      rdfs:range :C21 ;
+      rdfs:label "is concerned by" .
+
+
+###  https://r11.eu/ns/prosopography/P38
+:P38 rdf:type owl:ObjectProperty ;
+     owl:inverseOf :P38i ;
+     rdfs:domain crm:E21_Person ;
+     rdfs:range :C21 ;
+     rdfs:comment "This property associates the person with the skill he/she has. A skill being modelled as a quality of a person, it must be retated to one and just one person."@en ;
+     rdfs:isDefinedBy "https://ontome.net/property/1747/namespace/3"@en ;
+     rdfs:label "has skill"@en .
+
+
+###  https://r11.eu/ns/prosopography/P38i
+:P38i rdf:type owl:ObjectProperty ;
+      rdfs:domain :C21 ;
+      rdfs:range crm:E21_Person ;
+      rdfs:label "is skill of"@en .
+
+
+###  https://r11.eu/ns/prosopography/P50
+:P50 rdf:type owl:ObjectProperty ;
+     rdfs:subPropertyOf crm:P2_has_type ;
+     owl:inverseOf :P50i ;
+     rdfs:domain :C12 ;
+     rdfs:range :C32 ;
+     rdfs:comment "This property associates a type to an instance of the a Social Role class in order to specify its identity" ;
+     rdfs:isDefinedBy "https://ontome.net/property/1853/namespace/112" ;
+     rdfs:label "has social role type" .
+
+
+###  https://r11.eu/ns/prosopography/P50i
+:P50i rdf:type owl:ObjectProperty ;
+      rdfs:subPropertyOf crm:P2i_is_type_of ;
+      rdfs:domain :C32 ;
+      rdfs:range :C12 ;
+      rdfs:label "is type of" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.cidoc-crm.org/cidoc-crm/E21_Person
+crm:E21_Person rdf:type owl:Class .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E2_Temporal_Entity
+crm:E2_Temporal_Entity rdf:type owl:Class .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E39_Actor
+crm:E39_Actor rdf:type owl:Class .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E55_Type
+crm:E55_Type rdf:type owl:Class .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E89_Propositional_Object
+crm:E89_Propositional_Object rdf:type owl:Class .
+
+
+###  http://www.cidoc-crm.org/cidoc-crm/E92_Spacetime_Volume
+crm:E92_Spacetime_Volume rdf:type owl:Class .
+
+
+###  https://r11.eu/ns/prosopography/C1
+:C1 rdf:type owl:Class ;
+    rdfs:subClassOf crm:E2_Temporal_Entity ;
+    rdfs:comment """The phenomenon situated in time and the social space of being perceived by a group, the society or a portion of it, as having a social, professional or political quality in the sense of a generic social type — but not of a specific, legally defined function.
+
+The present class is therefore disjoint with the C13 Social Role Embodiment class as that models legal roles and functions of persons or groups."""@en ;
+    rdfs:isDefinedBy "https://ontome.net/class/213/namespace/112"@en ;
+    rdfs:label "Social Quality Embodiment"@en .
+
+
+###  https://r11.eu/ns/prosopography/C101
+:C101 rdf:type owl:Class ;
+      rdfs:subClassOf crm:E92_Spacetime_Volume ;
+      rdfs:label "Association with Location" .
+
+
+###  https://r11.eu/ns/prosopography/C11
+:C11 rdf:type owl:Class ;
+     rdfs:subClassOf :C2 ;
+     rdfs:comment "Gender is the state of being male, female, or an analogous category (non-binary, eunuch, etc.) in relation to the social and cultural roles that are considered appropriate for the respective categories. (Adapted from Collins)"@en ;
+     rdfs:isDefinedBy "https://ontome.net/class/629/namespace/112"@en ;
+     rdfs:label "Gender"@en .
+
+
+###  https://r11.eu/ns/prosopography/C12
+:C12 rdf:type owl:Class ;
+     rdfs:subClassOf :C2 ;
+     rdfs:comment "A social role is a qualification of an actor that provides it with social power, i.e. some rights and duties related to the role, like a king, the president of an Academy, etc. A social role exists in the context of one or more specific customs or laws and is generally related to an institutionalized, i.e. legal group."@en ;
+     rdfs:isDefinedBy "https://ontome.net/class/698/namespace/112"@en ;
+     rdfs:label "Social Role"@en .
+
+
+###  https://r11.eu/ns/prosopography/C13
+:C13 rdf:type owl:Class ;
+     rdfs:subClassOf crm:E2_Temporal_Entity ;
+     rdfs:comment "The fact of having a more or less formally defined social role or function in a group at a given moment or during a given time-span. The social role is modelled as an embodiment by a (Human) Actor of a Social Actor. It provides the (Human) Actor with prerogatives and rights that are exercised with respect to other persons and groups. It is therefore modelled as a social connotation, i.e. a social qualification of an Actor."@en ;
+     rdfs:isDefinedBy "https://ontome.net/class/697/namespace/112"@en ;
+     rdfs:label "Social Role Embodiment"@en .
+
+
+###  https://r11.eu/ns/prosopography/C14
+:C14 rdf:type owl:Class ;
+     rdfs:subClassOf crm:E2_Temporal_Entity ;
+     rdfs:isDefinedBy "https://ontome.net/class/688/namespace/112"@en ;
+     rdfs:label "Holding of a Right or Obligation"@en .
+
+
+###  https://r11.eu/ns/prosopography/C2
+:C2 rdf:type owl:Class ;
+    rdfs:subClassOf crm:E55_Type ;
+    rdfs:comment """Professional, political, religious or whatever generic social quality of an actor, be it a person or a group, as it is perceived from the point of view of the representations of a human community. A social quality is a socially constructed concept (in the sense of the connotation of an entity with a crm:E55 Type) and it is used to socially classify individuals in the perspective of the community. 
+
+This class is not to be confused with the sdh-so:C12 Social Role class which models legally defined social roles and functions of actors and should be exclusively used for this kind of concepts. Social roles are formalisations of social qualities in relation to specific groups and custom or legal contexts."""@en ;
+    rdfs:isDefinedBy "https://ontome.net/class/444/namespace/112"@en ;
+    rdfs:label "Social Quality"@en .
+
+
+###  https://r11.eu/ns/prosopography/C21
+:C21 rdf:type owl:Class ;
+     rdfs:subClassOf crm:E2_Temporal_Entity ;
+     rdfs:comment "This class comprises the abilities of a person, based on practical knowledge or know-how, and trained through practice, to do something well. Know-how can be about creating immaterial things, producing physical objects, acting or communicating. The skill is a personal quality, the know-how a shared representation of actions or processes."@en ;
+     rdfs:isDefinedBy "https://ontome.net/class/211/namespace/3"@en ;
+     rdfs:label "Skill"@en .
+
+
+###  https://r11.eu/ns/prosopography/C23
+:C23 rdf:type owl:Class ;
+     rdfs:subClassOf :C1 ;
+     rdfs:comment "Religious identity of a person in the sense of perception by surrounding society, participation in religious events (e.g. going to church) and contribution to define one' self-concept in the sense of public preference for a specific religion or religious denomination. The official membership in a religious group or Church is not modeled with this class, only the religious social quality of a person."@en ;
+     rdfs:isDefinedBy "https://ontome.net/class/758/namespace/112"@en ;
+     rdfs:label "Religious Identity"@en .
+
+
+###  https://r11.eu/ns/prosopography/C24
+:C24 rdf:type owl:Class ;
+     rdfs:subClassOf :C2 ;
+     rdfs:comment """This class models religious identity in the sense of social sciences, as a type classifying individuals belonging to social-cultural systems of designated behaviors and practices, morals, worldviews, texts, sanctified places, prophecies, ethics, or organizations, that relates humanity to supernatural, transcendental, or spiritual elements (religion) or is a subgroup within a religion that operates under a common name, tradition, and identity (religious denomination).
+
+The instances of this class should be entered as characteristics of people (Catholic, Muslim, etc.) and not as religions (Catholicism, Islam, etc.)."""@en ;
+     rdfs:isDefinedBy "https://ontome.net/class/759/namespace/112"@en ;
+     rdfs:label "Religion or Religious Denomination"@en .
+
+
+###  https://r11.eu/ns/prosopography/C29
+:C29 rdf:type owl:Class ;
+     rdfs:subClassOf crm:E89_Propositional_Object ;
+     rdfs:comment "This class comprises know-how as practical knowledge, i.e. ​knowledge of how to do something. Experience in doing it is modelled with the hist:C21 Skill as a quality of a person being trained through practice to realize the know-how."@en ;
+     rdfs:isDefinedBy "https://ontome.net/class/767/namespace/3"@en ;
+     rdfs:label "Know-How"@en .
+
+
+###  https://r11.eu/ns/prosopography/C3
+:C3 rdf:type owl:Class ;
+    rdfs:subClassOf crm:E2_Temporal_Entity ;
+    rdfs:label "Social Relationship"@en .
+
+
+###  https://r11.eu/ns/prosopography/C32
+:C32 rdf:type owl:Class ;
+     rdfs:subClassOf crm:E55_Type ;
+     rdfs:label "Social Role Type" .
+
+
+###  https://r11.eu/ns/prosopography/C4
+:C4 rdf:type owl:Class ;
+    rdfs:subClassOf crm:E55_Type ;
+    rdfs:label "Social Relationship Type"@en .
+
+
+###  https://r11.eu/ns/prosopography/C5
+:C5 rdf:type owl:Class ;
+    rdfs:subClassOf crm:E2_Temporal_Entity ;
+    rdfs:comment "This class models the fact that a person or an organization belongs to a group during a given time span" ;
+    rdfs:isDefinedBy "https://ontome.net/class/442/namespace/112" ;
+    rdfs:label "Membership" .
+
+
+###  https://r11.eu/ns/prosopography/C7
+:C7 rdf:type owl:Class ;
+    rdfs:subClassOf :C2 ;
+    rdfs:comment "A job, profession or other activity"@en ;
+    rdfs:isDefinedBy "https://ontome.net/class/636/namespace/112"@en ;
+    rdfs:label "Occupation"@en .
+
+
+###  Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi
