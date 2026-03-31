@@ -1,11 +1,11 @@
 """TripleGenerator for the Persons sheet."""
 
 from collections.abc import Iterator
-from functools import cached_property, partial
 import itertools
-from typing import cast
 
 from lodkit import _Triple, ttl
+from rdflib import Literal, RDF, RDFS, URIRef
+
 from r11data.tabular.models import Person
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.utils.rdf_utils import (
@@ -18,11 +18,6 @@ from r11data.tabular.utils.rdf_utils import (
     r11spec,
     star,
 )
-from rdflib import Literal, RDF, RDFS, URIRef
-import structlog
-
-
-logger = structlog.get_logger()
 
 
 class PersonRDFConverter(_ModelRDFConverter[Person]):
@@ -70,7 +65,7 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
         yield from ttl(
             passage_uri,
             (RDF.type, crm.E33_Linguistic_Object),
-            (RDFS.label, self.model.source_text_reference),
+            (RDFS.label, self.model.source_text_reference),  # type: ignore ; publication implies text reference
         )
         if (excerpt := self.model.source_text_excerpt) is not None:
             yield (passage_uri, crm.P190_has_symbolic_content, Literal(excerpt))

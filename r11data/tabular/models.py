@@ -1,7 +1,8 @@
 """Pydantic models for main table to RDF conversion."""
 
 from functools import partial
-from typing import Annotated, Any, Literal as TypingLiteral, Self
+from typing import Annotated, Any, Self
+from typing import Literal as TypingLiteral
 
 from pydantic import (
     AfterValidator,
@@ -137,6 +138,20 @@ class Place(_AuthoritySourceBase):
     """Place model corresponding to the main 'Places' sheet."""
 
     reference_name: str = Field(validation_alias="Reference name")
+
+    @computed_field
+    @property
+    def place_uri(self) -> URIRef:
+        return mkuri(self.reference_name, self.service)
+
+    @computed_field
+    @property
+    def service(self) -> URIRef:
+        return (
+            URIRef("https://pbw2016.kdl.kcl.ac.uk/")
+            if self.authority == "44335536 / Roueché, Charlotte"
+            else URIRef("https://r11.eu/")
+        )
 
     pleiades_id: AnyUrl | None = Field(validation_alias="Pleiades ID")
     geonames_id: AnyUrl | None = Field(validation_alias="Geonames ID")

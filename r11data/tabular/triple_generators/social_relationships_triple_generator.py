@@ -5,6 +5,8 @@ from functools import cached_property
 import itertools
 
 from lodkit import _Triple, ttl
+from rdflib import RDF, RDFS, URIRef
+
 from r11data.tabular.models import SocialRelationship
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.utils.rdf_utils import (
@@ -16,11 +18,6 @@ from r11data.tabular.utils.rdf_utils import (
     star,
     tara_uri,
 )
-from rdflib import Literal, RDF, RDFS, URIRef
-import structlog
-
-
-logger = structlog.get_logger()
 
 
 class SocialRelationshipRDFConverter(_ModelRDFConverter[SocialRelationship]):
