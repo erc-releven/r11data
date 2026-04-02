@@ -8,12 +8,17 @@ from lodkit import _Triple, ttl
 from pydantic import AnyUrl, TypeAdapter
 from pydantic_extra_types.coordinate import Coordinate
 from r11data.tabular.models import Place
+from r11data.tabular.sources import geonames_json, pleiades_json, wikidata_json
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.utils.rdf_utils import crm, lrm, mkuri, star
 from rdflib import OWL, RDF, RDFS, Literal, URIRef
 
 
 class PlaceRDFConverter(_ModelRDFConverter[Place]):
+    f11_pleiades_uri = URIRef("https://pleiades.stoa.org/")
+    f11_geonames_uri = URIRef("https://www.geonames.org/")
+    f11_wikidata_uri = URIRef("https://www.wikidata.org/")
+
     def base_triples(self) -> Iterator[_Triple]:
         return ttl(
             self.model.place_uri,
@@ -59,27 +64,24 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
             )
 
         if (pleiades_place_id_uri := self.model.pleiades_id) is not None:
-            f11_pleiades_uri = URIRef("https://pleiades.stoa.org/")
-
-            yield (f11_pleiades_uri, RDF.type, lrm.F11_Corporate_Body)
+            yield (self.f11_pleiades_uri, RDF.type, lrm.F11_Corporate_Body)
             yield from _place_id_generator(
-                place_id_uri=pleiades_place_id_uri, place_id_service=f11_pleiades_uri
+                place_id_uri=pleiades_place_id_uri,
+                place_id_service=self.f11_pleiades_uri,
             )
 
         if (geonames_place_id_uri := self.model.geonames_id) is not None:
-            f11_geonames_uri = URIRef("https://www.geonames.org/")
-
-            yield (f11_geonames_uri, RDF.type, lrm.F11_Corporate_Body)
+            yield (self.f11_geonames_uri, RDF.type, lrm.F11_Corporate_Body)
             yield from _place_id_generator(
-                place_id_uri=geonames_place_id_uri, place_id_service=f11_geonames_uri
+                place_id_uri=geonames_place_id_uri,
+                place_id_service=self.f11_geonames_uri,
             )
 
         if (wikidata_place_id_uri := self.model.wikidata_id) is not None:
-            f11_wikidata_uri = URIRef("https://www.wikidata.org/")
-
-            yield (f11_wikidata_uri, RDF.type, lrm.F11_Corporate_Body)
+            yield (self.f11_wikidata_uri, RDF.type, lrm.F11_Corporate_Body)
             yield from _place_id_generator(
-                place_id_uri=wikidata_place_id_uri, place_id_service=f11_wikidata_uri
+                place_id_uri=wikidata_place_id_uri,
+                place_id_service=self.f11_wikidata_uri,
             )
 
     def part_of_place_triples(self) -> Iterator[_Triple]:
@@ -183,9 +185,6 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
         )
 
         def _spatio_temporal_base_triples() -> Iterator[_Triple]:
-            if not any([coordinates, begin, end]):
-                return
-
             e13_crm_p196_uri = mkuri()
 
             yield from ttl(
@@ -233,11 +232,10 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
             # authority + passage triples
             yield from self.authority_passage_triples(e13_crm_p160_uri)
 
-        def _spatio_definition_triples() -> Iterator[_Triple]:
-            if coordinates is None:
-                return
-
-            coordinates_json = TypeAdapter(Coordinate).dump_json(coordinates)
+        def _assert_coordinates(
+            coordinates_json: bytes, authority_uri: URIRef | None = None
+        ) -> Iterator[_Triple]:
+            """Helper for _spatio_definition_triples generator."""
             e13_crm_p161_uri = mkuri()
 
             yield from ttl(
@@ -264,7 +262,41 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
             )
 
             # authority + passage triples
-            yield from self.authority_passage_triples(e13_crm_p161_uri)
+            yield from self.authority_passage_triples(
+                e13_uri=e13_crm_p161_uri, authority_uri=authority_uri
+            )
+
+        def _spatio_definition_triples() -> Iterator[_Triple]:
+            if (coordinates := self.model.location_coordinates) is not None:
+                coordinates_json: bytes = TypeAdapter(Coordinate).dump_json(coordinates)
+                yield from _assert_coordinates(coordinates_json=coordinates_json)
+
+            if (pleiades_id := self.model.pleiades_id) is not None:
+                coordinates_json = pleiades_json.get(pleiades_id)
+
+                if coordinates_json:
+                    yield from _assert_coordinates(
+                        coordinates_json=coordinates_json,
+                        authority_uri=self.f11_pleiades_uri,
+                    )
+
+            if (geonames_id := self.model.geonames_id) is not None:
+                coordinates_json = geonames_json.get(geonames_id)
+
+                if coordinates_json:
+                    yield from _assert_coordinates(
+                        coordinates_json=coordinates_json,
+                        authority_uri=self.f11_geonames_uri,
+                    )
+
+            if (wikidata_id := self.model.wikidata_id) is not None:
+                coordinates_json = geonames_json.get(wikidata_id)
+
+                if coordinates_json:
+                    yield from _assert_coordinates(
+                        coordinates_json=coordinates_json,
+                        authority_uri=self.f11_wikidata_uri,
+                    )
 
         return itertools.chain(
             _spatio_temporal_base_triples(),
@@ -282,3 +314,11 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
             self.place_population_triples(),
             self.spatio_temporal_existence_triples(),
         )
+
+
+import json
+
+for k, v in pleiades_json.items():
+    value = json.loads(v).get("coordinates")
+    if value is None:
+        print(k, v)

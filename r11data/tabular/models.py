@@ -153,9 +153,18 @@ class Place(_AuthoritySourceBase):
             else URIRef("https://r11.eu/")
         )
 
-    pleiades_id: AnyUrl | None = Field(validation_alias="Pleiades ID")
-    geonames_id: AnyUrl | None = Field(validation_alias="Geonames ID")
-    wikidata_id: AnyUrl | None = Field(validation_alias="Wikidata ID")
+    pleiades_id: Annotated[
+        AnyUrl | None, AfterValidator(lambda x: str(x) if x is not None else x)
+    ] = Field(validation_alias="Pleiades ID")
+
+    geonames_id: Annotated[
+        AnyUrl | None, AfterValidator(lambda x: str(x) if x is not None else x)
+    ] = Field(validation_alias="Geonames ID")
+
+    wikidata_id: Annotated[
+        AnyUrl | None, AfterValidator(lambda x: str(x) if x is not None else x)
+    ] = Field(validation_alias="Wikidata ID")
+
     location_coordinates: Coordinate | None = Field(
         validation_alias="Location coordinates"
     )

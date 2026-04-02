@@ -18,6 +18,7 @@
           uv
           python312
           gcc
+          onlyoffice-desktopeditors
         ];
 
         NIX_LD = pkgs.lib.fileContents "${pkgs.stdenv.cc}/nix-support/dynamic-linker";
