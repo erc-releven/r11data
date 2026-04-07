@@ -108,6 +108,6 @@ def generate_pleiades_json() -> None:
     )
 
 
-generate_geonames_json()
+# generate_geonames_json()
 generate_pleiades_json()
-generate_wikidata_json()
+# generate_wikidata_json()
