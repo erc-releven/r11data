@@ -44,7 +44,7 @@ class PleiadesCoordinates(_RemoteServiceCoordinates):
             coordinates,
         ):
             match coordinates:
-                case (float(latitude), float(longitude)):
+                case (float(longitude), float(latitude)):
                     return Coordinate(latitude=latitude, longitude=longitude)  # pyright: ignore
                 case ([float(), float()], *_):
                     return [_get_coordinates(coordinate) for coordinate in coordinates]
