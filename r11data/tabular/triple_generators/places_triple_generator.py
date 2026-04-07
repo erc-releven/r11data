@@ -43,7 +43,7 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
                 mkuri(
                     crm.E15_Identifier_Assignment,
                     self.model.reference_name,
-                    self.model.service,
+                    place_id_service,
                 ),
                 (RDF.type, crm.E15_Identifier_Assignment),
                 (crm.P140_assigned_attribute_to, self.model.place_uri),
@@ -54,11 +54,10 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
                         mkuri(
                             crm.E42_Identifier,
                             self.model.reference_name,
-                            self.model.service,
+                            place_id_service,
                         ),
                         (RDF.type, crm.E42_Identifier),
                         (crm.P190_has_symbolic_content, place_id_base),
-                        (OWL.sameAs, place_id_uri),
                     ),
                 ),
             )
@@ -245,17 +244,15 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
                 (
                     crm.P141_assigned,
                     ttl(
-                        self.model.place_uri,
+                        mkuri(),
+                        (RDF.type, crm.E53_Place),
                         (
-                            crm.P53_has_former_or_current_location,
-                            ttl(
-                                mkuri(),
-                                (RDF.type, crm.E53_Place),
-                                (
-                                    crm.P168_place_is_defined_by,
-                                    Literal(coordinates_json, datatype=RDF.JSON),
-                                ),
-                            ),
+                            crm.P53i_is_former_or_current_location_of,
+                            self.model.place_uri,
+                        ),
+                        (
+                            crm.P168_place_is_defined_by,
+                            Literal(coordinates_json, datatype=RDF.JSON),
                         ),
                     ),
                 ),
@@ -272,7 +269,7 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
                 yield from _assert_coordinates(coordinates_json=coordinates_json)
 
             if (pleiades_id := self.model.pleiades_id) is not None:
-                coordinates_json = pleiades_json.get(pleiades_id)
+                coordinates_json = pleiades_json.get(pleiades_id)  # pyright: ignore
 
                 if coordinates_json:
                     yield from _assert_coordinates(
