@@ -1,8 +1,7 @@
 """TripleGenerator for the Lead seals sheet."""
 
-from collections.abc import Iterator
-from functools import cached_property
 import itertools
+from collections.abc import Iterator
 
 from lodkit import _Triple, ttl
 from r11data.tabular.models import LeadSeals
@@ -12,22 +11,17 @@ from rdflib import RDF, RDFS, URIRef
 
 
 class LeadSealsRDFConverter(_ModelRDFConverter[LeadSeals]):
-    @cached_property
-    def seal_uri(self) -> URIRef:
-        return mkuri(self.model.seal_id)
-
     def base_triples(self) -> Iterator[_Triple]:
         yield from ttl(
-            self.seal_uri,
+            self.model.seal_uri,
             (RDF.type, r11spec.Lead_Seal),
             (RDFS.label, f"{self.model.seal_id} (Seal ID)"),
         )
 
         if (external_url := self.model.external_url) is not None:
-            yield (URIRef(str(external_url)), so.ID7_matches, self.seal_uri)
+            yield (URIRef(str(external_url)), so.ID7_matches, self.model.seal_uri)
 
     def seal_collection_triples(self) -> Iterator[_Triple]:
-        seal_collection_uri = mkuri(self.model.seal_collection)
         e13_crm_p46_uri = mkuri()
 
         return ttl(
@@ -36,12 +30,12 @@ class LeadSealsRDFConverter(_ModelRDFConverter[LeadSeals]):
             (
                 crm.P140_assigned_attribute_to,
                 ttl(
-                    seal_collection_uri,
+                    self.model.seal_collection_uri,
                     (RDF.type, crm.E78_Curated_Holding),
                     (RDFS.label, self.model.seal_collection),
                 ),
             ),
-            (crm.P141_assigned, self.seal_uri),
+            (crm.P141_assigned, self.model.seal_uri),
         )
 
     def __iter__(self) -> Iterator[_Triple]:

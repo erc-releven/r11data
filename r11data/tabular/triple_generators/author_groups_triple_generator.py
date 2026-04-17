@@ -1,8 +1,8 @@
 """TripleGenerator for the Author groups sheet."""
 
+import itertools
 from collections.abc import Iterator
 from functools import cached_property
-import itertools
 
 from lodkit import _Triple, ttl
 from r11data.tabular.models import AuthorGroup, Person
@@ -12,16 +12,6 @@ from rdflib import RDF, RDFS, URIRef
 
 
 class AuthorGroupsRDFConverter(_ModelRDFConverter[AuthorGroup]):
-    @cached_property
-    def group_uri(self):
-        group_uri = (
-            mkuri(self.model.group_identifier)
-            if (_wisski_id := self.model.wisski_id) is None
-            else URIRef(str(_wisski_id))
-        )
-
-        return group_uri
-
     def base_triples(self) -> Iterator[_Triple]:
         group_member_model: Person | None = self.get_person_data(
             self.model.group_member, strict=False
@@ -33,7 +23,7 @@ class AuthorGroupsRDFConverter(_ModelRDFConverter[AuthorGroup]):
         group_member_uri: URIRef = group_member_model.person_uri
 
         yield from ttl(
-            self.group_uri,
+            self.model.group_uri,
             (RDF.type, r11spec.Author_Group),
             (RDFS.label, self.model.group_identifier),
             (

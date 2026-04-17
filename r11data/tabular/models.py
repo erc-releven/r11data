@@ -179,7 +179,7 @@ class Place(_AuthoritySourceBase):
 class AuthorGroup(BaseModel):
     """AuthorGroup model corresponding to the main 'Author groups' sheet."""
 
-    model_config = ConfigDict(str_strip_whitespace=True)
+    model_config = ConfigDict(str_strip_whitespace=True, arbitrary_types_allowed=True)
 
     wisski_id: Annotated[
         AnyUrl | None, AfterValidator(lambda x: str(x) if x is not None else x)
@@ -203,6 +203,11 @@ class AuthorGroup(BaseModel):
 
         return self
 
+    @computed_field
+    @property
+    def group_uri(self) -> URIRef:
+        return mkuri(self.group_identifier, "https://r11.eu/")
+
 
 class ActorGroup(_AuthoritySourceBase):
     """ActorGroup model corresponding to the main 'Actor Group' sheet."""
@@ -210,6 +215,11 @@ class ActorGroup(_AuthoritySourceBase):
     group_identifier: str = Field(validation_alias="Group identifier")
     # optional only for Marton
     group_member: str | None = Field(validation_alias="Group member")
+
+    @computed_field
+    @property
+    def group_uri(self) -> URIRef:
+        return mkuri(self.group_identifier, "https://r11.eu/")
 
 
 class TextPublication(_AuthoritySourceBase):
@@ -362,6 +372,8 @@ class Boulloteria(_AuthoritySourceBase):
 
 
 class LeadSeals(BaseModel):
+    model_config = ConfigDict(arbitrary_types_allowed=True)
+
     seal_id: str = Field(validation_alias="Seal ID")
     seal_collection: str = Field(validation_alias="Seal collection")
     boulloterion: str = Field(validation_alias="Boulloterion")
@@ -369,6 +381,16 @@ class LeadSeals(BaseModel):
     external_url: Annotated[
         AnyUrl | None, AfterValidator(lambda x: str(x) if x is not None else x)
     ] = Field(validation_alias="External url")
+
+    @computed_field
+    @property
+    def seal_uri(self) -> URIRef:
+        return mkuri(self.seal_id, "https://r11.eu/")
+
+    @computed_field
+    @property
+    def seal_collection_uri(self) -> URIRef:
+        return mkuri(self.seal_collection, "https://r11.eu/")
 
 
 class OtherObjects(_AuthoritySourceBase):
