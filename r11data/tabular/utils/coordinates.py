@@ -3,7 +3,7 @@
 import logging
 
 import httpx
-from pydantic import AnyUrl, BaseModel, ConfigDict, computed_field, fields
+from pydantic import AnyUrl, BaseModel, ConfigDict, TypeAdapter, computed_field, fields
 from pydantic_extra_types.coordinate import Coordinate
 from sparqlx import SPARQLWrapper
 
@@ -109,3 +109,9 @@ class WikidataCoordinates(_RemoteServiceCoordinates):
         if result and (coordinates := result[0]):
             return Coordinate(**coordinates)
         return None
+
+
+def serialize_coordinates(coordinate) -> str:
+    """JSON-serialize a coordinate object."""
+    ta = TypeAdapter(Coordinate)
+    return ta.dump_json(coordinate)

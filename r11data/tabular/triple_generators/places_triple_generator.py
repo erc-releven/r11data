@@ -6,10 +6,10 @@ from functools import partial
 
 from lodkit import _Triple, ttl
 from pydantic import AnyUrl, TypeAdapter
-from pydantic_extra_types.coordinate import Coordinate
 from r11data.tabular.models import Place
 from r11data.tabular.sources import geonames_json, pleiades_json, wikidata_json
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
+from r11data.tabular.utils.coordinates import serialize_coordinates
 from r11data.tabular.utils.rdf_utils import crm, lrm, mkuri, star
 from rdflib import OWL, RDF, RDFS, Literal, URIRef
 
@@ -127,8 +127,9 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
             ),
         )
 
+        ## todo: investigate
         # authority + passage triples
-        yield from self.authority_passage_triples(e17_uri)
+        # yield from self.authority_passage_triples(e17_uri)
 
     def place_succession_triples(self) -> Iterator[_Triple]:
         if (place_succession := self.model.succeeds_place) is None:
@@ -177,44 +178,72 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
         yield from self.authority_passage_triples(e13_crm_p53_uri)
 
     def spatio_temporal_existence_triples(self) -> Iterator[_Triple]:
-        e92_spacetime_volume_uri = mkuri()
+        e92_base_uri = mkuri()
         coordinates, begin, end = map(
             partial(getattr, self.model),
             ["location_coordinates", "earliest_existence", "latest_existence"],
         )
 
-        def _spatio_temporal_base_triples() -> Iterator[_Triple]:
-            e13_crm_p196_uri = mkuri()
+        def spatio_temporal_base_triples() -> Iterator[_Triple]:
+            e13_crm_p196_uri: URIRef = mkuri()
 
-            yield from ttl(
+            return ttl(
                 e13_crm_p196_uri,
                 (RDF.type, star.E13_crm_P196),
                 (crm.P140_assigned_attribute_to, self.model.place_uri),
                 (
                     crm.P141_assigned,
-                    ttl(e92_spacetime_volume_uri, (RDF.type, crm.E92_Spacetime_Volume)),
+                    ttl(e92_base_uri, (RDF.type, crm.E92_Spacetime_Volume)),
                 ),
+                (crm.P14_carried_out_by, self.model.service),
             )
 
-            # authority + passage triples
-            yield from self.authority_passage_triples(e13_crm_p196_uri)
+        def spatio_temporal_base_coordinates_tripes() -> Iterator[_Triple]:
+            if coordinates is None:
+                return
 
-        def _temporal_begin_end_triples() -> Iterator[_Triple]:
+            e13_crm_p161_uri: URIRef = mkuri()
+
+            yield from ttl(
+                e13_crm_p161_uri,
+                (RDF.type, star.E13_crm_P161),
+                (crm.P140_assigned_attribute_to, e92_base_uri),
+                (
+                    crm.P141_assigned,
+                    ttl(
+                        mkuri(),
+                        (RDF.type, crm.E53_Place),
+                        (
+                            crm.P53i_is_former_or_current_location_of,
+                            self.model.place_uri,
+                        ),
+                        (
+                            crm.P168_place_is_defined_by,
+                            Literal(
+                                serialize_coordinates(coordinates), datatype=RDF.JSON
+                            ),
+                        ),
+                    ),
+                ),
+                (crm.P14_carried_out_by, self.model.service),
+            )
+
+        def temporal_triples() -> Iterator[_Triple]:
             """Note: Temporal references are currently not translates to Julian days.
 
             Currently, `Earliest existence` and `Latest existence` fields are never defined,
-            so this is actually not relevant; if those fields every were defined, one would
+            so this is actually not relevant; if those fields ever were defined, one would
             need to see if existing Julian day converters are able to convert whatever data
             is defined in the table fields.
             """
 
-            e52_uri = mkuri()
-            e13_crm_p160_uri = mkuri()
+            e52_uri: URIRef = mkuri()
+            e13_crm_p160_uri: URIRef = mkuri()
 
             yield from ttl(
                 e13_crm_p160_uri,
                 (RDF.type, star.E13_crm_P160),
-                (crm.P140_assigned_attribute_to, e92_spacetime_volume_uri),
+                (crm.P140_assigned_attribute_to, e92_base_uri),
                 (crm.P141_assigned, ttl(e52_uri, (RDF.type, crm["E52_Time-Span"]))),
             )
 
@@ -228,28 +257,49 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
             if end is not None:
                 yield (e13_crm_p160_uri, crm.P82b_end_of_the_end, Literal(end))
 
+            ## todo: investigate
             # authority + passage triples
-            yield from self.authority_passage_triples(e13_crm_p160_uri)
+            # yield from self.authority_passage_triples(e13_crm_p160_uri)
 
         def _assert_coordinates(
             coordinates_json: bytes, authority_uri: URIRef | None = None
         ) -> Iterator[_Triple]:
             """Helper for _spatio_definition_triples generator."""
-            e13_crm_p161_uri = mkuri()
+
+            e27_uri: URIRef = mkuri(self.model.reference_name, str(authority_uri))
+            e92_uri: URIRef = mkuri()
+
+            yield (e92_uri, RDF.type, crm.E92_Spacetime_Volume)
 
             yield from ttl(
-                e13_crm_p161_uri,
+                mkuri(),
+                (RDF.type, star.E13_so_ID8),
+                (
+                    crm.P140_assigned_attribute_to,
+                    ttl(e27_uri, (RDF.type, crm.E27_Site)),
+                ),
+                (crm.P141_assigned, self.model.place_uri),
+                (crm.P14_carried_out_by, self.model.service),
+            )
+
+            yield from ttl(
+                mkuri(),
+                (RDF.type, star.E13_crm_P196),
+                (crm.P140_assigned_attribute_to, e27_uri),
+                (crm.P141_assigned, e92_uri),
+                (crm.P14_carried_out_by, authority_uri),
+            )
+
+            yield from ttl(
+                mkuri(),
                 (RDF.type, star.E13_crm_P161),
-                (crm.P140_assigned_attribute_to, e92_spacetime_volume_uri),
+                (crm.P140_assigned_attribute_to, e92_uri),
                 (
                     crm.P141_assigned,
                     ttl(
                         mkuri(),
                         (RDF.type, crm.E53_Place),
-                        (
-                            crm.P53i_is_former_or_current_location_of,
-                            self.model.place_uri,
-                        ),
+                        (crm.P53i_is_former_or_current_location_of, e27_uri),
                         (
                             crm.P168_place_is_defined_by,
                             Literal(coordinates_json, datatype=RDF.JSON),
@@ -258,16 +308,7 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
                 ),
             )
 
-            # authority + passage triples
-            yield from self.authority_passage_triples(
-                e13_uri=e13_crm_p161_uri, authority_uri=authority_uri
-            )
-
-        def _spatio_definition_triples() -> Iterator[_Triple]:
-            if (coordinates := self.model.location_coordinates) is not None:
-                coordinates_json: bytes = TypeAdapter(Coordinate).dump_json(coordinates)
-                yield from _assert_coordinates(coordinates_json=coordinates_json)
-
+        def spatial_triples() -> Iterator[_Triple]:
             if (pleiades_id := self.model.pleiades_id) is not None:
                 coordinates_json = pleiades_json.get(pleiades_id)  # pyright: ignore
 
@@ -296,9 +337,10 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
                     )
 
         return itertools.chain(
-            _spatio_temporal_base_triples(),
-            _temporal_begin_end_triples(),
-            _spatio_definition_triples(),
+            spatio_temporal_base_triples(),
+            spatio_temporal_base_coordinates_tripes(),
+            temporal_triples(),
+            spatial_triples(),
         )
 
     def __iter__(self) -> Iterator[_Triple]:
@@ -311,11 +353,3 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
             self.place_population_triples(),
             self.spatio_temporal_existence_triples(),
         )
-
-
-import json
-
-for k, v in pleiades_json.items():
-    value = json.loads(v).get("coordinates")
-    if value is None:
-        print(k, v)
