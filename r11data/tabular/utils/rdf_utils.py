@@ -1,21 +1,21 @@
-from collections.abc import Iterable, Iterator
-from hashlib import sha256
 import itertools
 import logging
+import warnings
+from collections.abc import Iterable, Iterator
+from hashlib import sha256
 from pathlib import PurePath
 from types import MappingProxyType
-from typing import Literal as TypingLiteral, Self
-from typing import IO, TextIO
+from typing import IO, Self, TextIO
+from typing import Literal as TypingLiteral
 from uuid import uuid4
-import warnings
 
-from lodkit import NamespaceGraph, _Triple as Triple
+from lodkit import NamespaceGraph
+from lodkit import _Triple as Triple
 from r11data.tabular.utils.date_parser import R11DateParser
 from r11data.utils.paths import ontologies_path
-from rdflib import Graph, Literal, Namespace, RDFS, URIRef
+from rdflib import RDFS, Graph, Literal, Namespace, URIRef
 from rdflib.parser import InputSource
 from rdflib.query import Result
-
 
 logger = logging.getLogger(__name__)
 

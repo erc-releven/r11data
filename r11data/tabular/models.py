@@ -16,7 +16,7 @@ from pydantic import (
     model_validator,
 )
 from pydantic_extra_types.coordinate import Coordinate
-from r11data.tabular.utils.rdf_utils import mkuri
+from r11data.tabular.utils.rdf_utils import crm, mkuri, pwro, r11spec, star
 from rdflib import URIRef
 
 
@@ -80,14 +80,15 @@ class _AuthoritySourceBase(BaseModel):
         excerpt = self.source_text_excerpt
 
         if publication_uri is None:
-            return None
+            return
 
-        _passage_uri_factory = partial(mkuri, publication_uri, reference)
-        passage_uri: URIRef = (
-            _passage_uri_factory() if excerpt is None else _passage_uri_factory(excerpt)
-        )
+        hash_values = [
+            value
+            for value in (publication_uri, reference, excerpt)
+            if value is not None
+        ]
 
-        return passage_uri
+        return mkuri(*hash_values)
 
 
 class Person(_AuthoritySourceBase):
@@ -330,6 +331,26 @@ class AuthorityStatus(_AuthoritySourceBase):
 
 
 class Correspondence(_AuthoritySourceBase):
+    @computed_field
+    @property
+    def letter_uri(self) -> URIRef:
+        return mkuri(r11spec.Letter, self.letter_sent, "https://r11.eu/")
+
+    @computed_field
+    @property
+    def correspondence_uri(self) -> URIRef:
+        return mkuri(r11spec.Correspondence, self.letter_sent, "https://r11.eu/")
+
+    @computed_field
+    @property
+    def dispatch_uri(self) -> URIRef:
+        return mkuri(pwro.WE12_Sending, self.letter_sent, "https://r11.eu/")
+
+    @computed_field
+    @property
+    def text_uri(self) -> URIRef:
+        return mkuri(r11spec.Text_Expression, self.letter_sent, "https://r11.eu/")
+
     letter_sent: str = Field(validation_alias="Letter sent")
     text_therein: str = Field(validation_alias="Text therein")
 

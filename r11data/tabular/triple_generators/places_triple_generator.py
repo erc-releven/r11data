@@ -129,7 +129,7 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
 
         ## todo: investigate
         # authority + passage triples
-        # yield from self.authority_passage_triples(e17_uri)
+        yield from self.authority_passage_triples(e17_uri)
 
     def place_succession_triples(self) -> Iterator[_Triple]:
         if (place_succession := self.model.succeeds_place) is None:
@@ -229,7 +229,7 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
             )
 
         def temporal_triples() -> Iterator[_Triple]:
-            """Note: Temporal references are currently not translates to Julian days.
+            """Note: Temporal references are currently not translated to Julian days.
 
             Currently, `Earliest existence` and `Latest existence` fields are never defined,
             so this is actually not relevant; if those fields ever were defined, one would
@@ -249,17 +249,16 @@ class PlaceRDFConverter(_ModelRDFConverter[Place]):
 
             if begin or end:
                 label = f"{begin or ''} - {end or ''}".strip()
-                yield (e13_crm_p160_uri, RDFS.label, Literal(label))
+                yield (e52_uri, RDFS.label, Literal(label))
 
             if begin is not None:
-                yield (e13_crm_p160_uri, crm.P82a_begin_of_the_begin, Literal(begin))
+                yield (e52_uri, crm.P82a_begin_of_the_begin, Literal(begin))
 
             if end is not None:
-                yield (e13_crm_p160_uri, crm.P82b_end_of_the_end, Literal(end))
+                yield (e52_uri, crm.P82b_end_of_the_end, Literal(end))
 
-            ## todo: investigate
             # authority + passage triples
-            # yield from self.authority_passage_triples(e13_crm_p160_uri)
+            yield from self.authority_passage_triples(e13_crm_p160_uri)
 
         def _assert_coordinates(
             coordinates_json: bytes, authority_uri: URIRef | None = None
