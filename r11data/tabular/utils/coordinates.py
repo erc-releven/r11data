@@ -3,7 +3,7 @@
 import logging
 
 import httpx
-from pydantic import AnyUrl, BaseModel, ConfigDict, TypeAdapter, computed_field, fields
+from pydantic import AnyUrl, BaseModel, ConfigDict, TypeAdapter, computed_field
 from pydantic_extra_types.coordinate import Coordinate
 from sparqlx import SPARQLWrapper
 

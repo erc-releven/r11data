@@ -2,13 +2,12 @@
 
 import itertools
 from collections.abc import Iterator
-from functools import cached_property
 
 from lodkit import _Triple, ttl
 from r11data.tabular.models import ActorGroup
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.utils.rdf_utils import crm, mkuri, pwro, star
-from rdflib import RDF, RDFS, URIRef
+from rdflib import RDF, RDFS
 
 
 class ActorGroupsRDFConverter(_ModelRDFConverter[ActorGroup]):

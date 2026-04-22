@@ -1,8 +1,7 @@
 """TripleGenerator for the Boulloteria sheet."""
 
-from collections.abc import Iterator
-from functools import cached_property
 import itertools
+from collections.abc import Iterator
 
 from lodkit import _Triple, ttl
 from r11data.tabular.models import Boulloteria, LeadSeals, Person
@@ -12,25 +11,25 @@ from rdflib import RDF, RDFS, URIRef
 
 
 class BoulloteriaRDFConverter(_ModelRDFConverter[Boulloteria]):
-    @cached_property
-    def boulloterion_uri(self) -> URIRef:
-        return mkuri(self.model.boulloterion_title)
-
     def base_triples(self) -> Iterator[_Triple]:
         yield from ttl(
-            self.boulloterion_uri,
+            self.model.boulloterion_uri,
             (RDF.type, r11spec.Boulloterion),
             (RDFS.label, self.model.boulloterion_title),
         )
 
         if (external_url := self.model.external_url) is not None:
-            yield (URIRef(str(external_url)), so.ID7_matches, self.boulloterion_uri)
+            yield (
+                URIRef(str(external_url)),
+                so.ID7_matches,
+                self.model.boulloterion_uri,
+            )
 
     def id_assertion_triples(self) -> Iterator[_Triple]:
         yield from ttl(
             mkuri(),
             (RDF.type, crm.E15_Identifier_Assignment),
-            (crm.P140_assigned_attribute_to, self.boulloterion_uri),
+            (crm.P140_assigned_attribute_to, self.model.boulloterion_uri),
             (
                 crm.P37_assigned,
                 ttl(
@@ -62,7 +61,7 @@ class BoulloteriaRDFConverter(_ModelRDFConverter[Boulloteria]):
         yield from ttl(
             e13_spec_l1_uri,
             (RDF.type, star.E13_spec_L1),
-            (crm.P140_assigned_attribute_to, self.boulloterion_uri),
+            (crm.P140_assigned_attribute_to, self.model.boulloterion_uri),
             (crm.P141_assigned, seal_uri),
         )
 
@@ -80,7 +79,7 @@ class BoulloteriaRDFConverter(_ModelRDFConverter[Boulloteria]):
                 crm.P140_assigned_attribute_to,
                 ttl(ownership_uri, (RDF.type, crm.E8_Acquisition)),
             ),
-            (crm.P141_assigned, self.boulloterion_uri),
+            (crm.P141_assigned, self.model.boulloterion_uri),
         )
 
         # ownership: timeframe

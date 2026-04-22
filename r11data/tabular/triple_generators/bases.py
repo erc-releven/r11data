@@ -1,18 +1,18 @@
 """Base classes for triple generators."""
 
 from collections.abc import Iterable, Iterator
-from functools import cached_property, partial
-from typing import Literal as TLiteral, overload
+from functools import cached_property
+from typing import Literal as TLiteral
+from typing import overload
 
-from lodkit import _Triple
 import pandas as pd
+import structlog
+from lodkit import _Triple
 from pydantic import BaseModel
 from r11data.tabular.models import Person, _AuthoritySourceBase
 from r11data.tabular.utils.df_utils import Sheets
-from r11data.tabular.utils.rdf_utils import RelevenGraph, crm, mkuri
+from r11data.tabular.utils.rdf_utils import RelevenGraph, crm
 from rdflib import Graph, URIRef
-import structlog
-
 
 logger = structlog.get_logger()
 
@@ -107,6 +107,7 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
         """Perform a relational look up for an authority and assert P14 about an E13."""
         if authority_uri is None:
             authority_id = getattr(self.model, "authority", None)
+
             if authority_id is None:
                 return
 
@@ -114,6 +115,7 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
                 person_id=authority_id,
                 strict=False,
             )
+
             if authority_model is None:
                 return
 

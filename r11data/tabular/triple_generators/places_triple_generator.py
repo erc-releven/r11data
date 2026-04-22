@@ -5,13 +5,13 @@ from collections.abc import Iterator
 from functools import partial
 
 from lodkit import _Triple, ttl
-from pydantic import AnyUrl, TypeAdapter
+from pydantic import AnyUrl
 from r11data.tabular.models import Place
-from r11data.tabular.sources import geonames_json, pleiades_json, wikidata_json
+from r11data.tabular.sources import geonames_json, pleiades_json
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.utils.coordinates import serialize_coordinates
 from r11data.tabular.utils.rdf_utils import crm, lrm, mkuri, star
-from rdflib import OWL, RDF, RDFS, Literal, URIRef
+from rdflib import RDF, RDFS, Literal, URIRef
 
 
 class PlaceRDFConverter(_ModelRDFConverter[Place]):

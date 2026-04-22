@@ -1,6 +1,5 @@
 """Pydantic models for main table to RDF conversion."""
 
-from functools import partial
 from typing import Annotated, Any, Self
 from typing import Literal as TypingLiteral
 
@@ -16,7 +15,7 @@ from pydantic import (
     model_validator,
 )
 from pydantic_extra_types.coordinate import Coordinate
-from r11data.tabular.utils.rdf_utils import crm, mkuri, pwro, r11spec, star
+from r11data.tabular.utils.rdf_utils import aaao, mkuri, pwro, r11spec
 from rdflib import URIRef
 
 
@@ -318,6 +317,13 @@ class GeopoliticalEvent(_AuthoritySourceBase):
 
 
 class AuthorityStatus(_AuthoritySourceBase):
+    @computed_field
+    @property
+    def status_uri(self) -> URIRef:
+        return mkuri(
+            aaao.ZE50_Authority_Status, self.authority_status_label, "https://r11.eu/"
+        )
+
     authority_ascribed: str = Field(validation_alias="Authority ascribed")
     authority_status_label: str = Field(validation_alias="Authority status label")
 
@@ -376,6 +382,11 @@ class BirthAndDeath(_AuthoritySourceBase):
 
 
 class Boulloteria(_AuthoritySourceBase):
+    @computed_field
+    @property
+    def boulloterion_uri(self) -> URIRef:
+        return mkuri(self.boulloterion_title, "https://r11.eu/")
+
     boulloterion_title: str = Field(validation_alias="Boulloterion title")
     dating: str = Field(validation_alias="Dating")
 

@@ -1,14 +1,14 @@
 """TripleGenerator for the Author groups sheet."""
 
+import itertools
 from collections.abc import Iterator
 from functools import cached_property
-import itertools
 
 from lodkit import _Triple, ttl
 from r11data.tabular.models import AuthorityStatus, Place
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.utils.rdf_utils import aaao, crm, mkuri, r11spec, star
-from rdflib import Literal, RDF, RDFS, URIRef
+from rdflib import RDF, RDFS, Literal, URIRef
 
 
 class AuthorityStatusRDFConverter(_ModelRDFConverter[AuthorityStatus]):
@@ -16,10 +16,6 @@ class AuthorityStatusRDFConverter(_ModelRDFConverter[AuthorityStatus]):
     def person_uri(self) -> URIRef:
         person_model = self.get_person_data(self.model.authority_ascribed)
         return person_model.person_uri
-
-    @cached_property
-    def status_uri(self) -> URIRef:
-        return mkuri(self.model.authority_status_label)
 
     def base_triples(self) -> Iterator[_Triple]:
         e13_aaao_zp96_uri = mkuri()
@@ -30,11 +26,12 @@ class AuthorityStatusRDFConverter(_ModelRDFConverter[AuthorityStatus]):
             (
                 crm.P140_assigned_attribute_to,
                 ttl(
-                    self.status_uri,
+                    self.model.status_uri,
                     (RDF.type, aaao.ZE50_Authority_Status),
                     (RDFS.label, self.model.authority_status_label),
                 ),
             ),
+            (crm.P141_assigned, self.person_uri),
         )
 
         yield from self.authority_passage_triples(e13_aaao_zp96_uri)
@@ -49,12 +46,12 @@ class AuthorityStatusRDFConverter(_ModelRDFConverter[AuthorityStatus]):
             mkuri(),
             (RDF.type, crm.E17_Type_Assignment),
             (crm.P14_carried_out_by, self.sheets.owner_id),
-            (crm.P41_classified, mkuri(self.model.authority_status_label)),
+            (crm.P41_classified, self.model.status_uri),
             (
                 crm.P42_assigned,
                 ttl(
                     authority_type_uri,
-                    (RDF.type, r11spec.Authority_Type),
+                    (RDF.type, r11spec.Authority_Status_Type),
                     (RDFS.label, status_type),
                 ),
             ),
@@ -65,11 +62,6 @@ class AuthorityStatusRDFConverter(_ModelRDFConverter[AuthorityStatus]):
             return
 
         authority_model = self.get_person_data(authority)
-        authority_uri: URIRef = (
-            mkuri(authority_model.identifier, authority_model.service)
-            if (_wisski_id := authority_model.wisski_id) is None
-            else URIRef(str(_wisski_id))
-        )
 
         e13_aaao_zp42_uri, e13_crm_p14_uri, ze13_speech_act_uri = (
             mkuri(),
@@ -82,16 +74,16 @@ class AuthorityStatusRDFConverter(_ModelRDFConverter[AuthorityStatus]):
             (RDF.type, star.E13_aaao_ZP42),
             (
                 crm.P140_assigned_attribute_to,
-                ttl(ze13_speech_act_uri, (RDF.type, aaao.ZP13_Speech_Act)),
+                ttl(ze13_speech_act_uri, (RDF.type, aaao.ZE13_Speech_Act)),
             ),
-            (crm.P141_assigned, self.status_uri),
+            (crm.P141_assigned, self.model.status_uri),
         )
 
         yield from ttl(
             e13_crm_p14_uri,
             (RDF.type, star.E13_crm_P14),
             (crm.P140_assigned_attribute_to, ze13_speech_act_uri),
-            (crm.P141_assigned, authority_uri),
+            (crm.P141_assigned, authority_model.person_uri),
         )
 
         # p14/p17/p67 triples
@@ -102,6 +94,7 @@ class AuthorityStatusRDFConverter(_ModelRDFConverter[AuthorityStatus]):
         if (geopgrahic_scope := self.model.geographic_scope) is None:
             return
 
+        e13_aaao_zp114_uri = mkuri()
         site_model: Place = self.lookup(
             sheet=self.sheets.places,
             model=Place,
@@ -110,13 +103,11 @@ class AuthorityStatusRDFConverter(_ModelRDFConverter[AuthorityStatus]):
             strict=True,
         )
 
-        e13_aaao_zp114_uri = mkuri()
-
         yield from ttl(
             e13_aaao_zp114_uri,
             (RDF.type, star.E13_aaao_ZP114),
-            (crm.P140_assigned_attribute_to, self.status_uri),
-            (crm.P141_assigned, mkuri(site_model.reference_name)),
+            (crm.P140_assigned_attribute_to, self.model.status_uri),
+            (crm.P141_assigned, ttl(site_model.place_uri, (RDF.type, crm.E27_Site))),
         )
 
         yield from self.authority_passage_triples(e13_aaao_zp114_uri)
@@ -130,20 +121,21 @@ class AuthorityStatusRDFConverter(_ModelRDFConverter[AuthorityStatus]):
         if not (temporal_start or temporal_end):
             return
 
-        e13_crm_p4_uri, time_span_uri = mkuri(), mkuri()
+        e13_crm_p4_uri = mkuri()
+        time_span_uri = mkuri()
 
         yield from ttl(
             e13_crm_p4_uri,
             (RDF.type, star.E13_crm_P4),
-            (crm.P140_assigned_attribute_to, self.status_uri),
+            (crm.P140_assigned_attribute_to, self.model.status_uri),
             (crm.P141_assigned, ttl(time_span_uri, (RDF.type, crm["E52_Time-Span"]))),
         )
 
         if temporal_start:
-            yield (time_span_uri, RDFS.label, Literal(temporal_start))
+            yield (time_span_uri, crm.P82a_begin_of_the_begin, Literal(temporal_start))
 
         if temporal_end:
-            yield (time_span_uri, RDFS.label, Literal(temporal_end))
+            yield (time_span_uri, crm.P82b_end_of_the_end, Literal(temporal_end))
 
     def __iter__(self) -> Iterator:
         return itertools.chain(
