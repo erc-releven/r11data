@@ -1,36 +1,30 @@
 """TripleGenerator for the Manuscripts sheet."""
 
-from collections.abc import Iterable, Iterator
 import itertools
+from collections.abc import Iterable, Iterator
 
 from lodkit import _Triple, ttl
-from r11data.tabular.models import Manuscript, Person, TextPublication
+from r11data.tabular.models import Manuscript, Person, Place, TextPublication
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
-from r11data.tabular.utils.rdf_utils import crm, mkuri, r11spec, star
+from r11data.tabular.utils.rdf_utils import (
+    crm,
+    generate_time_triples,
+    mkuri,
+    r11spec,
+    star,
+)
 from rdflib import RDF, RDFS
-import structlog
-
-
-logger = structlog.get_logger()
 
 
 class ManuscriptRDFConverter(_ModelRDFConverter[Manuscript]):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-
-        self.manuscript_uri = mkuri(self.model.identifier)
-        self.manuscript_production_uri = mkuri(
-            f"{self.model.identifier} - manuscript production"
-        )
-
     def base_triples(self) -> Iterable[_Triple]:
         return ttl(
-            self.manuscript_uri,
+            self.model.manuscript_uri,
             (RDF.type, r11spec.Manuscript),
             (RDFS.label, self.model.identifier),
         )
 
-    def manuscript_assertion_triples(self) -> Iterable[_Triple]:
+    def manuscript_contains_text_triples(self) -> Iterable[_Triple]:
         contained_publication: TextPublication | None = self.lookup(
             sheet=self.sheets.text_publications,
             model=TextPublication,
@@ -47,52 +41,63 @@ class ManuscriptRDFConverter(_ModelRDFConverter[Manuscript]):
         yield from ttl(
             e13_crm_128_uri,
             (RDF.type, star.E13_crm_P128),
-            (crm.P140_assigned_attribute_to, self.manuscript_uri),
+            (crm.P140_assigned_attribute_to, self.model.manuscript_uri),
             (crm.P141_assigned, contained_publication.text_identifier),
         )
 
         yield from self.authority_passage_triples(e13_crm_128_uri)
 
     def manuscript_production_triples(self) -> Iterable[_Triple]:
-        e13_crm_p108 = mkuri()
+        e13_crm_p108_uri = mkuri()
 
         yield from ttl(
-            e13_crm_p108,
+            e13_crm_p108_uri,
             (RDF.type, star.E13_crm_P108),
+            (crm.P141_assigned, self.model.manuscript_uri),
             (
                 crm.P140_assigned_attribute_to,
-                ttl(self.manuscript_production_uri, (RDF.type, crm.E12_Production)),
+                ttl(
+                    self.model.manuscript_production_uri, (RDF.type, crm.E12_Production)
+                ),
             ),
-            (crm.P141_assigned, self.manuscript_uri),
         )
 
-        yield from self.authority_passage_triples(e13_crm_p108)
+        yield from self.authority_passage_triples(e13_crm_p108_uri)
 
-    # B dating
     def manuscript_timeframe_assertion(self) -> Iterable[_Triple]:
         e13_crm_p4_uri = mkuri()
+        e52_uri = mkuri()
 
         yield from ttl(
             e13_crm_p4_uri,
             (RDF.type, star.E13_crm_P4),
-            (crm.P140_assigned_attribute_to, self.manuscript_production_uri),
-            # note: this might be translated to Julian date;
-            # however, the Wisskas query is currently asking only about the label
+            (crm.P140_assigned_attribute_to, self.model.manuscript_production_uri),
             (
                 crm.P141_assigned,
                 ttl(
-                    mkuri(),
+                    e52_uri,
                     (RDF.type, crm["E52_Time-Span"]),
                     (RDFS.label, self.model.dating),
                 ),
             ),
         )
 
+        yield from generate_time_triples(e52_uri=e52_uri, date_value=self.model.dating)
         yield from self.authority_passage_triples(e13_crm_p4_uri)
 
-    # C place copied
     def manuscript_location_assertion(self) -> Iterable[_Triple]:
         if (place := self.model.place_copied) is None:
+            return
+
+        place_model: Place | None = self.lookup(
+            sheet=self.sheets.places,
+            model=Place,
+            column="Reference name",
+            key=place,
+            strict=False,
+        )
+
+        if place_model is None:
             return
 
         e13_crm_p7_uri = mkuri()
@@ -100,11 +105,8 @@ class ManuscriptRDFConverter(_ModelRDFConverter[Manuscript]):
         yield from ttl(
             e13_crm_p7_uri,
             (RDF.type, star.E13_crm_P7),
-            (crm.P140_assigned_attribute_to, self.manuscript_production_uri),
-            (
-                crm.P141_assigned,
-                ttl(mkuri(), (RDF.type, crm.E27_Site), (RDFS.label, place)),
-            ),
+            (crm.P140_assigned_attribute_to, self.model.manuscript_production_uri),
+            (crm.P141_assigned, place_model.place_uri),
         )
 
         yield from self.authority_passage_triples(e13_crm_p7_uri)
@@ -122,7 +124,7 @@ class ManuscriptRDFConverter(_ModelRDFConverter[Manuscript]):
         yield from ttl(
             e13_crm_p14_uri,
             (RDF.type, star.E13_crm_P14),
-            (crm.P140_assigned_attribute_to, self.manuscript_production_uri),
+            (crm.P140_assigned_attribute_to, self.model.manuscript_production_uri),
             (crm.P141_assigned, person_model.person_uri),
         )
 
@@ -140,14 +142,14 @@ class ManuscriptRDFConverter(_ModelRDFConverter[Manuscript]):
         yield from ttl(
             e13_crm_p11_uri,
             (RDF.type, star.E13_crm_P11),
-            (crm.P140_assigned_attribute_to, self.manuscript_production_uri),
+            (crm.P140_assigned_attribute_to, self.model.manuscript_production_uri),
             (crm.P141_assigned, person_model.person_uri),
         )
 
     def __iter__(self) -> Iterator[_Triple]:
         return itertools.chain(
             self.base_triples(),
-            self.manuscript_assertion_triples(),
+            self.manuscript_contains_text_triples(),
             self.manuscript_production_triples(),
             self.manuscript_timeframe_assertion(),
             self.manuscript_location_assertion(),

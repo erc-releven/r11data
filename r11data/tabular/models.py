@@ -15,7 +15,7 @@ from pydantic import (
     model_validator,
 )
 from pydantic_extra_types.coordinate import Coordinate
-from r11data.tabular.utils.rdf_utils import aaao, mkuri, pwro, r11spec
+from r11data.tabular.utils.rdf_utils import aaao, crm, mkuri, pwro, r11spec
 from rdflib import URIRef
 
 
@@ -243,6 +243,16 @@ class TextPublication(_AuthoritySourceBase):
 
 
 class Manuscript(_AuthoritySourceBase):
+    @computed_field
+    @property
+    def manuscript_uri(self) -> URIRef:
+        return mkuri(r11spec.Manuscript, self.identifier)
+
+    @computed_field
+    @property
+    def manuscript_production_uri(self) -> URIRef:
+        return mkuri(crm.E12_Production, self.identifier)
+
     identifier: str = Field(validation_alias="Identifier")
     dating: str = Field(validation_alias="Dating")
     place_copied: str | None = Field(validation_alias="Place copied")
