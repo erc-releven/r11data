@@ -1,5 +1,5 @@
-from functools import cached_property
 import re
+from functools import cached_property
 from typing import Any
 
 import pandas as pd
@@ -84,7 +84,7 @@ class Sheets:
     def text_publications(self) -> pd.DataFrame:
         return self.load_sheet(
             sheet_name="Text publications",
-            required_columns=["Text identifier"],
+            required_columns=["Text identifier", "Source text/publication"],
         )
 
     @cached_property

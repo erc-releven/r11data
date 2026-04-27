@@ -15,7 +15,7 @@ from pydantic import (
     model_validator,
 )
 from pydantic_extra_types.coordinate import Coordinate
-from r11data.tabular.utils.rdf_utils import aaao, crm, mkuri, pwro, r11spec
+from r11data.tabular.utils.rdf_utils import aaao, crm, lrm, mkuri, pwro, r11spec
 from rdflib import URIRef
 
 
@@ -224,6 +224,37 @@ class ActorGroup(_AuthoritySourceBase):
 
 class TextPublication(_AuthoritySourceBase):
     """TextPublication model corresponding to the main 'Text publications' sheet."""
+
+    @computed_field
+    @property
+    def text_expression_uri(self) -> URIRef:
+        passage_uri = self.passage_uri
+        assert passage_uri is not None
+
+        return passage_uri
+
+    @computed_field
+    @property
+    def text_expression_creation_uri(self) -> URIRef:
+        return mkuri(lrm.F28_Expression_Creation, self.text_expression_uri)
+
+    @computed_field
+    @property
+    def text_expression_appellation_uri(self) -> URIRef:
+        return mkuri(crm.E33_E41_Linguistic_Appellation, self.text_expression_uri)
+
+    @computed_field
+    @property
+    def text_publication_uri(self) -> URIRef:
+        publication_uri = self.publication_uri
+        assert publication_uri is not None
+
+        return publication_uri
+
+    @computed_field
+    @property
+    def text_publication_creation_uri(self) -> URIRef:
+        return mkuri(lrm.F28_Expression_Creation, self.text_publication_uri)
 
     text_identifier: str = Field(validation_alias="Text identifier")
 

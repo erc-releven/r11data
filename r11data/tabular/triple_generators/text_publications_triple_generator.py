@@ -1,37 +1,32 @@
 """TripleGenerator for the Persons sheet."""
 
-from collections.abc import Iterator
 import itertools
+from collections.abc import Iterator
 
 from lodkit import _Triple, ttl
 from r11data.tabular.models import TextPublication
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
-from r11data.tabular.utils.rdf_utils import crm, lrm, mkuri, r11spec, star
+from r11data.tabular.utils.rdf_utils import (
+    crm,
+    generate_time_triples,
+    lrm,
+    mkuri,
+    r11spec,
+    star,
+)
 from rdflib import RDF, RDFS, URIRef
-import structlog
-
-
-logger = structlog.get_logger()
 
 
 class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+    """RDFConverter for TextPublication models.
 
-        self.written_text_uri: URIRef = self._mktexturi("Text Expression")
-        self.written_text_creation_uri: URIRef = self._mktexturi("Expression Creation")
-        self.text_edition_uri: URIRef = self._mktexturi("Publication")
-        self.text_edition_creation_uri: URIRef = self._mktexturi(
-            "text edition creation"
-        )
-
-    def _mktexturi(self, hash_part: str) -> URIRef:
-        """Helpter for creating a text_identifier based hashed URI."""
-        return mkuri(self.model.text_identifier, hash_part)
+    Note: Here, the Authority data is always the same as the TextPublication data;
+    i.e. assertions about TextPublications have themselves as authority.
+    """
 
     def base_triples(self) -> Iterator[_Triple]:
         yield from ttl(
-            self.written_text_uri,
+            self.model.text_expression_uri,
             (RDF.type, r11spec.Text_Expression),
             (RDFS.label, self.model.text_identifier),
         )
@@ -42,11 +37,11 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
             (
                 crm.P140_assigned_attribute_to,
                 ttl(
-                    self.written_text_creation_uri,
+                    self.model.text_expression_creation_uri,
                     (RDF.type, lrm.F28_Expression_Creation),
                 ),
             ),
-            (crm.P141_assigned, self.written_text_uri),
+            (crm.P141_assigned, self.model.text_expression_uri),
         )
 
     def title_assertion_triples(self) -> Iterator[_Triple]:
@@ -58,11 +53,11 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
         yield from ttl(
             e13_crm_p1_uri,
             (RDF.type, star.E13_crm_P1),
-            (crm.P140_assigned_attribute_to, self.written_text_uri),
+            (crm.P140_assigned_attribute_to, self.model.text_expression_uri),
             (
                 crm.P141_assigned,
                 ttl(
-                    mkuri(),
+                    self.model.text_expression_appellation_uri,
                     (RDF.type, crm.E33_E41_Linguistic_Appellation),
                     (crm.P190_has_symbolic_content, text_name),
                 ),
@@ -77,22 +72,25 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
             return
 
         e13_crm_p4_uri = mkuri()
+        e52_uri = mkuri()
 
         yield from ttl(
             e13_crm_p4_uri,
-            (RDF.type, star.E13_crm_p4),
-            (crm.P140_assigned_attribute_to, self.written_text_creation_uri),
+            (RDF.type, star.E13_crm_P4),
+            (crm.P140_assigned_attribute_to, self.model.text_expression_creation_uri),
             (
                 crm.P141_assigned,
                 ttl(
-                    mkuri(),
+                    e52_uri,
                     (RDF.type, crm["E52_Time-Span"]),
                     (RDFS.label, self.model.creation_date),
                 ),
             ),
         )
 
-        # authority + passage triples
+        yield from generate_time_triples(
+            e52_uri=e52_uri, date_value=self.model.creation_date
+        )
         yield from self.authority_passage_triples(e13_crm_p4_uri)
 
     def creation_author_assertion_triples(self) -> Iterator[_Triple]:
@@ -106,7 +104,7 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
         yield from ttl(
             e13_crm_p14_uri,
             (RDF.type, star.E13_crm_P14),
-            (crm.P140_assigned_attribute_to, self.written_text_creation_uri),
+            (crm.P140_assigned_attribute_to, self.model.text_expression_creation_uri),
             (crm.P141_assigned, person_data.person_uri),
         )
         # authority + passage triples
@@ -114,9 +112,9 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
 
     def edition_base_triples(self) -> Iterator[_Triple]:
         return ttl(
-            self.text_edition_uri,
+            self.model.text_publication_uri,
             (RDF.type, r11spec.Publication),
-            (RDFS.label, self.model.edition),  # edition is not optional
+            (RDFS.label, self.model.edition),
         )
 
     def edition_ceation_assertion_triples(self) -> Iterator[_Triple]:
@@ -126,11 +124,11 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
             (
                 crm.P140_assigned_attribute_to,
                 ttl(
-                    self.text_edition_creation_uri,
+                    self.model.text_publication_creation_uri,
                     (RDF.type, lrm.F28_Expression_Creation),
                 ),
             ),
-            (crm.P141_assigned, self.text_edition_uri),
+            (crm.P141_assigned, self.model.text_publication_uri),
         )
 
     def edition_editor_assertion_triples(self) -> Iterator[_Triple]:
@@ -144,7 +142,7 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
         yield from ttl(
             e13_crm_p14_uri,
             (RDF.type, star.E13_crm_P14),
-            (crm.P140_assigned_attribute_to, self.written_text_creation_uri),
+            (crm.P140_assigned_attribute_to, self.model.text_publication_creation_uri),
             (crm.P141_assigned, person_data.person_uri),
         )
 
@@ -157,8 +155,8 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
         yield from ttl(
             e13_lrmoo_r76_uri,
             (RDF.type, star.E13_lrmoo_R76),
-            (crm.P140_assigned_attribute_to, self.text_edition_uri),
-            (crm.P141_assigned, self.written_text_uri),
+            (crm.P140_assigned_attribute_to, self.model.text_publication_uri),
+            (crm.P141_assigned, self.model.text_expression_uri),
         )
 
         # authority + passage triples
