@@ -42,7 +42,7 @@ class ManuscriptRDFConverter(_ModelRDFConverter[Manuscript]):
             e13_crm_128_uri,
             (RDF.type, star.E13_crm_P128),
             (crm.P140_assigned_attribute_to, self.model.manuscript_uri),
-            (crm.P141_assigned, contained_publication.text_identifier),
+            (crm.P141_assigned, contained_publication.text_expression_uri),
         )
 
         yield from self.authority_passage_triples(e13_crm_128_uri)

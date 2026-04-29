@@ -69,11 +69,12 @@ class _AuthoritySourceBase(BaseModel):
         if (publication := self.source_text_publication) is None:
             return None
 
-        return mkuri(publication, "https://r11.eu/")
+        return mkuri(r11spec.Publication, publication, "https://r11.eu/")
 
     @computed_field
     @property
     def passage_uri(self) -> URIRef | None:
+        """Passage / Linguistic Object URI."""
         publication_uri = self.publication_uri
         reference = self.source_text_reference
         excerpt = self.source_text_excerpt
@@ -228,10 +229,7 @@ class TextPublication(_AuthoritySourceBase):
     @computed_field
     @property
     def text_expression_uri(self) -> URIRef:
-        passage_uri = self.passage_uri
-        assert passage_uri is not None
-
-        return passage_uri
+        return mkuri(r11spec.Text_Expression, self.text_identifier, "https://r11.eu/")
 
     @computed_field
     @property
@@ -282,7 +280,7 @@ class Manuscript(_AuthoritySourceBase):
     @computed_field
     @property
     def manuscript_production_uri(self) -> URIRef:
-        return mkuri(crm.E12_Production, self.identifier)
+        return mkuri(crm.E12_Production, self.manuscript_production_uri)
 
     identifier: str = Field(validation_alias="Identifier")
     dating: str = Field(validation_alias="Dating")
