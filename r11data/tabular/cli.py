@@ -1,5 +1,6 @@
 from pathlib import Path
 
+import typer
 from r11data.tabular.generators import (
     actor_groups_triples,
     author_groups_triples,
@@ -8,6 +9,8 @@ from r11data.tabular.generators import (
     boulloteria_triples,
     correspondence_triples,
     death_triples,
+    geopolitical_event_triples,
+    journeys_triples,
     lead_seals_triples,
     location_triples,
     manuscript_triples,
@@ -16,8 +19,6 @@ from r11data.tabular.generators import (
     social_relationships_triples,
     text_publication_triples,
 )
-import typer
-
 
 app = typer.Typer()
 
@@ -37,6 +38,8 @@ GENERATORS = {
     "text_publications": text_publication_triples,
     "deaths": death_triples,
     "locations": location_triples,
+    "journeys": journeys_triples,
+    "geopolitical_events": geopolitical_event_triples,
 }
 
 

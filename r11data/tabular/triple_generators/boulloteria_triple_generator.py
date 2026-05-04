@@ -26,14 +26,16 @@ class BoulloteriaRDFConverter(_ModelRDFConverter[Boulloteria]):
             )
 
     def id_assertion_triples(self) -> Iterator[_Triple]:
+        e15_uri = mkuri()
+
         yield from ttl(
-            mkuri(),
+            e15_uri,
             (RDF.type, crm.E15_Identifier_Assignment),
             (crm.P140_assigned_attribute_to, self.model.boulloterion_uri),
             (
                 crm.P37_assigned,
                 ttl(
-                    mkuri(),
+                    self.model.identifier_uri,
                     (RDF.type, crm.E42_Identifier),
                     (
                         crm.P190_has_symbolic_content,
@@ -42,6 +44,8 @@ class BoulloteriaRDFConverter(_ModelRDFConverter[Boulloteria]):
                 ),
             ),
         )
+
+        yield from self.authority_passage_triples(e15_uri)
 
     def produced_seal_triples(self) -> Iterator[_Triple]:
         seal_model: LeadSeals | None = self.lookup(
@@ -56,13 +60,12 @@ class BoulloteriaRDFConverter(_ModelRDFConverter[Boulloteria]):
             return
 
         e13_spec_l1_uri = mkuri()
-        seal_uri = mkuri(seal_model.seal_id)  # connection to seal triple generator
 
         yield from ttl(
             e13_spec_l1_uri,
             (RDF.type, star.E13_spec_L1),
             (crm.P140_assigned_attribute_to, self.model.boulloterion_uri),
-            (crm.P141_assigned, seal_uri),
+            (crm.P141_assigned, seal_model.seal_uri),
         )
 
         yield from self.authority_passage_triples(e13_spec_l1_uri)
@@ -102,18 +105,20 @@ class BoulloteriaRDFConverter(_ModelRDFConverter[Boulloteria]):
         yield from self.authority_passage_triples(e13_crm_p4_uri)
 
         # ownership: owner
-        if (owner := self.model.owner) is not None:
-            owner_model: Person = self.get_person_data(person_id=owner)
-            e13_crm_p22 = mkuri()
+        if (owner := self.model.owner) is None:
+            return
 
-            yield from ttl(
-                e13_crm_p22,
-                (RDF.type, star.E13_crm_P22),
-                (crm.P140_assigned_attribute_to, ownership_uri),
-                (crm.P141_assigned, owner_model.person_uri),
-            )
+        owner_model: Person = self.get_person_data(person_id=owner)
+        e13_crm_p22 = mkuri()
 
-            yield from self.authority_passage_triples(e13_crm_p22)
+        yield from ttl(
+            e13_crm_p22,
+            (RDF.type, star.E13_crm_P22),
+            (crm.P140_assigned_attribute_to, ownership_uri),
+            (crm.P141_assigned, owner_model.person_uri),
+        )
+
+        yield from self.authority_passage_triples(e13_crm_p22)
 
     def __iter__(self) -> Iterator[_Triple]:
         return itertools.chain(

@@ -25,7 +25,8 @@ class OtherObjectsRDFConverter(_ModelRDFConverter[OtherObjects]):
             yield from ttl(
                 e17_uri,
                 (RDF.type, crm.E17_Type_Assignment),
-                (crm.P41_classified, self.object_uri)(
+                (crm.P41_classified, self.object_uri),
+                (
                     crm.P42_assigned,
                     ttl(
                         mkuri(object_type),

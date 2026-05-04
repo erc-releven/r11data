@@ -303,7 +303,17 @@ class SocialRelationship(_AuthoritySourceBase):
 
 
 class Journey(_AuthoritySourceBase):
-    journey_id: str | None = Field(validation_alias="Journey id")
+    @computed_field
+    @property
+    def voyage_uri(self) -> URIRef:
+        return mkuri(pwro.WE7_Voyage, self.journey_id)
+
+    @computed_field
+    @property
+    def visit_uri(self) -> URIRef:
+        return mkuri(pwro.WE13_Visit, self.journey_id)
+
+    journey_id: str = Field(validation_alias="Journey id")
 
     who_travelled: str | None = Field(validation_alias="Who travelled")
     group_travelled: str | None = Field(validation_alias="Group travelled")
@@ -333,6 +343,21 @@ class Journey(_AuthoritySourceBase):
 
 
 class GeopoliticalEvent(_AuthoritySourceBase):
+    @computed_field
+    @property
+    def event_uri(self) -> URIRef:
+        return mkuri(crm.E7_Activity, self.event_label)
+
+    @computed_field
+    @property
+    def event_type_uri(self) -> URIRef:
+        return mkuri("Event type", self.event_type)
+
+    @computed_field
+    @property
+    def attack_event_uri(self) -> URIRef:
+        return mkuri(pwro.WE6_Attack, self.event_uri)
+
     event_label: str = Field(validation_alias="Event label")
     event_date: str = Field(validation_alias="Event date")
     event_type: str = Field(validation_alias="Event type")
@@ -425,6 +450,13 @@ class Boulloteria(_AuthoritySourceBase):
     @property
     def boulloterion_uri(self) -> URIRef:
         return mkuri(self.boulloterion_title, "https://r11.eu/")
+
+    @computed_field
+    @property
+    def identifier_uri(self) -> URIRef:
+        """E42_Identifier URI."""
+        # todo: check if r11.eu is really the agent here
+        return mkuri(crm.E42_Identifier, self.boulloterion_title, "https://r11.eu/")
 
     boulloterion_title: str = Field(validation_alias="Boulloterion title")
     dating: str = Field(validation_alias="Dating")

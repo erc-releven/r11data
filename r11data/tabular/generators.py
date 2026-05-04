@@ -11,6 +11,8 @@ from r11data.tabular.models import (
     Boulloteria,
     Correspondence,
     DeathSheetModel,
+    GeopoliticalEvent,
+    Journey,
     LeadSeals,
     LocationSheetModel,
     Manuscript,
@@ -26,6 +28,8 @@ from r11data.tabular.triple_generators import (
     BirthDeathEventRDFConverter,
     CorrespondenceRDFConverter,
     DeathsTripleGenerator,
+    GeopolicalEventRDFConverter,
+    JourneysRDFConverter,
     LocationsTripleGenerator,
     PersonRDFConverter,
     PlaceRDFConverter,
@@ -50,7 +54,6 @@ from r11data.tabular.utils.rdf_utils import (
     lewis_uri,
     marton_uri,
 )
-
 
 ##################################################
 #### sheets
@@ -142,6 +145,39 @@ def places_triples() -> Iterator[Triple]:
         lewis_places_triple_generator,
         aleks_places_triple_generator,
         marton_places_triple_generator,
+    )
+
+
+##################################################
+#### Journeys
+
+
+def journeys_triples() -> Iterator[Triple]:
+    lewis_journeys_triple_generator: TripleGenerator[Journey] = TripleGenerator(
+        focus_sheet=lewis_sheets.journeys,
+        sheets=lewis_sheets,
+        model_type=Journey,
+        model_converter=JourneysRDFConverter,
+    )
+
+    aleks_journeys_triple_generator: TripleGenerator[Journey] = TripleGenerator(
+        focus_sheet=aleks_sheets.journeys,
+        sheets=aleks_sheets,
+        model_type=Journey,
+        model_converter=JourneysRDFConverter,
+    )
+
+    marton_journeys_triple_generator: TripleGenerator[Journey] = TripleGenerator(
+        focus_sheet=marton_sheets.journeys,
+        sheets=marton_sheets,
+        model_type=Journey,
+        model_converter=JourneysRDFConverter,
+    )
+
+    return TripleChain(
+        lewis_journeys_triple_generator,
+        aleks_journeys_triple_generator,
+        marton_journeys_triple_generator,
     )
 
 
@@ -500,4 +536,43 @@ def location_triples() -> Iterator[Triple]:
             for df in [lewis_locations_df, aleks_locations_df, marton_locations_df]
             for _, row in df.iterrows()
         ]
+    )
+
+
+##################################################
+#### GeopolicialEvents
+
+
+def geopolitical_event_triples() -> Iterator[Triple]:
+    lewis_geo_events_triple_generator: TripleGenerator[GeopoliticalEvent] = (
+        TripleGenerator(
+            focus_sheet=lewis_sheets.geopolitical_events,
+            sheets=lewis_sheets,
+            model_type=GeopoliticalEvent,
+            model_converter=GeopolicalEventRDFConverter,
+        )
+    )
+
+    aleks_geo_events_triple_generator: TripleGenerator[GeopoliticalEvent] = (
+        TripleGenerator(
+            focus_sheet=aleks_sheets.geopolitical_events,
+            sheets=aleks_sheets,
+            model_type=GeopoliticalEvent,
+            model_converter=GeopolicalEventRDFConverter,
+        )
+    )
+
+    marton_geo_events_triple_generator: TripleGenerator[GeopoliticalEvent] = (
+        TripleGenerator(
+            focus_sheet=marton_sheets.geopolitical_events,
+            sheets=marton_sheets,
+            model_type=GeopoliticalEvent,
+            model_converter=GeopolicalEventRDFConverter,
+        )
+    )
+
+    return TripleChain(
+        lewis_geo_events_triple_generator,
+        aleks_geo_events_triple_generator,
+        marton_geo_events_triple_generator,
     )

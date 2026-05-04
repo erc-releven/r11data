@@ -1,0 +1,1342 @@
+@prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://r11.eu/rdf/resource/0ddcde43f4ec5afe73f5a87cf94994972ae6> ns1:P67_refers_to <https://r11.eu/rdf/resource/2acce1a3-a8e6-45d5-93c7-eadfe4b01003>,
+        <https://r11.eu/rdf/resource/e6972201-a474-4279-81e3-110525ebdc02> .
+
+<https://r11.eu/rdf/resource/0efaefc46991f3a803023099ddeb9d00e4a1> ns1:P67_refers_to <https://r11.eu/rdf/resource/21791440-a200-44ec-818d-018b9c165720>,
+        <https://r11.eu/rdf/resource/63a2ee0d-0674-4d15-ab92-faa0db6b1ac9>,
+        <https://r11.eu/rdf/resource/782171af-4bc6-4573-a317-ebcab6b76f8d>,
+        <https://r11.eu/rdf/resource/ce579822-e371-424d-8d8c-7e15d55c3428> .
+
+<https://r11.eu/rdf/resource/172fa37b6f52cc87fc9e800ebbbd299b96ef> ns1:P67_refers_to <https://r11.eu/rdf/resource/03360bf8-de17-47ca-9606-fc5150962ef9>,
+        <https://r11.eu/rdf/resource/1b206803-6b26-498f-b1e4-2755942d6b29> .
+
+<https://r11.eu/rdf/resource/189eb48b46ac1999a0d26dbb93ade7f6e525> ns1:P67_refers_to <https://r11.eu/rdf/resource/1ac2e4c0-5d99-4257-a555-7fce37822aeb>,
+        <https://r11.eu/rdf/resource/b640eab3-3cc7-4d94-9254-ec91dcbf5a78> .
+
+<https://r11.eu/rdf/resource/190f377283b52cf36c0bb96e2dc8b1639222> ns1:P67_refers_to <https://r11.eu/rdf/resource/de0f4747-57eb-471a-8804-871b3b99d3b9>,
+        <https://r11.eu/rdf/resource/fa7fce2b-1dcf-4efc-a910-8267cdb18bb0> .
+
+<https://r11.eu/rdf/resource/1af78e605458a08b282f3d8acb96c725abe4> ns1:P67_refers_to <https://r11.eu/rdf/resource/1d2c68a5-63bc-4664-bbfa-7af017abb483>,
+        <https://r11.eu/rdf/resource/69fc612f-42a4-4dd9-bee0-ef86f578c74d> .
+
+<https://r11.eu/rdf/resource/23377689dfdd20a66802cc7150f2b50ce028> ns1:P67_refers_to <https://r11.eu/rdf/resource/49a6411f-e6b2-436c-a3c3-284077a3519e>,
+        <https://r11.eu/rdf/resource/8156c3d5-c6e9-4da7-9254-f9ba54eff74d> .
+
+<https://r11.eu/rdf/resource/2452af4c8643fe8a6b299aeb66e32f677127> ns1:P67_refers_to <https://r11.eu/rdf/resource/09a1930f-dbdb-4e4a-b4c9-a7e04fb1d1a8>,
+        <https://r11.eu/rdf/resource/7c2764b6-32a7-48a1-99ad-f2aaa8cd7c9e> .
+
+<https://r11.eu/rdf/resource/2d59aadcbc9445b68ec1eb4f19777f3d921f> ns1:P67_refers_to <https://r11.eu/rdf/resource/3f47e67f-12b1-4d8c-8136-b69726db2f36>,
+        <https://r11.eu/rdf/resource/424cc906-d693-4288-b988-0a387783e47e>,
+        <https://r11.eu/rdf/resource/5a658651-1d33-401f-b553-48b2f92512a9>,
+        <https://r11.eu/rdf/resource/710cdb24-e7ff-4553-8ff0-fe0925da6567>,
+        <https://r11.eu/rdf/resource/7a49c318-4277-4030-8882-ae48ab0ea112>,
+        <https://r11.eu/rdf/resource/7edd8eaa-f256-427d-807c-8dd7faee53ca> .
+
+<https://r11.eu/rdf/resource/342d59796d0d0a6752c10748a639f93daada> ns1:P67_refers_to <https://r11.eu/rdf/resource/a01e6645-a5db-4857-9f1e-d4bfe0cc8f52>,
+        <https://r11.eu/rdf/resource/a6dd2c97-ad92-4f39-81c5-dd47e673e4ba> .
+
+<https://r11.eu/rdf/resource/35660cad5972e5b3ab222530de6fa14e0c39> ns1:P67_refers_to <https://r11.eu/rdf/resource/183928f5-4794-42eb-9159-a56bf1383e1b>,
+        <https://r11.eu/rdf/resource/f133ec01-4589-4dd9-b23f-4cff1e7d1d4c> .
+
+<https://r11.eu/rdf/resource/3a6aa0aebbfade0c0ac22bcf2dc84c16cd19> ns1:P67_refers_to <https://r11.eu/rdf/resource/44a1bc24-bce6-48b6-8af5-213258b71b08>,
+        <https://r11.eu/rdf/resource/6ed923ce-7287-4d65-b8ee-b2b37ab178bb> .
+
+<https://r11.eu/rdf/resource/3d2adb9429a8d0d2cd0a0dfbee61e2b30491> ns1:P67_refers_to <https://r11.eu/rdf/resource/8a99e279-e92f-41bc-b6a9-1d430130515e>,
+        <https://r11.eu/rdf/resource/e45400ed-7a52-4597-8a8c-45418e1d8fec> .
+
+<https://r11.eu/rdf/resource/3ee1f2604a2539935bf565c4c73d76e29300> ns1:P67_refers_to <https://r11.eu/rdf/resource/1fd486f6-5161-495b-86ae-31316d1af626>,
+        <https://r11.eu/rdf/resource/7ede041d-92f8-4191-8105-b63151c1628e> .
+
+<https://r11.eu/rdf/resource/40c09f8fbe0d8c64d31dffc05540211767ba> ns1:P67_refers_to <https://r11.eu/rdf/resource/8832eba7-1d0a-4001-90cb-8db46fe6ec55>,
+        <https://r11.eu/rdf/resource/88d96baa-24e8-43b7-a9a2-e32a5889bedd> .
+
+<https://r11.eu/rdf/resource/4417ce5e9c1b5e091b7eed76484063435ad1> ns1:P67_refers_to <https://r11.eu/rdf/resource/aad25a9d-34ca-4b6d-827a-2dc24c5bd3c8>,
+        <https://r11.eu/rdf/resource/cfcad911-6b0f-420b-8661-5541998a6edd> .
+
+<https://r11.eu/rdf/resource/46a065ed2ac969054175925d084bdf5933e2> ns1:P67_refers_to <https://r11.eu/rdf/resource/6db5af6b-6617-4e5d-b180-6cc513309de9>,
+        <https://r11.eu/rdf/resource/fa10a5bb-6a71-4eef-a4bc-17cab5b09742> .
+
+<https://r11.eu/rdf/resource/46fc1b82ecc68f7e2d6c724b06afdaef6e93> ns1:P67_refers_to <https://r11.eu/rdf/resource/60d2a139-d137-4b56-af1c-f79688e5809a>,
+        <https://r11.eu/rdf/resource/6f81dcc0-5167-42b2-8ac3-5825602e6370> .
+
+<https://r11.eu/rdf/resource/480f851b7197835b1291a1a344da5375e03f> ns1:P67_refers_to <https://r11.eu/rdf/resource/682e4a44-5651-4a38-be9f-338705388157>,
+        <https://r11.eu/rdf/resource/862032ea-6958-4260-bd20-e97a38a6e0bd> .
+
+<https://r11.eu/rdf/resource/4d520edcf9b77ad701cae3f98b68d635eb1f> ns1:P67_refers_to <https://r11.eu/rdf/resource/0e9ff0e3-d77d-4b14-9da7-4b020464de09>,
+        <https://r11.eu/rdf/resource/9b0d99cf-3f66-4673-a4ea-0b407f03a799> .
+
+<https://r11.eu/rdf/resource/4daa59bfc0eb96df46624cca29674c1ea9c1> ns1:P67_refers_to <https://r11.eu/rdf/resource/0604302e-ed76-4dc0-bb7f-59e4855fab23>,
+        <https://r11.eu/rdf/resource/10258c02-40f1-4571-8b6a-1493aefe42a2>,
+        <https://r11.eu/rdf/resource/4214cb8d-8cd9-4450-a797-e75d485d0889>,
+        <https://r11.eu/rdf/resource/7077d3fa-49ff-44f4-9fd8-10b27c554c3c>,
+        <https://r11.eu/rdf/resource/bb11e379-1922-44db-9c2f-3ce31975b4d6>,
+        <https://r11.eu/rdf/resource/c44c0625-690a-4df1-90cb-682bf8f1c435> .
+
+<https://r11.eu/rdf/resource/5088324cdadb23739ece079248e5512b27a8> ns1:P67_refers_to <https://r11.eu/rdf/resource/2aea5e13-6c99-46ec-b380-cc4bee870fca>,
+        <https://r11.eu/rdf/resource/b99f8dce-9def-4392-954d-8651a644b13d> .
+
+<https://r11.eu/rdf/resource/55f9d82ec68b5c67622aca2a4373f0ef316d> ns1:P67_refers_to <https://r11.eu/rdf/resource/24d12695-f5da-4880-b224-6cb98848d492>,
+        <https://r11.eu/rdf/resource/ef1d2e08-d1f4-424e-8159-ee7fe1516428> .
+
+<https://r11.eu/rdf/resource/5647690999a463877b2641c73a7ab7385bf0> ns1:P67_refers_to <https://r11.eu/rdf/resource/7d78626a-0900-45b4-8474-eb8c7653197c>,
+        <https://r11.eu/rdf/resource/910d63db-ed4b-4c5b-985d-354987557a50> .
+
+<https://r11.eu/rdf/resource/5695c12f349cd6ccd4f30a04904936ea399a> ns1:P67_refers_to <https://r11.eu/rdf/resource/604732ee-eeab-4773-8f92-0d575d49953f>,
+        <https://r11.eu/rdf/resource/c0ea58b2-a002-4042-b006-fd5793ff8bb6> .
+
+<https://r11.eu/rdf/resource/5a564f047495ae4bb765f2a1ea0c32994520> ns1:P67_refers_to <https://r11.eu/rdf/resource/6ee31173-b850-4f85-90dc-9c54c566ccce>,
+        <https://r11.eu/rdf/resource/d4a345cc-c479-4431-9fe5-22d2f72acac0> .
+
+<https://r11.eu/rdf/resource/5ccc9b3c1fdcdb021b09115fbb191481f37d> ns1:P67_refers_to <https://r11.eu/rdf/resource/71472d0f-4b61-4393-90fa-37ff56cd518c>,
+        <https://r11.eu/rdf/resource/927bd2e1-1d0d-4bef-9ed8-34a8949b416b> .
+
+<https://r11.eu/rdf/resource/5cf0877efdf2b89fd33c98e7d29a0ef560db> ns1:P67_refers_to <https://r11.eu/rdf/resource/d14ae873-2aa2-467b-9594-d5d2ace4eed0>,
+        <https://r11.eu/rdf/resource/e21f1470-716e-46fa-a1f9-52488752b1b8> .
+
+<https://r11.eu/rdf/resource/68b4dd830827e41e8439f7012d0916321d44> ns1:P67_refers_to <https://r11.eu/rdf/resource/6e4f262a-75a0-47b3-a5d8-5e368caadccc>,
+        <https://r11.eu/rdf/resource/f8158721-6f3e-498f-9425-fd92f5545b8e> .
+
+<https://r11.eu/rdf/resource/6e9572ee2dffc669f90ad18f129527591e5f> ns1:P67_refers_to <https://r11.eu/rdf/resource/2c2f5fd7-49a6-4c0c-b5e6-45be0b5a00a9>,
+        <https://r11.eu/rdf/resource/38210041-5400-4e15-a829-1aedc21299f5> .
+
+<https://r11.eu/rdf/resource/776080853349c2e3c3b9baa92deb79e94598> ns1:P67_refers_to <https://r11.eu/rdf/resource/156a2914-73e2-4b9e-9310-b42c93352919>,
+        <https://r11.eu/rdf/resource/d71257d3-ae5b-478a-938b-d6cdfd1719ad> .
+
+<https://r11.eu/rdf/resource/7a07a4ef943a01706d8a7811f780614dff0f> ns1:P67_refers_to <https://r11.eu/rdf/resource/8d492bae-42b9-424c-8a15-91b6bb7772e5>,
+        <https://r11.eu/rdf/resource/c0035d6e-4085-49d3-a537-29e82fb9a530> .
+
+<https://r11.eu/rdf/resource/7a23dbc9c307c21b62c55d3819bd65550c07> ns1:P67_refers_to <https://r11.eu/rdf/resource/8c739f79-dbc3-4476-be2b-c31b4306a2bb>,
+        <https://r11.eu/rdf/resource/9f5660f8-e2fe-4a01-8106-f34bd508cc96>,
+        <https://r11.eu/rdf/resource/a5cfb31c-e63b-4b32-a1d5-6c5d2c8123a8>,
+        <https://r11.eu/rdf/resource/c64573a7-0219-41d6-a926-c089771fb3b9> .
+
+<https://r11.eu/rdf/resource/7a64e3b98a269638f3ac479d40f4c88df3d6> ns1:P67_refers_to <https://r11.eu/rdf/resource/3aad0c96-ff61-4187-9270-1eab54894ec1>,
+        <https://r11.eu/rdf/resource/c8aa0f57-8210-46ac-a3ec-2818d672302a> .
+
+<https://r11.eu/rdf/resource/7ac8570b4f7f370b49463e2017d530b37d8f> ns1:P67_refers_to <https://r11.eu/rdf/resource/9face1b1-6607-48f8-b4f0-6b964965872c>,
+        <https://r11.eu/rdf/resource/eda9f560-589c-4791-afd6-68c86a2fdc24> .
+
+<https://r11.eu/rdf/resource/7cfc63f8369c1e866521d27a1a778b4f7bb9> ns1:P67_refers_to <https://r11.eu/rdf/resource/2681cd87-0393-47f5-be8e-45262821c152>,
+        <https://r11.eu/rdf/resource/e34349b5-468c-48e0-9c99-ea9e748e309e> .
+
+<https://r11.eu/rdf/resource/7dbf91fdba0ec42fc595f2b857b3e1b23cc9> ns1:P67_refers_to <https://r11.eu/rdf/resource/bdfe3ee7-f2db-494a-a570-21d2f69155f5>,
+        <https://r11.eu/rdf/resource/d9dc80f1-13fd-425e-baeb-1d957a12e794> .
+
+<https://r11.eu/rdf/resource/822f3e97c15ddf6814d919705261588565d4> ns1:P67_refers_to <https://r11.eu/rdf/resource/2c548cef-333c-447b-8cb2-de798331e0b9>,
+        <https://r11.eu/rdf/resource/ac8223ad-ea4a-4821-bd08-05f5d88792ba> .
+
+<https://r11.eu/rdf/resource/8cda33ef1561efe2fc2f3edc825ed97ecf0f> ns1:P67_refers_to <https://r11.eu/rdf/resource/173fb205-24bb-4ce3-900c-de3d6b38999f>,
+        <https://r11.eu/rdf/resource/3f347391-8cd0-46e4-84b9-14583d290a03> .
+
+<https://r11.eu/rdf/resource/8d44b2d53aa7a4bb05a115c0e185cf2b5bc4> ns1:P67_refers_to <https://r11.eu/rdf/resource/38ba86b3-53a4-424a-85c3-0baf8172b2cb>,
+        <https://r11.eu/rdf/resource/3b56378c-08e5-40ac-8e27-d9cbe4dadb0b> .
+
+<https://r11.eu/rdf/resource/8ff3385d4126164ec4ca9afa47958fae4206> ns1:P67_refers_to <https://r11.eu/rdf/resource/5227c3b9-2514-404a-9e2e-806c9bd0666b>,
+        <https://r11.eu/rdf/resource/d6c29983-b8f3-4267-b8af-6815501d423e> .
+
+<https://r11.eu/rdf/resource/95e669d6179e082fe43b8af1d840117ae36b> ns1:P67_refers_to <https://r11.eu/rdf/resource/0cca1f10-ec14-42ad-82bf-3071a6903e5b>,
+        <https://r11.eu/rdf/resource/99743800-c403-4368-b6ef-9ee0e3245149>,
+        <https://r11.eu/rdf/resource/a5edb412-4f0e-40a4-9227-bdd47770e94b>,
+        <https://r11.eu/rdf/resource/e2eb08eb-a657-411c-b0c2-91eb165607cc> .
+
+<https://r11.eu/rdf/resource/98726642ee3376025ff6a6f90c47a3450aa4> ns1:P67_refers_to <https://r11.eu/rdf/resource/adf12945-fdf1-4e8d-8394-a371ec2e34a3>,
+        <https://r11.eu/rdf/resource/af6a9469-8226-47da-84d0-3af19bcbf85c> .
+
+<https://r11.eu/rdf/resource/9c0ada4587f781bfb14d27fd54cc5c27fb74> ns1:P67_refers_to <https://r11.eu/rdf/resource/14d5e378-d507-4372-950b-d4af3bea83b0>,
+        <https://r11.eu/rdf/resource/b023fc41-6ace-4619-9e94-473acd64c111> .
+
+<https://r11.eu/rdf/resource/9ef0f0effd843d57cf781e74247f921a354c> ns1:P67_refers_to <https://r11.eu/rdf/resource/58afd9f4-03fd-4bec-b5e0-1b7a9318a579>,
+        <https://r11.eu/rdf/resource/7c4158a8-5c33-4618-b5af-289682ba05f8> .
+
+<https://r11.eu/rdf/resource/a3bf1cb1073282904dddfaecd22731cbaac7> ns1:P67_refers_to <https://r11.eu/rdf/resource/44c5c824-acd1-46c0-836f-e4e7f1c855e3>,
+        <https://r11.eu/rdf/resource/83d21a97-84b7-4693-93ba-49d2319bcf84> .
+
+<https://r11.eu/rdf/resource/a93ff6eb9dcff62319fb359aad89a3cec334> ns1:P67_refers_to <https://r11.eu/rdf/resource/526914bb-6293-418d-bb46-c1237546a306>,
+        <https://r11.eu/rdf/resource/be752088-7996-4a94-bb9c-695c9aa6aaea> .
+
+<https://r11.eu/rdf/resource/ae7682b6e1d17af9fcf90f25ecd84ce172cf> ns1:P67_refers_to <https://r11.eu/rdf/resource/073334f3-743e-44a7-b9f6-a3e51c0c93fb>,
+        <https://r11.eu/rdf/resource/b83e2607-0c55-4491-9d95-5d13b085912f> .
+
+<https://r11.eu/rdf/resource/b0c4f47f5e6b5109d07850a189c0451ad0c3> ns1:P67_refers_to <https://r11.eu/rdf/resource/4e47dcab-065c-456c-9507-ff87cfec4c10>,
+        <https://r11.eu/rdf/resource/5ac580a4-e00e-4b34-8661-a25ef5aaf2ba> .
+
+<https://r11.eu/rdf/resource/b99c81672ed21be413eddf49013e9b208d49> ns1:P67_refers_to <https://r11.eu/rdf/resource/6cebbacd-3fe0-4f9d-bc8b-2f75cd54f14c>,
+        <https://r11.eu/rdf/resource/dab1248e-6ddc-419f-bd81-dce2c29bd449> .
+
+<https://r11.eu/rdf/resource/b9f3c704c2ea69147b95fb9adebaef06e9b4> ns1:P67_refers_to <https://r11.eu/rdf/resource/4a197363-a37f-42d0-bfb8-a4b39543b9ca>,
+        <https://r11.eu/rdf/resource/8f4daefe-c883-448c-b28a-7b1795a17494> .
+
+<https://r11.eu/rdf/resource/ba27c870df1aeea90bcccf258c5625f875ef> ns1:P67_refers_to <https://r11.eu/rdf/resource/26edd6a0-8e73-4f35-841e-059611c54ced>,
+        <https://r11.eu/rdf/resource/4792f8fc-5da5-482f-9ed7-b68c904c17e3> .
+
+<https://r11.eu/rdf/resource/ba5bf043416a4f6b7017152bc3b068820c95> ns1:P67_refers_to <https://r11.eu/rdf/resource/0b6daae4-fb4e-42ac-aabc-741391955c60>,
+        <https://r11.eu/rdf/resource/3f4b1353-af24-4096-bac7-5bc1677140cc> .
+
+<https://r11.eu/rdf/resource/c4e8dfa1f9154ea1d4aa4361043b400f0b04> ns1:P67_refers_to <https://r11.eu/rdf/resource/5c0d0d83-395e-486b-a04f-f532713b7c5e>,
+        <https://r11.eu/rdf/resource/73c45f44-3fe1-45ca-b52c-4e4d18aca1b1> .
+
+<https://r11.eu/rdf/resource/c7a60860d1324f326067a07df9047f39b9fe> ns1:P67_refers_to <https://r11.eu/rdf/resource/6cf8aa87-f55d-4a4e-abb8-5dcc850fab4e>,
+        <https://r11.eu/rdf/resource/de44f32a-83b8-4d5e-b152-fea1a9a7a90a> .
+
+<https://r11.eu/rdf/resource/cd77e51d9c441c4775cbeaf9b3d543e51074> ns1:P67_refers_to <https://r11.eu/rdf/resource/734ddfb0-e16b-443c-97a8-86e48ddf43df>,
+        <https://r11.eu/rdf/resource/b7d580f0-d658-4839-9b4e-c13aac56e25d> .
+
+<https://r11.eu/rdf/resource/cdb0db429bb4f7147d0d5b0198de2bdabc6a> ns1:P67_refers_to <https://r11.eu/rdf/resource/c0050988-e142-4b2f-9684-5286c7d653fb>,
+        <https://r11.eu/rdf/resource/c88599d3-e1e2-496b-80e1-d089e3903a25> .
+
+<https://r11.eu/rdf/resource/d0d982a9b7597a57742ee67f4bbc311cb64d> ns1:P67_refers_to <https://r11.eu/rdf/resource/07556dd9-05ba-4825-96cd-e10dcefc054b>,
+        <https://r11.eu/rdf/resource/6bf04517-859c-44db-b039-b7b2bd7f960a>,
+        <https://r11.eu/rdf/resource/a05fe712-52d6-4166-845a-39ab660ca1dd>,
+        <https://r11.eu/rdf/resource/c1836bff-890d-4c22-a47d-2bb49cf04e37> .
+
+<https://r11.eu/rdf/resource/d2c01d961dfd742488d45104b8a76257f06b> ns1:P67_refers_to <https://r11.eu/rdf/resource/704ece01-b26f-4f25-b86b-ee115782cb03>,
+        <https://r11.eu/rdf/resource/cfbdda57-1712-4d68-b4c1-41decee86422> .
+
+<https://r11.eu/rdf/resource/d6572aee5980929e909223c108d400e5e211> ns1:P67_refers_to <https://r11.eu/rdf/resource/61b81634-323f-44f0-b2ff-0077309ec599>,
+        <https://r11.eu/rdf/resource/aec8936f-501b-4d8a-8593-99fdd60096f6> .
+
+<https://r11.eu/rdf/resource/d8c13da1c1d1e57d75b8ca84236d53d4fc8a> ns1:P67_refers_to <https://r11.eu/rdf/resource/36435f2b-587f-40a6-8d7f-33e70b10bbf6>,
+        <https://r11.eu/rdf/resource/73c5ca9e-f98d-4873-bdd5-9ed76f9ef944> .
+
+<https://r11.eu/rdf/resource/e1a20ae9e768f1008e32820325e73fd62d31> ns1:P67_refers_to <https://r11.eu/rdf/resource/546861a4-13a8-498e-be84-93760167837d>,
+        <https://r11.eu/rdf/resource/c84cd745-df8d-44ea-8321-293bd580d5f8> .
+
+<https://r11.eu/rdf/resource/e3c4b8b12933a4268bddeec598b06cd18cf8> ns1:P67_refers_to <https://r11.eu/rdf/resource/1f6236aa-4717-4fc1-814a-9ed2376e801b>,
+        <https://r11.eu/rdf/resource/83eb7d70-dd6f-4c3c-b0e3-93961b726924>,
+        <https://r11.eu/rdf/resource/8be0fa12-2c1a-4772-903c-f12f413362a2>,
+        <https://r11.eu/rdf/resource/a8ec8ef2-152f-46d9-a2ba-458b74f81e99> .
+
+<https://r11.eu/rdf/resource/e8e6a7cdeb6578dc2fd305fc0f22e014e496> ns1:P67_refers_to <https://r11.eu/rdf/resource/151fa1ef-6376-4faa-bda7-b3aaf8f9ac2a>,
+        <https://r11.eu/rdf/resource/b9e5856f-350d-4b9d-b598-73b7dc427852> .
+
+<https://r11.eu/rdf/resource/ecaa9401cf7658ccb2c515d508162cd3c9ae> ns1:P67_refers_to <https://r11.eu/rdf/resource/18bd7fbe-d8ac-4a12-bce1-179483d7cfa5>,
+        <https://r11.eu/rdf/resource/dfcab30e-b8e3-4cee-a50e-0a2c19476f9b> .
+
+<https://r11.eu/rdf/resource/ee186422bacc43dcf6044e9b8c745134efc8> ns1:P67_refers_to <https://r11.eu/rdf/resource/9141a63f-06be-4698-a4f7-934344495cab>,
+        <https://r11.eu/rdf/resource/a225b4cb-709f-41a4-80c6-f5547a4a07ef> .
+
+<https://r11.eu/rdf/resource/f61d9604cefc2e8afdd98763feb0f97062fc> ns1:P67_refers_to <https://r11.eu/rdf/resource/bf106de9-675c-4c0f-945d-8a9bfbbdcb43>,
+        <https://r11.eu/rdf/resource/ec9dd0d8-a5c8-4ac7-810e-71e3bb616560> .
+
+<https://r11.eu/rdf/resource/f8100862c46c6541c1689f76189575fcdd96> ns1:P67_refers_to <https://r11.eu/rdf/resource/7e165d33-3e64-49bb-9de6-916f21facfe9>,
+        <https://r11.eu/rdf/resource/8509064e-4da2-4f16-af64-4e9cf5c56a6c> .
+
+<https://r11.eu/rdf/resource/f8bbc9d27649c91fef9351a23a8ba7f24ce2> ns1:P67_refers_to <https://r11.eu/rdf/resource/205580aa-24bc-408c-a634-a644b10e00c6>,
+        <https://r11.eu/rdf/resource/218c49e0-98a4-485f-b11b-a460d3162f0f> .
+
+<https://r11.eu/rdf/resource/fb02059fc5aa209b0d3018a697ae6849b55f> ns1:P67_refers_to <https://r11.eu/rdf/resource/2993d336-c9a3-4bc6-a287-037e24805a54>,
+        <https://r11.eu/rdf/resource/7a21566c-5760-496b-85c9-19e35e809a86> .
+
+<https://r11.eu/rdf/resource/fbed97ed5652be4be517e0afc4f4059814a4> ns1:P67_refers_to <https://r11.eu/rdf/resource/439fe339-5351-4e9d-ae90-7548dfeb3f44>,
+        <https://r11.eu/rdf/resource/c63a6ec2-cc2c-401d-ab73-1f315422c9f5> .
+
+<https://r11.eu/rdf/resource/03360bf8-de17-47ca-9606-fc5150962ef9> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/b2c4065681e4d38c8f8cbfd8bcf9f0be04cb> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/0604302e-ed76-4dc0-bb7f-59e4855fab23> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/766ac1cb4532a3a3cce05b23b3af114678b7> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/f0e03b677b23ecb4c831a19d1fec09abd498> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/069fb0b2e71ba4fcd500c2a5ac1dd955b846> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/073334f3-743e-44a7-b9f6-a3e51c0c93fb> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/1d7b6f50ae45a271e942c4f7c88482109524> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/44cfa48737ba07daa3c69057236ff2f85b22> .
+
+<https://r11.eu/rdf/resource/07556dd9-05ba-4825-96cd-e10dcefc054b> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/8a5dae76e43d9b43b76c6685e2af72b6295d> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/6d64fc56545cda874e4de33afccc489e756d> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/09a1930f-dbdb-4e4a-b4c9-a7e04fb1d1a8> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e3e5450920d1584e42ebf37ede2bf75ad3b3> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/88882a6042f646343f7977bc08cb2eaca390> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/0b6daae4-fb4e-42ac-aabc-741391955c60> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/6711ce5cab63c1c91e161bea8758b9d5bb20> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/774a73693b1c4b060b1bc9527d52e239c814> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/0cca1f10-ec14-42ad-82bf-3071a6903e5b> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/ef5f254942aea5c3f456437b9fad9f919687> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/6c7ee5f75e4875948febbc25ce2e93b6924c> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/0e9ff0e3-d77d-4b14-9da7-4b020464de09> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/d35e0530c0ba318f89797ebaf41280e9dc56> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/0d897e7c2e91c54def5b27cadd9c16dbf539> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/10258c02-40f1-4571-8b6a-1493aefe42a2> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/2d2b56a9e5fb4063b8313f26532c222d00a5> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/12bbfaf6916068540f81d39b909b53014fe3> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/1419ea2f94976b2bdc4bf5568dc48504963d> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/14d5e378-d507-4372-950b-d4af3bea83b0> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/bb61766e12d4c202249ce21fbc089d0fb9e7> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/16b3e8a860d07d48b8fa0ba024dfebd20cb9> .
+
+<https://r11.eu/rdf/resource/151fa1ef-6376-4faa-bda7-b3aaf8f9ac2a> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/25f007ae397ed4a21f6344cf21c20ebec6aa> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/156a2914-73e2-4b9e-9310-b42c93352919> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/d4ab14a7a665d70b9e5c74aaa596270eec4f> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/b8192504d3b1aac82dfaeefc97d0b3b09e56> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/173fb205-24bb-4ce3-900c-de3d6b38999f> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/fab6185a41d2974ce8d5836b4a2597d7b025> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/aebb1b86e9baf0f7e6a47920e80259704dac> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/183928f5-4794-42eb-9159-a56bf1383e1b> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/3bd1ac2e3ca1f2f2ed4222d0b143881c9040> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/6711ce5cab63c1c91e161bea8758b9d5bb20> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/6c3328e42fd6776745e08ebe953379017bae> .
+
+<https://r11.eu/rdf/resource/18bd7fbe-d8ac-4a12-bce1-179483d7cfa5> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/b14298b6da1284faeb77da4c6da24565d366> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/1ac2e4c0-5d99-4257-a555-7fce37822aeb> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/43260cbfee6dc2f684fab522a1a36ffeba74> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/6c3328e42fd6776745e08ebe953379017bae> .
+
+<https://r11.eu/rdf/resource/1b206803-6b26-498f-b1e4-2755942d6b29> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/b2c4065681e4d38c8f8cbfd8bcf9f0be04cb> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/594937fd39f4b22c0e0d353be3168eb3b950> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/1d2c68a5-63bc-4664-bbfa-7af017abb483> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/04be9b0e9d0a92b28477306bdc80782342e1> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/330b081957ea033101ba0934df1a3a583c15> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/1f6236aa-4717-4fc1-814a-9ed2376e801b> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fb1ca70446d0718407676ae4e03046194962> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/0c2a0ad5eb38c5218fd0d14d95adb0f2a6e0> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/1fd486f6-5161-495b-86ae-31316d1af626> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/d346bb29b8e481007bfabc7d166f26c9a315> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/dc0ccf3e5baa692d97d3b018660d4aba90a3> .
+
+<https://r11.eu/rdf/resource/205580aa-24bc-408c-a634-a644b10e00c6> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/3d49532cb64377d7067e97565b0f27f6438f> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/4d5d04f3167092a6aa0dcb6ec5ebb7228ffa> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/20a71cded099566821bd48fbde125d1b9c2f> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/21791440-a200-44ec-818d-018b9c165720> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/2de386213de2913d6252bdbec16fe9b572f4> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/dc0ccf3e5baa692d97d3b018660d4aba90a3> .
+
+<https://r11.eu/rdf/resource/218c49e0-98a4-485f-b11b-a460d3162f0f> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/3d49532cb64377d7067e97565b0f27f6438f> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/240208748b068de86f77d47fa236f57b7441> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/24d12695-f5da-4880-b224-6cb98848d492> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/0930bad77118893ffbadbde294435345e3db> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/e363c19cd08ef23ee592980369f7a471ce2c> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/2681cd87-0393-47f5-be8e-45262821c152> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/720e9c15b40a13bebce3cfb288073e09ba35> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/16b3e8a860d07d48b8fa0ba024dfebd20cb9> .
+
+<https://r11.eu/rdf/resource/26edd6a0-8e73-4f35-841e-059611c54ced> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/fd3c36d12cba141148e39f04f649c7618b61> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/2993d336-c9a3-4bc6-a287-037e24805a54> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/3bd1ac2e3ca1f2f2ed4222d0b143881c9040> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/720e9c15b40a13bebce3cfb288073e09ba35> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/16b3e8a860d07d48b8fa0ba024dfebd20cb9> .
+
+<https://r11.eu/rdf/resource/2acce1a3-a8e6-45d5-93c7-eadfe4b01003> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/b321bdb8264b28a705869777ba2ce46ed32a> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/2aea5e13-6c99-46ec-b380-cc4bee870fca> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/10ddca42acc20b911d9992eeab53a21aea67> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/2c2f5fd7-49a6-4c0c-b5e6-45be0b5a00a9> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/f101add9b946f9690e1a7a18f1e1d448909d> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/12bbfaf6916068540f81d39b909b53014fe3> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/2c548cef-333c-447b-8cb2-de798331e0b9> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/dc5e40538054cfdaec3f46f80755c87ae811> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/330b081957ea033101ba0934df1a3a583c15> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/334a41bebd055781524382579e97e0e0ceca> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/36435f2b-587f-40a6-8d7f-33e70b10bbf6> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/fab6185a41d2974ce8d5836b4a2597d7b025> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/aebb1b86e9baf0f7e6a47920e80259704dac> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/38210041-5400-4e15-a829-1aedc21299f5> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/f101add9b946f9690e1a7a18f1e1d448909d> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/dc0ccf3e5baa692d97d3b018660d4aba90a3> .
+
+<https://r11.eu/rdf/resource/38ba86b3-53a4-424a-85c3-0baf8172b2cb> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/775b859ac98c5e8e07f7be5a31b3fb31542a> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/fc701e9ff1981067287666fe63e4b9bc43e1> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/3a97a8b961be125756c27817411e4ca42bc2> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/3aad0c96-ff61-4187-9270-1eab54894ec1> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/2a7e3ced38a79f90657dc101e81f4bbad1f9> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/9b51e6dd430b3af19461e824704eea1d12ae> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/3b56378c-08e5-40ac-8e27-d9cbe4dadb0b> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/775b859ac98c5e8e07f7be5a31b3fb31542a> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/3f347391-8cd0-46e4-84b9-14583d290a03> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/fab6185a41d2974ce8d5836b4a2597d7b025> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/3f47e67f-12b1-4d8c-8136-b69726db2f36> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/06a7a70d0df1be71aae4fae7158c3cc15a57> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/3f4b1353-af24-4096-bac7-5bc1677140cc> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/6711ce5cab63c1c91e161bea8758b9d5bb20> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/6c3328e42fd6776745e08ebe953379017bae> .
+
+<https://r11.eu/rdf/resource/4214cb8d-8cd9-4450-a797-e75d485d0889> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/2d2b56a9e5fb4063b8313f26532c222d00a5> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/20a71cded099566821bd48fbde125d1b9c2f> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/424cc906-d693-4288-b988-0a387783e47e> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/06a7a70d0df1be71aae4fae7158c3cc15a57> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/439fe339-5351-4e9d-ae90-7548dfeb3f44> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/41afb18e63c9e373a3197480ca5d1a87bd5a> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/8e1c7d84ec6b8cf9645681e5397fa01be38b> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/44a1bc24-bce6-48b6-8af5-213258b71b08> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/664ed5578449bb4ccc11cfd85264e1b3edba> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/8590f6b7e18750a38efaf9f30bb42d90bbc0> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/44c5c824-acd1-46c0-836f-e4e7f1c855e3> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c585ef98cc72c62a191809e37e3d48666e4e> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/1419ea2f94976b2bdc4bf5568dc48504963d> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/44cfa48737ba07daa3c69057236ff2f85b22> a <https://r11.eu/ns/spec/Geopolitical_Event_Type> ;
+    rdfs:label "Pogrom (Event Type)" .
+
+<https://r11.eu/rdf/resource/45aa3298040a0b2da9fe04adc4e257f31ca4> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/4792f8fc-5da5-482f-9ed7-b68c904c17e3> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/fd3c36d12cba141148e39f04f649c7618b61> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/45aa3298040a0b2da9fe04adc4e257f31ca4> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/49984fff152ad174d62c4b4fb5038599ef17> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/49a6411f-e6b2-436c-a3c3-284077a3519e> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/ff2065804b9fbeafa5a3f822313ea32b280b> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/527f1d74ac783f6033eba6cd38bd8c6d3850> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/4a197363-a37f-42d0-bfb8-a4b39543b9ca> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/06a7a70d0df1be71aae4fae7158c3cc15a57> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/216586090034de58f1bea10adf9cf572109c> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/4d5d04f3167092a6aa0dcb6ec5ebb7228ffa> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/4e47dcab-065c-456c-9507-ff87cfec4c10> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/eca6bf14f7d99ea686d298d93c30a0a917d3> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/5f38619540b23e1dfebc43ebc2119ce6c4fa> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/5227c3b9-2514-404a-9e2e-806c9bd0666b> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/f61476d8816ed5f25fe65f8d2cbb94a991c8> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/526914bb-6293-418d-bb46-c1237546a306> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/8daea94ffc27b08350d900cc52056f1e5986> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/d207c9c1f2b77de5c72a9e69e34e2234048b> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/527f1d74ac783f6033eba6cd38bd8c6d3850> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/546861a4-13a8-498e-be84-93760167837d> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/369792837f9999468da1cc068719a2270719> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/56ef9b8cbfce5148c1fe332d443d9917f0ad> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/5794cfa7676b9c856d62fe4e3cbdc5f0350d> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/58afd9f4-03fd-4bec-b5e0-1b7a9318a579> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/ef9348be4ff6f49f3fe444d8eedd6e8053be> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/dc0ccf3e5baa692d97d3b018660d4aba90a3> .
+
+<https://r11.eu/rdf/resource/594937fd39f4b22c0e0d353be3168eb3b950> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/5a658651-1d33-401f-b553-48b2f92512a9> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/06a7a70d0df1be71aae4fae7158c3cc15a57> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/216586090034de58f1bea10adf9cf572109c> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/5a930de1e25791c7edb89865aadee71824f4> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/5ac580a4-e00e-4b34-8661-a25ef5aaf2ba> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/eca6bf14f7d99ea686d298d93c30a0a917d3> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/5c0d0d83-395e-486b-a04f-f532713b7c5e> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/3bd1ac2e3ca1f2f2ed4222d0b143881c9040> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/f61476d8816ed5f25fe65f8d2cbb94a991c8> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/604522ea21d96ca8a4db3150dfd5562634e0> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/604732ee-eeab-4773-8f92-0d575d49953f> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/e522e1df065715e5a8a49a0b415dabea1117> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/60d2a139-d137-4b56-af1c-f79688e5809a> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/d4ab14a7a665d70b9e5c74aaa596270eec4f> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/61b81634-323f-44f0-b2ff-0077309ec599> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/6a319a7300ef972cff4b7090a081bda19307> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/d260b5d2559b89d159ead8784a55aebd12b6> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/63a2ee0d-0674-4d15-ab92-faa0db6b1ac9> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/2de386213de2913d6252bdbec16fe9b572f4> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/18944767046704d5ce7fce053d00dc81d65b> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/682e4a44-5651-4a38-be9f-338705388157> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/b14298b6da1284faeb77da4c6da24565d366> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/f9714bebe3f652cd66f2c2639d182bc2555f> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/69fc612f-42a4-4dd9-bee0-ef86f578c74d> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/04be9b0e9d0a92b28477306bdc80782342e1> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/6bf04517-859c-44db-b039-b7b2bd7f960a> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/59989ceb91c870900b17cbe5094c593bb84c> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/334a41bebd055781524382579e97e0e0ceca> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/6c7ee5f75e4875948febbc25ce2e93b6924c> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/6cebbacd-3fe0-4f9d-bc8b-2f75cd54f14c> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/d35e0530c0ba318f89797ebaf41280e9dc56> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/6cf8aa87-f55d-4a4e-abb8-5dcc850fab4e> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/10ddca42acc20b911d9992eeab53a21aea67> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/6d950ddfecc4e1f19fafa83c753975668904> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/6db5af6b-6617-4e5d-b180-6cc513309de9> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9828a467ad09c0034dd47cb0c396a27ca4c7> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/04ef382827c155338e646447814370e04f6e> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/6e4f262a-75a0-47b3-a5d8-5e368caadccc> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/5959a4f91c8df67cb0f67bb308cf5928858e> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/dc5e40538054cfdaec3f46f80755c87ae811> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/6ed923ce-7287-4d65-b8ee-b2b37ab178bb> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/664ed5578449bb4ccc11cfd85264e1b3edba> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/16b3e8a860d07d48b8fa0ba024dfebd20cb9> .
+
+<https://r11.eu/rdf/resource/6ee31173-b850-4f85-90dc-9c54c566ccce> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/2a7e3ced38a79f90657dc101e81f4bbad1f9> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/dc0ccf3e5baa692d97d3b018660d4aba90a3> .
+
+<https://r11.eu/rdf/resource/6f81dcc0-5167-42b2-8ac3-5825602e6370> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/d4ab14a7a665d70b9e5c74aaa596270eec4f> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/b8192504d3b1aac82dfaeefc97d0b3b09e56> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/704ece01-b26f-4f25-b86b-ee115782cb03> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/3bd1ac2e3ca1f2f2ed4222d0b143881c9040> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/0af635995f56379b06f430e804837af6533f> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/7077d3fa-49ff-44f4-9fd8-10b27c554c3c> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/5a6cd7db8cb15bc7f8fa937762cf7dd75473> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/710cdb24-e7ff-4553-8ff0-fe0925da6567> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/06a7a70d0df1be71aae4fae7158c3cc15a57> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/71472d0f-4b61-4393-90fa-37ff56cd518c> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/726dc8ef8a611c84dbb777479f7762eadae4> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/c2a43c11de34161bac07ea1fe0507c354e1f> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/734ddfb0-e16b-443c-97a8-86e48ddf43df> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/8a5dae76e43d9b43b76c6685e2af72b6295d> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/dc0ccf3e5baa692d97d3b018660d4aba90a3> .
+
+<https://r11.eu/rdf/resource/73c45f44-3fe1-45ca-b52c-4e4d18aca1b1> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/f61476d8816ed5f25fe65f8d2cbb94a991c8> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/e2d57c6d5e842fcf3f17b0620adcce7876af> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/3bd1ac2e3ca1f2f2ed4222d0b143881c9040> .
+
+<https://r11.eu/rdf/resource/73c5ca9e-f98d-4873-bdd5-9ed76f9ef944> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/fab6185a41d2974ce8d5836b4a2597d7b025> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/782171af-4bc6-4573-a317-ebcab6b76f8d> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/2de386213de2913d6252bdbec16fe9b572f4> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/18944767046704d5ce7fce053d00dc81d65b> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/7a21566c-5760-496b-85c9-19e35e809a86> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/720e9c15b40a13bebce3cfb288073e09ba35> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/f24faa273f2555023fee9b12aa4cba9f65c0> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/3bd1ac2e3ca1f2f2ed4222d0b143881c9040> .
+
+<https://r11.eu/rdf/resource/7a49c318-4277-4030-8882-ae48ab0ea112> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/06a7a70d0df1be71aae4fae7158c3cc15a57> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/216586090034de58f1bea10adf9cf572109c> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/7c2764b6-32a7-48a1-99ad-f2aaa8cd7c9e> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/e3e5450920d1584e42ebf37ede2bf75ad3b3> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/7c4158a8-5c33-4618-b5af-289682ba05f8> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/ef9348be4ff6f49f3fe444d8eedd6e8053be> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/5a930de1e25791c7edb89865aadee71824f4> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/7d78626a-0900-45b4-8474-eb8c7653197c> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/50d69827b696e4fb0d04f548a64e27fcc23d> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/49984fff152ad174d62c4b4fb5038599ef17> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/7e165d33-3e64-49bb-9de6-916f21facfe9> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/3bd1ac2e3ca1f2f2ed4222d0b143881c9040> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/10ddca42acc20b911d9992eeab53a21aea67> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/7edd8eaa-f256-427d-807c-8dd7faee53ca> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/06a7a70d0df1be71aae4fae7158c3cc15a57> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/216586090034de58f1bea10adf9cf572109c> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/7ede041d-92f8-4191-8105-b63151c1628e> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/d346bb29b8e481007bfabc7d166f26c9a315> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/82aa28f927813a919f756390fb3368316498> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/8156c3d5-c6e9-4da7-9254-f9ba54eff74d> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/ff2065804b9fbeafa5a3f822313ea32b280b> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/82aa28f927813a919f756390fb3368316498> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/83d21a97-84b7-4693-93ba-49d2319bcf84> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/c585ef98cc72c62a191809e37e3d48666e4e> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/83eb7d70-dd6f-4c3c-b0e3-93961b726924> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/0c2a0ad5eb38c5218fd0d14d95adb0f2a6e0> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/6d950ddfecc4e1f19fafa83c753975668904> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fb1ca70446d0718407676ae4e03046194962> .
+
+<https://r11.eu/rdf/resource/8509064e-4da2-4f16-af64-4e9cf5c56a6c> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/10ddca42acc20b911d9992eeab53a21aea67> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/5add03cc6c280cf9a4bab1410ef1bbf88f47> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/3bd1ac2e3ca1f2f2ed4222d0b143881c9040> .
+
+<https://r11.eu/rdf/resource/8590f6b7e18750a38efaf9f30bb42d90bbc0> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/862032ea-6958-4260-bd20-e97a38a6e0bd> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/b14298b6da1284faeb77da4c6da24565d366> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/8832eba7-1d0a-4001-90cb-8db46fe6ec55> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/25f007ae397ed4a21f6344cf21c20ebec6aa> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/88d96baa-24e8-43b7-a9a2-e32a5889bedd> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/25f007ae397ed4a21f6344cf21c20ebec6aa> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/e2d20038ef3584fd848fc90b064eabd8a968> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/8a99e279-e92f-41bc-b6a9-1d430130515e> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c80238f9329b3d78cf9fd7a78d89110b6699> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/b266cdba5891782272896d60e0b60db87cd2> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/8be0fa12-2c1a-4772-903c-f12f413362a2> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/51d77a8ac05a2834879bae441376d3b3cc8e> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/c53cdf2d8169dade7a93cc02ed746afa2b00> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fb1ca70446d0718407676ae4e03046194962> .
+
+<https://r11.eu/rdf/resource/8c28c6a89434b1c4df4fe5f1e3fc626012e7> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/8c739f79-dbc3-4476-be2b-c31b4306a2bb> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/58f5d5abb6956cece891309c307abb261bb1> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/c515a98090e00fd72774deac2583efcaa31e> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/8d492bae-42b9-424c-8a15-91b6bb7772e5> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/2ca232120fdf58f18b876a88df0127a747d7> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/8e1c7d84ec6b8cf9645681e5397fa01be38b> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/8f4daefe-c883-448c-b28a-7b1795a17494> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/06a7a70d0df1be71aae4fae7158c3cc15a57> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/910d63db-ed4b-4c5b-985d-354987557a50> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/50d69827b696e4fb0d04f548a64e27fcc23d> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/9141a63f-06be-4698-a4f7-934344495cab> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/eca6bf14f7d99ea686d298d93c30a0a917d3> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/5f38619540b23e1dfebc43ebc2119ce6c4fa> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/927bd2e1-1d0d-4bef-9ed8-34a8949b416b> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/726dc8ef8a611c84dbb777479f7762eadae4> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/96d4747994125f0e8cc4a19f791fbab97c57> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/97776953bf4d90b1e57d083247197fd904e5> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/99743800-c403-4368-b6ef-9ee0e3245149> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/ef5f254942aea5c3f456437b9fad9f919687> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/9b0d99cf-3f66-4673-a4ea-0b407f03a799> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/d35e0530c0ba318f89797ebaf41280e9dc56> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/9f5660f8-e2fe-4a01-8106-f34bd508cc96> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/58f5d5abb6956cece891309c307abb261bb1> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/dc0ccf3e5baa692d97d3b018660d4aba90a3> .
+
+<https://r11.eu/rdf/resource/9f5c3f29bc088b979c44d24c198ca46cbfeb> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/9face1b1-6607-48f8-b4f0-6b964965872c> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/d57812ed4cdeca5ca582715501c3a3490e13> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/a01e6645-a5db-4857-9f1e-d4bfe0cc8f52> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/6711ce5cab63c1c91e161bea8758b9d5bb20> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/774a73693b1c4b060b1bc9527d52e239c814> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/a05fe712-52d6-4166-845a-39ab660ca1dd> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/59989ceb91c870900b17cbe5094c593bb84c> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/a225b4cb-709f-41a4-80c6-f5547a4a07ef> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/eca6bf14f7d99ea686d298d93c30a0a917d3> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/a2e26b4c9becfad3f448e0af5cc18a13663d> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/a5cfb31c-e63b-4b32-a1d5-6c5d2c8123a8> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/604725d58d32d29f88c2cf189e7362f90ba4> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/96d4747994125f0e8cc4a19f791fbab97c57> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/a5edb412-4f0e-40a4-9227-bdd47770e94b> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/d83d1220761a31f17992bc58cad254f6dcb9> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/c491d66392d021ed2584256287c199b553ba> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/a6dd2c97-ad92-4f39-81c5-dd47e673e4ba> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/6711ce5cab63c1c91e161bea8758b9d5bb20> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/6c3328e42fd6776745e08ebe953379017bae> .
+
+<https://r11.eu/rdf/resource/a8ec8ef2-152f-46d9-a2ba-458b74f81e99> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fb1ca70446d0718407676ae4e03046194962> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/51d77a8ac05a2834879bae441376d3b3cc8e> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/aad25a9d-34ca-4b6d-827a-2dc24c5bd3c8> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/b390bc2b2b3b73da09763ebb3945127dc913> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/ac8223ad-ea4a-4821-bd08-05f5d88792ba> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/dc5e40538054cfdaec3f46f80755c87ae811> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/17e0e834b478ebdbf67a43c55c6f35a22fde> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/adf12945-fdf1-4e8d-8394-a371ec2e34a3> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/4ca8fa09b3ec42d6df4846fc77535ea65ecd> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/3a97a8b961be125756c27817411e4ca42bc2> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/ae71a029c5f43cac940975cf3dd5f5a6e5c5> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/aec8936f-501b-4d8a-8593-99fdd60096f6> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/6a319a7300ef972cff4b7090a081bda19307> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/af6a9469-8226-47da-84d0-3af19bcbf85c> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/4ca8fa09b3ec42d6df4846fc77535ea65ecd> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/b023fc41-6ace-4619-9e94-473acd64c111> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/bb61766e12d4c202249ce21fbc089d0fb9e7> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/f49968b8414c360b26ff3351c97e79d2bde5> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/b266cdba5891782272896d60e0b60db87cd2> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/b640eab3-3cc7-4d94-9254-ec91dcbf5a78> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/43260cbfee6dc2f684fab522a1a36ffeba74> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/fe15fd3bdc11dd2c2f0f08b15480c2a2ea76> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/b7d580f0-d658-4839-9b4e-c13aac56e25d> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/8a5dae76e43d9b43b76c6685e2af72b6295d> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/6d64fc56545cda874e4de33afccc489e756d> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/b83e2607-0c55-4491-9d95-5d13b085912f> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/1d7b6f50ae45a271e942c4f7c88482109524> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/8c28c6a89434b1c4df4fe5f1e3fc626012e7> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/b96f034f485c76ae51025c751b67c18cb4b7> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/b99f8dce-9def-4392-954d-8651a644b13d> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/10ddca42acc20b911d9992eeab53a21aea67> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/5add03cc6c280cf9a4bab1410ef1bbf88f47> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/b9e5856f-350d-4b9d-b598-73b7dc427852> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/25f007ae397ed4a21f6344cf21c20ebec6aa> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/e2d20038ef3584fd848fc90b064eabd8a968> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/bb11e379-1922-44db-9c2f-3ce31975b4d6> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/766ac1cb4532a3a3cce05b23b3af114678b7> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/bdfe3ee7-f2db-494a-a570-21d2f69155f5> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/a480ff521ae5419c55c4f1083b04c629d5bc> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/be752088-7996-4a94-bb9c-695c9aa6aaea> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/8daea94ffc27b08350d900cc52056f1e5986> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/bf106de9-675c-4c0f-945d-8a9bfbbdcb43> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/f61476d8816ed5f25fe65f8d2cbb94a991c8> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/e2d57c6d5e842fcf3f17b0620adcce7876af> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/c0035d6e-4085-49d3-a537-29e82fb9a530> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/2ca232120fdf58f18b876a88df0127a747d7> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/5794cfa7676b9c856d62fe4e3cbdc5f0350d> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/c0050988-e142-4b2f-9684-5286c7d653fb> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e3e5450920d1584e42ebf37ede2bf75ad3b3> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/88882a6042f646343f7977bc08cb2eaca390> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/c0ea58b2-a002-4042-b006-fd5793ff8bb6> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e522e1df065715e5a8a49a0b415dabea1117> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/b96f034f485c76ae51025c751b67c18cb4b7> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/c1836bff-890d-4c22-a47d-2bb49cf04e37> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/8a5dae76e43d9b43b76c6685e2af72b6295d> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/dc0ccf3e5baa692d97d3b018660d4aba90a3> .
+
+<https://r11.eu/rdf/resource/c24c7a7cedceb21f0a67cfbd40b4e596e130> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/c2a43c11de34161bac07ea1fe0507c354e1f> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/c44c0625-690a-4df1-90cb-682bf8f1c435> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/5a6cd7db8cb15bc7f8fa937762cf7dd75473> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/c24c7a7cedceb21f0a67cfbd40b4e596e130> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/c491d66392d021ed2584256287c199b553ba> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/c515a98090e00fd72774deac2583efcaa31e> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/c53cdf2d8169dade7a93cc02ed746afa2b00> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/c63a6ec2-cc2c-401d-ab73-1f315422c9f5> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/41afb18e63c9e373a3197480ca5d1a87bd5a> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/dc0ccf3e5baa692d97d3b018660d4aba90a3> .
+
+<https://r11.eu/rdf/resource/c64573a7-0219-41d6-a926-c089771fb3b9> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/604725d58d32d29f88c2cf189e7362f90ba4> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/dc0ccf3e5baa692d97d3b018660d4aba90a3> .
+
+<https://r11.eu/rdf/resource/c84cd745-df8d-44ea-8321-293bd580d5f8> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/369792837f9999468da1cc068719a2270719> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/604522ea21d96ca8a4db3150dfd5562634e0> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/c88599d3-e1e2-496b-80e1-d089e3903a25> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/e3e5450920d1584e42ebf37ede2bf75ad3b3> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/c8aa0f57-8210-46ac-a3ec-2818d672302a> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/2a7e3ced38a79f90657dc101e81f4bbad1f9> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/dc0ccf3e5baa692d97d3b018660d4aba90a3> .
+
+<https://r11.eu/rdf/resource/ce579822-e371-424d-8d8c-7e15d55c3428> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/2de386213de2913d6252bdbec16fe9b572f4> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/dc0ccf3e5baa692d97d3b018660d4aba90a3> .
+
+<https://r11.eu/rdf/resource/cfbdda57-1712-4d68-b4c1-41decee86422> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/0af635995f56379b06f430e804837af6533f> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/9f5c3f29bc088b979c44d24c198ca46cbfeb> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/3bd1ac2e3ca1f2f2ed4222d0b143881c9040> .
+
+<https://r11.eu/rdf/resource/cfcad911-6b0f-420b-8661-5541998a6edd> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/b390bc2b2b3b73da09763ebb3945127dc913> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/97776953bf4d90b1e57d083247197fd904e5> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/d14ae873-2aa2-467b-9594-d5d2ace4eed0> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/bb61766e12d4c202249ce21fbc089d0fb9e7> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/f49968b8414c360b26ff3351c97e79d2bde5> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/d207c9c1f2b77de5c72a9e69e34e2234048b> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/d260b5d2559b89d159ead8784a55aebd12b6> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/d4a345cc-c479-4431-9fe5-22d2f72acac0> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/2a7e3ced38a79f90657dc101e81f4bbad1f9> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/9b51e6dd430b3af19461e824704eea1d12ae> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/d6c29983-b8f3-4267-b8af-6815501d423e> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/f61476d8816ed5f25fe65f8d2cbb94a991c8> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/e2d57c6d5e842fcf3f17b0620adcce7876af> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/d71257d3-ae5b-478a-938b-d6cdfd1719ad> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/d4ab14a7a665d70b9e5c74aaa596270eec4f> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> .
+
+<https://r11.eu/rdf/resource/d9dc80f1-13fd-425e-baeb-1d957a12e794> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/a480ff521ae5419c55c4f1083b04c629d5bc> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/240208748b068de86f77d47fa236f57b7441> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/dab1248e-6ddc-419f-bd81-dce2c29bd449> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/d35e0530c0ba318f89797ebaf41280e9dc56> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/0d897e7c2e91c54def5b27cadd9c16dbf539> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/de0f4747-57eb-471a-8804-871b3b99d3b9> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/b27fc3d6130e8826655db6660042c6471095> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/56ef9b8cbfce5148c1fe332d443d9917f0ad> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/de44f32a-83b8-4d5e-b152-fea1a9a7a90a> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/10ddca42acc20b911d9992eeab53a21aea67> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/5add03cc6c280cf9a4bab1410ef1bbf88f47> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/dfcab30e-b8e3-4cee-a50e-0a2c19476f9b> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/b14298b6da1284faeb77da4c6da24565d366> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/f9714bebe3f652cd66f2c2639d182bc2555f> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/e21f1470-716e-46fa-a1f9-52488752b1b8> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/bb61766e12d4c202249ce21fbc089d0fb9e7> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/16b3e8a860d07d48b8fa0ba024dfebd20cb9> .
+
+<https://r11.eu/rdf/resource/e2eb08eb-a657-411c-b0c2-91eb165607cc> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/d83d1220761a31f17992bc58cad254f6dcb9> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/e34349b5-468c-48e0-9c99-ea9e748e309e> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/720e9c15b40a13bebce3cfb288073e09ba35> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/f24faa273f2555023fee9b12aa4cba9f65c0> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/e363c19cd08ef23ee592980369f7a471ce2c> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/e45400ed-7a52-4597-8a8c-45418e1d8fec> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/c80238f9329b3d78cf9fd7a78d89110b6699> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/e6972201-a474-4279-81e3-110525ebdc02> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/b321bdb8264b28a705869777ba2ce46ed32a> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/ae71a029c5f43cac940975cf3dd5f5a6e5c5> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/ec9dd0d8-a5c8-4ac7-810e-71e3bb616560> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/f61476d8816ed5f25fe65f8d2cbb94a991c8> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/eda9f560-589c-4791-afd6-68c86a2fdc24> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/d57812ed4cdeca5ca582715501c3a3490e13> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/069fb0b2e71ba4fcd500c2a5ac1dd955b846> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/ef1d2e08-d1f4-424e-8159-ee7fe1516428> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/0930bad77118893ffbadbde294435345e3db> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> .
+
+<https://r11.eu/rdf/resource/f0e03b677b23ecb4c831a19d1fec09abd498> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/f133ec01-4589-4dd9-b23f-4cff1e7d1d4c> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/6711ce5cab63c1c91e161bea8758b9d5bb20> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/774a73693b1c4b060b1bc9527d52e239c814> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/3bd1ac2e3ca1f2f2ed4222d0b143881c9040> .
+
+<https://r11.eu/rdf/resource/f8158721-6f3e-498f-9425-fd92f5545b8e> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/dc5e40538054cfdaec3f46f80755c87ae811> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/17e0e834b478ebdbf67a43c55c6f35a22fde> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/5959a4f91c8df67cb0f67bb308cf5928858e> .
+
+<https://r11.eu/rdf/resource/fa10a5bb-6a71-4eef-a4bc-17cab5b09742> a <https://r11.eu/ns/star/E13_crm_P9> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/04ef382827c155338e646447814370e04f6e> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/a2e26b4c9becfad3f448e0af5cc18a13663d> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9828a467ad09c0034dd47cb0c396a27ca4c7> .
+
+<https://r11.eu/rdf/resource/fa7fce2b-1dcf-4efc-a910-8267cdb18bb0> a ns1:E17_Type_Assignment ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> ;
+    ns1:P41_classified <https://r11.eu/rdf/resource/b27fc3d6130e8826655db6660042c6471095> ;
+    ns1:P42_assigned <https://r11.eu/rdf/resource/dc0ccf3e5baa692d97d3b018660d4aba90a3> .
+
+<https://r11.eu/rdf/resource/fc701e9ff1981067287666fe63e4b9bc43e1> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/fe15fd3bdc11dd2c2f0f08b15480c2a2ea76> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/04be9b0e9d0a92b28477306bdc80782342e1> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Turk raid of Sebasteia" .
+
+<https://r11.eu/rdf/resource/04ef382827c155338e646447814370e04f6e> a ns1:E7_Activity ;
+    rdfs:label "Crusader Siege of Jerusalem" .
+
+<https://r11.eu/rdf/resource/0930bad77118893ffbadbde294435345e3db> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Turk raid of Vaspurakan" .
+
+<https://r11.eu/rdf/resource/0af635995f56379b06f430e804837af6533f> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Capture of Nicaea" .
+
+<https://r11.eu/rdf/resource/0c2a0ad5eb38c5218fd0d14d95adb0f2a6e0> a ns1:E7_Activity ;
+    rdfs:label "Crusader Siege of Antioch" .
+
+<https://r11.eu/rdf/resource/0d897e7c2e91c54def5b27cadd9c16dbf539> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/17e0e834b478ebdbf67a43c55c6f35a22fde> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/18944767046704d5ce7fce053d00dc81d65b> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/1d7b6f50ae45a271e942c4f7c88482109524> a ns1:E7_Activity ;
+    rdfs:label "Pogrom of Christian population of Jerusalem" .
+
+<https://r11.eu/rdf/resource/2ca232120fdf58f18b876a88df0127a747d7> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Annexation of Antioch 1087" .
+
+<https://r11.eu/rdf/resource/2d2b56a9e5fb4063b8313f26532c222d00a5> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Turk raid of Chaldia" .
+
+<https://r11.eu/rdf/resource/369792837f9999468da1cc068719a2270719> a ns1:E7_Activity ;
+    rdfs:label "Seljuk raid of Nisibis 1065" .
+
+<https://r11.eu/rdf/resource/3d49532cb64377d7067e97565b0f27f6438f> a ns1:E7_Activity ;
+    rdfs:label "Seljuk raid of Edessa hinterland II 1065" .
+
+<https://r11.eu/rdf/resource/41afb18e63c9e373a3197480ca5d1a87bd5a> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Siege of Edessa 1070" .
+
+<https://r11.eu/rdf/resource/43260cbfee6dc2f684fab522a1a36ffeba74> a ns1:E7_Activity ;
+    rdfs:label "Byzantine Attempt to annex Ani" .
+
+<https://r11.eu/rdf/resource/4ca8fa09b3ec42d6df4846fc77535ea65ecd> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Annexation of Antioch 1084" .
+
+<https://r11.eu/rdf/resource/50d69827b696e4fb0d04f548a64e27fcc23d> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Turk raid of Paghin 1062" .
+
+<https://r11.eu/rdf/resource/51d77a8ac05a2834879bae441376d3b3cc8e> a ns1:E7_Activity ;
+    rdfs:label "Crusader Siege of Nicea" .
+
+<https://r11.eu/rdf/resource/58f5d5abb6956cece891309c307abb261bb1> a ns1:E7_Activity ;
+    rdfs:label "Byzantine Siege of Dvin III" .
+
+<https://r11.eu/rdf/resource/59989ceb91c870900b17cbe5094c593bb84c> a ns1:E7_Activity ;
+    rdfs:label "Seljuk sack of Arčeš 1054" .
+
+<https://r11.eu/rdf/resource/5a6cd7db8cb15bc7f8fa937762cf7dd75473> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Turk raid of Tao-Tayk" .
+
+<https://r11.eu/rdf/resource/5f38619540b23e1dfebc43ebc2119ce6c4fa> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/604725d58d32d29f88c2cf189e7362f90ba4> a ns1:E7_Activity ;
+    rdfs:label "Byzantine Siege of Dvin II" .
+
+<https://r11.eu/rdf/resource/664ed5578449bb4ccc11cfd85264e1b3edba> a ns1:E7_Activity ;
+    rdfs:label "Rebellion of Leo Tornikios" .
+
+<https://r11.eu/rdf/resource/6a319a7300ef972cff4b7090a081bda19307> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Turk raid of Kars" .
+
+<https://r11.eu/rdf/resource/6d64fc56545cda874e4de33afccc489e756d> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/726dc8ef8a611c84dbb777479f7762eadae4> a ns1:E7_Activity ;
+    rdfs:label "Seljuk sack of Arcke 1054" .
+
+<https://r11.eu/rdf/resource/766ac1cb4532a3a3cce05b23b3af114678b7> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Turk raid of Taron" .
+
+<https://r11.eu/rdf/resource/775b859ac98c5e8e07f7be5a31b3fb31542a> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Turk raid of Vaspurakan 1019" .
+
+<https://r11.eu/rdf/resource/88882a6042f646343f7977bc08cb2eaca390> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/8daea94ffc27b08350d900cc52056f1e5986> a ns1:E7_Activity ;
+    rdfs:label "Seljuk raid of Edessa hinterland 1081" .
+
+<https://r11.eu/rdf/resource/9b51e6dd430b3af19461e824704eea1d12ae> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/a480ff521ae5419c55c4f1083b04c629d5bc> a ns1:E7_Activity ;
+    rdfs:label "Seljuk raid of Ani 1055" .
+
+<https://r11.eu/rdf/resource/aebb1b86e9baf0f7e6a47920e80259704dac> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/b27fc3d6130e8826655db6660042c6471095> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Siege of Manzikert 1070" .
+
+<https://r11.eu/rdf/resource/b2c4065681e4d38c8f8cbfd8bcf9f0be04cb> a ns1:E7_Activity ;
+    rdfs:label "Seljuk raid of Hark‘ 1056" .
+
+<https://r11.eu/rdf/resource/b321bdb8264b28a705869777ba2ce46ed32a> a ns1:E7_Activity ;
+    rdfs:label "Seljuk raid of Nisibis 1066" .
+
+<https://r11.eu/rdf/resource/b390bc2b2b3b73da09763ebb3945127dc913> a ns1:E7_Activity ;
+    rdfs:label "Byzantine Annexation of Kars" .
+
+<https://r11.eu/rdf/resource/b8192504d3b1aac82dfaeefc97d0b3b09e56> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/c585ef98cc72c62a191809e37e3d48666e4e> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Turk raid of Xorjean 1054" .
+
+<https://r11.eu/rdf/resource/c80238f9329b3d78cf9fd7a78d89110b6699> a ns1:E7_Activity ;
+    rdfs:label "Seljuk raid of Okomi 1056" .
+
+<https://r11.eu/rdf/resource/d346bb29b8e481007bfabc7d166f26c9a315> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Siege of Nicaea J 1092" .
+
+<https://r11.eu/rdf/resource/d57812ed4cdeca5ca582715501c3a3490e13> a ns1:E7_Activity ;
+    rdfs:label "Seljuk raid of Black Mountain 1066" .
+
+<https://r11.eu/rdf/resource/d83d1220761a31f17992bc58cad254f6dcb9> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Turk raid of Tayk 1054" .
+
+<https://r11.eu/rdf/resource/e2d20038ef3584fd848fc90b064eabd8a968> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/e522e1df065715e5a8a49a0b415dabea1117> a ns1:E7_Activity ;
+    rdfs:label "Seljuk raid of Edessa hinterland 1065" .
+
+<https://r11.eu/rdf/resource/ef5f254942aea5c3f456437b9fad9f919687> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Turk raid of Ekegheac‘ 1054" .
+
+<https://r11.eu/rdf/resource/ef9348be4ff6f49f3fe444d8eedd6e8053be> a ns1:E7_Activity ;
+    rdfs:label "Byzantine Siege of Manzikert 1071" .
+
+<https://r11.eu/rdf/resource/f101add9b946f9690e1a7a18f1e1d448909d> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Siege of Aleppo 1070" .
+
+<https://r11.eu/rdf/resource/f24faa273f2555023fee9b12aa4cba9f65c0> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/f49968b8414c360b26ff3351c97e79d2bde5> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/f9714bebe3f652cd66f2c2639d182bc2555f> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/fd3c36d12cba141148e39f04f649c7618b61> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Turk raid of Smbat's Berd" .
+
+<https://r11.eu/rdf/resource/ff2065804b9fbeafa5a3f822313ea32b280b> a ns1:E7_Activity ;
+    rdfs:label "Seljuk raid of Mesopotamia 1057" .
+
+<https://r11.eu/rdf/resource/5add03cc6c280cf9a4bab1410ef1bbf88f47> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/774a73693b1c4b060b1bc9527d52e239c814> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/e2d57c6d5e842fcf3f17b0620adcce7876af> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/216586090034de58f1bea10adf9cf572109c> a <https://ontology.swissartresearch.net/pwro/WE6_Attack> .
+
+<https://r11.eu/rdf/resource/25f007ae397ed4a21f6344cf21c20ebec6aa> a ns1:E7_Activity ;
+    rdfs:label "Annexation of Ani" .
+
+<https://r11.eu/rdf/resource/2a7e3ced38a79f90657dc101e81f4bbad1f9> a ns1:E7_Activity ;
+    rdfs:label "Byzantine Siege of Dvin" .
+
+<https://r11.eu/rdf/resource/2de386213de2913d6252bdbec16fe9b572f4> a ns1:E7_Activity ;
+    rdfs:label "Byzantine Siege of Amida" .
+
+<https://r11.eu/rdf/resource/6c3328e42fd6776745e08ebe953379017bae> a <https://r11.eu/ns/spec/Geopolitical_Event_Type> ;
+    rdfs:label "Battle (Event Type)" .
+
+<https://r11.eu/rdf/resource/720e9c15b40a13bebce3cfb288073e09ba35> a ns1:E7_Activity ;
+    rdfs:label "Revolt of Isaac Komnenos" .
+
+<https://r11.eu/rdf/resource/8a5dae76e43d9b43b76c6685e2af72b6295d> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Siege of Manzikert 1054" .
+
+<https://r11.eu/rdf/resource/b14298b6da1284faeb77da4c6da24565d366> a ns1:E7_Activity ;
+    rdfs:label "Annexation of Vaspurakan" .
+
+<https://r11.eu/rdf/resource/bb61766e12d4c202249ce21fbc089d0fb9e7> a ns1:E7_Activity ;
+    rdfs:label "Rebellion of Georgios Maniakes" .
+
+<https://r11.eu/rdf/resource/d35e0530c0ba318f89797ebaf41280e9dc56> a ns1:E7_Activity ;
+    rdfs:label "Seljuk raid of Ekegheac' and Karin 1057" .
+
+<https://r11.eu/rdf/resource/d4ab14a7a665d70b9e5c74aaa596270eec4f> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Conquest of Ani 1064" .
+
+<https://r11.eu/rdf/resource/dc5e40538054cfdaec3f46f80755c87ae811> a ns1:E7_Activity ;
+    rdfs:label "Annexation of Tao-Tayk" .
+
+<https://r11.eu/rdf/resource/e3e5450920d1584e42ebf37ede2bf75ad3b3> a ns1:E7_Activity ;
+    rdfs:label "Seljuk raid of Taron 1058" .
+
+<https://r11.eu/rdf/resource/eca6bf14f7d99ea686d298d93c30a0a917d3> a ns1:E7_Activity ;
+    rdfs:label "Annexation of Berkri" .
+
+<https://r11.eu/rdf/resource/fab6185a41d2974ce8d5836b4a2597d7b025> a ns1:E7_Activity ;
+    rdfs:label "Annexation of Bulgaria" .
+
+<https://r11.eu/rdf/resource/16b3e8a860d07d48b8fa0ba024dfebd20cb9> a <https://r11.eu/ns/spec/Geopolitical_Event_Type> ;
+    rdfs:label "Revolt (Event Type)" .
+
+<https://r11.eu/rdf/resource/10ddca42acc20b911d9992eeab53a21aea67> a ns1:E7_Activity ;
+    rdfs:label "Annexation of Edessa" .
+
+<https://r11.eu/rdf/resource/6711ce5cab63c1c91e161bea8758b9d5bb20> a ns1:E7_Activity ;
+    rdfs:label "Battle of Manzikert 1071" .
+
+<https://r11.eu/rdf/resource/f61476d8816ed5f25fe65f8d2cbb94a991c8> a ns1:E7_Activity ;
+    rdfs:label "Seljuk raid of Melitene 1057" .
+
+<https://r11.eu/rdf/resource/06a7a70d0df1be71aae4fae7158c3cc15a57> a ns1:E7_Activity ;
+    rdfs:label "Seljuk Turk raid of Artzn" .
+
+<https://r11.eu/rdf/resource/dc0ccf3e5baa692d97d3b018660d4aba90a3> a <https://r11.eu/ns/spec/Geopolitical_Event_Type> ;
+    rdfs:label "Siege (Event Type)" .
+
+<https://r11.eu/rdf/resource/52ef3486e900c4aa9d23dd5e4acc08ce88ee> a <https://r11.eu/ns/spec/Geopolitical_Event_Type> ;
+    rdfs:label "Annexation (Event Type)" .
+
+<https://r11.eu/rdf/resource/4dfddc6052a371ee24b48a9c428f80951847> a <https://r11.eu/ns/spec/Geopolitical_Event_Type> ;
+    rdfs:label "Attack (Event Type)" .
+

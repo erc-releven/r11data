@@ -16,6 +16,12 @@ from r11data.tabular.triple_generators.correspondence_triple_generator import (
 from r11data.tabular.triple_generators.deaths_triple_generator import (
     DeathsTripleGenerator as DeathsTripleGenerator,
 )
+from r11data.tabular.triple_generators.geopolitical_event_triple_generator import (
+    GeopoliticalEventRDFConverter as GeopolicalEventRDFConverter,
+)
+from r11data.tabular.triple_generators.journeys_triple_generator import (
+    JourneysRDFConverter as JourneysRDFConverter,
+)
 from r11data.tabular.triple_generators.locations_triple_generator import (
     LocationsTripleGenerator as LocationsTripleGenerator,
 )
