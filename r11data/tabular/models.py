@@ -372,7 +372,7 @@ class GeopoliticalEvent(_AuthoritySourceBase):
     intended_target_place: str | None = Field(
         validation_alias="Intended target place of attack"
     )
-    intended_target_poplulation: str | None = Field(
+    intended_target_population: str | None = Field(
         validation_alias="Intended target population"
     )
 
