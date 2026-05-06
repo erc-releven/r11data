@@ -28,7 +28,7 @@ from r11data.tabular.triple_generators import (
     BirthDeathEventRDFConverter,
     CorrespondenceRDFConverter,
     DeathsTripleGenerator,
-    GeopolicalEventRDFConverter,
+    GeopoliticalEventRDFConverter,
     JourneysRDFConverter,
     LocationsTripleGenerator,
     PersonRDFConverter,

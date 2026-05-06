@@ -46,37 +46,25 @@ class JourneysRDFConverter(_ModelRDFConverter[Journey]):
         yield from self.authority_passage_triples(e13_pwro_wp7_uri)
 
     def journey_time_frame_assertion_triples(self) -> Iterable[_Triple]:
-        start_date = self.model.start_date
-        end_date = self.model.end_date
+        """Time-Spans currently based start dates;
+        the tables have data like start_date='J 1000', end_data='J 1000 - J 1001'
+        and it is not entirely clear how to exactly translate that to CRM.
+        """
 
-        if not any([start_date, end_date]):
+        if (start_date := self.model.start_date) is None:
             return
 
         e13_crm_p4_uri = mkuri()
+        e52_uri = mkuri()
 
         yield from ttl(
             e13_crm_p4_uri,
             (RDF.type, star.E13_crm_P4),
             (crm.P140_assigned_attribute_to, self.model.voyage_uri),
+            (crm.P141_assigned, e52_uri),
         )
 
-        def _partial_time_frame_triples(date: str | None, predicate: URIRef):
-            if date is None:
-                return
-
-            e52_uri = mkuri()
-
-            yield from ttl(
-                e13_crm_p4_uri,
-                (
-                    crm.P141_assigned,
-                    ttl(e52_uri, (RDF.type, crm["E52_Time-Span"]), (predicate, date)),
-                ),
-            )
-
-        yield from _partial_time_frame_triples(start_date, crm.P82a_begin_of_the_begin)
-        yield from _partial_time_frame_triples(end_date, crm.P82b_end_of_the_end)
-
+        yield from generate_time_triples(e52_uri, start_date)
         yield from self.authority_passage_triples(e13_crm_p4_uri)
 
     def journey_under_authority_assertion_triples(self) -> Iterable[_Triple]:
