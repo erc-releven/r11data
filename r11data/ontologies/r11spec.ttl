@@ -14,6 +14,17 @@
                           rdfs:comment "This ontology contains the subclasses of and shortcuts for CIDOC-CRM elements that are necessary for distinguishing different sorts of RELEVEN data that belong to the same CRM superclass."@en .
 
 #################################################################
+#    Datatypes
+#################################################################
+
+###  https://r11.eu/ns/spec/JulianDay
+:JulianDay rdf:type rdfs:Datatype ;
+           rdfs:label "Julian day"@en ;
+           rdfs:comment "A Julian Day Number, expressed as a positive integer." ;
+           owl:onDatatype xsd:positiveInteger .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
@@ -96,7 +107,7 @@
 
 ###  https://r11.eu/ns/spec/Geopolitical_Event
 :Geopolitical_Event rdf:type owl:Class ;
-                         rdfs:subClassOf crm:E7_Activity .
+                    rdfs:subClassOf crm:E7_Activity .
 
 
 ###  https://r11.eu/ns/spec/Geopolitical_Event_Type

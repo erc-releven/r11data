@@ -64,6 +64,8 @@ class ClosedOntologyNamespace:
       rdfs:Class
       owl:Class
 
+      rdfs:Datatype 
+
       rdf:Property
       owl:ObjectProperty
       owl:DatatypeProperty
@@ -236,7 +238,7 @@ def _generate_julian_day_triples(
     is_position: bool = jd_begin == jd_end
     known_limit = parsed_date.date_entry.known_limit
 
-    jd = r11["JulianDay"]
+    jd = r11spec["JulianDay"]
 
     match is_position, known_limit:
         case True, None:
