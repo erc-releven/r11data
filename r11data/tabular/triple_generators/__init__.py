@@ -17,7 +17,7 @@ from r11data.tabular.triple_generators.deaths_triple_generator import (
     DeathsTripleGenerator as DeathsTripleGenerator,
 )
 from r11data.tabular.triple_generators.geopolitical_event_triple_generator import (
-    GeopoliticalEventRDFConverter as GeopolicalEventRDFConverter,
+    GeopoliticalEventRDFConverter as GeopoliticalEventRDFConverter,
 )
 from r11data.tabular.triple_generators.journeys_triple_generator import (
     JourneysRDFConverter as JourneysRDFConverter,

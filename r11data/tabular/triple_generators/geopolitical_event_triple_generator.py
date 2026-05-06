@@ -15,16 +15,12 @@ from r11data.tabular.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.utils.rdf_utils import (
     aaao,
     crm,
-    get_source_name_lang_tag,
-    lrm,
     mkuri,
     pwro,
-    r11,
-    r11pros,
     r11spec,
     star,
 )
-from rdflib import RDF, RDFS, Literal, URIRef
+from rdflib import RDF, RDFS, URIRef
 
 
 class GeopoliticalEventRDFConverter(_ModelRDFConverter[GeopoliticalEvent]):

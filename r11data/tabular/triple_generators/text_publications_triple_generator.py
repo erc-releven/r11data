@@ -14,7 +14,7 @@ from r11data.tabular.utils.rdf_utils import (
     r11spec,
     star,
 )
-from rdflib import RDF, RDFS, URIRef
+from rdflib import RDF, RDFS
 
 
 class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
