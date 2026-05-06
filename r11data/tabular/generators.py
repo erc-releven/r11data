@@ -549,7 +549,7 @@ def geopolitical_event_triples() -> Iterator[Triple]:
             focus_sheet=lewis_sheets.geopolitical_events,
             sheets=lewis_sheets,
             model_type=GeopoliticalEvent,
-            model_converter=GeopolicalEventRDFConverter,
+            model_converter=GeopoliticalEventRDFConverter,
         )
     )
 
@@ -558,7 +558,7 @@ def geopolitical_event_triples() -> Iterator[Triple]:
             focus_sheet=aleks_sheets.geopolitical_events,
             sheets=aleks_sheets,
             model_type=GeopoliticalEvent,
-            model_converter=GeopolicalEventRDFConverter,
+            model_converter=GeopoliticalEventRDFConverter,
         )
     )
 
@@ -567,7 +567,7 @@ def geopolitical_event_triples() -> Iterator[Triple]:
             focus_sheet=marton_sheets.geopolitical_events,
             sheets=marton_sheets,
             model_type=GeopoliticalEvent,
-            model_converter=GeopolicalEventRDFConverter,
+            model_converter=GeopoliticalEventRDFConverter,
         )
     )
 

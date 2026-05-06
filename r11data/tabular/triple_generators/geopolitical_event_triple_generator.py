@@ -15,6 +15,7 @@ from r11data.tabular.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.utils.rdf_utils import (
     aaao,
     crm,
+    generate_time_triples,
     mkuri,
     pwro,
     r11spec,
@@ -27,9 +28,23 @@ class GeopoliticalEventRDFConverter(_ModelRDFConverter[GeopoliticalEvent]):
     def base_triples(self) -> Iterator[_Triple]:
         yield from ttl(
             self.model.event_uri,
-            (RDF.type, crm.E7_Activity),
+            (RDF.type, r11spec.Geopolitical_Event),
             (RDFS.label, self.model.event_label),
         )
+
+    def event_time_assertion_triples(self) -> Iterator[_Triple]:
+        e13_crm_p4_uri = mkuri()
+        e52_uri = mkuri()
+
+        yield from ttl(
+            e13_crm_p4_uri,
+            (RDF.type, star.E13_crm_P4),
+            (crm.P140_assigned_attribute_to, self.model.event_uri),
+            (crm.P141_assigned, ttl(e52_uri, (RDF.type, crm["E52_Time-Span"]))),
+        )
+
+        yield from generate_time_triples(e52_uri, self.model.event_date)
+        yield from self.authority_passage_triples(e13_crm_p4_uri)
 
     def attack_event_assertion_triples(self) -> Iterator[_Triple]:
         e13_crm_p9_uri = mkuri()
@@ -292,6 +307,7 @@ class GeopoliticalEventRDFConverter(_ModelRDFConverter[GeopoliticalEvent]):
     def __iter__(self) -> Iterator[_Triple]:
         return itertools.chain(
             self.base_triples(),
+            self.event_time_assertion_triples(),
             self.attack_event_assertion_triples(),
             self.event_type_assertion_triples(),
             self.active_party_assertion_triples(),
