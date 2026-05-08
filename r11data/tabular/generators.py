@@ -16,6 +16,7 @@ from r11data.tabular.models import (
     LeadSeals,
     LocationSheetModel,
     Manuscript,
+    OtherObjects,
     Person,
     Place,
     SocialRelationship,
@@ -31,6 +32,7 @@ from r11data.tabular.triple_generators import (
     GeopoliticalEventRDFConverter,
     JourneysRDFConverter,
     LocationsTripleGenerator,
+    OtherObjectsRDFConverter,
     PersonRDFConverter,
     PlaceRDFConverter,
     SocialRelationshipRDFConverter,
@@ -575,4 +577,37 @@ def geopolitical_event_triples() -> Iterator[Triple]:
         lewis_geo_events_triple_generator,
         aleks_geo_events_triple_generator,
         marton_geo_events_triple_generator,
+    )
+
+
+##################################################
+#### Other Objects
+
+
+def other_object_triples() -> Iterator[Triple]:
+    lewis_objects_triple_generator: TripleGenerator[OtherObjects] = TripleGenerator(
+        focus_sheet=lewis_sheets.other_objects,
+        sheets=lewis_sheets,
+        model_type=OtherObjects,
+        model_converter=OtherObjectsRDFConverter,
+    )
+
+    aleks_objects_triple_generator: TripleGenerator[OtherObjects] = TripleGenerator(
+        focus_sheet=aleks_sheets.other_objects,
+        sheets=aleks_sheets,
+        model_type=OtherObjects,
+        model_converter=OtherObjectsRDFConverter,
+    )
+
+    marton_objects_triple_generator: TripleGenerator[OtherObjects] = TripleGenerator(
+        focus_sheet=marton_sheets.other_objects,
+        sheets=marton_sheets,
+        model_type=OtherObjects,
+        model_converter=OtherObjectsRDFConverter,
+    )
+
+    return TripleChain(
+        lewis_objects_triple_generator,
+        aleks_objects_triple_generator,
+        marton_objects_triple_generator,
     )

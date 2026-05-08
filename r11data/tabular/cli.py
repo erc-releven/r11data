@@ -14,6 +14,7 @@ from r11data.tabular.generators import (
     lead_seals_triples,
     location_triples,
     manuscript_triples,
+    other_object_triples,
     person_triples,
     places_triples,
     social_relationships_triples,
@@ -40,6 +41,7 @@ GENERATORS = {
     "locations": location_triples,
     "journeys": journeys_triples,
     "geopolitical_events": geopolitical_event_triples,
+    "other_objects": other_object_triples,
 }
 
 

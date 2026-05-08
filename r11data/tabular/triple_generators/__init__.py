@@ -28,6 +28,9 @@ from r11data.tabular.triple_generators.locations_triple_generator import (
 from r11data.tabular.triple_generators.manuscript_triple_generator import (
     ManuscriptRDFConverter as ManuscriptRDFConverter,
 )
+from r11data.tabular.triple_generators.other_objects_triple_generator import (
+    OtherObjectsRDFConverter as OtherObjectsRDFConverter,
+)
 from r11data.tabular.triple_generators.persons_triple_generator import (
     PersonRDFConverter as PersonRDFConverter,
 )

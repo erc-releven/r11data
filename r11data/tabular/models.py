@@ -497,6 +497,16 @@ class LeadSeals(BaseModel):
 
 
 class OtherObjects(_AuthoritySourceBase):
+    @computed_field
+    @property
+    def object_uri(self) -> URIRef:
+        return mkuri(crm["E22_Human-Made_Object"], self.title)
+
+    @computed_field
+    @property
+    def object_production_uri(self) -> URIRef:
+        return mkuri(crm.E12_Production, self.object_uri)
+
     title: str = Field(validation_alias="Title")
 
     external_id: Annotated[
