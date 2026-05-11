@@ -1,23 +1,22 @@
 """TripleGenerator for the Social Relationship sheet."""
 
+import itertools
 from collections.abc import Iterator
 from functools import cached_property
-import itertools
 
 from lodkit import _Triple, ttl
-from rdflib import RDF, RDFS, URIRef
-
 from r11data.tabular.models import SocialRelationship
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
+from r11data.tabular.utils.date_parser import generate_date_triples
 from r11data.tabular.utils.rdf_utils import (
     crm,
-    generate_time_triples,
     mkuri,
     r11pros,
     r11spec,
     star,
     tara_uri,
 )
+from rdflib import RDF, RDFS, URIRef
 
 
 class SocialRelationshipRDFConverter(_ModelRDFConverter[SocialRelationship]):
@@ -105,10 +104,10 @@ class SocialRelationshipRDFConverter(_ModelRDFConverter[SocialRelationship]):
         )
 
         if (start_date := self.model.start_date) is not None:
-            yield from generate_time_triples(e52_uri=e52_uri, date_value=start_date)
+            yield from generate_date_triples(e52_uri, start_date)
 
         if (end_date := self.model.end_date) is not None:
-            yield from generate_time_triples(e52_uri=e52_uri, date_value=end_date)
+            yield from generate_date_triples(e52_uri, end_date)
 
     def __iter__(self) -> Iterator[_Triple]:
         return itertools.chain(

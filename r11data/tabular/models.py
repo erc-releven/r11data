@@ -280,7 +280,7 @@ class Manuscript(_AuthoritySourceBase):
     @computed_field
     @property
     def manuscript_production_uri(self) -> URIRef:
-        return mkuri(crm.E12_Production, self.manuscript_production_uri)
+        return mkuri(crm.E12_Production, self.manuscript_uri)
 
     identifier: str = Field(validation_alias="Identifier")
     dating: str = Field(validation_alias="Dating")

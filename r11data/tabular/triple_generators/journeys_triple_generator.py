@@ -6,9 +6,9 @@ from collections.abc import Iterable, Iterator
 from lodkit import _Triple, ttl
 from r11data.tabular.models import AuthorityStatus, Journey, Person, Place
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
+from r11data.tabular.utils.date_parser import generate_date_triples
 from r11data.tabular.utils.rdf_utils import (
     crm,
-    generate_time_triples,
     mkuri,
     pwro,
     star,
@@ -61,10 +61,10 @@ class JourneysRDFConverter(_ModelRDFConverter[Journey]):
             e13_crm_p4_uri,
             (RDF.type, star.E13_crm_P4),
             (crm.P140_assigned_attribute_to, self.model.voyage_uri),
-            (crm.P141_assigned, e52_uri),
+            (crm.P141_assigned, ttl(e52_uri, (RDF.type, crm["E52_Time-Span"]))),
         )
 
-        yield from generate_time_triples(e52_uri, start_date)
+        yield from generate_date_triples(e52_uri, start_date)
         yield from self.authority_passage_triples(e13_crm_p4_uri)
 
     def journey_under_authority_assertion_triples(self) -> Iterable[_Triple]:
@@ -230,7 +230,7 @@ class JourneysRDFConverter(_ModelRDFConverter[Journey]):
             (crm.P141_assigned, ttl(e52_uri, (RDF.type, crm["E52_Time-Span"]))),
         )
 
-        yield from generate_time_triples(e52_uri=e52_uri, date_value=visited_when)
+        yield from generate_date_triples(e52_uri, visited_when)
         yield from self.authority_passage_triples(e13_crm_p4_uri)
 
     def visited_place_assertion_triples(self) -> Iterable[_Triple]:

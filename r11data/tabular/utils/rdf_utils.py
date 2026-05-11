@@ -11,7 +11,6 @@ from uuid import uuid4
 
 from lodkit import NamespaceGraph
 from lodkit import _Triple as Triple
-from r11data.tabular.utils.date_parser import R11DateParser
 from r11data.utils.paths import ontologies_path
 from rdflib import RDFS, Graph, Literal, Namespace, URIRef
 from rdflib.parser import InputSource
@@ -217,90 +216,3 @@ class TripleChain(itertools.chain[Triple]):
             warnings.warn(msg)
 
         return _graph
-
-
-def _generate_julian_day_triples(
-    e52_uri: URIRef, parsed_date: R11DateParser
-) -> Iterator[Triple]:
-    """Logic for creating time triples based on an R11DateParser object.
-
-    -- cases --
-    1. position (begin == end):
-    2. duration (begin != end)
-    3 position/known_limit
-      3.1 TAQ position
-      3.2 TPQ position
-    4 duration/known_limit
-      4.1 TAQ duration
-      4.2 TPQ duration
-    """
-    jd_begin, jd_end = parsed_date.jd_duration
-    is_position: bool = jd_begin == jd_end
-    known_limit = parsed_date.date_entry.known_limit
-
-    jd = r11spec["JulianDay"]
-
-    match is_position, known_limit:
-        case True, None:
-            yield (
-                e52_uri,
-                crm["P82_at_some_time_within"],
-                Literal(jd_begin, datatype=jd),
-            )
-        case True, "TAQ":
-            # end of the end
-            yield (e52_uri, crm["P82b_end_of_the_end"], Literal(jd_begin, datatype=jd))
-        case True, "TPQ":
-            # begin of the begin
-            yield (
-                e52_uri,
-                crm["P82a_begin_of_the_begin"],
-                Literal(jd_begin, datatype=jd),
-            )
-        case False, None:
-            yield from [
-                (
-                    e52_uri,
-                    crm["P82a_begin_of_the_begin"],
-                    Literal(jd_begin, datatype=jd),
-                ),
-                (e52_uri, crm["P82b_end_of_the_end"], Literal(jd_end, datatype=jd)),
-            ]
-        case False, "TAQ":
-            yield from [
-                (e52_uri, crm["P81b_begin_of_the_end"], Literal(jd_begin, datatype=jd)),
-                (e52_uri, crm["P82b_end_of_the_end"], Literal(jd_end, datatype=jd)),
-            ]
-        case False, "TPQ":
-            # begin of the begin, end of the begin
-            yield from [
-                (
-                    e52_uri,
-                    crm["P82a_begin_of_the_begin"],
-                    Literal(jd_begin, datatype=jd),
-                ),
-                (e52_uri, crm["P81a_end_of_the_begin"], Literal(jd_end, datatype=jd)),
-            ]
-        case _:
-            raise Exception("Time triple switch failed.")
-
-
-def generate_time_triples(e52_uri: URIRef, date_value: str | None) -> Iterator[Triple]:
-    """Triple generator for generating temporal assertions given an  E52 URI and a date value string.
-
-    If the date value string can be parsed into a R11DateParser object,
-    the generator will yield temporal CRM assertions with JulianDay-converted dates;
-    else, the generator will simply yield an rdfs:label label assertion for the date string.
-    """
-    if date_value is not None:
-        yield (e52_uri, RDFS.label, Literal(date_value))
-
-        try:
-            parsed_date = R11DateParser(date_value=date_value)
-        except Exception:
-            msg = f"Failed to parse date value '{date_value}'."
-            logger.warning(msg)
-        else:
-            yield from _generate_julian_day_triples(
-                e52_uri=e52_uri, parsed_date=parsed_date
-            )

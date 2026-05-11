@@ -6,6 +6,7 @@ from collections.abc import Iterator
 from lodkit import _Triple, ttl
 from r11data.tabular.models import Correspondence, Place
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
+from r11data.tabular.utils.date_parser import generate_date_triples
 from r11data.tabular.utils.rdf_utils import crm, mkuri, pwro, r11spec, star
 from rdflib import RDF, RDFS
 
@@ -148,7 +149,27 @@ class CorrespondenceRDFConverter(_ModelRDFConverter[Correspondence]):
             # authority + passage triples
             yield from self.authority_passage_triples(e13_pwro_wp4_uri)
 
+    def dispatch_date_assertion_triples(self) -> Iterator[_Triple]:
+        """Note: `When received` is currently not defined in the model."""
+        if (when_sent := self.model.when_sent) is None:
+            return
+
+        e13_crm_p4_uri = mkuri()
+        e52_uri = mkuri()
+
+        yield from ttl(
+            e13_crm_p4_uri,
+            (RDF.type, star.E13_crm_P4),
+            (crm.P140_assigned_attribute_to, self.model.dispatch_uri),
+            (crm.P141_assigned, ttl(e52_uri, (RDF.type, crm["E52_Time-Span"]))),
+        )
+
+        yield from generate_date_triples(e52_uri, when_sent)
+
     def __iter__(self) -> Iterator[_Triple]:
         return itertools.chain(
-            self.base_triples(), self.letter_triples(), self.dispatch_triples()
+            self.base_triples(),
+            self.letter_triples(),
+            self.dispatch_triples(),
+            self.dispatch_date_assertion_triples(),
         )

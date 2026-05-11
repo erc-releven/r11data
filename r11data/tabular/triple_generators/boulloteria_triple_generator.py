@@ -6,6 +6,7 @@ from collections.abc import Iterator
 from lodkit import _Triple, ttl
 from r11data.tabular.models import Boulloteria, LeadSeals, Person
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
+from r11data.tabular.utils.date_parser import generate_date_triples
 from r11data.tabular.utils.rdf_utils import crm, mkuri, r11spec, so, star
 from rdflib import RDF, RDFS, URIRef
 
@@ -73,6 +74,7 @@ class BoulloteriaRDFConverter(_ModelRDFConverter[Boulloteria]):
     def ownership_triples(self) -> Iterator[_Triple]:
         e13_crm_p24_uri, e13_crm_p4_uri = mkuri(), mkuri()
         ownership_uri = mkuri()
+        e52_uri = mkuri()
 
         # ownership: base
         yield from ttl(
@@ -93,12 +95,13 @@ class BoulloteriaRDFConverter(_ModelRDFConverter[Boulloteria]):
             (
                 crm.P141_assigned,
                 ttl(
-                    mkuri(),
+                    e52_uri,
                     (RDF.type, crm["E52_Time-Span"]),
-                    (RDFS.label, self.model.dating),
                 ),
             ),
         )
+
+        yield from generate_date_triples(e52_uri, self.model.dating)
 
         # authority/passage triples
         yield from self.authority_passage_triples(e13_crm_p24_uri)

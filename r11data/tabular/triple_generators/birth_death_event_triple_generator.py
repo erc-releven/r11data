@@ -7,7 +7,8 @@ from functools import cached_property
 from lodkit import _Triple, ttl
 from r11data.tabular.models import BirthAndDeath, Person, Place
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
-from r11data.tabular.utils.rdf_utils import crm, generate_time_triples, mkuri, star
+from r11data.tabular.utils.date_parser import generate_date_triples
+from r11data.tabular.utils.rdf_utils import crm, mkuri, star
 from rdflib import RDF, RDFS, URIRef
 
 
@@ -70,12 +71,11 @@ class BirthDeathEventRDFConverter(_ModelRDFConverter[BirthAndDeath]):
                 ttl(
                     e52_uri,
                     (RDF.type, crm["E52_Time-Span"]),
-                    (RDFS.label, date),
                 ),
             ),
         )
 
-        yield from generate_time_triples(e52_uri=e52_uri, date_value=date)
+        yield from generate_date_triples(e52_uri, date)
         yield from self.authority_passage_triples(e13_crm_p4_uri)
 
     def event_place_assertion_triples(self) -> Iterator[_Triple]:

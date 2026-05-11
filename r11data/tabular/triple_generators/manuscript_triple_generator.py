@@ -6,9 +6,9 @@ from collections.abc import Iterable, Iterator
 from lodkit import _Triple, ttl
 from r11data.tabular.models import Manuscript, Person, Place, TextPublication
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
+from r11data.tabular.utils.date_parser import generate_date_triples
 from r11data.tabular.utils.rdf_utils import (
     crm,
-    generate_time_triples,
     mkuri,
     r11spec,
     star,
@@ -77,12 +77,11 @@ class ManuscriptRDFConverter(_ModelRDFConverter[Manuscript]):
                 ttl(
                     e52_uri,
                     (RDF.type, crm["E52_Time-Span"]),
-                    (RDFS.label, self.model.dating),
                 ),
             ),
         )
 
-        yield from generate_time_triples(e52_uri=e52_uri, date_value=self.model.dating)
+        yield from generate_date_triples(e52_uri, self.model.dating)
         yield from self.authority_passage_triples(e13_crm_p4_uri)
 
     def manuscript_location_assertion(self) -> Iterable[_Triple]:

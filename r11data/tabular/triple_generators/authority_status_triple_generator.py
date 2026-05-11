@@ -7,6 +7,7 @@ from functools import cached_property
 from lodkit import _Triple, ttl
 from r11data.tabular.models import AuthorityStatus, Place
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
+from r11data.tabular.utils.date_parser import generate_date_triples
 from r11data.tabular.utils.rdf_utils import aaao, crm, mkuri, r11spec, star
 from rdflib import RDF, RDFS, Literal, URIRef
 
@@ -122,20 +123,20 @@ class AuthorityStatusRDFConverter(_ModelRDFConverter[AuthorityStatus]):
             return
 
         e13_crm_p4_uri = mkuri()
-        time_span_uri = mkuri()
+        e52_uri = mkuri()
 
         yield from ttl(
             e13_crm_p4_uri,
             (RDF.type, star.E13_crm_P4),
             (crm.P140_assigned_attribute_to, self.model.status_uri),
-            (crm.P141_assigned, ttl(time_span_uri, (RDF.type, crm["E52_Time-Span"]))),
+            (crm.P141_assigned, ttl(e52_uri, (RDF.type, crm["E52_Time-Span"]))),
         )
 
         if temporal_start:
-            yield (time_span_uri, crm.P82a_begin_of_the_begin, Literal(temporal_start))
+            yield from generate_date_triples(e52_uri, temporal_start)
 
         if temporal_end:
-            yield (time_span_uri, crm.P82b_end_of_the_end, Literal(temporal_end))
+            yield from generate_date_triples(e52_uri, temporal_end)
 
     def __iter__(self) -> Iterator:
         return itertools.chain(

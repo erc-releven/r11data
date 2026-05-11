@@ -1,299 +1,262 @@
 """Functionality for parsing and RDF-converting date entries."""
 
-# postponed annotation eval (see pep563)
-from __future__ import annotations
-import calendar
-from contextlib import suppress
+import logging
 import math
 import operator
 import re
-from typing import ClassVar, Optional, Self
+from calendar import monthrange
+from collections.abc import Iterator
+from typing import Literal, Self
 
 import convertdate
-from pydantic import BaseModel, field_validator, model_validator
-from toolz.dicttoolz import valfilter
+from lodkit import _Triple
+from pydantic import BaseModel, model_validator
+from r11data.tabular.utils.rdf_utils import crm, r11spec
+from rdflib import RDFS
+from rdflib import Literal as RDFLiteral
+
+logger = logging.getLogger(__name__)
+
+
+Calendar = Literal["A", "AM", "J"]
+Qualifier = Literal["TAQ", "TPQ"]
+
+MONTHS = {
+    "January": 1,
+    "February": 2,
+    "March": 3,
+    "April": 4,
+    "May": 5,
+    "June": 6,
+    "July": 7,
+    "August": 8,
+    "September": 9,
+    "October": 10,
+    "November": 11,
+    "December": 12,
+}
+
+
+class DatePart(BaseModel):
+    calendar: Calendar | None = None
+    year: int
+    month: int | None = None
+    day: int | None = None
+    qualifier: Qualifier | None = None
+
+
+class DateRange(BaseModel):
+    start: DatePart
+    end: DatePart | None = None
+
+    @model_validator(mode="after")
+    def inherit_calendar(self) -> "DateRange":
+        if self.end is not None and self.end.calendar is None:
+            self.end.calendar = self.start.calendar
+        return self
+
+
+class ExpandedDateRange(BaseModel):
+    calendar: Calendar | None = None
+
+    start_year: int
+    start_month: int
+    start_day: int
+
+    end_year: int
+    end_month: int
+    end_day: int
+
+    start_qualifier: Qualifier | None = None
+    end_qualifier: Qualifier | None = None
+
+
+MONTH_RE = "|".join(MONTHS)
+
+DATE_RE = re.compile(
+    rf"""
+    ^\s*
+    (?:(?P<calendar>AM|A|J)\s*)?
+    (?P<year>\d+)
+    \s*[,;:]?\s*
+    (?:
+        (?P<month>{MONTH_RE})
+        (?:\s+(?P<day>\d{{1,2}}))?
+    )?
+    \s*
+    (?:
+        \[?(?P<qualifier>TAQ|TPQ)\]?
+    )?
+    \s*$
+    """,
+    re.VERBOSE,
+)
+
+
+def parse_date_part(text: str) -> DatePart:
+    match = DATE_RE.match(text)
+
+    if not match:
+        raise ValueError(f"Invalid date part: {text!r}")
+
+    month_name = match.group("month")
+
+    return DatePart(
+        calendar=match.group("calendar"),
+        year=int(match.group("year")),
+        month=MONTHS[month_name] if month_name else None,
+        day=int(match.group("day")) if match.group("day") else None,
+        qualifier=match.group("qualifier"),
+    )
+
+
+def parse_date(text: str) -> DateRange:
+    start_text, *rest = re.split(r"\s*-\s*", text, maxsplit=1)
+
+    return DateRange(
+        start=parse_date_part(start_text),
+        end=parse_date_part(rest[0]) if rest else None,
+    )
+
+
+def lower_bound(part: DatePart) -> tuple[int, int, int]:
+    return (
+        part.year,
+        part.month or 1,
+        part.day or 1,
+    )
+
+
+def upper_bound(part: DatePart) -> tuple[int, int, int]:
+    if part.month is None:
+        match part.calendar:
+            case "A":
+                return part.year, 13, 5
+            case "J" | "AM" | None:
+                return part.year, 12, 31
+            case _:
+                raise AssertionError("unreachable")
+
+    if part.day is None:
+        match part.calendar:
+            case "A":
+                if 1 <= part.month <= 12:
+                    return part.year, part.month, 30
+                if part.month == 13:
+                    return part.year, 13, 5
+                raise ValueError(f"Invalid Armenian month: {part.month}")
+
+            case "J" | "AM" | None:
+                return part.year, part.month, monthrange(part.year, part.month)[1]
+
+            case _:
+                raise AssertionError("unreachable")
+
+    return part.year, part.month, part.day
+
+
+def expand_date_range(date_range: DateRange) -> ExpandedDateRange:
+    start_part = date_range.start
+    end_part = date_range.end or date_range.start
+
+    start_year, start_month, start_day = lower_bound(start_part)
+    end_year, end_month, end_day = upper_bound(end_part)
+
+    return ExpandedDateRange(
+        calendar=start_part.calendar,
+        start_year=start_year,
+        start_month=start_month,
+        start_day=start_day,
+        end_year=end_year,
+        end_month=end_month,
+        end_day=end_day,
+        start_qualifier=start_part.qualifier,
+        end_qualifier=end_part.qualifier,
+    )
+
+
+def parse_and_expand_date(text: str) -> ExpandedDateRange:
+    return expand_date_range(parse_date(text))
+
+
+##################################################
+#### converters
 
 
 def byzantine_to_jd(year: int, month: int, day: int):
-    """..."""
     byzantine_leap_days = math.floor(5509 / 4)
     byzantine_julian_days_delta = 5509 * 365 + byzantine_leap_days + 1
 
     julian_jd = convertdate.julian.to_jd(year=year, month=month, day=day)
-
     result_jd = operator.sub(julian_jd, byzantine_julian_days_delta)
 
     return result_jd
 
 
-class InvalidDateException(Exception):
-    """Exception for indicating invalid date entries.
-
-    This exception is raised from the R11DateEntry model if a validator fails.
-    """
-
-
-def _get_raw_duration(date_entry: R11DateEntry) -> tuple[tuple, tuple]:
-    """Get a tuple represenation from an R11DateEntry object."""
-    _begin_values = (
-        date_entry.year_begin,
-        date_entry.month_begin,
-        date_entry.day_begin,
-    )
-    _end_values = (date_entry.year_end, date_entry.month_end, date_entry.day_end)
-
-    return _begin_values, _end_values
+jd_converters = {
+    "AM": byzantine_to_jd,
+    "A": convertdate.armenian.to_jd,
+    "J": convertdate.julianday.from_julian,
+}
+##################################################
 
 
-class R11DateEntry(BaseModel):
-    """Model for r11 date entries."""
-
-    # -- model fields --
-    calendar: str
-    year_begin: int
-    year_end: Optional[int] = None
-    month_begin: Optional[str] = None
-    month_end: Optional[str] = None
-    day_begin: Optional[int] = None
-    day_end: Optional[int] = None
-    known_limit: Optional[str] = None
-
-    # -- class level attributes --
-    _calendars: ClassVar[list[str]] = ["AM", "J", "A"]
-    _month_index_mapping: ClassVar[dict[str, int]] = {
-        name: index for index, name in enumerate(calendar.month_name[1:], start=1)
-    }
-    _known_limit_values: ClassVar[list[str]] = ["TPQ", "TAQ"]
-
-    # -- validators --
-    @field_validator("calendar")
-    @classmethod
-    def _calendar_validator(cls, value):
-        """Validate calendar values.
-
-        Checks if the received value for the 'calendar' slot is valid.
-        """
-        if value not in cls._calendars:
-            raise InvalidDateException(
-                f"Calendar value must be one of {cls._calendars}.\n"
-                f"Received '{value}'."
-            )
-        return value
-
-    @field_validator("year_end")
-    @classmethod
-    def _year_end_validator(cls, value, values):
-        """Validate end year values.
-
-        Checks if the received value for the 'year_end' slot is lt the begin year.
-        """
-        _year_begin_value = values.data["year_begin"]
-        if value < _year_begin_value:
-            raise InvalidDateException(
-                f"Start year greater than end year ({_year_begin_value}-{value})."
-            )
-        return value
-
-    @field_validator("month_begin", "month_end")
-    @classmethod
-    def _month_validator(cls, value):
-        """Validate month values.
-
-        Checks if the received value is a valid month name.
-        """
-        try:
-            month_index = cls._month_index_mapping[value]
-            return month_index
-        except KeyError:
-            raise InvalidDateException(
-                f"Month values must be one of {list(cls._month_index_mapping)}.\n"
-                f"Received '{value}'."
-            )
-
-    @field_validator("month_end")
-    @classmethod
-    def _month_end_validator(cls, value, values):
-        """Validate month end values."""
-        _month_begin_value = values.data["month_begin"]
-        _year_begin_value = values.data["year_begin"]
-        _year_end_value = values.data["year_end"]
-
-        if (value < _month_begin_value) and _year_end_value is None:
-            raise InvalidDateException(
-                f"Start month greater than end month with only a single year specified "
-                f"({_year_begin_value}, {_month_begin_value}-{value})."
-            )
-        return value
-
-    @field_validator("day_begin", "day_end")
-    @classmethod
-    def _day_begin_validator(cls, value, values):
-        """Validate begin day values.
-
-        Note that this assumes that if day_begin is given,
-        also year_begin and month_begin must be present.
-        This adds additional checking since it does not make sense
-        to have e.g. just a year and a day.
-        """
-        # https://stackoverflow.com/q/77250848/6455731
-        with suppress(KeyError):
-            _year_begin = values.data["year_begin"]
-            _month_begin = values.data["month_begin"]
-
-            # check for boundaries
-            # note: general lt check for full dates is done in the model_validator
-            if value > calendar._monthlen(_year_begin, _month_begin):
-                raise InvalidDateException(
-                    f"Day '{value}' out of bounds for "
-                    f"year-month '{_year_begin}-{_month_begin}'."
-                )
-
-        return value
-
-    @field_validator("known_limit")
-    @classmethod
-    def _known_limit_validator(cls, value):
-        """Validate known limit values.
-
-        Checks if the received value for the known limit slot is valid.
-        """
-        if value not in cls._known_limit_values:
-            raise InvalidDateException(
-                f"Known limit value must be one of {cls._known_limit_values}.\n"
-                f"Received '{value}'."
-            )
-        return value
-
-    @model_validator(mode="after")
-    def _complete_values(self) -> Self:
-        """Model validator for R11DateEntry objects.
-
-        The validator is used to assign values to slots
-        and also to perform a final check on the start and end values.
-        """
-        # handle epagomenal days in armenian dates
-        month_end_default = 13 if self.calendar == "A" else 12
-
-        def day_end_default():
-            """Calculate the month_end default value.
-
-            Caveat: This depends on non-local data and should
-            run only after data.month is finally determined.
-            """
-            if self.month_end == 13:
-                day_end = 5
-            elif self.calendar == "A":
-                day_end = 30
-            else:
-                day_end = calendar._monthlen(self.year_end, self.month_end)
-            return day_end
-
-        # end values
-        self.year_end = self.year_end or self.year_begin
-        self.month_end = self.month_end or self.month_begin or month_end_default
-
-        self.day_end = self.day_end or self.day_begin or day_end_default()
-
-        # begin values
-        self.month_begin = self.month_begin or 1
-        self.day_begin = self.day_begin or 1
-
-        # check if start date is lt end date
-        _begin_values, _end_values = _get_raw_duration(self)
-
-        if _begin_values > _end_values:
-            raise InvalidDateException(
-                "Begin values are greater than end values.\n"
-                f"Begin values: {_begin_values}, end values: {_end_values}."
-            )
-
-        return self
+def _get_start_predicate(start_qualifier):
+    match start_qualifier:
+        case "TAQ":
+            return crm.P81b_begin_of_the_end
+        case "TPQ":
+            return crm.P82a_begin_of_the_begin
+        case None:
+            return crm.P82a_begin_of_the_begin
+        case _:
+            assert False, "This should never happen."
 
 
-class R11DateParser:
-    """Parse R11 table date entries.
+def _get_end_predicate(end_qualifier):
+    match end_qualifier:
+        case "TAQ":
+            return crm.P82b_end_of_the_end
+        case "TPQ":
+            return crm.P81a_end_of_the_begin
+        case None:
+            return crm.P82b_end_of_the_end
+        case _:
+            assert False, "This should never happen."
 
-    The input data (a raw R11 date string) is processed using a regex;
-    capture groups are used to instantiate an R11DateEntry dataclass.
-    """
 
-    _jd_converters = {
-        "AM": byzantine_to_jd,
-        "A": convertdate.armenian.to_jd,
-        "J": convertdate.julianday.from_julian,
-    }
+def generate_date_triples(e52_node, date: str) -> Iterator[_Triple]:
+    try:
+        date_range = parse_and_expand_date(date)
 
-    def __init__(self, date_value: str):
-        """Initialize a R11DateParser.
+        converter = jd_converters[date_range.calendar]
 
-        Constructs a R11DateEntry component from a raw date_value string.
-        """
-        self._date_value = date_value
-        self._date_entry_kwargs = valfilter(
-            lambda x: x is not None, self._parse_date(self._date_value)
+        start_predicate = _get_start_predicate(date_range.start_qualifier)
+        end_predicate = _get_end_predicate(date_range.end_qualifier)
+
+        start_date = converter(
+            date_range.start_year, date_range.start_month, date_range.start_day
         )
-        # use dependency injection?
-        self.date_entry = R11DateEntry(**self._date_entry_kwargs)
-
-    @staticmethod
-    def _split_date_part(
-        date_part: str, pattern: str = r"(\w+)?(?:/|-(\w+))?"
-    ) -> tuple[str | None, str | None]:
-        """Split a partial date entry by pattern.
-
-        Helper for parse_date function.
-        """
-        _match_groups = re.match(pattern, date_part).groups()
-        x, y, *_ = *_match_groups, None
-        return (x, y)
-
-    def _parse_date(self, date_entry: str) -> dict[str, str | None]:
-        """Parse a date string and generate a mapping."""
-        # R11DateEntry.model_fields.keys()
-        keys = (
-            "calendar",
-            "year_begin",
-            "year_end",
-            "month_begin",
-            "month_end",
-            "day_begin",
-            "day_end",
-            "known_limit",
+        end_date = converter(
+            date_range.end_year, date_range.end_month, date_range.end_day
         )
 
-        _date_split = date_entry.split(" ")
-        _date_parts = (*_date_split, *[""] * (len(keys) - len(_date_split)))
-
-        calendar = _date_parts[0]
-        year_begin, year_end = self._split_date_part(_date_parts[1])
-        month_begin, month_end = self._split_date_part(_date_parts[2])
-        day_begin, day_end = self._split_date_part(_date_parts[3])
-
-        _known_limit_match = re.search(r"\[(\w+)\]$", date_entry)
-        known_limit = _known_limit_match.groups()[0] if _known_limit_match else None
-
-        values = (
-            calendar,
-            year_begin,
-            year_end,
-            month_begin,
-            month_end,
-            day_begin,
-            day_end,
-            known_limit,
+    except Exception as exc:
+        logger.warning(
+            "Unable to compute date for %r: %s",
+            date,
+            exc,
         )
-
-        return dict(zip(keys, values))
-
-    @property
-    def raw_duration(self) -> tuple[tuple, tuple]:
-        """Duration represented as iso8601 tuples."""
-        return _get_raw_duration(self.date_entry)
-
-    @property
-    def jd_duration(self) -> tuple[int, int]:
-        """Duration represented as tuple Julian days."""
-        _begin_values, _end_values = self.raw_duration
-        _converter = self._jd_converters[self.date_entry.calendar]
-
-        return int(_converter(*_begin_values)), int(_converter(*_end_values))
+        return
+    else:
+        yield (e52_node, RDFS.label, RDFLiteral(date))
+        yield (
+            e52_node,
+            start_predicate,
+            RDFLiteral(start_date, datatype=r11spec.JulianDay),
+        )
+        yield (
+            e52_node,
+            end_predicate,
+            RDFLiteral(end_date, datatype=r11spec.JulianDay),
+        )

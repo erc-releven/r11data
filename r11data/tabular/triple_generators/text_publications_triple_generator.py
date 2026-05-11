@@ -6,9 +6,9 @@ from collections.abc import Iterator
 from lodkit import _Triple, ttl
 from r11data.tabular.models import TextPublication
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
+from r11data.tabular.utils.date_parser import generate_date_triples
 from r11data.tabular.utils.rdf_utils import (
     crm,
-    generate_time_triples,
     lrm,
     mkuri,
     r11spec,
@@ -68,7 +68,7 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
         yield from self.authority_passage_triples(e13_crm_p1_uri)
 
     def creation_time_assertion_triples(self) -> Iterator[_Triple]:
-        if self.model.creation_date is None:
+        if (creation_date := self.model.creation_date) is None:
             return
 
         e13_crm_p4_uri = mkuri()
@@ -78,19 +78,10 @@ class TextPublicationsRDFConverter(_ModelRDFConverter[TextPublication]):
             e13_crm_p4_uri,
             (RDF.type, star.E13_crm_P4),
             (crm.P140_assigned_attribute_to, self.model.text_expression_creation_uri),
-            (
-                crm.P141_assigned,
-                ttl(
-                    e52_uri,
-                    (RDF.type, crm["E52_Time-Span"]),
-                    (RDFS.label, self.model.creation_date),
-                ),
-            ),
+            (crm.P141_assigned, ttl(e52_uri, (RDF.type, crm["E52_Time-Span"]))),
         )
 
-        yield from generate_time_triples(
-            e52_uri=e52_uri, date_value=self.model.creation_date
-        )
+        yield from generate_date_triples(e52_uri, creation_date)
         yield from self.authority_passage_triples(e13_crm_p4_uri)
 
     def creation_author_assertion_triples(self) -> Iterator[_Triple]:

@@ -12,10 +12,10 @@ from r11data.tabular.models import (
     Place,
 )
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
+from r11data.tabular.utils.date_parser import generate_date_triples
 from r11data.tabular.utils.rdf_utils import (
     aaao,
     crm,
-    generate_time_triples,
     mkuri,
     pwro,
     r11spec,
@@ -43,7 +43,7 @@ class GeopoliticalEventRDFConverter(_ModelRDFConverter[GeopoliticalEvent]):
             (crm.P141_assigned, ttl(e52_uri, (RDF.type, crm["E52_Time-Span"]))),
         )
 
-        yield from generate_time_triples(e52_uri, self.model.event_date)
+        yield from generate_date_triples(e52_uri, self.model.event_date)
         yield from self.authority_passage_triples(e13_crm_p4_uri)
 
     def attack_event_assertion_triples(self) -> Iterator[_Triple]:
