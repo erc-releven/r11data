@@ -3,7 +3,7 @@ name = "r11data"
 version = "0.1.0"
 description = ""
 authors = [{ name = "Lukas Plank", email = "lupl@tuta.io" }]
-requires-python = "~=3.12"
+requires-python = ">=3.12"
 readme = "README.md"
 dependencies = [
     "rdflib>=7.0.0,<8",
@@ -21,7 +21,6 @@ dependencies = [
     "lodkit>=0.2.7",
     "openpyxl>=3.1.5",
     "pydantic-extra-types>=2.10.5",
-    "wisskas",
     "httpx>=0.28.1",
     "structlog>=25.4.0",
     "python-calamine>=0.5.3",
@@ -33,6 +32,7 @@ dependencies = [
     "fastexcel>=0.19.0",
     "xlsxwriter>=3.2.9",
     "stamina>=25.2.0",
+    "wisskas>=0.1.0",
 ]
 
 [dependency-groups]
@@ -43,10 +43,9 @@ dev = [
 
 [tool.uv]
 
-[tool.uv.sources]
-# wisskas = { git = "https://github.com/acdh-oeaw/wisskas" }
-wisskas = { git = "https://github.com/acdh-oeaw/wisskas/", branch="dev"}
-
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[tool.uv.sources]
+wisskas = { git = "https://github.com/acdh-oeaw/wisskas.git" }

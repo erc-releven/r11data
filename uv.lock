@@ -1,6 +1,6 @@
 version = 1
 revision = 3
-requires-python = ">=3.12, <4"
+requires-python = ">=3.12"
 
 [[package]]
 name = "annotated-doc"
@@ -826,7 +826,7 @@ requires-dist = [
     { name = "structlog", specifier = ">=25.4.0" },
     { name = "toolz", specifier = ">=0.12.1,<0.13" },
     { name = "typer", specifier = ">=0.24.1" },
-    { name = "wisskas", git = "https://github.com/acdh-oeaw/wisskas/?branch=dev" },
+    { name = "wisskas", git = "https://github.com/acdh-oeaw/wisskas.git" },
     { name = "xlsxwriter", specifier = ">=3.2.9" },
 ]
 
@@ -850,17 +850,17 @@ wheels = [
 
 [[package]]
 name = "rdfproxy"
-version = "0.9.0"
+version = "0.10.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
-    { name = "httpx" },
     { name = "pandas" },
     { name = "pydantic" },
     { name = "rdflib" },
+    { name = "sparqlx" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/45/b8/260247151ad31de26be34c1357f09c4ff9362c403f6e5c8bbe77f6ad8101/rdfproxy-0.9.0.tar.gz", hash = "sha256:4adc7e6c5c656a477b00590c8b1b86a83f1bb6536b0e30b00a5369a828e72b47", size = 123321, upload-time = "2025-08-11T13:57:46.021Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/52/41/f0cd6593018619cf8237d7db80d1c09f7dc7542e2fffef9e91b3357188d7/rdfproxy-0.10.1.tar.gz", hash = "sha256:a8ce0da79d39a8c55519a94234f732cd0b6718163d571177140bac096d661718", size = 114034, upload-time = "2026-02-09T08:24:15.137Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/ef/d6/b3e5445a6832730490f13e5634d899e1ac6179d9c2fb08c6ecb7a22142d5/rdfproxy-0.9.0-py3-none-any.whl", hash = "sha256:11067e5e6e01fd49fb92b372b2bb57f2a60bc54babdda4cc665a10f64a2e3ed5", size = 39106, upload-time = "2025-08-11T13:57:44.594Z" },
+    { url = "https://files.pythonhosted.org/packages/a4/77/2db669eda75ca3d2fffbd3a4ffccecd900279e3fb208121b959dd59ee9bd/rdfproxy-0.10.1-py3-none-any.whl", hash = "sha256:cb889fe4d1b68717ff4a5dfee781d7d130458708d6b067332b24ea4aa7623a5a", size = 37432, upload-time = "2026-02-09T08:24:12.692Z" },
 ]
 
 [[package]]
@@ -878,14 +878,14 @@ wheels = [
 
 [[package]]
 name = "rich-argparse"
-version = "1.7.1"
+version = "1.8.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "rich" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/71/a6/34460d81e5534f6d2fc8e8d91ff99a5835fdca53578eac89e4f37b3a7c6d/rich_argparse-1.7.1.tar.gz", hash = "sha256:d7a493cde94043e41ea68fb43a74405fa178de981bf7b800f7a3bd02ac5c27be", size = 38094, upload-time = "2025-05-25T20:20:35.335Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/6a/e5/1064c43203a357d668cd42435f7a15fe6af51512d85b2104fecb937aa861/rich_argparse-1.8.0.tar.gz", hash = "sha256:679df3d832fa94ad6e4bdb07ded088cd7ea2dddc58ae9b2b46346a40b06cbc0c", size = 38940, upload-time = "2026-05-01T15:18:43.604Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/31/f6/5fc0574af5379606ffd57a4b68ed88f9b415eb222047fe023aefcc00a648/rich_argparse-1.7.1-py3-none-any.whl", hash = "sha256:a8650b42e4a4ff72127837632fba6b7da40784842f08d7395eb67a9cbd7b4bf9", size = 25357, upload-time = "2025-05-25T20:20:33.793Z" },
+    { url = "https://files.pythonhosted.org/packages/0b/35/1cceccc5fcb50fa2ed53e2aa278cd032f3902682a73e763fb1ac3be8e6fa/rich_argparse-1.8.0-py3-none-any.whl", hash = "sha256:d2a3ce7854654e2253c578763ab0a32f05016f23a55fadba7b9a91b6c0e92142", size = 25616, upload-time = "2026-05-01T15:18:42.395Z" },
 ]
 
 [[package]]
@@ -1091,7 +1091,7 @@ wheels = [
 [[package]]
 name = "wisskas"
 version = "0.1.0"
-source = { git = "https://github.com/acdh-oeaw/wisskas/?branch=dev#73e0ac50ee636b8615ae5a7be43adec8cf366db3" }
+source = { git = "https://github.com/acdh-oeaw/wisskas.git#bbda651ea00d623da1332e055f9b6db3398757bd" }
 dependencies = [
     { name = "jinja2" },
     { name = "lxml" },
