@@ -48,4 +48,4 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [tool.uv.sources]
-wisskas = { git = "https://github.com/acdh-oeaw/wisskas.git" }
+wisskas = { git = "https://github.com/acdh-oeaw/wisskas.git", branch="dev"}
