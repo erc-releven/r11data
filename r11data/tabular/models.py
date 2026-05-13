@@ -453,6 +453,11 @@ class Boulloteria(_AuthoritySourceBase):
 
     @computed_field
     @property
+    def boulloterion_production_uri(self) -> URIRef:
+        return mkuri(crm.E12_Production, self.boulloterion_uri)
+
+    @computed_field
+    @property
     def identifier_uri(self) -> URIRef:
         """E42_Identifier URI."""
         # todo: check if r11.eu is really the agent here

@@ -48,6 +48,32 @@ class BoulloteriaRDFConverter(_ModelRDFConverter[Boulloteria]):
 
         yield from self.authority_passage_triples(e15_uri)
 
+    def production_assertion_triples(self) -> Iterator[_Triple]:
+        e13_crm_p108_uri = mkuri()
+
+        yield from ttl(
+            e13_crm_p108_uri,
+            (RDF.type, star.E13_crm_P108),
+            (crm.P140_assigned_attribute_to, self.model.boulloterion_uri),
+            (crm.P141_assigned, self.model.boulloterion_production_uri),
+        )
+
+        yield from self.authority_passage_triples(e13_crm_p108_uri)
+
+    def production_time_span_assertion_triples(self) -> Iterator[_Triple]:
+        e13_crm_p4_uri = mkuri()
+        e52_uri = mkuri()
+
+        yield from ttl(
+            e13_crm_p4_uri,
+            (RDF.type, star.E13_crm_P4),
+            (crm.P140_assigned_attribute_to, self.model.boulloterion_production_uri),
+            (crm.P141_assigned, ttl(e52_uri, (RDF.type, crm["E52_Time-Span"]))),
+        )
+
+        yield from generate_date_triples(e52_uri, self.model.dating)
+        yield from self.authority_passage_triples(e13_crm_p4_uri)
+
     def produced_seal_triples(self) -> Iterator[_Triple]:
         seal_model: LeadSeals | None = self.lookup(
             self.sheets.lead_seals,
