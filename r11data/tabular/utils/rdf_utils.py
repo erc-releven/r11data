@@ -1,7 +1,7 @@
 import itertools
 import logging
 import warnings
-from collections.abc import Iterable, Iterator
+from collections.abc import Iterable
 from hashlib import sha256
 from pathlib import PurePath
 from types import MappingProxyType
@@ -12,7 +12,7 @@ from uuid import uuid4
 from lodkit import NamespaceGraph
 from lodkit import _Triple as Triple
 from r11data.utils.paths import ontologies_path
-from rdflib import RDFS, Graph, Literal, Namespace, URIRef
+from rdflib import Graph, Namespace, URIRef
 from rdflib.parser import InputSource
 from rdflib.query import Result
 

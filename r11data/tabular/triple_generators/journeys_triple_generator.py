@@ -13,7 +13,7 @@ from r11data.tabular.utils.rdf_utils import (
     pwro,
     star,
 )
-from rdflib import RDF, URIRef
+from rdflib import RDF
 
 
 class JourneysRDFConverter(_ModelRDFConverter[Journey]):

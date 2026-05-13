@@ -6,7 +6,7 @@ import operator
 import re
 from calendar import monthrange
 from collections.abc import Iterator
-from typing import Literal, Self
+from typing import Literal
 
 import convertdate
 from lodkit import _Triple

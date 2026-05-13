@@ -9,7 +9,7 @@ from r11data.tabular.models import AuthorityStatus, Place
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.utils.date_parser import generate_date_triples
 from r11data.tabular.utils.rdf_utils import aaao, crm, mkuri, r11spec, star
-from rdflib import RDF, RDFS, Literal, URIRef
+from rdflib import RDF, RDFS, URIRef
 
 
 class AuthorityStatusRDFConverter(_ModelRDFConverter[AuthorityStatus]):

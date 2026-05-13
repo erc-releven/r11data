@@ -8,7 +8,6 @@ from r11data.tabular.models import OtherObjects, Place, TextPublication
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.utils.date_parser import generate_date_triples
 from r11data.tabular.utils.rdf_utils import (
-    aaao,
     crm,
     mkuri,
     star,
