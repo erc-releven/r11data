@@ -1,11 +1,9 @@
 """TripleGenerator for the Persons sheet."""
 
-from collections.abc import Iterator
 import itertools
+from collections.abc import Iterator
 
 from lodkit import _Triple, ttl
-from rdflib import Literal, RDF, RDFS, URIRef
-
 from r11data.tabular.models import Person
 from r11data.tabular.triple_generators.bases import _ModelRDFConverter
 from r11data.tabular.utils.rdf_utils import (
@@ -18,6 +16,7 @@ from r11data.tabular.utils.rdf_utils import (
     r11spec,
     star,
 )
+from rdflib import RDF, RDFS, Literal, URIRef
 
 
 class PersonRDFConverter(_ModelRDFConverter[Person]):
@@ -79,9 +78,8 @@ class PersonRDFConverter(_ModelRDFConverter[Person]):
             (crm.P141_assigned, passage_uri),
         )
 
-        yield from self.authority_passage_triples(
-            e13_uri=e13_lrmoo_r15_uri, authority_uri=self.sheets.owner_id
-        )
+        yield (e13_lrmoo_r15_uri, crm.P14_carried_out_by, self.sheets.owner_id)
+        yield from self._p67_triples(e13_lrmoo_r15_uri)
 
     def appellation_assertion_triples(self) -> Iterator[_Triple]:
         e13_crm_p1_uri = mkuri()
