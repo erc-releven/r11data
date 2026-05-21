@@ -9,7 +9,7 @@ import pandas as pd
 import structlog
 from lodkit import _Triple
 from pydantic import BaseModel
-from r11data.tabular.models import Person, _AuthoritySourceBase
+from r11data.tabular.models import AuthorGroup, Person, _AuthoritySourceBase
 from r11data.tabular.utils.df_utils import Sheets
 from r11data.tabular.utils.rdf_utils import RelevenGraph, crm
 from rdflib import Graph, URIRef
@@ -105,28 +105,35 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
         row = _row.iloc[0]
         return Person(**row.to_dict())
 
-    def _p14_triples(
-        self,
-        e13_uri: URIRef,
-    ) -> Iterator[_Triple]:
-        """Perform a relational look up for an authority and assert P14 about an E13."""
-        authority_id = getattr(self.model, "authority", None)
+    def _p14_triples(self, e13_uri: URIRef) -> Iterator[_Triple]:
+        """Look up an authority and assert P14 about an E13."""
+        authority_uri = self._get_authority_uri()
 
-        if authority_id is None:
+        if authority_uri is None:
             return
-
-        authority_model: Person | None = self.get_person_data(
-            person_id=authority_id,
-            strict=False,
-        )
-
-        if authority_model is None:
-            return
-
-        authority_uri = authority_model.person_uri
-
-        assert isinstance(authority_uri, URIRef)
         yield (e13_uri, crm.P14_carried_out_by, authority_uri)
+
+    def _get_authority_uri(self) -> URIRef | None:
+        authority_id = getattr(self.model, "authority", None)
+        authority_group_id = getattr(self.model, "authority_group", None)
+
+        if authority_id:
+            authority_model = self.get_person_data(
+                person_id=authority_id,
+                strict=False,
+            )
+            return authority_model.person_uri if authority_model else None
+
+        if authority_group_id:
+            authority_group_model = self.lookup(
+                sheet=self.sheets.author_groups,
+                model=AuthorGroup,
+                column="Group identifier",
+                key=authority_group_id,
+                strict=False,
+            )
+            return authority_group_model.group_uri if authority_group_model else None
+        return None
 
     def _p67_triples(self, e13_uri: URIRef) -> Iterator[_Triple]:
         """Construct a passage URI and assert P67 about a passage and an E13."""
