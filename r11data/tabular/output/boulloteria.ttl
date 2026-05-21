@@ -4,364 +4,364 @@
 
 <https://pbw2016.kdl.kcl.ac.uk/> ns2:ID7_matches <https://r11.eu/rdf/resource/da2417cef950b8e2e963678a6137b4ea7b5f> .
 
-<https://r11.eu/rdf/resource/56a7f25c658d734a4727684eb981530dd834> ns1:P67_refers_to <https://r11.eu/rdf/resource/17b9e30f-2dfc-457d-9a07-230f0f9ef2cd>,
-        <https://r11.eu/rdf/resource/96c03c2a-a96c-4747-967c-7422546f4e45>,
-        <https://r11.eu/rdf/resource/b59f30b4-779a-49b5-901c-9bef111b23d6> .
+<https://r11.eu/rdf/resource/56a7f25c658d734a4727684eb981530dd834> ns1:P67_refers_to <https://r11.eu/rdf/resource/12359362-fb4f-421e-8a60-6cf68589efa7>,
+        <https://r11.eu/rdf/resource/ca13a3ab-a314-4bb4-abdf-a7f5472a9aba>,
+        <https://r11.eu/rdf/resource/e6757746-a324-4402-8c24-1c8226881877> .
 
-<https://r11.eu/rdf/resource/70b81722ba026066d6e02d0cdacc93b49ab4> ns1:P67_refers_to <https://r11.eu/rdf/resource/01412f53-9f15-4345-8451-5ba461594ed7>,
-        <https://r11.eu/rdf/resource/09f94d75-a9f7-45de-a1eb-aa4226a7a28e>,
-        <https://r11.eu/rdf/resource/221e0e99-3155-450c-870e-3cfeb429ad49>,
-        <https://r11.eu/rdf/resource/42817944-b20a-40c4-8495-327c3528ad1f>,
-        <https://r11.eu/rdf/resource/6602fded-a6c5-4c05-8c3f-aa2d34011519>,
-        <https://r11.eu/rdf/resource/f4a64705-a053-493f-ab71-72025f993ca0> .
+<https://r11.eu/rdf/resource/70b81722ba026066d6e02d0cdacc93b49ab4> ns1:P67_refers_to <https://r11.eu/rdf/resource/51f4e1ad-f962-44cc-9e82-437e32be91e7>,
+        <https://r11.eu/rdf/resource/593802c1-6217-4375-89d3-f58c8609abfc>,
+        <https://r11.eu/rdf/resource/81e54721-dc3e-411c-aa91-ca1cf9ea019c>,
+        <https://r11.eu/rdf/resource/ad88b818-2dfb-4b14-a064-829124c42fe3>,
+        <https://r11.eu/rdf/resource/cbfa1280-6559-4d15-93b7-42503dcf5476>,
+        <https://r11.eu/rdf/resource/f52941a5-27ed-44fc-b8cd-b6e0e989b420> .
 
-<https://r11.eu/rdf/resource/9e75eec1913229c219bf26cd0aeb3156754c> ns1:P67_refers_to <https://r11.eu/rdf/resource/1e290aaa-fe30-4d08-a63e-dda9374f341d>,
-        <https://r11.eu/rdf/resource/3ec223fc-0d1e-4661-851d-261baa55ee14>,
-        <https://r11.eu/rdf/resource/41a50c33-7599-4656-9821-beee7ae94d1a>,
-        <https://r11.eu/rdf/resource/4ed9051a-fa59-438f-a4c2-80d32f681be7>,
-        <https://r11.eu/rdf/resource/58fceafd-7188-4d8d-a29c-8c67daf2b85e>,
-        <https://r11.eu/rdf/resource/76dc2a74-41f6-4978-a6ad-6e9b1f140ad9>,
-        <https://r11.eu/rdf/resource/7863db39-f695-4c2f-a52a-7d3eb89858a6>,
-        <https://r11.eu/rdf/resource/87968dd5-ecce-4fb8-923a-c1fe5c31c472>,
-        <https://r11.eu/rdf/resource/8bcc0015-038a-48c5-802b-8c94dac6e2a2>,
-        <https://r11.eu/rdf/resource/8c4fcdcf-b3df-491f-a579-4db714d3b16d>,
-        <https://r11.eu/rdf/resource/94014c42-e078-4838-a737-329ffd3de96a>,
-        <https://r11.eu/rdf/resource/99425dfa-cbdd-41c7-889b-033858023eba>,
-        <https://r11.eu/rdf/resource/a2919acb-485b-4a50-afe6-9dabf64792d4>,
-        <https://r11.eu/rdf/resource/a6383b0e-2f72-4b94-a70e-b49186369a07>,
-        <https://r11.eu/rdf/resource/bd28b4f9-496c-4591-8b79-747a913bd8f3>,
-        <https://r11.eu/rdf/resource/d245a49e-c1c3-438a-afbb-3dd1e858fecc>,
-        <https://r11.eu/rdf/resource/e688b4b5-124a-4b40-bb85-07f1056340dc> .
+<https://r11.eu/rdf/resource/9e75eec1913229c219bf26cd0aeb3156754c> ns1:P67_refers_to <https://r11.eu/rdf/resource/04e624df-68b5-4a5c-8697-4532c54b9fda>,
+        <https://r11.eu/rdf/resource/26208fd6-d2ea-460a-a208-e06b3efd727c>,
+        <https://r11.eu/rdf/resource/466d69b6-3fe4-42bc-8ea8-6292ea7d975b>,
+        <https://r11.eu/rdf/resource/4b49163d-7958-4999-98a7-d58603557533>,
+        <https://r11.eu/rdf/resource/4c0783e4-2081-485d-b6ea-9195f54e2db5>,
+        <https://r11.eu/rdf/resource/5f04cbaa-4c66-4d32-a076-1f258a567bcc>,
+        <https://r11.eu/rdf/resource/6348043e-28e3-46bb-85e4-cb2b35a44ef9>,
+        <https://r11.eu/rdf/resource/7979ba1b-e52b-41e3-988b-9b0ad21183bc>,
+        <https://r11.eu/rdf/resource/8302469d-aa19-4ff7-8a76-200dd5389bd5>,
+        <https://r11.eu/rdf/resource/88ba0fc4-0b73-4db2-a972-1b2d81b41810>,
+        <https://r11.eu/rdf/resource/c4b3ec3f-3fbd-454a-945a-9ac0dbf4cdb6>,
+        <https://r11.eu/rdf/resource/d643704e-5e7d-484c-8ee1-5d828aa5c3f6>,
+        <https://r11.eu/rdf/resource/dfe152c8-bca0-4951-9605-e4abac16ce8b>,
+        <https://r11.eu/rdf/resource/ebdad4df-e0bf-4c1a-ae2f-7345a2805371>,
+        <https://r11.eu/rdf/resource/ee3c89ee-faaa-49b3-80a9-30b8866953e4>,
+        <https://r11.eu/rdf/resource/fb00767e-c8cf-4ed2-9f3a-a121c4ca87f5>,
+        <https://r11.eu/rdf/resource/fd5de114-b6eb-49f8-87c1-e736254fda6c> .
 
-<https://r11.eu/rdf/resource/ab5f8c897cd26eac9c0446d5c81d7e5b20ff> ns1:P67_refers_to <https://r11.eu/rdf/resource/0248dc00-535b-4be3-b4b2-c58a9dc25367>,
-        <https://r11.eu/rdf/resource/0415c403-0659-42f3-92ea-9b70a4830eb2>,
-        <https://r11.eu/rdf/resource/23174c50-732f-46e6-8e84-0281f72ae4ab>,
-        <https://r11.eu/rdf/resource/f519cfed-ff63-4e51-82b7-2f82aaf8ae77>,
-        <https://r11.eu/rdf/resource/f7d4463f-d90c-45ad-95e0-13a26d14f593>,
-        <https://r11.eu/rdf/resource/fed15291-a786-4f26-b96d-b73d34d873ee> .
+<https://r11.eu/rdf/resource/ab5f8c897cd26eac9c0446d5c81d7e5b20ff> ns1:P67_refers_to <https://r11.eu/rdf/resource/2c634ea5-384d-48a9-9f14-b1fd4eda68b9>,
+        <https://r11.eu/rdf/resource/3214f803-e16a-4166-a3c2-e99c160cd77f>,
+        <https://r11.eu/rdf/resource/6a2ffcff-a0d5-4add-9efe-4415eb012b01>,
+        <https://r11.eu/rdf/resource/8944d49e-6e46-4c44-9343-da6a95abfd76>,
+        <https://r11.eu/rdf/resource/b1b5f3c8-c908-4edb-92cc-14f8e67e3c50>,
+        <https://r11.eu/rdf/resource/f0104167-abbb-40a9-bb3c-d0ab4d797a97> .
 
-<https://r11.eu/rdf/resource/eff9a040fc9fa3fbe3033d8c56971256a3d0> ns1:P67_refers_to <https://r11.eu/rdf/resource/15e567b7-c6e0-4fcb-9f0e-2bb84de6d3a3>,
-        <https://r11.eu/rdf/resource/9364d878-0857-42d9-a8a9-0c4579b17719>,
-        <https://r11.eu/rdf/resource/b46121b4-8988-4097-a9ec-908c870b6e1b>,
-        <https://r11.eu/rdf/resource/b7711208-7d83-4dca-b1bf-809fa9dd2718>,
-        <https://r11.eu/rdf/resource/d8e02e88-0135-46d0-9352-e4ecd813abbc> .
+<https://r11.eu/rdf/resource/eff9a040fc9fa3fbe3033d8c56971256a3d0> ns1:P67_refers_to <https://r11.eu/rdf/resource/004f296d-01ec-4d97-bca0-16c019ac1bc6>,
+        <https://r11.eu/rdf/resource/3ab92318-b244-4e04-9829-b607d0034ccd>,
+        <https://r11.eu/rdf/resource/c84d4742-bbfd-442b-bd20-02cd6068872a>,
+        <https://r11.eu/rdf/resource/e4bdbb77-d17a-41e6-80a8-bbf3a7f8f343>,
+        <https://r11.eu/rdf/resource/eb9639f7-ac96-4d89-9381-4e3797bb814a> .
 
-<https://r11.eu/rdf/resource/f848b7b49374bee7827786ee8121e0c3c537> ns1:P67_refers_to <https://r11.eu/rdf/resource/1e35ed8d-6a7e-49de-a432-1b21e678f953>,
-        <https://r11.eu/rdf/resource/22bdf9d4-1ed5-4d84-ad95-021198b2545c>,
-        <https://r11.eu/rdf/resource/5638c89d-6eda-4895-ac57-497a1a30cff8>,
-        <https://r11.eu/rdf/resource/7126f41e-ff6d-4502-ba28-188ff746a867>,
-        <https://r11.eu/rdf/resource/e4731d58-936a-4bfc-b6a0-1e76bff7eb00> .
+<https://r11.eu/rdf/resource/f848b7b49374bee7827786ee8121e0c3c537> ns1:P67_refers_to <https://r11.eu/rdf/resource/3968b89f-dc38-4a36-be93-eff1352c2d32>,
+        <https://r11.eu/rdf/resource/69268ecb-3526-47b1-98e8-da3dccbdbbcd>,
+        <https://r11.eu/rdf/resource/7ff0e825-6912-4aa0-a3de-3f8f5e99afe5>,
+        <https://r11.eu/rdf/resource/96aa79b5-b29f-4bac-8069-bcd5522b7d5c>,
+        <https://r11.eu/rdf/resource/d6e7416a-37c0-49c2-ada4-61eb6e7e4ef5> .
 
-<https://r11.eu/rdf/resource/01412f53-9f15-4345-8451-5ba461594ed7> a <https://r11.eu/ns/star/E13_crm_P4> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/1f153769-66c3-4596-9a15-f751b7c3e17f> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/5ed7457c-c655-4157-a610-3b877dc2fa40> ;
+<https://r11.eu/rdf/resource/004f296d-01ec-4d97-bca0-16c019ac1bc6> a <https://r11.eu/ns/star/E13_crm_P4> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/9cdf9769-e377-4c4b-865c-2ef6aa029045> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/59aa7439-6218-44b1-936e-00248eeef645> ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
 
-<https://r11.eu/rdf/resource/0248dc00-535b-4be3-b4b2-c58a9dc25367> a <https://r11.eu/ns/star/E13_crm_P24> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/2eba1bc1-1238-4ac2-aaf3-f842c20d1ecd> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/76e9e4a001282064f4525684af5be6f0f6d6> ;
+<https://r11.eu/rdf/resource/04e624df-68b5-4a5c-8697-4532c54b9fda> a <https://r11.eu/ns/star/E13_crm_P24> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/f0d5995e-fc07-4c72-9372-ef734e2e1222> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/e01f96c9f27a72a941bd15208c78f2535ab3> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
+
+<https://r11.eu/rdf/resource/12359362-fb4f-421e-8a60-6cf68589efa7> a <https://r11.eu/ns/star/E13_crm_P24> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/4511a0ea-7210-4c81-ab06-86be3f387ca6> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/85df4f0fdff2f96748ea45e7b954ebba3b46> ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
 
-<https://r11.eu/rdf/resource/0415c403-0659-42f3-92ea-9b70a4830eb2> a <https://r11.eu/ns/star/E13_crm_P4> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/a5f53271-e387-4030-839a-8e4be9ce2f01> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/6af52c7b-92d6-4125-8793-c5954f2d563e> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
-
-<https://r11.eu/rdf/resource/09f94d75-a9f7-45de-a1eb-aa4226a7a28e> a <https://r11.eu/ns/star/E13_crm_P24> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/1f153769-66c3-4596-9a15-f751b7c3e17f> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/52fa81846e30268bedfda2c5c36baca0f9a2> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
-
-<https://r11.eu/rdf/resource/0e1bc139-ddda-4263-9c0e-d8f66d5ee9ee> a ns1:E52_Time-Span ;
+<https://r11.eu/rdf/resource/1dff8843-ba3e-4aca-add2-e27b1602cc83> a ns1:E52_Time-Span ;
     rdfs:label "J 1100 [TAQ]" ;
     ns1:P81b_begin_of_the_end "2122832.5"^^<https://r11.eu/ns/spec/JulianDay> ;
     ns1:P82b_end_of_the_end "2123197.5"^^<https://r11.eu/ns/spec/JulianDay> .
-
-<https://r11.eu/rdf/resource/15e567b7-c6e0-4fcb-9f0e-2bb84de6d3a3> a <https://r11.eu/ns/star/E13_crm_P22> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/2b3a07a1-dced-43f0-9072-0012f8b5c38e> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/ff73f8a1df13c1e2ef04395672b32555f147> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
-
-<https://r11.eu/rdf/resource/17b9e30f-2dfc-457d-9a07-230f0f9ef2cd> a <https://r11.eu/ns/star/E13_crm_P4> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/f4b549b2-4fc4-4ffd-a73f-81fd19ef6027> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/19724a7b-450d-4ea7-ad85-c8216b58af99> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
-
-<https://r11.eu/rdf/resource/19724a7b-450d-4ea7-ad85-c8216b58af99> a ns1:E52_Time-Span ;
-    rdfs:label "J 1100" ;
-    ns1:P82a_begin_of_the_begin "2122832.5"^^<https://r11.eu/ns/spec/JulianDay> ;
-    ns1:P82b_end_of_the_end "2123197.5"^^<https://r11.eu/ns/spec/JulianDay> .
-
-<https://r11.eu/rdf/resource/1e290aaa-fe30-4d08-a63e-dda9374f341d> a <https://r11.eu/ns/star/E13_crm_P22> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c5eed21a-f32b-471f-b16d-df34b0eaf718> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/84f03b6692cee865cec5df3989200c45e169> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
-
-<https://r11.eu/rdf/resource/1e35ed8d-6a7e-49de-a432-1b21e678f953> a <https://r11.eu/ns/star/E13_crm_P24> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e345129d-e26e-4eac-a059-771651fbf7e7> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/e01f96c9f27a72a941bd15208c78f2535ab3> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/59e92384de4e20b0da1c0ca34f7044b5da0b> .
-
-<https://r11.eu/rdf/resource/1fc7eb14-a743-47a9-9135-c5d18d1538d0> a ns1:E52_Time-Span ;
-    rdfs:label "J 1078 [TPQ]" ;
-    ns1:P81a_end_of_the_begin "2115161.5"^^<https://r11.eu/ns/spec/JulianDay> ;
-    ns1:P82a_begin_of_the_begin "2114797.5"^^<https://r11.eu/ns/spec/JulianDay> .
-
-<https://r11.eu/rdf/resource/221e0e99-3155-450c-870e-3cfeb429ad49> a <https://r11.eu/ns/star/E13_crm_P24> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/7f218bde-0f04-4f43-b71a-1f1ae479bdd2> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/52fa81846e30268bedfda2c5c36baca0f9a2> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
 
 <https://r11.eu/rdf/resource/22a98795c19647154d51e2e0dae78548eac5> a ns1:E42_Identifier ;
     ns1:P190_has_symbolic_content "Leo (Boulloterion ID)" .
 
-<https://r11.eu/rdf/resource/22bdf9d4-1ed5-4d84-ad95-021198b2545c> a ns1:E15_Identifier_Assignment ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e01f96c9f27a72a941bd15208c78f2535ab3> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/59e92384de4e20b0da1c0ca34f7044b5da0b> ;
-    ns1:P37_assigned <https://r11.eu/rdf/resource/27757ac455dc5b3c5da6a5cbc626b1f8a578> .
-
-<https://r11.eu/rdf/resource/23174c50-732f-46e6-8e84-0281f72ae4ab> a ns1:E15_Identifier_Assignment ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/76e9e4a001282064f4525684af5be6f0f6d6> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> ;
-    ns1:P37_assigned <https://r11.eu/rdf/resource/0a4710b651a2b4d27cfb7f6eabe6c2050f96> .
-
-<https://r11.eu/rdf/resource/236175e8-7c5a-4c32-be17-fd4b3ec4d41f> a ns1:E52_Time-Span ;
-    rdfs:label "J 1074" ;
-    ns1:P82a_begin_of_the_begin "2113336.5"^^<https://r11.eu/ns/spec/JulianDay> ;
-    ns1:P82b_end_of_the_end "2113700.5"^^<https://r11.eu/ns/spec/JulianDay> .
-
-<https://r11.eu/rdf/resource/3ec223fc-0d1e-4661-851d-261baa55ee14> a ns1:E15_Identifier_Assignment ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e01f96c9f27a72a941bd15208c78f2535ab3> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> ;
-    ns1:P37_assigned <https://r11.eu/rdf/resource/27757ac455dc5b3c5da6a5cbc626b1f8a578> .
-
-<https://r11.eu/rdf/resource/41a50c33-7599-4656-9821-beee7ae94d1a> a <https://r11.eu/ns/star/E13_crm_P24> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/779dd966-3fd6-42fd-be52-ee2b0e85c990> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/e01f96c9f27a72a941bd15208c78f2535ab3> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
-
-<https://r11.eu/rdf/resource/42817944-b20a-40c4-8495-327c3528ad1f> a ns1:E15_Identifier_Assignment ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/52fa81846e30268bedfda2c5c36baca0f9a2> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> ;
-    ns1:P37_assigned <https://r11.eu/rdf/resource/0fe3f6a0d7205a9253a345646b12ef022cfa> .
-
-<https://r11.eu/rdf/resource/4ed9051a-fa59-438f-a4c2-80d32f681be7> a <https://r11.eu/ns/star/E13_spec_L1> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e01f96c9f27a72a941bd15208c78f2535ab3> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/73861e8a59e72070227a65ebe277219ec821> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
-
-<https://r11.eu/rdf/resource/5542deb0-51fd-41b3-96b4-a1353534361e> a ns1:E52_Time-Span ;
+<https://r11.eu/rdf/resource/23fb1d27-5699-4985-9a68-c2889cc37bf4> a ns1:E52_Time-Span ;
     rdfs:label "J 1078 [TPQ]" ;
     ns1:P81a_end_of_the_begin "2115161.5"^^<https://r11.eu/ns/spec/JulianDay> ;
     ns1:P82a_begin_of_the_begin "2114797.5"^^<https://r11.eu/ns/spec/JulianDay> .
 
-<https://r11.eu/rdf/resource/5638c89d-6eda-4895-ac57-497a1a30cff8> a <https://r11.eu/ns/star/E13_crm_P4> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e345129d-e26e-4eac-a059-771651fbf7e7> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/236175e8-7c5a-4c32-be17-fd4b3ec4d41f> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/59e92384de4e20b0da1c0ca34f7044b5da0b> .
-
-<https://r11.eu/rdf/resource/58fceafd-7188-4d8d-a29c-8c67daf2b85e> a <https://r11.eu/ns/star/E13_spec_L1> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/da2417cef950b8e2e963678a6137b4ea7b5f> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/db9b5eeb4c15e0533ed14cffcca0d8186712> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
-
-<https://r11.eu/rdf/resource/5ed7457c-c655-4157-a610-3b877dc2fa40> a ns1:E52_Time-Span ;
-    rdfs:label "J 1075 [TPQ]" ;
-    ns1:P81a_end_of_the_begin "2114065.5"^^<https://r11.eu/ns/spec/JulianDay> ;
-    ns1:P82a_begin_of_the_begin "2113701.5"^^<https://r11.eu/ns/spec/JulianDay> .
-
-<https://r11.eu/rdf/resource/5fa1f143-1d1d-42f8-ba7a-010da2c4e5a0> a ns1:E52_Time-Span ;
-    rdfs:label "J 1080 [TAQ]" ;
-    ns1:P81b_begin_of_the_end "2115527.5"^^<https://r11.eu/ns/spec/JulianDay> ;
-    ns1:P82b_end_of_the_end "2115892.5"^^<https://r11.eu/ns/spec/JulianDay> .
-
-<https://r11.eu/rdf/resource/64f94489-6c39-48fc-99ce-cb481f601cfb> a ns1:E52_Time-Span ;
-    rdfs:label "J 1075 [TPQ]" ;
-    ns1:P81a_end_of_the_begin "2114065.5"^^<https://r11.eu/ns/spec/JulianDay> ;
-    ns1:P82a_begin_of_the_begin "2113701.5"^^<https://r11.eu/ns/spec/JulianDay> .
-
-<https://r11.eu/rdf/resource/6602fded-a6c5-4c05-8c3f-aa2d34011519> a ns1:E15_Identifier_Assignment ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/52fa81846e30268bedfda2c5c36baca0f9a2> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> ;
-    ns1:P37_assigned <https://r11.eu/rdf/resource/0fe3f6a0d7205a9253a345646b12ef022cfa> .
-
-<https://r11.eu/rdf/resource/6af52c7b-92d6-4125-8793-c5954f2d563e> a ns1:E52_Time-Span ;
-    rdfs:label "J 1001 [TPQ]" ;
-    ns1:P81a_end_of_the_begin "2087037.5"^^<https://r11.eu/ns/spec/JulianDay> ;
-    ns1:P82a_begin_of_the_begin "2086673.5"^^<https://r11.eu/ns/spec/JulianDay> .
-
-<https://r11.eu/rdf/resource/7126f41e-ff6d-4502-ba28-188ff746a867> a <https://r11.eu/ns/star/E13_crm_P22> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e345129d-e26e-4eac-a059-771651fbf7e7> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/84f03b6692cee865cec5df3989200c45e169> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/59e92384de4e20b0da1c0ca34f7044b5da0b> .
-
-<https://r11.eu/rdf/resource/76dc2a74-41f6-4978-a6ad-6e9b1f140ad9> a <https://r11.eu/ns/star/E13_crm_P4> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/779dd966-3fd6-42fd-be52-ee2b0e85c990> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/5fa1f143-1d1d-42f8-ba7a-010da2c4e5a0> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
-
-<https://r11.eu/rdf/resource/7863db39-f695-4c2f-a52a-7d3eb89858a6> a <https://r11.eu/ns/star/E13_crm_P24> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c5eed21a-f32b-471f-b16d-df34b0eaf718> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/da2417cef950b8e2e963678a6137b4ea7b5f> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
-
-<https://r11.eu/rdf/resource/87968dd5-ecce-4fb8-923a-c1fe5c31c472> a ns1:E15_Identifier_Assignment ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e01f96c9f27a72a941bd15208c78f2535ab3> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> ;
-    ns1:P37_assigned <https://r11.eu/rdf/resource/27757ac455dc5b3c5da6a5cbc626b1f8a578> .
-
-<https://r11.eu/rdf/resource/8bcc0015-038a-48c5-802b-8c94dac6e2a2> a ns1:E15_Identifier_Assignment ;
+<https://r11.eu/rdf/resource/26208fd6-d2ea-460a-a208-e06b3efd727c> a ns1:E15_Identifier_Assignment ;
     ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/da2417cef950b8e2e963678a6137b4ea7b5f> ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> ;
     ns1:P37_assigned <https://r11.eu/rdf/resource/cd66e22f4d770ed15d0d3d82cd44b923bc27> .
 
-<https://r11.eu/rdf/resource/8c4fcdcf-b3df-491f-a579-4db714d3b16d> a <https://r11.eu/ns/star/E13_spec_L1> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e01f96c9f27a72a941bd15208c78f2535ab3> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/73861e8a59e72070227a65ebe277219ec821> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
-
-<https://r11.eu/rdf/resource/9364d878-0857-42d9-a8a9-0c4579b17719> a ns1:E15_Identifier_Assignment ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/57275c96da61c2eafe31cb8c264697578aab> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> ;
-    ns1:P37_assigned <https://r11.eu/rdf/resource/c9252813fdfe7c5503c52fabc9cea37aceb4> .
-
-<https://r11.eu/rdf/resource/94014c42-e078-4838-a737-329ffd3de96a> a <https://r11.eu/ns/star/E13_crm_P24> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/48f5cbcf-be93-4264-a39a-eb1b493aeaab> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/da2417cef950b8e2e963678a6137b4ea7b5f> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
-
-<https://r11.eu/rdf/resource/96c03c2a-a96c-4747-967c-7422546f4e45> a ns1:E15_Identifier_Assignment ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/85df4f0fdff2f96748ea45e7b954ebba3b46> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> ;
-    ns1:P37_assigned <https://r11.eu/rdf/resource/22a98795c19647154d51e2e0dae78548eac5> .
-
-<https://r11.eu/rdf/resource/99425dfa-cbdd-41c7-889b-033858023eba> a <https://r11.eu/ns/star/E13_crm_P4> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c5eed21a-f32b-471f-b16d-df34b0eaf718> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/1fc7eb14-a743-47a9-9135-c5d18d1538d0> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
-
-<https://r11.eu/rdf/resource/9e5f8320-44f6-48c0-9d93-e474cbbc54b2> a ns1:E52_Time-Span ;
-    rdfs:label "J 1100 [TAQ]" ;
-    ns1:P81b_begin_of_the_end "2122832.5"^^<https://r11.eu/ns/spec/JulianDay> ;
+<https://r11.eu/rdf/resource/2c3205d7-9657-4491-8b73-7bd18e86250a> a ns1:E52_Time-Span ;
+    rdfs:label "J 1100" ;
+    ns1:P82a_begin_of_the_begin "2122832.5"^^<https://r11.eu/ns/spec/JulianDay> ;
     ns1:P82b_end_of_the_end "2123197.5"^^<https://r11.eu/ns/spec/JulianDay> .
 
-<https://r11.eu/rdf/resource/a2919acb-485b-4a50-afe6-9dabf64792d4> a ns1:E15_Identifier_Assignment ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/da2417cef950b8e2e963678a6137b4ea7b5f> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> ;
-    ns1:P37_assigned <https://r11.eu/rdf/resource/cd66e22f4d770ed15d0d3d82cd44b923bc27> .
-
-<https://r11.eu/rdf/resource/a6383b0e-2f72-4b94-a70e-b49186369a07> a <https://r11.eu/ns/star/E13_crm_P4> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/48f5cbcf-be93-4264-a39a-eb1b493aeaab> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/edc9ef35-68fe-4f42-bb4f-d4f02c64bdd5> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
-
-<https://r11.eu/rdf/resource/b46121b4-8988-4097-a9ec-908c870b6e1b> a <https://r11.eu/ns/star/E13_crm_P4> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/2b3a07a1-dced-43f0-9072-0012f8b5c38e> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/64f94489-6c39-48fc-99ce-cb481f601cfb> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
-
-<https://r11.eu/rdf/resource/b59f30b4-779a-49b5-901c-9bef111b23d6> a <https://r11.eu/ns/star/E13_crm_P24> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/f4b549b2-4fc4-4ffd-a73f-81fd19ef6027> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/85df4f0fdff2f96748ea45e7b954ebba3b46> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
-
-<https://r11.eu/rdf/resource/b7711208-7d83-4dca-b1bf-809fa9dd2718> a <https://r11.eu/ns/star/E13_spec_L1> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/57275c96da61c2eafe31cb8c264697578aab> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/86d9ae95c55bfa1c88332826f6350b16c52a> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
-
-<https://r11.eu/rdf/resource/bd28b4f9-496c-4591-8b79-747a913bd8f3> a <https://r11.eu/ns/star/E13_crm_P4> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/804f914f-dc9f-4e20-aca4-2183202a6fb1> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/5542deb0-51fd-41b3-96b4-a1353534361e> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
-
-<https://r11.eu/rdf/resource/c9252813fdfe7c5503c52fabc9cea37aceb4> a ns1:E42_Identifier ;
-    ns1:P190_has_symbolic_content "Michael, grandson of Samuel (Boulloterion ID)" .
-
-<https://r11.eu/rdf/resource/d245a49e-c1c3-438a-afbb-3dd1e858fecc> a <https://r11.eu/ns/star/E13_crm_P24> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/804f914f-dc9f-4e20-aca4-2183202a6fb1> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/e01f96c9f27a72a941bd15208c78f2535ab3> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
-
-<https://r11.eu/rdf/resource/d8e02e88-0135-46d0-9352-e4ecd813abbc> a <https://r11.eu/ns/star/E13_crm_P24> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/2b3a07a1-dced-43f0-9072-0012f8b5c38e> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/57275c96da61c2eafe31cb8c264697578aab> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
-
-<https://r11.eu/rdf/resource/e4731d58-936a-4bfc-b6a0-1e76bff7eb00> a <https://r11.eu/ns/star/E13_spec_L1> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e01f96c9f27a72a941bd15208c78f2535ab3> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/73861e8a59e72070227a65ebe277219ec821> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/59e92384de4e20b0da1c0ca34f7044b5da0b> .
-
-<https://r11.eu/rdf/resource/e688b4b5-124a-4b40-bb85-07f1056340dc> a <https://r11.eu/ns/star/E13_spec_L1> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/da2417cef950b8e2e963678a6137b4ea7b5f> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/db9b5eeb4c15e0533ed14cffcca0d8186712> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
-
-<https://r11.eu/rdf/resource/edc9ef35-68fe-4f42-bb4f-d4f02c64bdd5> a ns1:E52_Time-Span ;
-    rdfs:label "J 1080 [TAQ]" ;
-    ns1:P81b_begin_of_the_end "2115527.5"^^<https://r11.eu/ns/spec/JulianDay> ;
-    ns1:P82b_end_of_the_end "2115892.5"^^<https://r11.eu/ns/spec/JulianDay> .
-
-<https://r11.eu/rdf/resource/f4a64705-a053-493f-ab71-72025f993ca0> a <https://r11.eu/ns/star/E13_crm_P4> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/7f218bde-0f04-4f43-b71a-1f1ae479bdd2> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/0e1bc139-ddda-4263-9c0e-d8f66d5ee9ee> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
-
-<https://r11.eu/rdf/resource/f519cfed-ff63-4e51-82b7-2f82aaf8ae77> a <https://r11.eu/ns/star/E13_crm_P4> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/2eba1bc1-1238-4ac2-aaf3-f842c20d1ecd> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/9e5f8320-44f6-48c0-9d93-e474cbbc54b2> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
-
-<https://r11.eu/rdf/resource/f7d4463f-d90c-45ad-95e0-13a26d14f593> a <https://r11.eu/ns/star/E13_crm_P24> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/a5f53271-e387-4030-839a-8e4be9ce2f01> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/76e9e4a001282064f4525684af5be6f0f6d6> ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
-
-<https://r11.eu/rdf/resource/fed15291-a786-4f26-b96d-b73d34d873ee> a ns1:E15_Identifier_Assignment ;
+<https://r11.eu/rdf/resource/2c634ea5-384d-48a9-9f14-b1fd4eda68b9> a ns1:E15_Identifier_Assignment ;
     ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/76e9e4a001282064f4525684af5be6f0f6d6> ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> ;
     ns1:P37_assigned <https://r11.eu/rdf/resource/0a4710b651a2b4d27cfb7f6eabe6c2050f96> .
 
+<https://r11.eu/rdf/resource/3214f803-e16a-4166-a3c2-e99c160cd77f> a ns1:E15_Identifier_Assignment ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/76e9e4a001282064f4525684af5be6f0f6d6> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> ;
+    ns1:P37_assigned <https://r11.eu/rdf/resource/0a4710b651a2b4d27cfb7f6eabe6c2050f96> .
+
+<https://r11.eu/rdf/resource/3968b89f-dc38-4a36-be93-eff1352c2d32> a ns1:E15_Identifier_Assignment ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e01f96c9f27a72a941bd15208c78f2535ab3> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/59e92384de4e20b0da1c0ca34f7044b5da0b> ;
+    ns1:P37_assigned <https://r11.eu/rdf/resource/27757ac455dc5b3c5da6a5cbc626b1f8a578> .
+
+<https://r11.eu/rdf/resource/3ab92318-b244-4e04-9829-b607d0034ccd> a ns1:E15_Identifier_Assignment ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/57275c96da61c2eafe31cb8c264697578aab> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> ;
+    ns1:P37_assigned <https://r11.eu/rdf/resource/c9252813fdfe7c5503c52fabc9cea37aceb4> .
+
+<https://r11.eu/rdf/resource/3ecc893d-d408-48e6-aa53-5b5719ab384f> a ns1:E52_Time-Span ;
+    rdfs:label "J 1080 [TAQ]" ;
+    ns1:P81b_begin_of_the_end "2115527.5"^^<https://r11.eu/ns/spec/JulianDay> ;
+    ns1:P82b_end_of_the_end "2115892.5"^^<https://r11.eu/ns/spec/JulianDay> .
+
+<https://r11.eu/rdf/resource/44007012-f3f8-4a8e-8e7b-91722777075f> a ns1:E52_Time-Span ;
+    rdfs:label "J 1074" ;
+    ns1:P82a_begin_of_the_begin "2113336.5"^^<https://r11.eu/ns/spec/JulianDay> ;
+    ns1:P82b_end_of_the_end "2113700.5"^^<https://r11.eu/ns/spec/JulianDay> .
+
+<https://r11.eu/rdf/resource/466d69b6-3fe4-42bc-8ea8-6292ea7d975b> a ns1:E15_Identifier_Assignment ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e01f96c9f27a72a941bd15208c78f2535ab3> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> ;
+    ns1:P37_assigned <https://r11.eu/rdf/resource/27757ac455dc5b3c5da6a5cbc626b1f8a578> .
+
+<https://r11.eu/rdf/resource/4b49163d-7958-4999-98a7-d58603557533> a <https://r11.eu/ns/star/E13_crm_P22> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/ba6c36ea-0955-4c31-8cc5-36b3c63d8b2d> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/84f03b6692cee865cec5df3989200c45e169> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
+
+<https://r11.eu/rdf/resource/4c0783e4-2081-485d-b6ea-9195f54e2db5> a <https://r11.eu/ns/star/E13_crm_P4> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/98abef97-71c0-45f1-a383-1b2d6a42539a> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/3ecc893d-d408-48e6-aa53-5b5719ab384f> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
+
+<https://r11.eu/rdf/resource/51f4e1ad-f962-44cc-9e82-437e32be91e7> a <https://r11.eu/ns/star/E13_crm_P24> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/0d183d9d-f285-40a5-adf8-067a473bdefc> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/52fa81846e30268bedfda2c5c36baca0f9a2> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
+
+<https://r11.eu/rdf/resource/55c9c142-7628-4a3b-b59b-3e657c4c807d> a ns1:E52_Time-Span ;
+    rdfs:label "J 1100 [TAQ]" ;
+    ns1:P81b_begin_of_the_end "2122832.5"^^<https://r11.eu/ns/spec/JulianDay> ;
+    ns1:P82b_end_of_the_end "2123197.5"^^<https://r11.eu/ns/spec/JulianDay> .
+
+<https://r11.eu/rdf/resource/593802c1-6217-4375-89d3-f58c8609abfc> a <https://r11.eu/ns/star/E13_crm_P4> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/19568339-6c80-4448-b29b-4612fa0a1e05> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/55c9c142-7628-4a3b-b59b-3e657c4c807d> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
+
+<https://r11.eu/rdf/resource/59aa7439-6218-44b1-936e-00248eeef645> a ns1:E52_Time-Span ;
+    rdfs:label "J 1075 [TPQ]" ;
+    ns1:P81a_end_of_the_begin "2114065.5"^^<https://r11.eu/ns/spec/JulianDay> ;
+    ns1:P82a_begin_of_the_begin "2113701.5"^^<https://r11.eu/ns/spec/JulianDay> .
+
+<https://r11.eu/rdf/resource/5f04cbaa-4c66-4d32-a076-1f258a567bcc> a <https://r11.eu/ns/star/E13_crm_P4> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/ba6c36ea-0955-4c31-8cc5-36b3c63d8b2d> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/dd7bc205-18e7-4b4e-a892-2359d97c519b> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
+
+<https://r11.eu/rdf/resource/6348043e-28e3-46bb-85e4-cb2b35a44ef9> a ns1:E15_Identifier_Assignment ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/da2417cef950b8e2e963678a6137b4ea7b5f> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> ;
+    ns1:P37_assigned <https://r11.eu/rdf/resource/cd66e22f4d770ed15d0d3d82cd44b923bc27> .
+
+<https://r11.eu/rdf/resource/69268ecb-3526-47b1-98e8-da3dccbdbbcd> a <https://r11.eu/ns/star/E13_crm_P24> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/196bb8ef-d3c3-4d52-8576-c6507c8af4e3> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/e01f96c9f27a72a941bd15208c78f2535ab3> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/59e92384de4e20b0da1c0ca34f7044b5da0b> .
+
+<https://r11.eu/rdf/resource/6a2ffcff-a0d5-4add-9efe-4415eb012b01> a <https://r11.eu/ns/star/E13_crm_P4> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e065e05f-f72f-42a2-82db-065714895bfc> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/1dff8843-ba3e-4aca-add2-e27b1602cc83> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
+
+<https://r11.eu/rdf/resource/7979ba1b-e52b-41e3-988b-9b0ad21183bc> a <https://r11.eu/ns/star/E13_crm_P4> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/f0d5995e-fc07-4c72-9372-ef734e2e1222> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/93dcdf75-e76a-40d5-863b-93dc9c36ea2e> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
+
+<https://r11.eu/rdf/resource/7ff0e825-6912-4aa0-a3de-3f8f5e99afe5> a <https://r11.eu/ns/star/E13_crm_P22> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/196bb8ef-d3c3-4d52-8576-c6507c8af4e3> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/84f03b6692cee865cec5df3989200c45e169> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/59e92384de4e20b0da1c0ca34f7044b5da0b> .
+
+<https://r11.eu/rdf/resource/81e54721-dc3e-411c-aa91-ca1cf9ea019c> a ns1:E15_Identifier_Assignment ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/52fa81846e30268bedfda2c5c36baca0f9a2> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> ;
+    ns1:P37_assigned <https://r11.eu/rdf/resource/0fe3f6a0d7205a9253a345646b12ef022cfa> .
+
+<https://r11.eu/rdf/resource/8302469d-aa19-4ff7-8a76-200dd5389bd5> a <https://r11.eu/ns/star/E13_spec_L1> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/da2417cef950b8e2e963678a6137b4ea7b5f> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/db9b5eeb4c15e0533ed14cffcca0d8186712> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
+
+<https://r11.eu/rdf/resource/88ba0fc4-0b73-4db2-a972-1b2d81b41810> a <https://r11.eu/ns/star/E13_crm_P24> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/98abef97-71c0-45f1-a383-1b2d6a42539a> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/da2417cef950b8e2e963678a6137b4ea7b5f> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
+
+<https://r11.eu/rdf/resource/8944d49e-6e46-4c44-9343-da6a95abfd76> a <https://r11.eu/ns/star/E13_crm_P24> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e065e05f-f72f-42a2-82db-065714895bfc> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/76e9e4a001282064f4525684af5be6f0f6d6> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
+
+<https://r11.eu/rdf/resource/93dcdf75-e76a-40d5-863b-93dc9c36ea2e> a ns1:E52_Time-Span ;
+    rdfs:label "J 1080 [TAQ]" ;
+    ns1:P81b_begin_of_the_end "2115527.5"^^<https://r11.eu/ns/spec/JulianDay> ;
+    ns1:P82b_end_of_the_end "2115892.5"^^<https://r11.eu/ns/spec/JulianDay> .
+
+<https://r11.eu/rdf/resource/96aa79b5-b29f-4bac-8069-bcd5522b7d5c> a <https://r11.eu/ns/star/E13_crm_P4> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/196bb8ef-d3c3-4d52-8576-c6507c8af4e3> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/44007012-f3f8-4a8e-8e7b-91722777075f> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/59e92384de4e20b0da1c0ca34f7044b5da0b> .
+
+<https://r11.eu/rdf/resource/a32227e7-a5fa-4a05-a9a8-a945ea5a933a> a ns1:E52_Time-Span ;
+    rdfs:label "J 1001 [TPQ]" ;
+    ns1:P81a_end_of_the_begin "2087037.5"^^<https://r11.eu/ns/spec/JulianDay> ;
+    ns1:P82a_begin_of_the_begin "2086673.5"^^<https://r11.eu/ns/spec/JulianDay> .
+
+<https://r11.eu/rdf/resource/ad88b818-2dfb-4b14-a064-829124c42fe3> a ns1:E15_Identifier_Assignment ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/52fa81846e30268bedfda2c5c36baca0f9a2> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> ;
+    ns1:P37_assigned <https://r11.eu/rdf/resource/0fe3f6a0d7205a9253a345646b12ef022cfa> .
+
+<https://r11.eu/rdf/resource/b1b5f3c8-c908-4edb-92cc-14f8e67e3c50> a <https://r11.eu/ns/star/E13_crm_P24> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/23bbb768-98d5-4707-933e-a36642540610> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/76e9e4a001282064f4525684af5be6f0f6d6> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
+
+<https://r11.eu/rdf/resource/b810df69-e517-4f18-b5a2-49a93ec49af2> a ns1:E52_Time-Span ;
+    rdfs:label "J 1075 [TPQ]" ;
+    ns1:P81a_end_of_the_begin "2114065.5"^^<https://r11.eu/ns/spec/JulianDay> ;
+    ns1:P82a_begin_of_the_begin "2113701.5"^^<https://r11.eu/ns/spec/JulianDay> .
+
+<https://r11.eu/rdf/resource/c4b3ec3f-3fbd-454a-945a-9ac0dbf4cdb6> a <https://r11.eu/ns/star/E13_spec_L1> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e01f96c9f27a72a941bd15208c78f2535ab3> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/73861e8a59e72070227a65ebe277219ec821> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
+
+<https://r11.eu/rdf/resource/c84d4742-bbfd-442b-bd20-02cd6068872a> a <https://r11.eu/ns/star/E13_crm_P24> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/9cdf9769-e377-4c4b-865c-2ef6aa029045> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/57275c96da61c2eafe31cb8c264697578aab> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
+
+<https://r11.eu/rdf/resource/c9252813fdfe7c5503c52fabc9cea37aceb4> a ns1:E42_Identifier ;
+    ns1:P190_has_symbolic_content "Michael, grandson of Samuel (Boulloterion ID)" .
+
+<https://r11.eu/rdf/resource/ca13a3ab-a314-4bb4-abdf-a7f5472a9aba> a ns1:E15_Identifier_Assignment ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/85df4f0fdff2f96748ea45e7b954ebba3b46> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> ;
+    ns1:P37_assigned <https://r11.eu/rdf/resource/22a98795c19647154d51e2e0dae78548eac5> .
+
+<https://r11.eu/rdf/resource/cbfa1280-6559-4d15-93b7-42503dcf5476> a <https://r11.eu/ns/star/E13_crm_P4> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/0d183d9d-f285-40a5-adf8-067a473bdefc> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/b810df69-e517-4f18-b5a2-49a93ec49af2> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
+
+<https://r11.eu/rdf/resource/d643704e-5e7d-484c-8ee1-5d828aa5c3f6> a <https://r11.eu/ns/star/E13_crm_P4> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/61c46b3c-1ba4-4c7c-818b-7ec4fd549e13> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/23fb1d27-5699-4985-9a68-c2889cc37bf4> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
+
+<https://r11.eu/rdf/resource/d6e7416a-37c0-49c2-ada4-61eb6e7e4ef5> a <https://r11.eu/ns/star/E13_spec_L1> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e01f96c9f27a72a941bd15208c78f2535ab3> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/73861e8a59e72070227a65ebe277219ec821> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/59e92384de4e20b0da1c0ca34f7044b5da0b> .
+
+<https://r11.eu/rdf/resource/dd7bc205-18e7-4b4e-a892-2359d97c519b> a ns1:E52_Time-Span ;
+    rdfs:label "J 1078 [TPQ]" ;
+    ns1:P81a_end_of_the_begin "2115161.5"^^<https://r11.eu/ns/spec/JulianDay> ;
+    ns1:P82a_begin_of_the_begin "2114797.5"^^<https://r11.eu/ns/spec/JulianDay> .
+
+<https://r11.eu/rdf/resource/dfe152c8-bca0-4951-9605-e4abac16ce8b> a <https://r11.eu/ns/star/E13_spec_L1> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e01f96c9f27a72a941bd15208c78f2535ab3> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/73861e8a59e72070227a65ebe277219ec821> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
+
+<https://r11.eu/rdf/resource/e4bdbb77-d17a-41e6-80a8-bbf3a7f8f343> a <https://r11.eu/ns/star/E13_spec_L1> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/57275c96da61c2eafe31cb8c264697578aab> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/86d9ae95c55bfa1c88332826f6350b16c52a> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
+
+<https://r11.eu/rdf/resource/e6757746-a324-4402-8c24-1c8226881877> a <https://r11.eu/ns/star/E13_crm_P4> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/4511a0ea-7210-4c81-ab06-86be3f387ca6> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/2c3205d7-9657-4491-8b73-7bd18e86250a> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
+
+<https://r11.eu/rdf/resource/eb9639f7-ac96-4d89-9381-4e3797bb814a> a <https://r11.eu/ns/star/E13_crm_P22> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/9cdf9769-e377-4c4b-865c-2ef6aa029045> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/ff73f8a1df13c1e2ef04395672b32555f147> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
+
+<https://r11.eu/rdf/resource/ebdad4df-e0bf-4c1a-ae2f-7345a2805371> a ns1:E15_Identifier_Assignment ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e01f96c9f27a72a941bd15208c78f2535ab3> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> ;
+    ns1:P37_assigned <https://r11.eu/rdf/resource/27757ac455dc5b3c5da6a5cbc626b1f8a578> .
+
+<https://r11.eu/rdf/resource/ee3c89ee-faaa-49b3-80a9-30b8866953e4> a <https://r11.eu/ns/star/E13_crm_P24> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/ba6c36ea-0955-4c31-8cc5-36b3c63d8b2d> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/da2417cef950b8e2e963678a6137b4ea7b5f> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
+
+<https://r11.eu/rdf/resource/f0104167-abbb-40a9-bb3c-d0ab4d797a97> a <https://r11.eu/ns/star/E13_crm_P4> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/23bbb768-98d5-4707-933e-a36642540610> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/a32227e7-a5fa-4a05-a9a8-a945ea5a933a> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
+
+<https://r11.eu/rdf/resource/f52941a5-27ed-44fc-b8cd-b6e0e989b420> a <https://r11.eu/ns/star/E13_crm_P24> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/19568339-6c80-4448-b29b-4612fa0a1e05> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/52fa81846e30268bedfda2c5c36baca0f9a2> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9ac9b9086bfb49d5ecf31dbcebaf964ea98d> .
+
+<https://r11.eu/rdf/resource/fb00767e-c8cf-4ed2-9f3a-a121c4ca87f5> a <https://r11.eu/ns/star/E13_spec_L1> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/da2417cef950b8e2e963678a6137b4ea7b5f> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/db9b5eeb4c15e0533ed14cffcca0d8186712> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
+
+<https://r11.eu/rdf/resource/fd5de114-b6eb-49f8-87c1-e736254fda6c> a <https://r11.eu/ns/star/E13_crm_P24> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/61c46b3c-1ba4-4c7c-818b-7ec4fd549e13> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/e01f96c9f27a72a941bd15208c78f2535ab3> ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/c575c91eb1f2f743bf52898ecae201da1d01> .
+
 <https://r11.eu/rdf/resource/0a4710b651a2b4d27cfb7f6eabe6c2050f96> a ns1:E42_Identifier ;
     ns1:P190_has_symbolic_content "Gregorios Radenos? (Boulloterion ID)" .
+
+<https://r11.eu/rdf/resource/0d183d9d-f285-40a5-adf8-067a473bdefc> a ns1:E8_Acquisition .
 
 <https://r11.eu/rdf/resource/0fe3f6a0d7205a9253a345646b12ef022cfa> a ns1:E42_Identifier ;
     ns1:P190_has_symbolic_content "Ioannes proedros (Boulloterion ID)" .
 
-<https://r11.eu/rdf/resource/1f153769-66c3-4596-9a15-f751b7c3e17f> a ns1:E8_Acquisition .
+<https://r11.eu/rdf/resource/19568339-6c80-4448-b29b-4612fa0a1e05> a ns1:E8_Acquisition .
 
-<https://r11.eu/rdf/resource/2eba1bc1-1238-4ac2-aaf3-f842c20d1ecd> a ns1:E8_Acquisition .
+<https://r11.eu/rdf/resource/23bbb768-98d5-4707-933e-a36642540610> a ns1:E8_Acquisition .
 
-<https://r11.eu/rdf/resource/48f5cbcf-be93-4264-a39a-eb1b493aeaab> a ns1:E8_Acquisition .
+<https://r11.eu/rdf/resource/4511a0ea-7210-4c81-ab06-86be3f387ca6> a ns1:E8_Acquisition .
 
-<https://r11.eu/rdf/resource/779dd966-3fd6-42fd-be52-ee2b0e85c990> a ns1:E8_Acquisition .
-
-<https://r11.eu/rdf/resource/7f218bde-0f04-4f43-b71a-1f1ae479bdd2> a ns1:E8_Acquisition .
-
-<https://r11.eu/rdf/resource/804f914f-dc9f-4e20-aca4-2183202a6fb1> a ns1:E8_Acquisition .
+<https://r11.eu/rdf/resource/61c46b3c-1ba4-4c7c-818b-7ec4fd549e13> a ns1:E8_Acquisition .
 
 <https://r11.eu/rdf/resource/85df4f0fdff2f96748ea45e7b954ebba3b46> a <https://r11.eu/ns/spec/Boulloterion> ;
     rdfs:label "Leo" .
 
-<https://r11.eu/rdf/resource/a5f53271-e387-4030-839a-8e4be9ce2f01> a ns1:E8_Acquisition .
+<https://r11.eu/rdf/resource/98abef97-71c0-45f1-a383-1b2d6a42539a> a ns1:E8_Acquisition .
 
 <https://r11.eu/rdf/resource/cd66e22f4d770ed15d0d3d82cd44b923bc27> a ns1:E42_Identifier ;
     ns1:P190_has_symbolic_content "Theodoros son of Het‘oum kouropalates and doux of Melitene (Boulloterion ID)" .
 
-<https://r11.eu/rdf/resource/f4b549b2-4fc4-4ffd-a73f-81fd19ef6027> a ns1:E8_Acquisition .
+<https://r11.eu/rdf/resource/e065e05f-f72f-42a2-82db-065714895bfc> a ns1:E8_Acquisition .
+
+<https://r11.eu/rdf/resource/f0d5995e-fc07-4c72-9372-ef734e2e1222> a ns1:E8_Acquisition .
+
+<https://r11.eu/rdf/resource/196bb8ef-d3c3-4d52-8576-c6507c8af4e3> a ns1:E8_Acquisition .
 
 <https://r11.eu/rdf/resource/27757ac455dc5b3c5da6a5cbc626b1f8a578> a ns1:E42_Identifier ;
     ns1:P190_has_symbolic_content "Theodoros son of Het‘oum kouropalates and doux of Melitene (Version 1) (Boulloterion ID)" .
 
-<https://r11.eu/rdf/resource/2b3a07a1-dced-43f0-9072-0012f8b5c38e> a ns1:E8_Acquisition .
-
 <https://r11.eu/rdf/resource/57275c96da61c2eafe31cb8c264697578aab> a <https://r11.eu/ns/spec/Boulloterion> ;
     rdfs:label "Michael, grandson of Samuel" .
 
-<https://r11.eu/rdf/resource/c5eed21a-f32b-471f-b16d-df34b0eaf718> a ns1:E8_Acquisition .
+<https://r11.eu/rdf/resource/9cdf9769-e377-4c4b-865c-2ef6aa029045> a ns1:E8_Acquisition .
 
-<https://r11.eu/rdf/resource/e345129d-e26e-4eac-a059-771651fbf7e7> a ns1:E8_Acquisition .
+<https://r11.eu/rdf/resource/ba6c36ea-0955-4c31-8cc5-36b3c63d8b2d> a ns1:E8_Acquisition .
 
 <https://r11.eu/rdf/resource/52fa81846e30268bedfda2c5c36baca0f9a2> a <https://r11.eu/ns/spec/Boulloterion> ;
     rdfs:label "Ioannes proedros" .

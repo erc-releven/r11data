@@ -1,244 +1,239 @@
 @prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://r11.eu/rdf/resource/0c0097e2a360e9d6e59a4f7ec1d98b6dcb35> ns1:P67_refers_to <https://r11.eu/rdf/resource/376fb733-5859-4de0-91e9-83dd253c865f> .
-
-<https://r11.eu/rdf/resource/0ddcde43f4ec5afe73f5a87cf94994972ae6> ns1:P67_refers_to <https://r11.eu/rdf/resource/53e8e2f3-f1a4-4253-a77d-b0aadc15774b> .
-
-<https://r11.eu/rdf/resource/16687de4ec2610b3553c6f21356acb5c571a> ns1:P67_refers_to <https://r11.eu/rdf/resource/1b73edc3-c7a5-45dc-908c-64c762f294e1>,
-        <https://r11.eu/rdf/resource/c6c3b9a7-87c7-4e28-a464-8cc54638547f> .
-
-<https://r11.eu/rdf/resource/172fa37b6f52cc87fc9e800ebbbd299b96ef> ns1:P67_refers_to <https://r11.eu/rdf/resource/0ed5b35a-77f3-47b4-9cdf-0c498ce45473>,
-        <https://r11.eu/rdf/resource/bb9c4719-f9c6-4a5f-a831-373be41dd9c8> .
-
-<https://r11.eu/rdf/resource/189eb48b46ac1999a0d26dbb93ade7f6e525> ns1:P67_refers_to <https://r11.eu/rdf/resource/73292be8-814f-4e8b-87b1-da2f18d10a58> .
-
-<https://r11.eu/rdf/resource/1af78e605458a08b282f3d8acb96c725abe4> ns1:P67_refers_to <https://r11.eu/rdf/resource/10239ccb-23d6-4922-9ad9-d2f9cddcc68e> .
-
-<https://r11.eu/rdf/resource/2277639b-74b2-430a-8be7-3a976e30a793> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/14d13257104a2dee2d5edf7266810d7d75e8> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] .
-
-<https://r11.eu/rdf/resource/23377689dfdd20a66802cc7150f2b50ce028> ns1:P67_refers_to <https://r11.eu/rdf/resource/716e8f2d-6e5c-4483-bcff-083aff55dbd3>,
-        <https://r11.eu/rdf/resource/f05d0fed-efbd-4cf8-aee0-eeed20e275b6> .
-
-<https://r11.eu/rdf/resource/270141ed-6a0b-4e97-9093-f80befbb85d9> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/49e37c99b074cedf9d756ce9758953174636> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] .
-
-<https://r11.eu/rdf/resource/2d351eff5fe580b65c904bd31d27f3a6543d> ns1:P67_refers_to <https://r11.eu/rdf/resource/cf3e412b-d164-407d-966f-699eeffd56ea> .
-
-<https://r11.eu/rdf/resource/31d579421c4ca3404fe6587c5a7aa29d7b85> ns1:P67_refers_to <https://r11.eu/rdf/resource/c85b85d8-1659-418f-853d-3894d3d0ae98> .
-
-<https://r11.eu/rdf/resource/342d59796d0d0a6752c10748a639f93daada> ns1:P67_refers_to <https://r11.eu/rdf/resource/1eb8af2f-5111-4e84-baaf-99e0d9d6f015>,
-        <https://r11.eu/rdf/resource/3fefef2d-0e44-4f09-ad9f-3643cac98542>,
-        <https://r11.eu/rdf/resource/edaf9cf6-88bf-4497-916a-9446d21c9cfb> .
-
-<https://r11.eu/rdf/resource/38b01e84cafc83a1f6b9ef2289e2ad392a8d> ns1:P67_refers_to <https://r11.eu/rdf/resource/07261ce4-676b-49f1-b3cd-9310f317574c> .
-
-<https://r11.eu/rdf/resource/3d2adb9429a8d0d2cd0a0dfbee61e2b30491> ns1:P67_refers_to <https://r11.eu/rdf/resource/98fdc92a-bc7b-4c2b-842f-de8f7d4b1d01>,
-        <https://r11.eu/rdf/resource/f0ccfd60-67fc-4a17-9ae6-dc47a53d9038> .
-
-<https://r11.eu/rdf/resource/3ee1f2604a2539935bf565c4c73d76e29300> ns1:P67_refers_to <https://r11.eu/rdf/resource/3b91baf4-877f-41d2-a186-002a43f1cc3c> .
-
-<https://r11.eu/rdf/resource/41c515367696bb09b2b93c6964d58846d0e5> ns1:P67_refers_to <https://r11.eu/rdf/resource/c36d8c9d-e302-4559-90df-f0714ae7d493>,
-        <https://r11.eu/rdf/resource/c83b544a-7a26-4916-9d42-f68ea3efd6af>,
-        <https://r11.eu/rdf/resource/d875be8d-8b0f-4e15-bb33-ee92520dc05a> .
-
-<https://r11.eu/rdf/resource/43172b9b-e611-4395-b400-378f316a79af> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/b53c2a4448f390b61a37ec16ccaaf9a9583f> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] .
-
-<https://r11.eu/rdf/resource/44ae17149674cd0f8684af51b5fdbc7a4a09> ns1:P67_refers_to <https://r11.eu/rdf/resource/38c59ee7-0265-4e24-aeec-3098a7a30729>,
-        <https://r11.eu/rdf/resource/9bd4cc29-6fc6-40ad-b4ba-a0a3f4973aaa>,
-        <https://r11.eu/rdf/resource/afaccbcc-9589-4aaa-8fc4-c2acdf436812> .
-
-<https://r11.eu/rdf/resource/46a065ed2ac969054175925d084bdf5933e2> ns1:P67_refers_to <https://r11.eu/rdf/resource/a0229568-d9b3-495a-b6c6-18a9e6939d97> .
-
-<https://r11.eu/rdf/resource/46fc1b82ecc68f7e2d6c724b06afdaef6e93> ns1:P67_refers_to <https://r11.eu/rdf/resource/5a17d124-8681-4011-b2e8-325e87799876> .
-
-<https://r11.eu/rdf/resource/49b77fe9c0c4b3faec8c9913b530063f3cab> ns1:P67_refers_to <https://r11.eu/rdf/resource/71378b3c-d5a1-48cc-b64f-f6dc13db9e40> .
-
-<https://r11.eu/rdf/resource/4c3a90d3de632bb5f720a85dc35e1feaf0db> ns1:P67_refers_to <https://r11.eu/rdf/resource/280a0eb2-baf3-44cb-abb1-ac2da8306fe4> .
-
-<https://r11.eu/rdf/resource/4daa59bfc0eb96df46624cca29674c1ea9c1> ns1:P67_refers_to <https://r11.eu/rdf/resource/0b143f13-1fd4-411a-bf2b-0602d906b423>,
-        <https://r11.eu/rdf/resource/131f89d1-8925-4e8a-a9bc-33b3291f2974>,
-        <https://r11.eu/rdf/resource/32d361ab-b1b9-4773-b1e7-860920480df9>,
-        <https://r11.eu/rdf/resource/529b0015-11dd-4446-91c0-f0833ab83476>,
-        <https://r11.eu/rdf/resource/db1c14a3-e3c8-48ab-9c92-b61ac04a86af>,
-        <https://r11.eu/rdf/resource/f33d4fe2-f6b0-4daf-a969-0acca15112c4> .
-
-<https://r11.eu/rdf/resource/4ee162ebf49b69964f09d982fd214bdff525> ns1:P67_refers_to <https://r11.eu/rdf/resource/328af9f9-ef4a-4ef5-b068-4893e182167d>,
-        <https://r11.eu/rdf/resource/38bcfb96-d523-4f5c-b53b-f9b4c1bdedd3> .
-
-<https://r11.eu/rdf/resource/55f9d82ec68b5c67622aca2a4373f0ef316d> ns1:P67_refers_to <https://r11.eu/rdf/resource/d2ba07f6-340e-40eb-84a3-f116efdbcb4f> .
-
-<https://r11.eu/rdf/resource/5647690999a463877b2641c73a7ab7385bf0> ns1:P67_refers_to <https://r11.eu/rdf/resource/851a2a64-269f-465d-b8b2-8d458ade9008>,
-        <https://r11.eu/rdf/resource/933671d7-e0f7-4754-9724-71570e34c708>,
-        <https://r11.eu/rdf/resource/bdc04ba0-41d2-4351-b199-0c578ac33149>,
-        <https://r11.eu/rdf/resource/c3a81469-84c4-42b3-9106-9b0471b8d750> .
-
-<https://r11.eu/rdf/resource/5695c12f349cd6ccd4f30a04904936ea399a> ns1:P67_refers_to <https://r11.eu/rdf/resource/1a8d99f1-5ad0-4dd8-8266-8adb0bb612c4> .
-
-<https://r11.eu/rdf/resource/5a6b9a05590a2a455b9644239ab0b11c4e3c> ns1:P67_refers_to <https://r11.eu/rdf/resource/24900a19-a662-4b31-83ed-7fad6e255cfe> .
-
-<https://r11.eu/rdf/resource/5fe2d76ad273eb9d40295a76e4a76ea65f58> ns1:P67_refers_to <https://r11.eu/rdf/resource/391b1095-b96e-4182-987f-633e7a79549b>,
-        <https://r11.eu/rdf/resource/85182b6b-8f69-4e24-9bbb-e804d7a64411> .
-
-<https://r11.eu/rdf/resource/68ce0fe3454d17ea7d0a6516253a8dc53661> ns1:P67_refers_to <https://r11.eu/rdf/resource/c9553b1c-cbcf-4cfc-9bae-e9a17e0e107e>,
-        <https://r11.eu/rdf/resource/d5ae3306-1367-4fe3-8a86-5d0d5c55b3a3> .
-
-<https://r11.eu/rdf/resource/6d57559e6d864dfa9639d99501d07c2315f5> ns1:P67_refers_to <https://r11.eu/rdf/resource/194b94bc-2408-42d4-af61-47246317ef0b> .
-
-<https://r11.eu/rdf/resource/6e9572ee2dffc669f90ad18f129527591e5f> ns1:P67_refers_to <https://r11.eu/rdf/resource/b619589a-eabc-4024-9997-86a6d0b188b7> .
-
-<https://r11.eu/rdf/resource/7289c100d9101cfc016a47ef8957a6e2b256> ns1:P67_refers_to <https://r11.eu/rdf/resource/040b5acd-417f-4ebc-b05c-86b45085bb7e> .
-
-<https://r11.eu/rdf/resource/7348e19d323d0f5918aae7b9f786770162c8> ns1:P67_refers_to <https://r11.eu/rdf/resource/22e21224-4e77-481b-9a09-8e038e7d1d91>,
-        <https://r11.eu/rdf/resource/c4cb68c3-0262-4b26-8f1b-386c64d34ff2> .
-
-<https://r11.eu/rdf/resource/7423c5a8de3039d5db8cdaf54491c41f7fdc> ns1:P67_refers_to <https://r11.eu/rdf/resource/924a7394-c11d-4b79-bb93-fd54cf5456f4> .
-
-<https://r11.eu/rdf/resource/7a23dbc9c307c21b62c55d3819bd65550c07> ns1:P67_refers_to <https://r11.eu/rdf/resource/34e01a72-dda0-408d-b0b3-008ee97cda32>,
-        <https://r11.eu/rdf/resource/f91cd036-fd02-46f2-a274-cf4f7be27fe2> .
-
-<https://r11.eu/rdf/resource/7a64e3b98a269638f3ac479d40f4c88df3d6> ns1:P67_refers_to <https://r11.eu/rdf/resource/439ac89b-d5cb-436d-a994-731c2fef3342> .
-
-<https://r11.eu/rdf/resource/7ac8570b4f7f370b49463e2017d530b37d8f> ns1:P67_refers_to <https://r11.eu/rdf/resource/76d5a869-fcac-493a-aaba-a2ae5f022321> .
-
-<https://r11.eu/rdf/resource/7dbf91fdba0ec42fc595f2b857b3e1b23cc9> ns1:P67_refers_to <https://r11.eu/rdf/resource/de123fd9-b693-48fe-8612-7cd6c7d574ba>,
-        <https://r11.eu/rdf/resource/fd08afb2-f59a-4c3f-be6b-932f27d8037f> .
-
-<https://r11.eu/rdf/resource/85199226fb30beb0be83eb4f6de280d0ba56> ns1:P67_refers_to <https://r11.eu/rdf/resource/28ee9df5-19a6-4349-a9e6-8dcd59e52018> .
-
-<https://r11.eu/rdf/resource/8b793e5fb67f8d4fa94cc9e6f0862d46fbfd> ns1:P67_refers_to <https://r11.eu/rdf/resource/d0c049fb-e428-4a51-bc49-10d6997088bd> .
-
-<https://r11.eu/rdf/resource/8d44b2d53aa7a4bb05a115c0e185cf2b5bc4> ns1:P67_refers_to <https://r11.eu/rdf/resource/41cb2db8-a448-464d-a044-7a060ce95181>,
-        <https://r11.eu/rdf/resource/4e6c253a-d135-4ab4-bac2-c1ae729d46d0> .
-
-<https://r11.eu/rdf/resource/91172e72390d65b90bc67e2dcf80b174a136> ns1:P67_refers_to <https://r11.eu/rdf/resource/5fa5b300-4bed-4745-9e28-a8f422469157> .
-
-<https://r11.eu/rdf/resource/912ce6b54ba1f396772c5262c2679bf49da5> ns1:P67_refers_to <https://r11.eu/rdf/resource/b793be21-b1c3-4cb9-a430-d59d9847a6f6>,
-        <https://r11.eu/rdf/resource/c585e2c7-4537-4458-bb6e-7bd90092156e> .
-
-<https://r11.eu/rdf/resource/95e669d6179e082fe43b8af1d840117ae36b> ns1:P67_refers_to <https://r11.eu/rdf/resource/37e8ad0c-a491-484e-9a0d-3cf44e9db8ea>,
-        <https://r11.eu/rdf/resource/77f17f8d-854c-4116-93a0-466553a3586e>,
-        <https://r11.eu/rdf/resource/e10466fd-a72d-4449-84df-48fb63654b9b>,
-        <https://r11.eu/rdf/resource/f25553c8-3549-4ec6-80e3-0057f829258d> .
-
-<https://r11.eu/rdf/resource/98f3955a439b1360e4ef30ecf325a6f36c1b> ns1:P67_refers_to <https://r11.eu/rdf/resource/17257f94-bfaf-4816-a81c-002d290258f0> .
-
-<https://r11.eu/rdf/resource/98fea0f2-142b-4aa2-b373-45f82a9cfe18> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+<https://r11.eu/rdf/resource/04676ec8-5901-4a53-b327-f89d218d0ea8> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
     ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/f6713a8eea03e6996e28e5151b3ca6f595dc> ;
     ns1:P141_assigned [ a ns1:E74_Group ] .
 
-<https://r11.eu/rdf/resource/9e78f754c811df831d61b87955c03a4065b3> ns1:P67_refers_to <https://r11.eu/rdf/resource/19e42b3e-d1cc-44f1-924e-566f823c1cbb> .
+<https://r11.eu/rdf/resource/0c0097e2a360e9d6e59a4f7ec1d98b6dcb35> ns1:P67_refers_to <https://r11.eu/rdf/resource/3e53f7ab-9e8e-4138-8e44-dd6991437c16> .
 
-<https://r11.eu/rdf/resource/a3b84fdd-5a71-4039-84dd-173755cfb2a6> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/37bbe33833587f841b6cde505a3643317f84> ;
+<https://r11.eu/rdf/resource/0ddcde43f4ec5afe73f5a87cf94994972ae6> ns1:P67_refers_to <https://r11.eu/rdf/resource/fdc10904-880c-4249-98ec-ccf3961b597a> .
+
+<https://r11.eu/rdf/resource/16687de4ec2610b3553c6f21356acb5c571a> ns1:P67_refers_to <https://r11.eu/rdf/resource/02918f16-7337-4ac4-8b18-c1632324a9a4>,
+        <https://r11.eu/rdf/resource/8f899678-670b-412d-927c-91fec39b24b9> .
+
+<https://r11.eu/rdf/resource/172fa37b6f52cc87fc9e800ebbbd299b96ef> ns1:P67_refers_to <https://r11.eu/rdf/resource/368dd420-2414-4888-9a91-793e884ecefc>,
+        <https://r11.eu/rdf/resource/c967d7c8-7891-43e9-9f2a-f101e931055b> .
+
+<https://r11.eu/rdf/resource/189eb48b46ac1999a0d26dbb93ade7f6e525> ns1:P67_refers_to <https://r11.eu/rdf/resource/c6ef8d39-858b-4e0a-912c-4d898eaebd07> .
+
+<https://r11.eu/rdf/resource/1af78e605458a08b282f3d8acb96c725abe4> ns1:P67_refers_to <https://r11.eu/rdf/resource/7b7b1a02-2584-4131-bf48-4a55131c5ae0> .
+
+<https://r11.eu/rdf/resource/1e6d91e1-eff7-4e97-a609-990e064d0d16> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/49e37c99b074cedf9d756ce9758953174636> ;
     ns1:P141_assigned [ a ns1:E74_Group ] .
 
-<https://r11.eu/rdf/resource/a3bf1cb1073282904dddfaecd22731cbaac7> ns1:P67_refers_to <https://r11.eu/rdf/resource/48c7bc15-72e0-4256-916d-b1eaa16c9cd0>,
-        <https://r11.eu/rdf/resource/fb14d09a-8fbe-4945-b535-38cf11a7d0ea> .
+<https://r11.eu/rdf/resource/23377689dfdd20a66802cc7150f2b50ce028> ns1:P67_refers_to <https://r11.eu/rdf/resource/3574fefd-5242-4909-bdb2-961081e40356>,
+        <https://r11.eu/rdf/resource/5ec2e42d-fd0d-47ad-8bb2-fc95ea41b874> .
 
-<https://r11.eu/rdf/resource/a93ff6eb9dcff62319fb359aad89a3cec334> ns1:P67_refers_to <https://r11.eu/rdf/resource/c7f33a7b-decc-465f-92ea-d295da5e2787> .
-
-<https://r11.eu/rdf/resource/ac8b45fbe8f32ae6814dc36452740aea48cc> ns1:P67_refers_to <https://r11.eu/rdf/resource/68a000fe-185f-4e40-8069-1ee6d9a74012> .
-
-<https://r11.eu/rdf/resource/ac9988beaf47d3ee25219b09a20f7e9878d7> ns1:P67_refers_to <https://r11.eu/rdf/resource/b889c82f-250a-4cbf-9ebd-e0061a4f14a8>,
-        <https://r11.eu/rdf/resource/bf03b848-7cc6-4da9-a30b-9551d9a30351>,
-        <https://r11.eu/rdf/resource/c53d5fe3-20c6-43dd-b2ff-1bf24744e6de> .
-
-<https://r11.eu/rdf/resource/ae7682b6e1d17af9fcf90f25ecd84ce172cf> ns1:P67_refers_to <https://r11.eu/rdf/resource/1fab9bfd-8266-4893-b4dc-4ec66d5baa93>,
-        <https://r11.eu/rdf/resource/d3a721c1-3086-4354-a51f-96d4332d7d18> .
-
-<https://r11.eu/rdf/resource/b242744a3dad3b0156477c73b2ba36bcadf7> ns1:P67_refers_to <https://r11.eu/rdf/resource/d7df3913-fe75-4ac0-adb1-3dd8a75f99c5>,
-        <https://r11.eu/rdf/resource/fd9cfff7-2ea7-4e0d-b414-5a26de164bc1> .
-
-<https://r11.eu/rdf/resource/b85262a0-c03f-41ae-9e24-1887d8c0d00f> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/2e49e29b88d7e819e1fa0c416bf13e5ae55a> ;
+<https://r11.eu/rdf/resource/23c4c1f3-2f56-415d-941f-53ca71550641> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/b53c2a4448f390b61a37ec16ccaaf9a9583f> ;
     ns1:P141_assigned [ a ns1:E74_Group ] .
 
-<https://r11.eu/rdf/resource/b9f3c704c2ea69147b95fb9adebaef06e9b4> ns1:P67_refers_to <https://r11.eu/rdf/resource/dabd4dfb-df41-4243-988a-1fff7ceac574>,
-        <https://r11.eu/rdf/resource/f249500e-ead7-41c1-99a3-2edcaeab42f3> .
+<https://r11.eu/rdf/resource/2d351eff5fe580b65c904bd31d27f3a6543d> ns1:P67_refers_to <https://r11.eu/rdf/resource/97376c7a-7ba5-45b9-99e7-e86bebb273df> .
 
-<https://r11.eu/rdf/resource/ba27c870df1aeea90bcccf258c5625f875ef> ns1:P67_refers_to <https://r11.eu/rdf/resource/3fbce4d7-96eb-4d0b-89e5-b4000604c8c2>,
-        <https://r11.eu/rdf/resource/ebe07d2c-eed2-4531-b103-49deeba1c5b4> .
+<https://r11.eu/rdf/resource/31d579421c4ca3404fe6587c5a7aa29d7b85> ns1:P67_refers_to <https://r11.eu/rdf/resource/376d41f0-e5bb-4288-a8a2-90f33342a86a> .
 
-<https://r11.eu/rdf/resource/c1657527a8de3f06b39ee43b575571d25879> ns1:P67_refers_to <https://r11.eu/rdf/resource/e66b8f4e-39a0-43c5-8cd0-6008284be1f2> .
+<https://r11.eu/rdf/resource/342d59796d0d0a6752c10748a639f93daada> ns1:P67_refers_to <https://r11.eu/rdf/resource/80adfe49-5ca4-4a8e-8550-f25333c468ad>,
+        <https://r11.eu/rdf/resource/93a5b80a-73e2-40e4-a285-b9768339aad7>,
+        <https://r11.eu/rdf/resource/e9fc20e1-b74b-4111-842e-5367973c781b> .
 
-<https://r11.eu/rdf/resource/c3ec7bb7-b309-4c9e-979f-fff106c0c109> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+<https://r11.eu/rdf/resource/38b01e84cafc83a1f6b9ef2289e2ad392a8d> ns1:P67_refers_to <https://r11.eu/rdf/resource/92b0fbb3-d5c3-4598-9f5b-337ad0097e8e> .
+
+<https://r11.eu/rdf/resource/3d2adb9429a8d0d2cd0a0dfbee61e2b30491> ns1:P67_refers_to <https://r11.eu/rdf/resource/509f3568-9daf-4ad7-a32d-057f93523353>,
+        <https://r11.eu/rdf/resource/d1d0b764-ef77-4ef2-a55f-502de9d16e54> .
+
+<https://r11.eu/rdf/resource/3ee1f2604a2539935bf565c4c73d76e29300> ns1:P67_refers_to <https://r11.eu/rdf/resource/44f9fc33-ce0a-425b-b927-a3e534e15881> .
+
+<https://r11.eu/rdf/resource/41c515367696bb09b2b93c6964d58846d0e5> ns1:P67_refers_to <https://r11.eu/rdf/resource/40208d82-8959-4504-8485-ea1ec9ac4e1b>,
+        <https://r11.eu/rdf/resource/57d7c8ec-5fe9-4570-b65d-33b9e1f0ab6a>,
+        <https://r11.eu/rdf/resource/ee6b1043-5a9f-4390-8ff0-fe56ba89dde2> .
+
+<https://r11.eu/rdf/resource/44ae17149674cd0f8684af51b5fdbc7a4a09> ns1:P67_refers_to <https://r11.eu/rdf/resource/4171781b-52d3-4b5f-9515-151f21f8d7d6>,
+        <https://r11.eu/rdf/resource/80404199-649f-44ca-a3db-8c06e8fcc512>,
+        <https://r11.eu/rdf/resource/92578566-5ef5-47c7-b96d-58fdb92a0c3b> .
+
+<https://r11.eu/rdf/resource/46a065ed2ac969054175925d084bdf5933e2> ns1:P67_refers_to <https://r11.eu/rdf/resource/6503ca66-66e1-4b61-9ae1-09b3815e981a> .
+
+<https://r11.eu/rdf/resource/46fc1b82ecc68f7e2d6c724b06afdaef6e93> ns1:P67_refers_to <https://r11.eu/rdf/resource/5bfe8fd2-1b56-4a5a-9d14-0b89ffad7596> .
+
+<https://r11.eu/rdf/resource/49b77fe9c0c4b3faec8c9913b530063f3cab> ns1:P67_refers_to <https://r11.eu/rdf/resource/cd78e746-3948-4382-9b57-a9eeaec31b62> .
+
+<https://r11.eu/rdf/resource/4c3a90d3de632bb5f720a85dc35e1feaf0db> ns1:P67_refers_to <https://r11.eu/rdf/resource/169132a3-b327-4be9-8f81-46388ba9f699> .
+
+<https://r11.eu/rdf/resource/4daa59bfc0eb96df46624cca29674c1ea9c1> ns1:P67_refers_to <https://r11.eu/rdf/resource/55f5bbf5-65b3-456a-96ad-7c9bf16db189>,
+        <https://r11.eu/rdf/resource/6c97b040-40a1-4368-b8e8-ec2341303687>,
+        <https://r11.eu/rdf/resource/6e42feb4-1647-487e-bbde-2e84489f7676>,
+        <https://r11.eu/rdf/resource/891a3293-1371-4841-9f48-8526158960c8>,
+        <https://r11.eu/rdf/resource/a5c5ff40-5e20-430d-ae11-986c3220f120>,
+        <https://r11.eu/rdf/resource/d8443165-c688-48ce-b61f-782636e7472c> .
+
+<https://r11.eu/rdf/resource/4e9ff568-60f6-40c8-89c5-03d5eaebe666> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
     ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/eef6b091c5e52a165d5f8b3d3a8923686037> ;
     ns1:P141_assigned [ a ns1:E74_Group ] .
 
-<https://r11.eu/rdf/resource/cd25a6602415b02835fc5ee812ef769eb0d7> ns1:P67_refers_to <https://r11.eu/rdf/resource/dc47fdfd-e79d-4a74-848d-ad664aeb73ca> .
+<https://r11.eu/rdf/resource/4ee162ebf49b69964f09d982fd214bdff525> ns1:P67_refers_to <https://r11.eu/rdf/resource/12f1e15c-e0b5-4397-bd8c-a3c636b84f2a>,
+        <https://r11.eu/rdf/resource/e0e5b0ae-4213-4c46-9a23-c20b2a8899dc> .
 
-<https://r11.eu/rdf/resource/d4d4d5dac31d1ab60ab66da60128930e89e2> ns1:P67_refers_to <https://r11.eu/rdf/resource/54d7dcdf-b553-45dc-b5ba-ab49e6921dc0> .
+<https://r11.eu/rdf/resource/55f9d82ec68b5c67622aca2a4373f0ef316d> ns1:P67_refers_to <https://r11.eu/rdf/resource/9eda8c10-d763-4b52-ba5c-a96692266581> .
 
-<https://r11.eu/rdf/resource/d6572aee5980929e909223c108d400e5e211> ns1:P67_refers_to <https://r11.eu/rdf/resource/aa231c65-05d4-4ff3-b823-09d0c7387de5>,
-        <https://r11.eu/rdf/resource/eaa31f6e-142a-43bb-8b3d-6d99b333aefa> .
+<https://r11.eu/rdf/resource/5647690999a463877b2641c73a7ab7385bf0> ns1:P67_refers_to <https://r11.eu/rdf/resource/26c43406-d0d3-436a-8616-d57df5ab2344>,
+        <https://r11.eu/rdf/resource/529d4405-435a-4301-9f1b-e8bc811cc5d8>,
+        <https://r11.eu/rdf/resource/5d24b673-5ad9-4b0f-ab6f-91eb2eaaa6b7>,
+        <https://r11.eu/rdf/resource/7ed67034-aabd-48c9-8d8c-f4cd3c59a807> .
 
-<https://r11.eu/rdf/resource/d95e93d8ca60a44186da232e0011dfbc8505> ns1:P67_refers_to <https://r11.eu/rdf/resource/dcfba68b-9889-4dc0-98a8-c78dc8ec452c> .
+<https://r11.eu/rdf/resource/5695c12f349cd6ccd4f30a04904936ea399a> ns1:P67_refers_to <https://r11.eu/rdf/resource/317f6e69-4f82-4913-a658-e8b764872e7b> .
 
-<https://r11.eu/rdf/resource/da40912bff40437ec7e978d8d594ba046aa9> ns1:P67_refers_to <https://r11.eu/rdf/resource/46e9e855-6d95-49f1-946b-e78d0026c8aa> .
+<https://r11.eu/rdf/resource/593ee5bc-0ced-4619-9541-923631a5ffc0> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/37bbe33833587f841b6cde505a3643317f84> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] .
 
-<https://r11.eu/rdf/resource/dab0419470ebcd1603429dad1b2f69d1708c> ns1:P67_refers_to <https://r11.eu/rdf/resource/47fc72bf-30a0-4757-a52b-85e9f01d586c>,
-        <https://r11.eu/rdf/resource/6c42482b-8417-438d-8f0a-34b96202073c> .
+<https://r11.eu/rdf/resource/5a6b9a05590a2a455b9644239ab0b11c4e3c> ns1:P67_refers_to <https://r11.eu/rdf/resource/63b40c2c-3002-4198-b9db-77616e4299e0> .
 
-<https://r11.eu/rdf/resource/db395620eb0ab59bef420e60d76a419bd1a8> ns1:P67_refers_to <https://r11.eu/rdf/resource/729276a6-6688-4991-8323-bbb08add97f7> .
+<https://r11.eu/rdf/resource/5fe2d76ad273eb9d40295a76e4a76ea65f58> ns1:P67_refers_to <https://r11.eu/rdf/resource/3ae6e230-3037-4ad0-9f3c-c1d93db178a9>,
+        <https://r11.eu/rdf/resource/99c0d53a-a2ad-47fa-892d-9de41fa0ce83> .
 
-<https://r11.eu/rdf/resource/e1a20ae9e768f1008e32820325e73fd62d31> ns1:P67_refers_to <https://r11.eu/rdf/resource/1bf61e7e-605c-436f-ab36-807bf7c72f7c> .
+<https://r11.eu/rdf/resource/68ce0fe3454d17ea7d0a6516253a8dc53661> ns1:P67_refers_to <https://r11.eu/rdf/resource/58e65ee5-6b6f-4dbf-8e4d-7b4f7216e318>,
+        <https://r11.eu/rdf/resource/952b392c-c585-48f6-8db0-1b4919c040db> .
 
-<https://r11.eu/rdf/resource/e3791eaacd16a79516d786dca3f06bdd1fe4> ns1:P67_refers_to <https://r11.eu/rdf/resource/ee77aed2-8f5a-4cff-bc27-453cc20d1b0e> .
+<https://r11.eu/rdf/resource/6d57559e6d864dfa9639d99501d07c2315f5> ns1:P67_refers_to <https://r11.eu/rdf/resource/6a95760b-c2b8-459c-bcc8-90159560d6b7> .
 
-<https://r11.eu/rdf/resource/ee186422bacc43dcf6044e9b8c745134efc8> ns1:P67_refers_to <https://r11.eu/rdf/resource/512913fe-e40d-4726-8f41-6e16fc1f13bf> .
+<https://r11.eu/rdf/resource/6e9572ee2dffc669f90ad18f129527591e5f> ns1:P67_refers_to <https://r11.eu/rdf/resource/05ebd2be-6bd2-4cd3-9da9-6547a65f2ba4> .
 
-<https://r11.eu/rdf/resource/f61d9604cefc2e8afdd98763feb0f97062fc> ns1:P67_refers_to <https://r11.eu/rdf/resource/25f084fc-6b3a-4384-b47c-a43a21f9f3bd>,
-        <https://r11.eu/rdf/resource/bbcb5236-292d-4fc6-b33b-ed48149220fd> .
+<https://r11.eu/rdf/resource/7289c100d9101cfc016a47ef8957a6e2b256> ns1:P67_refers_to <https://r11.eu/rdf/resource/9b2f3abc-27ca-48ae-8bfa-9edf414ee337> .
 
-<https://r11.eu/rdf/resource/f8bbc9d27649c91fef9351a23a8ba7f24ce2> ns1:P67_refers_to <https://r11.eu/rdf/resource/3998a456-ecea-45a1-8f46-54db0d2ff27a> .
+<https://r11.eu/rdf/resource/7348e19d323d0f5918aae7b9f786770162c8> ns1:P67_refers_to <https://r11.eu/rdf/resource/47e9eb74-117b-4f09-b6cd-ee46687d3c66>,
+        <https://r11.eu/rdf/resource/d9d53d78-a044-4081-b4e8-1acd36634811> .
+
+<https://r11.eu/rdf/resource/7423c5a8de3039d5db8cdaf54491c41f7fdc> ns1:P67_refers_to <https://r11.eu/rdf/resource/ae3cbe9e-3bc0-4020-9f09-72c01e4a906e> .
+
+<https://r11.eu/rdf/resource/7a23dbc9c307c21b62c55d3819bd65550c07> ns1:P67_refers_to <https://r11.eu/rdf/resource/3e937946-2c1f-4db7-a36a-d6cb41810682>,
+        <https://r11.eu/rdf/resource/719d1f83-4427-4b37-a8e4-5a2f6ec13484> .
+
+<https://r11.eu/rdf/resource/7a64e3b98a269638f3ac479d40f4c88df3d6> ns1:P67_refers_to <https://r11.eu/rdf/resource/6327b150-66e4-4d05-a537-9d64b45c2ed2> .
+
+<https://r11.eu/rdf/resource/7ac8570b4f7f370b49463e2017d530b37d8f> ns1:P67_refers_to <https://r11.eu/rdf/resource/f383cfe3-501d-4279-9ea0-0b9e5ab81e52> .
+
+<https://r11.eu/rdf/resource/7dbf91fdba0ec42fc595f2b857b3e1b23cc9> ns1:P67_refers_to <https://r11.eu/rdf/resource/96959580-0d5d-4f31-b66b-0fd7968f1dd6>,
+        <https://r11.eu/rdf/resource/f3cb604a-124c-4e71-8c30-175834c8a221> .
+
+<https://r11.eu/rdf/resource/85199226fb30beb0be83eb4f6de280d0ba56> ns1:P67_refers_to <https://r11.eu/rdf/resource/e38e3fba-af9e-4f21-8bf7-433231e0204a> .
+
+<https://r11.eu/rdf/resource/8b793e5fb67f8d4fa94cc9e6f0862d46fbfd> ns1:P67_refers_to <https://r11.eu/rdf/resource/6abeae63-3c35-4a87-8e89-4d27ac2766d2> .
+
+<https://r11.eu/rdf/resource/8d44b2d53aa7a4bb05a115c0e185cf2b5bc4> ns1:P67_refers_to <https://r11.eu/rdf/resource/5872e0ed-536d-40aa-bc7b-47b69ee84d25>,
+        <https://r11.eu/rdf/resource/d10cf65f-db7b-42c5-8a6f-9e1dcb829670> .
+
+<https://r11.eu/rdf/resource/91172e72390d65b90bc67e2dcf80b174a136> ns1:P67_refers_to <https://r11.eu/rdf/resource/5a458c14-8997-4ff0-9d14-c33cbfc55283> .
+
+<https://r11.eu/rdf/resource/912ce6b54ba1f396772c5262c2679bf49da5> ns1:P67_refers_to <https://r11.eu/rdf/resource/4ab5b30e-f360-46d1-8094-41dfea7eaa62>,
+        <https://r11.eu/rdf/resource/93f29851-63b9-4046-9bc3-bbbbf7c607b0> .
+
+<https://r11.eu/rdf/resource/95e669d6179e082fe43b8af1d840117ae36b> ns1:P67_refers_to <https://r11.eu/rdf/resource/5f31c47e-d1b6-46d9-8b9a-f841c602eaac>,
+        <https://r11.eu/rdf/resource/764db0ce-da0d-4546-b09e-1202571c86a9>,
+        <https://r11.eu/rdf/resource/980f26f8-c4d5-4708-8067-216a3fd12857>,
+        <https://r11.eu/rdf/resource/ac5e2fa1-56c2-4d13-8747-2d3f72264b90> .
+
+<https://r11.eu/rdf/resource/98f3955a439b1360e4ef30ecf325a6f36c1b> ns1:P67_refers_to <https://r11.eu/rdf/resource/7927470b-3417-41aa-afa1-2f83ecbd39da> .
+
+<https://r11.eu/rdf/resource/9e78f754c811df831d61b87955c03a4065b3> ns1:P67_refers_to <https://r11.eu/rdf/resource/338d89df-91a4-4f8a-b716-704a1028d32b> .
+
+<https://r11.eu/rdf/resource/a3bf1cb1073282904dddfaecd22731cbaac7> ns1:P67_refers_to <https://r11.eu/rdf/resource/4483e0df-745a-4382-93e7-3a120e1bfe90>,
+        <https://r11.eu/rdf/resource/4aabecef-f48a-4030-ab57-9f2fa330508a> .
+
+<https://r11.eu/rdf/resource/a93ff6eb9dcff62319fb359aad89a3cec334> ns1:P67_refers_to <https://r11.eu/rdf/resource/0134dacb-4566-484a-9930-d7427fa7b0b6> .
+
+<https://r11.eu/rdf/resource/ac8b45fbe8f32ae6814dc36452740aea48cc> ns1:P67_refers_to <https://r11.eu/rdf/resource/abe19545-3600-4278-afa1-2b3ab2a2bcae> .
+
+<https://r11.eu/rdf/resource/ac9988beaf47d3ee25219b09a20f7e9878d7> ns1:P67_refers_to <https://r11.eu/rdf/resource/4ca3753c-cefb-4c05-8ca9-1bc616e7b19b>,
+        <https://r11.eu/rdf/resource/89508089-a65b-42f7-9e1c-3d4f2ea866de>,
+        <https://r11.eu/rdf/resource/ba41eb69-2851-4947-8aa3-c1ff2fd719a8> .
+
+<https://r11.eu/rdf/resource/ae7682b6e1d17af9fcf90f25ecd84ce172cf> ns1:P67_refers_to <https://r11.eu/rdf/resource/d89c5c3a-230e-4988-ba10-d221cc479751>,
+        <https://r11.eu/rdf/resource/dba81338-6081-46ea-8b9e-a9890cb33830> .
+
+<https://r11.eu/rdf/resource/b242744a3dad3b0156477c73b2ba36bcadf7> ns1:P67_refers_to <https://r11.eu/rdf/resource/6f656372-946f-447f-9492-0c7d34c0cfed>,
+        <https://r11.eu/rdf/resource/d3e19deb-5efd-4523-844c-65d45db11c73> .
+
+<https://r11.eu/rdf/resource/b9f3c704c2ea69147b95fb9adebaef06e9b4> ns1:P67_refers_to <https://r11.eu/rdf/resource/65b4c501-22ce-4b55-adc8-f0bdcc4f5dab>,
+        <https://r11.eu/rdf/resource/8cc2e46f-a1a9-4952-9776-5928258226f1> .
+
+<https://r11.eu/rdf/resource/ba27c870df1aeea90bcccf258c5625f875ef> ns1:P67_refers_to <https://r11.eu/rdf/resource/bbfd072c-ff7e-4737-9862-faa01fd30700>,
+        <https://r11.eu/rdf/resource/d1f6b530-da2a-4274-9fb1-ecb593ffb0fe> .
+
+<https://r11.eu/rdf/resource/c1657527a8de3f06b39ee43b575571d25879> ns1:P67_refers_to <https://r11.eu/rdf/resource/dbe1cebd-f743-49b8-b3b3-2bfc8603f0c4> .
+
+<https://r11.eu/rdf/resource/cd25a6602415b02835fc5ee812ef769eb0d7> ns1:P67_refers_to <https://r11.eu/rdf/resource/9fbb4cd0-a93c-4585-a638-4a9b258ab924> .
+
+<https://r11.eu/rdf/resource/d4d4d5dac31d1ab60ab66da60128930e89e2> ns1:P67_refers_to <https://r11.eu/rdf/resource/db4ab739-5742-44c6-8ca7-1a52b300d806> .
+
+<https://r11.eu/rdf/resource/d6572aee5980929e909223c108d400e5e211> ns1:P67_refers_to <https://r11.eu/rdf/resource/4d159940-5e89-4cf9-82c2-2db6286f838e>,
+        <https://r11.eu/rdf/resource/abd27371-5e39-40b4-9909-b2fbc84817c7> .
+
+<https://r11.eu/rdf/resource/d76d016e-6c83-4550-81b1-fb16d8d9fe67> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/14d13257104a2dee2d5edf7266810d7d75e8> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] .
+
+<https://r11.eu/rdf/resource/d95e93d8ca60a44186da232e0011dfbc8505> ns1:P67_refers_to <https://r11.eu/rdf/resource/2e86d71a-3d95-4904-b3aa-69deb586ddb9> .
+
+<https://r11.eu/rdf/resource/da40912bff40437ec7e978d8d594ba046aa9> ns1:P67_refers_to <https://r11.eu/rdf/resource/d11c4691-2f19-4b32-a1bb-9566d5cb2c4a> .
+
+<https://r11.eu/rdf/resource/dab0419470ebcd1603429dad1b2f69d1708c> ns1:P67_refers_to <https://r11.eu/rdf/resource/36c5f9bd-1349-4d56-8a79-7d4e97149c91>,
+        <https://r11.eu/rdf/resource/d78b3a4f-e7e6-4126-a309-9ec6618133d3> .
+
+<https://r11.eu/rdf/resource/db395620eb0ab59bef420e60d76a419bd1a8> ns1:P67_refers_to <https://r11.eu/rdf/resource/3f993237-9f31-4a17-bcb3-6f1611f8f542> .
+
+<https://r11.eu/rdf/resource/e1a20ae9e768f1008e32820325e73fd62d31> ns1:P67_refers_to <https://r11.eu/rdf/resource/ad754714-deed-4f6a-98f8-b4e2d32fcc9c> .
+
+<https://r11.eu/rdf/resource/e3791eaacd16a79516d786dca3f06bdd1fe4> ns1:P67_refers_to <https://r11.eu/rdf/resource/0714d743-2eb1-4706-afce-dba0fe058e34> .
+
+<https://r11.eu/rdf/resource/e498d581-f1aa-47dc-8560-b0818742d19e> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/2e49e29b88d7e819e1fa0c416bf13e5ae55a> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] .
+
+<https://r11.eu/rdf/resource/ee186422bacc43dcf6044e9b8c745134efc8> ns1:P67_refers_to <https://r11.eu/rdf/resource/2f533335-44f3-49af-a640-80780770064b> .
+
+<https://r11.eu/rdf/resource/f61d9604cefc2e8afdd98763feb0f97062fc> ns1:P67_refers_to <https://r11.eu/rdf/resource/24db6689-e049-446b-b858-9c7cb4c87871>,
+        <https://r11.eu/rdf/resource/78290375-a29e-4587-be3d-1c67cc25f509> .
+
+<https://r11.eu/rdf/resource/f8bbc9d27649c91fef9351a23a8ba7f24ce2> ns1:P67_refers_to <https://r11.eu/rdf/resource/29e08d34-6ee9-461f-8f76-f7cd75418bf0> .
 
 <https://r11.eu/rdf/resource/00e8224cbd8ada5021123f3e414f10aae8e2> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Parents of Simeon Colophon 99" .
 
-<https://r11.eu/rdf/resource/040b5acd-417f-4ebc-b05c-86b45085bb7e> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/35ea7ce003d3242ddd20965f0c870ce5ea38> ;
+<https://r11.eu/rdf/resource/0134dacb-4566-484a-9930-d7427fa7b0b6> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/d0ec77c287f5c88d2a9335717346cffa7459> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/4991004efd51113d70e9f06a953ace382238> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/02918f16-7337-4ac4-8b18-c1632324a9a4> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/b0c3be2a041b806c0677c8498e87166ddc96> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
 <https://r11.eu/rdf/resource/0466d31fb2f6cc5ef0e832f353c9deb1e8e4> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raiders Kars" .
 
+<https://r11.eu/rdf/resource/05ebd2be-6bd2-4cd3-9da9-6547a65f2ba4> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/a0d6f2bf8587e640342b86500ea9df1d653b> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
 <https://r11.eu/rdf/resource/06cee006d28b7e821484950ee42ee70a9a97> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Ani 1055" .
 
-<https://r11.eu/rdf/resource/07261ce4-676b-49f1-b3cd-9310f317574c> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/00e8224cbd8ada5021123f3e414f10aae8e2> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/90b1f1e5b924207a26b3de47060e2171c13a> .
-
-<https://r11.eu/rdf/resource/0b143f13-1fd4-411a-bf2b-0602d906b423> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/27bd6fee814f3cf79cd947d4a35b96be1701> ;
+<https://r11.eu/rdf/resource/0714d743-2eb1-4706-afce-dba0fe058e34> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/7de43a73fb473cd1375ec624e25ee927af3f> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/0ed5b35a-77f3-47b4-9cdf-0c498ce45473> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/153d7ce89dadaa654f42500a6b9ec35cbf24> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/10239ccb-23d6-4922-9ad9-d2f9cddcc68e> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/6c7b5e3c9c534cfa6c6a5a8f76fef07fcd31> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
 
 <https://r11.eu/rdf/resource/12b728d6c705c7ac876a646844811a908151> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "The Army of Basil II (Tayk)" .
 
-<https://r11.eu/rdf/resource/131f89d1-8925-4e8a-a9bc-33b3291f2974> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/699b4b2395f2f8f43c4d545508d867c95922> ;
+<https://r11.eu/rdf/resource/12f1e15c-e0b5-4397-bd8c-a3c636b84f2a> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/6aaa84a5c3a750d1f26c0b91cd85c932d8e1> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/aeb2426da6cad7f824aed45175b210f8bc9b> .
 
 <https://r11.eu/rdf/resource/138416e3e60daf223fca268459f125d02a6f> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Byzantine Army II (Ani)" .
@@ -249,15 +244,10 @@
 <https://r11.eu/rdf/resource/153d7ce89dadaa654f42500a6b9ec35cbf24> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raiders Hark‘ 1056" .
 
-<https://r11.eu/rdf/resource/17257f94-bfaf-4816-a81c-002d290258f0> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/138416e3e60daf223fca268459f125d02a6f> ;
+<https://r11.eu/rdf/resource/169132a3-b327-4be9-8f81-46388ba9f699> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/32f52f9e085c7e0be5b0ba0cfb4f017e785d> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
-
-<https://r11.eu/rdf/resource/194b94bc-2408-42d4-af61-47246317ef0b> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e2403cd3ddca5977e559ac26ad2cab58fd01> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fac893ffa3071eed4add6a8de84bbd9148a9> .
 
 <https://r11.eu/rdf/resource/195a2f3152dd0ed330deaefc227f848a7e06> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Parents of Step‘annos Colophon 123" .
@@ -265,81 +255,41 @@
 <https://r11.eu/rdf/resource/195e30657fdf21e16e03efd39b2fe528c869> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Byzantine Army II (Dvin)" .
 
-<https://r11.eu/rdf/resource/19e42b3e-d1cc-44f1-924e-566f823c1cbb> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/195a2f3152dd0ed330deaefc227f848a7e06> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/757a2efd810f10ceabd383fd1217ec35909f> .
-
-<https://r11.eu/rdf/resource/1a8d99f1-5ad0-4dd8-8266-8adb0bb612c4> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e40ec8ca432459195771e1699e3862c525ac> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
-
-<https://r11.eu/rdf/resource/1b73edc3-c7a5-45dc-908c-64c762f294e1> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/d531306892f0cbfc54091b7461ec600cbf1e> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/1bf61e7e-605c-436f-ab36-807bf7c72f7c> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/24edbce4575edce39160ee4a8fcebaab841a> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
-
 <https://r11.eu/rdf/resource/1c7f6998ed676b317e3f1e653a898eeaa176> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Army of Isaac I Komnenos" .
 
 <https://r11.eu/rdf/resource/1cb5e7830e3b6cbb94e93e78cbec51f40b22> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Byzantine Army (Ani)" .
 
-<https://r11.eu/rdf/resource/1eb8af2f-5111-4e84-baaf-99e0d9d6f015> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/391277dbb85b7834cdaab6db5211860c6cba> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/1fab9bfd-8266-4893-b4dc-4ec66d5baa93> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/bd1155dd481f29b77fed76270991289da636> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
-
 <https://r11.eu/rdf/resource/20c6c38095fe1df99b5fd781812086430de0> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raiders Ekegheac' and Karin 1057" .
-
-<https://r11.eu/rdf/resource/22e21224-4e77-481b-9a09-8e038e7d1d91> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/52e4a62b0ea55e3c360e76ee43b0918cfb88> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
 <https://r11.eu/rdf/resource/23d14e579f8c88c751c6dd071a1e7e62a29c> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Miaphysite Monks of the Black Mountain" .
 
-<https://r11.eu/rdf/resource/24900a19-a662-4b31-83ed-7fad6e255cfe> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/3fd92053379151aac65557ef5a425e159e91> ;
+<https://r11.eu/rdf/resource/24db6689-e049-446b-b858-9c7cb4c87871> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/fbe78ad7a7a5650846684d8babab9a3850a1> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
 <https://r11.eu/rdf/resource/24edbce4575edce39160ee4a8fcebaab841a> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Nisibis 1065" .
 
-<https://r11.eu/rdf/resource/25f084fc-6b3a-4384-b47c-a43a21f9f3bd> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/4f934aeaa225adb85a51f323fc7bfdc64f5d> ;
+<https://r11.eu/rdf/resource/26c43406-d0d3-436a-8616-d57df5ab2344> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/82a29fd47edffadba3c88d8387fefd0b35b5> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
 
 <https://r11.eu/rdf/resource/27bd6fee814f3cf79cd947d4a35b96be1701> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raiders Tao-Tayk" .
 
-<https://r11.eu/rdf/resource/280a0eb2-baf3-44cb-abb1-ac2da8306fe4> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/32f52f9e085c7e0be5b0ba0cfb4f017e785d> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fac893ffa3071eed4add6a8de84bbd9148a9> .
-
-<https://r11.eu/rdf/resource/28ee9df5-19a6-4349-a9e6-8dcd59e52018> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/2c08133cc29913dacc9a0576229553b209a8> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
 <https://r11.eu/rdf/resource/299868a01252ca13915d25525db6b3d5aba3> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Ekegheac‘ 1054" .
+
+<https://r11.eu/rdf/resource/29e08d34-6ee9-461f-8f76-f7cd75418bf0> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/6518d1f213e141e74a5828e55ba2ecd047bc> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
 
 <https://r11.eu/rdf/resource/2c08133cc29913dacc9a0576229553b209a8> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Vaspurakan" .
@@ -347,15 +297,20 @@
 <https://r11.eu/rdf/resource/2e49e29b88d7e819e1fa0c416bf13e5ae55a> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Murderers of Gerard, bishop of Cenad" .
 
-<https://r11.eu/rdf/resource/328af9f9-ef4a-4ef5-b068-4893e182167d> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/6aaa84a5c3a750d1f26c0b91cd85c932d8e1> ;
+<https://r11.eu/rdf/resource/2e86d71a-3d95-4904-b3aa-69deb586ddb9> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/66ce8902dc75d9df49b34a76618a9036cb26> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/aeb2426da6cad7f824aed45175b210f8bc9b> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/d88543887d8de44fd5f5df63d153e7968296> .
 
-<https://r11.eu/rdf/resource/32d361ab-b1b9-4773-b1e7-860920480df9> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/d4b7474ce309398f92ee3b60a2cf11376ad7> ;
+<https://r11.eu/rdf/resource/2f533335-44f3-49af-a640-80780770064b> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/bdb4690f1dcd32662d96998e5f87232663e9> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/317f6e69-4f82-4913-a658-e8b764872e7b> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e40ec8ca432459195771e1699e3862c525ac> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
 
 <https://r11.eu/rdf/resource/32eb8e0b89b22e6a0861960146b57894697d> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Family of Markos 105" .
@@ -363,26 +318,36 @@
 <https://r11.eu/rdf/resource/32f52f9e085c7e0be5b0ba0cfb4f017e785d> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Béla I's German captives released in 1062" .
 
-<https://r11.eu/rdf/resource/34e01a72-dda0-408d-b0b3-008ee97cda32> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/195e30657fdf21e16e03efd39b2fe528c869> ;
+<https://r11.eu/rdf/resource/338d89df-91a4-4f8a-b716-704a1028d32b> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/195a2f3152dd0ed330deaefc227f848a7e06> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/757a2efd810f10ceabd383fd1217ec35909f> .
+
+<https://r11.eu/rdf/resource/3574fefd-5242-4909-bdb2-961081e40356> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/9c8dfdabc53f3997ad1aefc403801b2bc242> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
 <https://r11.eu/rdf/resource/35ea7ce003d3242ddd20965f0c870ce5ea38> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "The Tanutērk‘ of Mayradzor Colophon 125" .
 
-<https://r11.eu/rdf/resource/376fb733-5859-4de0-91e9-83dd253c865f> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/32eb8e0b89b22e6a0861960146b57894697d> ;
+<https://r11.eu/rdf/resource/368dd420-2414-4888-9a91-793e884ecefc> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/153d7ce89dadaa654f42500a6b9ec35cbf24> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/891ec49728bc94850c1edef5d4aa436d23e5> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/36c5f9bd-1349-4d56-8a79-7d4e97149c91> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/b6d52ade32c830f1e8004a1c33ed5a880d42> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/376d41f0-e5bb-4288-a8a2-90f33342a86a> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/b72ae345c1d5585271372a7a2f6907d6c783> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
 
 <https://r11.eu/rdf/resource/37bbe33833587f841b6cde505a3643317f84> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Hungarian refugees at Emperor Henry III's court" .
-
-<https://r11.eu/rdf/resource/37e8ad0c-a491-484e-9a0d-3cf44e9db8ea> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/ebd19efdb957095afafadceab4697b2e18ca> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
 <https://r11.eu/rdf/resource/37f01ab26ea40490328aa8adf47c7e3a2899> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Parents of Evargris Colophon 103" .
@@ -396,54 +361,44 @@
 <https://r11.eu/rdf/resource/38b5ad10cd04e7762706ee090ffb4c025699> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "First Crusade" .
 
-<https://r11.eu/rdf/resource/38bcfb96-d523-4f5c-b53b-f9b4c1bdedd3> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/6aaa84a5c3a750d1f26c0b91cd85c932d8e1> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/aeb2426da6cad7f824aed45175b210f8bc9b> .
-
-<https://r11.eu/rdf/resource/38c59ee7-0265-4e24-aeec-3098a7a30729> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/1305926edf85177263f8a0f0d52112b7c69c> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/cdd0e7d2cc1b41f8729713e812473eff4610> .
-
-<https://r11.eu/rdf/resource/391b1095-b96e-4182-987f-633e7a79549b> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+<https://r11.eu/rdf/resource/3ae6e230-3037-4ad0-9f3c-c1d93db178a9> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
     ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/20c6c38095fe1df99b5fd781812086430de0> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
-<https://r11.eu/rdf/resource/3998a456-ecea-45a1-8f46-54db0d2ff27a> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/6518d1f213e141e74a5828e55ba2ecd047bc> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
-
 <https://r11.eu/rdf/resource/3b7daa71d3b14ebb8c1c7ff9a4a82947c8c0> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raiders Ani 1055" .
-
-<https://r11.eu/rdf/resource/3b91baf4-877f-41d2-a186-002a43f1cc3c> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c6adc0992feda13e330b237cee6721b57374> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
 
 <https://r11.eu/rdf/resource/3c71c3f14f329d35130c83ea10d5c42041b6> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Byzantine Army of Basil II (Bulgaria)" .
 
-<https://r11.eu/rdf/resource/3fbce4d7-96eb-4d0b-89e5-b4000604c8c2> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e650d42f762f7efa079c8b256fcd13f51d27> ;
+<https://r11.eu/rdf/resource/3e53f7ab-9e8e-4138-8e44-dd6991437c16> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/32eb8e0b89b22e6a0861960146b57894697d> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/891ec49728bc94850c1edef5d4aa436d23e5> .
+
+<https://r11.eu/rdf/resource/3e937946-2c1f-4db7-a36a-d6cb41810682> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/195e30657fdf21e16e03efd39b2fe528c869> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/3f993237-9f31-4a17-bcb3-6f1611f8f542> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/f1f363626a6d70ece04d8388c8844c4f536b> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/f8453500deaeb9573b4812cb59a69073e63e> .
 
 <https://r11.eu/rdf/resource/3fd92053379151aac65557ef5a425e159e91> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Rebellion of Maniakes" .
 
-<https://r11.eu/rdf/resource/3fefef2d-0e44-4f09-ad9f-3643cac98542> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/391277dbb85b7834cdaab6db5211860c6cba> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/41cb2db8-a448-464d-a044-7a060ce95181> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/63937a437b402863495becdf5c6807d0a91c> ;
+<https://r11.eu/rdf/resource/40208d82-8959-4504-8485-ea1ec9ac4e1b> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/994812974ddb4f2b3e9d7d96bfc102309d25> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/4171781b-52d3-4b5f-9515-151f21f8d7d6> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/1305926edf85177263f8a0f0d52112b7c69c> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/cdd0e7d2cc1b41f8729713e812473eff4610> .
 
 <https://r11.eu/rdf/resource/41ecb1871e8ec4148b7c09db5028f0f60388> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Chaldia" .
@@ -451,133 +406,198 @@
 <https://r11.eu/rdf/resource/428874906f3612bef91581fc7e873b46d87e> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Parents of Covuk Colophon 97" .
 
-<https://r11.eu/rdf/resource/439ac89b-d5cb-436d-a994-731c2fef3342> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/ee488b2aa8ed334c20d457afe56e08f1377b> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/46e9e855-6d95-49f1-946b-e78d0026c8aa> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e9641bf14b2340c4108d9f2cf88ab24772d7> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/47fc72bf-30a0-4757-a52b-85e9f01d586c> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/12b728d6c705c7ac876a646844811a908151> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/48c7bc15-72e0-4256-916d-b1eaa16c9cd0> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+<https://r11.eu/rdf/resource/4483e0df-745a-4382-93e7-3a120e1bfe90> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
     ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/aa508d58c6c3b3fb6a4bbbe9b9ade4b02d1a> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/44f9fc33-ce0a-425b-b927-a3e534e15881> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c6adc0992feda13e330b237cee6721b57374> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/47e9eb74-117b-4f09-b6cd-ee46687d3c66> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/52e4a62b0ea55e3c360e76ee43b0918cfb88> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
 <https://r11.eu/rdf/resource/49e37c99b074cedf9d756ce9758953174636> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Bavarian informers of Aba Samuel" .
 
-<https://r11.eu/rdf/resource/4e6c253a-d135-4ab4-bac2-c1ae729d46d0> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/87db243e0f0a96e1300fb9136c347ac7b977> ;
+<https://r11.eu/rdf/resource/4aabecef-f48a-4030-ab57-9f2fa330508a> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c34ab85b8dda1d7bb5008cf88a0360ea5ff1> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/4ab5b30e-f360-46d1-8094-41dfea7eaa62> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/853401a7f30f96cfe5925d2d30456bda6203> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/4ca3753c-cefb-4c05-8ca9-1bc616e7b19b> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c92da7edad16f50ca00b60da1c8751a8c515> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/4d159940-5e89-4cf9-82c2-2db6286f838e> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/0466d31fb2f6cc5ef0e832f353c9deb1e8e4> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
 <https://r11.eu/rdf/resource/4f934aeaa225adb85a51f323fc7bfdc64f5d> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Melitene 1057" .
 
-<https://r11.eu/rdf/resource/512913fe-e40d-4726-8f41-6e16fc1f13bf> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/bdb4690f1dcd32662d96998e5f87232663e9> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
-
-<https://r11.eu/rdf/resource/529b0015-11dd-4446-91c0-f0833ab83476> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c6b9173fd75ffbd81f89f671dba963a22824> ;
+<https://r11.eu/rdf/resource/509f3568-9daf-4ad7-a32d-057f93523353> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/92286e83bf6d59e5c4b366dcc4f79b8cc8d9> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
-<https://r11.eu/rdf/resource/53e8e2f3-f1a4-4253-a77d-b0aadc15774b> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/385e12e71526c37fb635dcf92f7e84e609d1> ;
+<https://r11.eu/rdf/resource/529d4405-435a-4301-9f1b-e8bc811cc5d8> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/82a29fd47edffadba3c88d8387fefd0b35b5> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
 
 <https://r11.eu/rdf/resource/54133872d6fd329d748bbf0cf73d4455b45d> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Mesopotamia 1057" .
 
-<https://r11.eu/rdf/resource/54d7dcdf-b553-45dc-b5ba-ab49e6921dc0> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/37f01ab26ea40490328aa8adf47c7e3a2899> ;
+<https://r11.eu/rdf/resource/55f5bbf5-65b3-456a-96ad-7c9bf16db189> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c6b9173fd75ffbd81f89f671dba963a22824> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/f0a675e993a7625270430e9ae0553d93b1fa> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
 <https://r11.eu/rdf/resource/56d8045a202a30c8fe5a0c8e491020551481> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Okomi 1056" .
 
-<https://r11.eu/rdf/resource/5a17d124-8681-4011-b2e8-325e87799876> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/ed2ed80169aac516efcb864cb84f562f7113> ;
+<https://r11.eu/rdf/resource/57d7c8ec-5fe9-4570-b65d-33b9e1f0ab6a> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/994812974ddb4f2b3e9d7d96bfc102309d25> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
 
-<https://r11.eu/rdf/resource/5e11e1eeadc80c4d0e8e3ba5512eb5d68a29> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
-    rdfs:label "Parents of Grigor Colophon 111" .
+<https://r11.eu/rdf/resource/5872e0ed-536d-40aa-bc7b-47b69ee84d25> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/63937a437b402863495becdf5c6807d0a91c> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
 
-<https://r11.eu/rdf/resource/5fa5b300-4bed-4745-9e28-a8f422469157> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+<https://r11.eu/rdf/resource/58e65ee5-6b6f-4dbf-8e4d-7b4f7216e318> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/5e11e1eeadc80c4d0e8e3ba5512eb5d68a29> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/a8ec6946a4c3e8c50bae91cff35f00f5fe5f> .
+
+<https://r11.eu/rdf/resource/5a458c14-8997-4ff0-9d14-c33cbfc55283> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
     ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/428874906f3612bef91581fc7e873b46d87e> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/2ca361958863e3631ed258d383cee477dbd3> .
 
+<https://r11.eu/rdf/resource/5bfe8fd2-1b56-4a5a-9d14-0b89ffad7596> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/ed2ed80169aac516efcb864cb84f562f7113> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/5d24b673-5ad9-4b0f-ab6f-91eb2eaaa6b7> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/82a29fd47edffadba3c88d8387fefd0b35b5> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/5e11e1eeadc80c4d0e8e3ba5512eb5d68a29> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
+    rdfs:label "Parents of Grigor Colophon 111" .
+
+<https://r11.eu/rdf/resource/5ec2e42d-fd0d-47ad-8bb2-fc95ea41b874> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/54133872d6fd329d748bbf0cf73d4455b45d> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/5f31c47e-d1b6-46d9-8b9a-f841c602eaac> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/944d3acb7740e525f8d67aff7456ecb901b3> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/6327b150-66e4-4d05-a537-9d64b45c2ed2> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/ee488b2aa8ed334c20d457afe56e08f1377b> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
 <https://r11.eu/rdf/resource/63937a437b402863495becdf5c6807d0a91c> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raiders Vaspurakan 1019" .
+
+<https://r11.eu/rdf/resource/63b40c2c-3002-4198-b9db-77616e4299e0> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/3fd92053379151aac65557ef5a425e159e91> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/6503ca66-66e1-4b61-9ae1-09b3815e981a> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/38b5ad10cd04e7762706ee090ffb4c025699> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9828a467ad09c0034dd47cb0c396a27ca4c7> .
 
 <https://r11.eu/rdf/resource/6518d1f213e141e74a5828e55ba2ecd047bc> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Edessa hinterland II 1065" .
 
-<https://r11.eu/rdf/resource/66ce8902dc75d9df49b34a76618a9036cb26> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
-    rdfs:label "Parents of Rstakes Colophon 104" .
-
-<https://r11.eu/rdf/resource/68a000fe-185f-4e40-8069-1ee6d9a74012> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/a2b55b9023232e20c706fe5fbcf96398dad7> ;
+<https://r11.eu/rdf/resource/65b4c501-22ce-4b55-adc8-f0bdcc4f5dab> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/994812974ddb4f2b3e9d7d96bfc102309d25> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/66ce8902dc75d9df49b34a76618a9036cb26> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
+    rdfs:label "Parents of Rstakes Colophon 104" .
 
 <https://r11.eu/rdf/resource/699b4b2395f2f8f43c4d545508d867c95922> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raiders Taron" .
 
-<https://r11.eu/rdf/resource/6c42482b-8417-438d-8f0a-34b96202073c> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/b6d52ade32c830f1e8004a1c33ed5a880d42> ;
+<https://r11.eu/rdf/resource/6a95760b-c2b8-459c-bcc8-90159560d6b7> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e2403cd3ddca5977e559ac26ad2cab58fd01> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/6abeae63-3c35-4a87-8e89-4d27ac2766d2> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/f34421feff0bcad386cfdc8fe867639562eb> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
 <https://r11.eu/rdf/resource/6c7b5e3c9c534cfa6c6a5a8f76fef07fcd31> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Sebasteia" .
 
-<https://r11.eu/rdf/resource/71378b3c-d5a1-48cc-b64f-f6dc13db9e40> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/ed2ed80169aac516efcb864cb84f562f7113> ;
+<https://r11.eu/rdf/resource/6c97b040-40a1-4368-b8e8-ec2341303687> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/d4b7474ce309398f92ee3b60a2cf11376ad7> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
-<https://r11.eu/rdf/resource/716e8f2d-6e5c-4483-bcff-083aff55dbd3> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/54133872d6fd329d748bbf0cf73d4455b45d> ;
+<https://r11.eu/rdf/resource/6e42feb4-1647-487e-bbde-2e84489f7676> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/41ecb1871e8ec4148b7c09db5028f0f60388> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
-<https://r11.eu/rdf/resource/729276a6-6688-4991-8323-bbb08add97f7> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/f1f363626a6d70ece04d8388c8844c4f536b> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/f8453500deaeb9573b4812cb59a69073e63e> .
-
-<https://r11.eu/rdf/resource/73292be8-814f-4e8b-87b1-da2f18d10a58> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/1cb5e7830e3b6cbb94e93e78cbec51f40b22> ;
+<https://r11.eu/rdf/resource/6f656372-946f-447f-9492-0c7d34c0cfed> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/997955f35d851e8a42cc4768124cc944d6ad> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/719d1f83-4427-4b37-a8e4-5a2f6ec13484> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/cb54d0f922744e6a69f3b03c2e2811263a28> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/764db0ce-da0d-4546-b09e-1202571c86a9> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/ebd19efdb957095afafadceab4697b2e18ca> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
 <https://r11.eu/rdf/resource/766e85db95a5df529b4e46c80f9d2c1cc5dc> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Black Mountain 1066" .
 
-<https://r11.eu/rdf/resource/76d5a869-fcac-493a-aaba-a2ae5f022321> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/766e85db95a5df529b4e46c80f9d2c1cc5dc> ;
+<https://r11.eu/rdf/resource/78290375-a29e-4587-be3d-1c67cc25f509> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/4f934aeaa225adb85a51f323fc7bfdc64f5d> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/7927470b-3417-41aa-afa1-2f83ecbd39da> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/138416e3e60daf223fca268459f125d02a6f> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
 
-<https://r11.eu/rdf/resource/77f17f8d-854c-4116-93a0-466553a3586e> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/944d3acb7740e525f8d67aff7456ecb901b3> ;
+<https://r11.eu/rdf/resource/7b7b1a02-2584-4131-bf48-4a55131c5ae0> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/6c7b5e3c9c534cfa6c6a5a8f76fef07fcd31> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
 
 <https://r11.eu/rdf/resource/7b892847b89ce619abaa636ce090e883240d> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Muslim population of Jerusalem" .
@@ -588,31 +608,66 @@
 <https://r11.eu/rdf/resource/7de43a73fb473cd1375ec624e25ee927af3f> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "The Army of Georgi I Georgia" .
 
-<https://r11.eu/rdf/resource/85182b6b-8f69-4e24-9bbb-e804d7a64411> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e119dcf62140b4bfae4faa35e3b7641e3dee> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/851a2a64-269f-465d-b8b2-8d458ade9008> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+<https://r11.eu/rdf/resource/7ed67034-aabd-48c9-8d8c-f4cd3c59a807> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
     ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/82a29fd47edffadba3c88d8387fefd0b35b5> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/80404199-649f-44ca-a3db-8c06e8fcc512> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/1305926edf85177263f8a0f0d52112b7c69c> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/cdd0e7d2cc1b41f8729713e812473eff4610> .
+
+<https://r11.eu/rdf/resource/80adfe49-5ca4-4a8e-8550-f25333c468ad> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/cca7f61661782c2e49ae0d6b69afc84b42f2> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
 <https://r11.eu/rdf/resource/87db243e0f0a96e1300fb9136c347ac7b977> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Army of Kingdom of Vaspurakan 1019" .
 
+<https://r11.eu/rdf/resource/891a3293-1371-4841-9f48-8526158960c8> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/27bd6fee814f3cf79cd947d4a35b96be1701> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/89508089-a65b-42f7-9e1c-3d4f2ea866de> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c92da7edad16f50ca00b60da1c8751a8c515> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/8cc2e46f-a1a9-4952-9776-5928258226f1> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/ae8c98531418440bb056a15d87a7a1a51023> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/8f899678-670b-412d-927c-91fec39b24b9> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/d531306892f0cbfc54091b7461ec600cbf1e> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
 <https://r11.eu/rdf/resource/92286e83bf6d59e5c4b366dcc4f79b8cc8d9> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raiders Okomi 1056" .
 
-<https://r11.eu/rdf/resource/924a7394-c11d-4b79-bb93-fd54cf5456f4> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c6591d7f51c87f5a936ce50de6e65c4b78c9> ;
+<https://r11.eu/rdf/resource/92578566-5ef5-47c7-b96d-58fdb92a0c3b> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/1305926edf85177263f8a0f0d52112b7c69c> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/cdd0e7d2cc1b41f8729713e812473eff4610> .
 
-<https://r11.eu/rdf/resource/933671d7-e0f7-4754-9724-71570e34c708> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/82a29fd47edffadba3c88d8387fefd0b35b5> ;
+<https://r11.eu/rdf/resource/92b0fbb3-d5c3-4598-9f5b-337ad0097e8e> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/00e8224cbd8ada5021123f3e414f10aae8e2> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/90b1f1e5b924207a26b3de47060e2171c13a> .
+
+<https://r11.eu/rdf/resource/93a5b80a-73e2-40e4-a285-b9768339aad7> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/391277dbb85b7834cdaab6db5211860c6cba> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/93f29851-63b9-4046-9bc3-bbbbf7c607b0> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/853401a7f30f96cfe5925d2d30456bda6203> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
 <https://r11.eu/rdf/resource/944d3acb7740e525f8d67aff7456ecb901b3> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raiders Tayk 1054" .
@@ -620,29 +675,54 @@
 <https://r11.eu/rdf/resource/947a7b932f32bce23e3e671cc08c4648994a> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Parents of David Colophon 111" .
 
-<https://r11.eu/rdf/resource/98fdc92a-bc7b-4c2b-842f-de8f7d4b1d01> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/56d8045a202a30c8fe5a0c8e491020551481> ;
+<https://r11.eu/rdf/resource/952b392c-c585-48f6-8db0-1b4919c040db> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/947a7b932f32bce23e3e671cc08c4648994a> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/a8ec6946a4c3e8c50bae91cff35f00f5fe5f> .
+
+<https://r11.eu/rdf/resource/96959580-0d5d-4f31-b66b-0fd7968f1dd6> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/06cee006d28b7e821484950ee42ee70a9a97> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/97376c7a-7ba5-45b9-99e7-e86bebb273df> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/23d14e579f8c88c751c6dd071a1e7e62a29c> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/980f26f8-c4d5-4708-8067-216a3fd12857> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/eff109ba313e4e6d63742feac35c75c410ce> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
 <https://r11.eu/rdf/resource/997955f35d851e8a42cc4768124cc944d6ad> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Army of Basil II (Bulgaria)" .
 
-<https://r11.eu/rdf/resource/9bd4cc29-6fc6-40ad-b4ba-a0a3f4973aaa> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/1305926edf85177263f8a0f0d52112b7c69c> ;
+<https://r11.eu/rdf/resource/99c0d53a-a2ad-47fa-892d-9de41fa0ce83> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e119dcf62140b4bfae4faa35e3b7641e3dee> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/cdd0e7d2cc1b41f8729713e812473eff4610> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/9b2f3abc-27ca-48ae-8bfa-9edf414ee337> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/35ea7ce003d3242ddd20965f0c870ce5ea38> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/4991004efd51113d70e9f06a953ace382238> .
 
 <https://r11.eu/rdf/resource/9c8dfdabc53f3997ad1aefc403801b2bc242> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raiders Mespotamia 1057" .
 
+<https://r11.eu/rdf/resource/9eda8c10-d763-4b52-ba5c-a96692266581> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/381fe028e8100ad0c5f9d713cd0c87543a4a> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
 <https://r11.eu/rdf/resource/9f33cb1c5b21b45f4330fcb94ffc3bb762e1> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Hark‘ 1056" .
 
-<https://r11.eu/rdf/resource/a0229568-d9b3-495a-b6c6-18a9e6939d97> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/38b5ad10cd04e7762706ee090ffb4c025699> ;
+<https://r11.eu/rdf/resource/9fbb4cd0-a93c-4585-a638-4a9b258ab924> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/7c6a319af5d3e6ba221c25fed968c642d0f2> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/9828a467ad09c0034dd47cb0c396a27ca4c7> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/6a9961d1e75aacb313e67f8cbf74f2aaf1fa> .
 
 <https://r11.eu/rdf/resource/a0d6f2bf8587e640342b86500ea9df1d653b> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Byzantine Army of Romanos 4 (1071)" .
@@ -650,21 +730,41 @@
 <https://r11.eu/rdf/resource/a2b55b9023232e20c706fe5fbcf96398dad7> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Army of the First Crusade" .
 
-<https://r11.eu/rdf/resource/aa231c65-05d4-4ff3-b823-09d0c7387de5> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/beb32c6b366453f8f6b7c144053df14b836f> ;
+<https://r11.eu/rdf/resource/a5c5ff40-5e20-430d-ae11-986c3220f120> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/699b4b2395f2f8f43c4d545508d867c95922> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
 <https://r11.eu/rdf/resource/aa508d58c6c3b3fb6a4bbbe9b9ade4b02d1a> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Xorjean 1054" .
 
+<https://r11.eu/rdf/resource/abd27371-5e39-40b4-9909-b2fbc84817c7> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/beb32c6b366453f8f6b7c144053df14b836f> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/abe19545-3600-4278-afa1-2b3ab2a2bcae> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/a2b55b9023232e20c706fe5fbcf96398dad7> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/ac5e2fa1-56c2-4d13-8747-2d3f72264b90> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/299868a01252ca13915d25525db6b3d5aba3> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/ad754714-deed-4f6a-98f8-b4e2d32fcc9c> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/24edbce4575edce39160ee4a8fcebaab841a> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/ae3cbe9e-3bc0-4020-9f09-72c01e4a906e> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c6591d7f51c87f5a936ce50de6e65c4b78c9> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
 <https://r11.eu/rdf/resource/ae8c98531418440bb056a15d87a7a1a51023> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Artzn" .
-
-<https://r11.eu/rdf/resource/afaccbcc-9589-4aaa-8fc4-c2acdf436812> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/1305926edf85177263f8a0f0d52112b7c69c> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/cdd0e7d2cc1b41f8729713e812473eff4610> .
 
 <https://r11.eu/rdf/resource/b0c3be2a041b806c0677c8498e87166ddc96> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Varangian Guard (in Tayk) 1054" .
@@ -672,34 +772,19 @@
 <https://r11.eu/rdf/resource/b53c2a4448f390b61a37ec16ccaaf9a9583f> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "surrendering defenders of Giecz" .
 
-<https://r11.eu/rdf/resource/b619589a-eabc-4024-9997-86a6d0b188b7> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/a0d6f2bf8587e640342b86500ea9df1d653b> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
-
 <https://r11.eu/rdf/resource/b6d52ade32c830f1e8004a1c33ed5a880d42> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "The Cavalry Force of Tayk" .
 
 <https://r11.eu/rdf/resource/b72ae345c1d5585271372a7a2f6907d6c783> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Army of Buzan" .
 
-<https://r11.eu/rdf/resource/b793be21-b1c3-4cb9-a430-d59d9847a6f6> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/853401a7f30f96cfe5925d2d30456bda6203> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/b889c82f-250a-4cbf-9ebd-e0061a4f14a8> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+<https://r11.eu/rdf/resource/ba41eb69-2851-4947-8aa3-c1ff2fd719a8> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
     ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c92da7edad16f50ca00b60da1c8751a8c515> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
 
-<https://r11.eu/rdf/resource/bb9c4719-f9c6-4a5f-a831-373be41dd9c8> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/9f33cb1c5b21b45f4330fcb94ffc3bb762e1> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/bbcb5236-292d-4fc6-b33b-ed48149220fd> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/fbe78ad7a7a5650846684d8babab9a3850a1> ;
+<https://r11.eu/rdf/resource/bbfd072c-ff7e-4737-9862-faa01fd30700> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e650d42f762f7efa079c8b256fcd13f51d27> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
@@ -709,46 +794,11 @@
 <https://r11.eu/rdf/resource/bdb4690f1dcd32662d96998e5f87232663e9> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Byzantine Army (Berkri)" .
 
-<https://r11.eu/rdf/resource/bdc04ba0-41d2-4351-b199-0c578ac33149> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/82a29fd47edffadba3c88d8387fefd0b35b5> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
-
 <https://r11.eu/rdf/resource/beb32c6b366453f8f6b7c144053df14b836f> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Kars 1053" .
 
-<https://r11.eu/rdf/resource/bf03b848-7cc6-4da9-a30b-9551d9a30351> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c92da7edad16f50ca00b60da1c8751a8c515> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
-
 <https://r11.eu/rdf/resource/c34ab85b8dda1d7bb5008cf88a0360ea5ff1> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raiders Xorjean 1054" .
-
-<https://r11.eu/rdf/resource/c36d8c9d-e302-4559-90df-f0714ae7d493> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/994812974ddb4f2b3e9d7d96bfc102309d25> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
-
-<https://r11.eu/rdf/resource/c3a81469-84c4-42b3-9106-9b0471b8d750> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/82a29fd47edffadba3c88d8387fefd0b35b5> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
-
-<https://r11.eu/rdf/resource/c4cb68c3-0262-4b26-8f1b-386c64d34ff2> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/52e4a62b0ea55e3c360e76ee43b0918cfb88> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/c53d5fe3-20c6-43dd-b2ff-1bf24744e6de> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c92da7edad16f50ca00b60da1c8751a8c515> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
-
-<https://r11.eu/rdf/resource/c585e2c7-4537-4458-bb6e-7bd90092156e> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/853401a7f30f96cfe5925d2d30456bda6203> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
 <https://r11.eu/rdf/resource/c6591d7f51c87f5a936ce50de6e65c4b78c9> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Rebellion of Leo Tornikios" .
@@ -759,30 +809,15 @@
 <https://r11.eu/rdf/resource/c6b9173fd75ffbd81f89f671dba963a22824> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raiders Chaldia" .
 
-<https://r11.eu/rdf/resource/c6c3b9a7-87c7-4e28-a464-8cc54638547f> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/b0c3be2a041b806c0677c8498e87166ddc96> ;
+<https://r11.eu/rdf/resource/c6ef8d39-858b-4e0a-912c-4d898eaebd07> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/1cb5e7830e3b6cbb94e93e78cbec51f40b22> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/c967d7c8-7891-43e9-9f2a-f101e931055b> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/9f33cb1c5b21b45f4330fcb94ffc3bb762e1> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/c7f33a7b-decc-465f-92ea-d295da5e2787> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/d0ec77c287f5c88d2a9335717346cffa7459> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
-
-<https://r11.eu/rdf/resource/c83b544a-7a26-4916-9d42-f68ea3efd6af> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/994812974ddb4f2b3e9d7d96bfc102309d25> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
-
-<https://r11.eu/rdf/resource/c85b85d8-1659-418f-853d-3894d3d0ae98> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/b72ae345c1d5585271372a7a2f6907d6c783> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
-
-<https://r11.eu/rdf/resource/c9553b1c-cbcf-4cfc-9bae-e9a17e0e107e> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/5e11e1eeadc80c4d0e8e3ba5512eb5d68a29> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/a8ec6946a4c3e8c50bae91cff35f00f5fe5f> .
 
 <https://r11.eu/rdf/resource/c9f38cf73ed374ee1e6c85059cdbdcee8aaa> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raiders Smbat's Berd" .
@@ -793,26 +828,36 @@
 <https://r11.eu/rdf/resource/cca7f61661782c2e49ae0d6b69afc84b42f2> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Byzantine Army of Romanos 4" .
 
-<https://r11.eu/rdf/resource/cf3e412b-d164-407d-966f-699eeffd56ea> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/23d14e579f8c88c751c6dd071a1e7e62a29c> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/d0c049fb-e428-4a51-bc49-10d6997088bd> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/f34421feff0bcad386cfdc8fe867639562eb> ;
+<https://r11.eu/rdf/resource/cd78e746-3948-4382-9b57-a9eeaec31b62> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/ed2ed80169aac516efcb864cb84f562f7113> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
 <https://r11.eu/rdf/resource/d0ec77c287f5c88d2a9335717346cffa7459> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Edessa 1081" .
 
-<https://r11.eu/rdf/resource/d2ba07f6-340e-40eb-84a3-f116efdbcb4f> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/381fe028e8100ad0c5f9d713cd0c87543a4a> ;
+<https://r11.eu/rdf/resource/d10cf65f-db7b-42c5-8a6f-9e1dcb829670> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/87db243e0f0a96e1300fb9136c347ac7b977> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/d11c4691-2f19-4b32-a1bb-9566d5cb2c4a> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/e9641bf14b2340c4108d9f2cf88ab24772d7> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
-<https://r11.eu/rdf/resource/d3a721c1-3086-4354-a51f-96d4332d7d18> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/7b892847b89ce619abaa636ce090e883240d> ;
+<https://r11.eu/rdf/resource/d1d0b764-ef77-4ef2-a55f-502de9d16e54> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/56d8045a202a30c8fe5a0c8e491020551481> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/d1f6b530-da2a-4274-9fb1-ecb593ffb0fe> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c9f38cf73ed374ee1e6c85059cdbdcee8aaa> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/d3e19deb-5efd-4523-844c-65d45db11c73> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/3c71c3f14f329d35130c83ea10d5c42041b6> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
 
@@ -822,53 +867,48 @@
 <https://r11.eu/rdf/resource/d531306892f0cbfc54091b7461ec600cbf1e> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Army of Gagik Abas of Kars" .
 
-<https://r11.eu/rdf/resource/d5ae3306-1367-4fe3-8a86-5d0d5c55b3a3> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/947a7b932f32bce23e3e671cc08c4648994a> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/a8ec6946a4c3e8c50bae91cff35f00f5fe5f> .
-
-<https://r11.eu/rdf/resource/d7df3913-fe75-4ac0-adb1-3dd8a75f99c5> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/997955f35d851e8a42cc4768124cc944d6ad> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
-
-<https://r11.eu/rdf/resource/d875be8d-8b0f-4e15-bb33-ee92520dc05a> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/994812974ddb4f2b3e9d7d96bfc102309d25> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
-
-<https://r11.eu/rdf/resource/d883d9472622cb2b96e196ea50f3cedf6abd> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
-    rdfs:label "Seljuk Turkish raid of Tao-Tayk" .
-
-<https://r11.eu/rdf/resource/dabd4dfb-df41-4243-988a-1fff7ceac574> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/994812974ddb4f2b3e9d7d96bfc102309d25> ;
+<https://r11.eu/rdf/resource/d78b3a4f-e7e6-4126-a309-9ec6618133d3> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/12b728d6c705c7ac876a646844811a908151> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
-<https://r11.eu/rdf/resource/db1c14a3-e3c8-48ab-9c92-b61ac04a86af> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+<https://r11.eu/rdf/resource/d8443165-c688-48ce-b61f-782636e7472c> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
     ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/d883d9472622cb2b96e196ea50f3cedf6abd> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
-<https://r11.eu/rdf/resource/dc47fdfd-e79d-4a74-848d-ad664aeb73ca> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/7c6a319af5d3e6ba221c25fed968c642d0f2> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/6a9961d1e75aacb313e67f8cbf74f2aaf1fa> .
+<https://r11.eu/rdf/resource/d883d9472622cb2b96e196ea50f3cedf6abd> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
+    rdfs:label "Seljuk Turkish raid of Tao-Tayk" .
 
-<https://r11.eu/rdf/resource/dcfba68b-9889-4dc0-98a8-c78dc8ec452c> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/66ce8902dc75d9df49b34a76618a9036cb26> ;
+<https://r11.eu/rdf/resource/d89c5c3a-230e-4988-ba10-d221cc479751> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/bd1155dd481f29b77fed76270991289da636> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/d88543887d8de44fd5f5df63d153e7968296> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
 
-<https://r11.eu/rdf/resource/de123fd9-b693-48fe-8612-7cd6c7d574ba> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/3b7daa71d3b14ebb8c1c7ff9a4a82947c8c0> ;
+<https://r11.eu/rdf/resource/d9d53d78-a044-4081-b4e8-1acd36634811> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/52e4a62b0ea55e3c360e76ee43b0918cfb88> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
-<https://r11.eu/rdf/resource/e10466fd-a72d-4449-84df-48fb63654b9b> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/299868a01252ca13915d25525db6b3d5aba3> ;
+<https://r11.eu/rdf/resource/db4ab739-5742-44c6-8ca7-1a52b300d806> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/37f01ab26ea40490328aa8adf47c7e3a2899> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/f0a675e993a7625270430e9ae0553d93b1fa> .
+
+<https://r11.eu/rdf/resource/dba81338-6081-46ea-8b9e-a9890cb33830> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/7b892847b89ce619abaa636ce090e883240d> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/dbe1cebd-f743-49b8-b3b3-2bfc8603f0c4> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/1c7f6998ed676b317e3f1e653a898eeaa176> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
+
+<https://r11.eu/rdf/resource/e0e5b0ae-4213-4c46-9a23-c20b2a8899dc> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/6aaa84a5c3a750d1f26c0b91cd85c932d8e1> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/aeb2426da6cad7f824aed45175b210f8bc9b> .
 
 <https://r11.eu/rdf/resource/e119dcf62140b4bfae4faa35e3b7641e3dee> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Ekegheac' and Karin 1057" .
@@ -876,45 +916,35 @@
 <https://r11.eu/rdf/resource/e2403cd3ddca5977e559ac26ad2cab58fd01> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Byzantine Army of Romanos 4 (1068)" .
 
+<https://r11.eu/rdf/resource/e38e3fba-af9e-4f21-8bf7-433231e0204a> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/2c08133cc29913dacc9a0576229553b209a8> ;
+    ns1:P141_assigned [ a ns1:E74_Group ] ;
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
 <https://r11.eu/rdf/resource/e40ec8ca432459195771e1699e3862c525ac> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Edessa hinterland 1065" .
 
 <https://r11.eu/rdf/resource/e650d42f762f7efa079c8b256fcd13f51d27> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Smbat's Berd" .
 
-<https://r11.eu/rdf/resource/e66b8f4e-39a0-43c5-8cd0-6008284be1f2> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/1c7f6998ed676b317e3f1e653a898eeaa176> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
-
 <https://r11.eu/rdf/resource/e9641bf14b2340c4108d9f2cf88ab24772d7> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Byzantine Eastern Army" .
 
-<https://r11.eu/rdf/resource/eaa31f6e-142a-43bb-8b3d-6d99b333aefa> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/0466d31fb2f6cc5ef0e832f353c9deb1e8e4> ;
+<https://r11.eu/rdf/resource/e9fc20e1-b74b-4111-842e-5367973c781b> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/391277dbb85b7834cdaab6db5211860c6cba> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
 <https://r11.eu/rdf/resource/ebd19efdb957095afafadceab4697b2e18ca> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Tayk 1054" .
 
-<https://r11.eu/rdf/resource/ebe07d2c-eed2-4531-b103-49deeba1c5b4> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c9f38cf73ed374ee1e6c85059cdbdcee8aaa> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/edaf9cf6-88bf-4497-916a-9446d21c9cfb> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/cca7f61661782c2e49ae0d6b69afc84b42f2> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
 <https://r11.eu/rdf/resource/ee488b2aa8ed334c20d457afe56e08f1377b> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Byzantine Army (Dvin)" .
 
-<https://r11.eu/rdf/resource/ee77aed2-8f5a-4cff-bc27-453cc20d1b0e> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/7de43a73fb473cd1375ec624e25ee927af3f> ;
+<https://r11.eu/rdf/resource/ee6b1043-5a9f-4390-8ff0-fe56ba89dde2> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/994812974ddb4f2b3e9d7d96bfc102309d25> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
 
 <https://r11.eu/rdf/resource/eef6b091c5e52a165d5f8b3d3a8923686037> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "abductors of Zbigniew, the illegitimate son of Władysław I Herman" .
@@ -922,60 +952,30 @@
 <https://r11.eu/rdf/resource/eff109ba313e4e6d63742feac35c75c410ce> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raiders Ekegheac‘ 1054" .
 
-<https://r11.eu/rdf/resource/f05d0fed-efbd-4cf8-aee0-eeed20e275b6> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/9c8dfdabc53f3997ad1aefc403801b2bc242> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/f0ccfd60-67fc-4a17-9ae6-dc47a53d9038> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/92286e83bf6d59e5c4b366dcc4f79b8cc8d9> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
 <https://r11.eu/rdf/resource/f1f363626a6d70ece04d8388c8844c4f536b> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Parents of Anania of Varag" .
-
-<https://r11.eu/rdf/resource/f249500e-ead7-41c1-99a3-2edcaeab42f3> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/ae8c98531418440bb056a15d87a7a1a51023> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/f25553c8-3549-4ec6-80e3-0057f829258d> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/eff109ba313e4e6d63742feac35c75c410ce> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/f33d4fe2-f6b0-4daf-a969-0acca15112c4> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/41ecb1871e8ec4148b7c09db5028f0f60388> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
 
 <https://r11.eu/rdf/resource/f34421feff0bcad386cfdc8fe867639562eb> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raid of Basean 1048-1049" .
 
-<https://r11.eu/rdf/resource/f6713a8eea03e6996e28e5151b3ca6f595dc> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
-    rdfs:label "Polish fugitives at the court of Břetislav II, Duke of Bohemia" .
-
-<https://r11.eu/rdf/resource/f91cd036-fd02-46f2-a274-cf4f7be27fe2> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/cb54d0f922744e6a69f3b03c2e2811263a28> ;
+<https://r11.eu/rdf/resource/f383cfe3-501d-4279-9ea0-0b9e5ab81e52> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/766e85db95a5df529b4e46c80f9d2c1cc5dc> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
 
-<https://r11.eu/rdf/resource/fb14d09a-8fbe-4945-b535-38cf11a7d0ea> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/c34ab85b8dda1d7bb5008cf88a0360ea5ff1> ;
+<https://r11.eu/rdf/resource/f3cb604a-124c-4e71-8c30-175834c8a221> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/3b7daa71d3b14ebb8c1c7ff9a4a82947c8c0> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
+
+<https://r11.eu/rdf/resource/f6713a8eea03e6996e28e5151b3ca6f595dc> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
+    rdfs:label "Polish fugitives at the court of Břetislav II, Duke of Bohemia" .
 
 <https://r11.eu/rdf/resource/fbe78ad7a7a5650846684d8babab9a3850a1> a <https://ontology.swissartresearch.net/pwro/WE4_Manifest_Group> ;
     rdfs:label "Seljuk Turkish raiders Melitene 1057" .
 
-<https://r11.eu/rdf/resource/fd08afb2-f59a-4c3f-be6b-932f27d8037f> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/06cee006d28b7e821484950ee42ee70a9a97> ;
-    ns1:P141_assigned [ a ns1:E74_Group ] ;
-    ns1:P14_carried_out_by <https://r11.eu/rdf/resource/fa197c088e8f827f6a03498a58722881a692> .
-
-<https://r11.eu/rdf/resource/fd9cfff7-2ea7-4e0d-b414-5a26de164bc1> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/3c71c3f14f329d35130c83ea10d5c42041b6> ;
+<https://r11.eu/rdf/resource/fdc10904-880c-4249-98ec-ccf3961b597a> a <https://r11.eu/ns/star/E13_pwro_WP5> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/385e12e71526c37fb635dcf92f7e84e609d1> ;
     ns1:P141_assigned [ a ns1:E74_Group ] ;
     ns1:P14_carried_out_by <https://r11.eu/rdf/resource/475a36c1f43584dff2355fda6b17bb87e4b6> .
 
