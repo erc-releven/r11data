@@ -55,6 +55,11 @@
         <https://r11.eu/rdf/resource/94abe70c16e5d0b79ba17068a9a8adfb1a12>,
         <https://r11.eu/rdf/resource/f051dc22bed5c8b05cee030b6933fcbbccea> .
 
+<https://r11.eu/rdf/resource/23ece915e58df7ff2e7fca8b0a8d17ce5a45> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Garland, Lynda; Rapp, Stephen H." ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/39c417d53b3ee7fc2d8b918f198cebd6072f>,
+        <https://r11.eu/rdf/resource/de7a7d9db478b1002a467f2c3b28d0e27bc4> .
+
 <https://r11.eu/rdf/resource/32b5502c07261b1827514f646b4e1fb77321> a <https://r11.eu/ns/spec/Author_Group> ;
     rdfs:label "Andrew I, King of Hungary; Nicholas, Bishop of Győr" ;
     ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/9d60a61279f16341f330c351d498ae71c46b>,
@@ -256,6 +261,11 @@
     ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/589f49eff075c77d13a742aa7328884db1ae>,
         <https://r11.eu/rdf/resource/98721596b6f4bbf0ea1036ad0ca8b7d6f66b> .
 
+<https://r11.eu/rdf/resource/9ea646ef782b17d4327b9e4eeb5156640a01> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Kaldellis, Anthony; Polémīs, Dīmī́trios I." ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/0a9f19d5faf09f73b2d05455658a52831d3e>,
+        <https://r11.eu/rdf/resource/4d46a126d2a4b8c3f65c426ff6e969cb992b> .
+
 <https://r11.eu/rdf/resource/a0cdd9d809a270bf1ea87ea473a277b458a4> a <https://r11.eu/ns/spec/Author_Group> ;
     rdfs:label "Ioannes VIII Xiphilinos, patriarch of Constantinople; Kyriakos, nomikos of Serres" ;
     ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/b645e7f2d8976e490f1636c44c7fb44c1281>,
@@ -300,6 +310,11 @@
     ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/351577356ad39108ebc95e273b6e8b1d7a4f>,
         <https://r11.eu/rdf/resource/e44d4b9b570c1cdb858fdc7eaf73206ede65> .
 
+<https://r11.eu/rdf/resource/bb599b7b83d0c9f0471f6e278530f8931d7b> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Kale, wife of Symbatios Pakourianos; Ioannes Phorites, notary at Constantinople" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/155e4993ed0f361a75bbba9d36736a8187d0>,
+        <https://r11.eu/rdf/resource/f393bd97b4aa03eac5aa3db49dea53e17828> .
+
 <https://r11.eu/rdf/resource/bc32b291b2f3980380bd387b19f055f1ca3c> a <https://r11.eu/ns/spec/Author_Group> ;
     rdfs:label "Whitby, Mary; Jeffreys, Michael J.; Karágiṓrgou, ́Olga" ;
     ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/95a722fd6b045d2a2d8feae82e9f44962487>,
@@ -332,6 +347,11 @@
     ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/5881b6b27cfbe3025aec0615b381870c861b>,
         <https://r11.eu/rdf/resource/6079c91e6ca9a536b3eceb49b5e09888102c>,
         <https://r11.eu/rdf/resource/d41259bba6e1d0d45c603d526955979b33d1> .
+
+<https://r11.eu/rdf/resource/c58544dc10ef9fc1d2039d9fbc852e174df8> a <https://r11.eu/ns/spec/Author_Group> ;
+    rdfs:label "Kaldellis, Anthony; Krallis, Dimitris" ;
+    ns1:P107_has_current_or_former_member <https://r11.eu/rdf/resource/4d46a126d2a4b8c3f65c426ff6e969cb992b>,
+        <https://r11.eu/rdf/resource/763a135ca90b132e4cc92a97a8753293d15e> .
 
 <https://r11.eu/rdf/resource/cf65956982bde01fa168e412c1f5c38a108f> a <https://r11.eu/ns/spec/Author_Group> ;
     rdfs:label "Gregorios Xeros, monk, dikaiophylax and anagrapheus; Michael, vestes and imperial notarios of the oikeiaka" ;
