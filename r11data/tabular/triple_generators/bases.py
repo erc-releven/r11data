@@ -28,7 +28,11 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
 
         publications_df: pd.DataFrame = self.sheets.text_publications
         mask = publications_df["Text identifier"] == publication
-        publication_label = publications_df.loc[mask, "Edition"].iloc[0]
+
+        try:
+            publication_label = publications_df.loc[mask, "Edition"].iloc[0]
+        except IndexError:
+            publication_label = "Undefined"
 
         return publication_label
 
@@ -102,24 +106,24 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
         return Person(**row.to_dict())
 
     def _p14_triples(
-        self, e13_uri: URIRef, authority_uri: URIRef | None = None
+        self,
+        e13_uri: URIRef,
     ) -> Iterator[_Triple]:
         """Perform a relational look up for an authority and assert P14 about an E13."""
-        if authority_uri is None:
-            authority_id = getattr(self.model, "authority", None)
+        authority_id = getattr(self.model, "authority", None)
 
-            if authority_id is None:
-                return
+        if authority_id is None:
+            return
 
-            authority_model: Person | None = self.get_person_data(
-                person_id=authority_id,
-                strict=False,
-            )
+        authority_model: Person | None = self.get_person_data(
+            person_id=authority_id,
+            strict=False,
+        )
 
-            if authority_model is None:
-                return
+        if authority_model is None:
+            return
 
-            authority_uri = authority_model.person_uri
+        authority_uri = authority_model.person_uri
 
         assert isinstance(authority_uri, URIRef)
         yield (e13_uri, crm.P14_carried_out_by, authority_uri)
@@ -133,11 +137,9 @@ class _ModelRDFConverter[_TModel: BaseModel](Iterable[_Triple]):
 
         yield (passage_uri, crm.P67_refers_to, e13_uri)
 
-    def authority_passage_triples(
-        self, e13_uri: URIRef, authority_uri: URIRef | None = None
-    ) -> Iterator[_Triple]:
+    def authority_passage_triples(self, e13_uri: URIRef) -> Iterator[_Triple]:
         """Triple generator for yielding authority and passage triples."""
-        yield from self._p14_triples(e13_uri=e13_uri, authority_uri=authority_uri)
+        yield from self._p14_triples(e13_uri=e13_uri)
         yield from self._p67_triples(e13_uri=e13_uri)
 
 
