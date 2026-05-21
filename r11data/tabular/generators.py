@@ -10,11 +10,9 @@ from r11data.tabular.models import (
     BirthAndDeath,
     Boulloteria,
     Correspondence,
-    DeathSheetModel,
     GeopoliticalEvent,
     Journey,
     LeadSeals,
-    LocationSheetModel,
     Manuscript,
     OtherObjects,
     Person,
@@ -509,35 +507,6 @@ def lead_seals_triples() -> Iterator[Triple]:
             model_type=LeadSeals,
             model_converter=LeadSealsRDFConverter,
         )
-    )
-
-
-##################################################
-##################################################
-#### Deaths
-
-
-def death_triples() -> Iterator[Triple]:
-    return TripleChain(
-        *[
-            DeathsTripleGenerator(model=DeathSheetModel(**row.to_dict()))
-            for df in [aleks_deaths_df, marton_deaths_df]
-            for _, row in df.iterrows()
-        ]
-    )
-
-
-##################################################
-#### Locations
-
-
-def location_triples() -> Iterator[Triple]:
-    return TripleChain(
-        *[
-            LocationsTripleGenerator(model=LocationSheetModel(**row.to_dict()))
-            for df in [lewis_locations_df, aleks_locations_df, marton_locations_df]
-            for _, row in df.iterrows()
-        ]
     )
 
 

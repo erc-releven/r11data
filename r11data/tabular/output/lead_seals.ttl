@@ -1,21 +1,21 @@
 @prefix ns1: <http://www.cidoc-crm.org/cidoc-crm/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-<https://r11.eu/rdf/resource/0c5a17bf-0602-4701-8e52-5d98e13a77ef> a <https://r11.eu/ns/star/E13_crm_P46> ;
+<https://r11.eu/rdf/resource/13329f04-ed44-4e70-8284-be4b520f3512> a <https://r11.eu/ns/star/E13_crm_P46> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/fa9ba8d97b7827a6bdc7e7f57f8495233ce4> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/ab0ca11452a809e0744ecaa5aa68bb303964> .
+
+<https://r11.eu/rdf/resource/8baabd56-90e4-41e7-92e9-31c562d1938e> a <https://r11.eu/ns/star/E13_crm_P46> ;
     ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/fa9ba8d97b7827a6bdc7e7f57f8495233ce4> ;
     ns1:P141_assigned <https://r11.eu/rdf/resource/db9b5eeb4c15e0533ed14cffcca0d8186712> .
 
-<https://r11.eu/rdf/resource/467e6cd4-ae31-4c5a-b0f5-8408e17c1881> a <https://r11.eu/ns/star/E13_crm_P46> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/590e143f53cf3b29a9bcda2d2f9166280361> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/73861e8a59e72070227a65ebe277219ec821> .
-
-<https://r11.eu/rdf/resource/4b7a909f-a499-4af5-a944-03ac20c1fd08> a <https://r11.eu/ns/star/E13_crm_P46> ;
+<https://r11.eu/rdf/resource/91ef2f22-1a45-4499-a603-1d585cfe3f16> a <https://r11.eu/ns/star/E13_crm_P46> ;
     ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/6f86c44dee4906494dd8013f01e77b4ca180> ;
     ns1:P141_assigned <https://r11.eu/rdf/resource/86d9ae95c55bfa1c88332826f6350b16c52a> .
 
-<https://r11.eu/rdf/resource/d35b2a29-39f6-4132-be05-67605556ef80> a <https://r11.eu/ns/star/E13_crm_P46> ;
-    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/fa9ba8d97b7827a6bdc7e7f57f8495233ce4> ;
-    ns1:P141_assigned <https://r11.eu/rdf/resource/ab0ca11452a809e0744ecaa5aa68bb303964> .
+<https://r11.eu/rdf/resource/d27d2b4e-c090-4769-a5fc-d4902830b35e> a <https://r11.eu/ns/star/E13_crm_P46> ;
+    ns1:P140_assigned_attribute_to <https://r11.eu/rdf/resource/590e143f53cf3b29a9bcda2d2f9166280361> ;
+    ns1:P141_assigned <https://r11.eu/rdf/resource/73861e8a59e72070227a65ebe277219ec821> .
 
 <https://r11.eu/rdf/resource/590e143f53cf3b29a9bcda2d2f9166280361> a ns1:E78_Curated_Holding ;
     rdfs:label "Hermitage" .
